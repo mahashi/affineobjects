@@ -1,0 +1,98 @@
+%References: Moerdijk, Shapira
+%todo: sheaves with values in arbitraty categories.
+\subsection{Sheaves}
+
+\begin{definition}[Sheaves of sets]
+Let $(\cat{C},\topo{T})$ be a site. Let $\presheaf{F}\in \presheaves{C}$.
+A compatible family on $X$ is a family of elements $x_f\in \presheaf{F}(X_f)$ indexed by a sieve $R$ on $X$, where $X_f=\domain{f}$ 
+and such that $\pullback{g}(x_{f})=x_{fg}$. This is the same as a morphism $R\rightarrow \presheaf{F}$ as presheaves.
+
+An amalgamation of a compatible family $(x_f)_R$ on $X$ is an element $x\in \presheaf{F}(X)$ such that $\pullback{f}(x)=x_f$.
+Hence given an morphism $X\rightarrow \presheaf{F}$ that extends the morphism $R\rightarrow \presheaf{F}$ defined by the compatible family.
+
+%%TODO: pullback sequence
+
+A presheaf that admits a unique amalgamation of every compatible family is called a sheaf.
+The category $\sheaves{C}$ is the full subcategory on these sheaves. 
+Let $i$ be the inclusion functor $\sheaves{C}\rightarrow \presheaves{C}$.
+\end{definition}
+
+\begin{definition}[Sheaves \#2]
+Let $(\cat{C},\topo{T})$ be a site. Let $\presheaf{F}\in \presheaves{C}{A}$. 
+Let $\cat{A}$ be (small) complete. Define $\presheaf{F}(R)$ for a sieve $R$ on $X$ to be 
+\[\Hom{R}{F}.\]
+
+We call $\presheaf{F}$ a sheaf if the map 
+\[\presheaf{F}(X) \rightarrow \presheaf{F}(R)\] is an isomorphism.
+
+This is just shorthand notation for the above definition. There is a bijection between $\Hom{R}{F}$ and matching families and the map sends a section to the unique matching family indexed by $R$ it is an amalgamation of.
+\end{definition}
+
+\begin{definition}[Plus construction Shapiro]
+Let $(\cat{C},\topo{T})$ be a site. Let $\presheaf{F}\in \presheaves{C}$.
+Define the category $\cat{I}$ whose objects are pairs $(R,\varphi)$ with $R\in \topo{T}(X)$ and $R\xrightarrow{\varphi} F$.
+A morphism between $(R,\varphi)\rightarrow (S,\phi)$ are inclusions $R\rightarrow S$ such that $\varphi=\phi$ restricted to $R$.
+
+Then
+\[\plus{F}(X) = \limit{(R,\varphi)\in \cat{I}} F(R).\]
+
+More concretely, $\plus{F}(X)$ is the set of all objects $(R,\varphi)$ with the equivalence relation that $(R, \varphi)\sim (S,\phi)$ if $\varphi=\phi$ on $R\cap S$. Or equivalently the set all compatible families with the equivalence relation that $(x_f)_R \sim (y_g)_S$ if $(x_f)_{R\cap S} = (y_g)_{R\cap S}$. 
+
+We have the map
+\[\unit:\presheaf{F}(X)\rightarrow \product{f\in R} \presheaf{F}(\domain{f})\]
+\[x \mapsto (X,x).\]
+
+This defines a natural transformation from $\id$ to $\plus{\blank}$.
+\end{definition}
+
+\begin{definition}[Plus construction Moerdijk]
+%TODO: fill in moerdijks construction
+\end{definition}
+
+\begin{lemma}
+$\plus{F}$ is separated
+\end{lemma}
+
+\begin{lemma}
+If $\presheaf{F}$ is separated then $\plus{F}$ is a sheaf.
+\end{lemma}
+
+
+\begin{lemma} 
+Let $\site{C}{S} \xrightarrow{g} \site{D}{T}$. 
+Let $\presheaf{F}$ be a presheaf on $\cat{D}$. 
+Then 
+\[ \plus{F}g \iso \plus{Fg}.\]
+\end{lemma}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{definition}[Sheafification]
+Define $\sheafify{F}=\plus{\plus{F}}: \presheaves{C} \rightarrow \sheaves{C}$. 
+This is a left adjoint to the inclusion functor.
+
+The functor $\sheafify{\blank}$ commutes with finite limits. There are two different proofs: Moerdijk and stack+Shapiro. Shapiro defines the plus with as a colimit over a directed set, hence this commutes with limits.
+\end{definition}
+
+\begin{theorem}
+The following this are equivalent for a category $\cat{C}$.
+\begin{itemize}
+\item A Grothendieck topology
+\item A full subcategory $\cat{E}\subset \presheaves{C}$ such that the the inclusion functor has a left adjoint that preserves finite limits.
+\end{itemize}
+\end{theorem}
+
+%% Properties
+\begin{remark}[Properties]
+\begin{itemize}
+\item The restriction of a sheaf is a sheaf
+\end{itemize}
+\end{remark}
+
+%% Rings
+
+%% Modules
+
+%% Quasi-coherent modules

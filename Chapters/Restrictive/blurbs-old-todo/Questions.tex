@@ -1,0 +1,163 @@
+\input{../preamble.tex}
+
+\begin{document}
+
+Let $X$ be a scheme throughout this document.
+
+%% Map between affines is always restrictive
+\begin{question}
+Let $U=\Spec A \xrightarrow{f} \Spec B = V$ be the inclusion of two affine opens inside $X$.
+Let $\shf=\widetilde{M}$ be a quasi-coherent sheaf on $X$. 
+Is $\shf(V)\tensor_{\O_X(V)} \O_X(U) \rightarrow \shf(U)$ an isomorphism of $\O_X(U)$ modules?
+\end{question}
+
+\begin{Qanswer}
+Yes. 
+
+We will use the Affine Communication lemma.
+Define the property P as:
+an affine $W\subset V$ has $P$ if $\shf(V)\tensor_{\O_X(V)} \O_X(W) \xrightarrow{\varphi} \shf(W)$ an isomorphism of $\O_X(W)$ modules.
+
+Let $W$ have property $P$ and $D(g)\subset W$ is a distinguised open of $W$.
+Let $r$ stand for any restriction map of $\shf$.
+
+Since $\shf$ is quasi-coherent
+\[\shf(W)\tensor_{\O_X(W)} \O_X(D(g)) \rightarrow \shf(D(g))= M_g,\]
+\[ n \tensor \lambda \to \lambda r(n)\]
+is an isomorphism.
+
+Also $W$ has property $P$, so 
+\[\shf(V)\tensor_{\O_X(V)} \O_X(W) \rightarrow \shf(W),\]
+\[ m \tensor \lambda \to \lambda r(m)\]
+is an isomorphism.
+We will use this to prove that 
+
+\[\shf(V)\tensor_{O_X(V)} O_X(D(g)) \rightarrow \shf(D(g)),\]
+\[m \tensor \lambda \to \lambda r(m)\]
+is an isomorphism.
+
+Let $c \in \shf(D(g))$. 
+Then $c= \sum_j \lambda_j r(n_j)$ for some $\lambda_j\in \O_X(D(g))$ and $n_j\in\shf(W)$.
+There exist $\kappa_{(i,j)} \in \O_X(W)$ and $m_{(i,j)}\in \shf(V)$ such that $\sum_i \kappa_{(i,j)} r(m_{(i,j)})= n_j$.
+Hence $\sum_{(i,j)} m_{(i,j)} \tensor (\kappa_{(i,j)}\lambda_j)\to c$, so our map is surjective.
+
+Let $\lambda\in \O_X(D(g))$ and $m\in \shf(V)$ be such that $\lambda r(m)=0$.
+Then $r(m) \tensor \lambda = 0$ in $\shf(W)\tensor_{\O_X(W)} \O_X(D(g))$ and
+
+\[ r(m) \tensor_{\O_X(W)} \lambda = 0\]
+\[(m\tensor_{\O_X(V)} 1) \tensor_{\O_X(W)} \lambda = 0,\]
+\[ m\tensor \lambda = 0 .\]
+
+So our map is an isomorphism.
+
+Let $\cup D(g_i) = W$ be a cover of distinguised opens, so $g_i\in \O_X(W)$.
+Assume that every $D(g_i)$ has property P.
+This amounts to
+
+\[\shf(V)\tensor_{\O_X(V)} \O_X(D(g_i)) \rightarrow \shf(D(g_i)),\]
+\[m \tensor \lambda \to \lambda r(m)\]
+
+being an isomorphism for every $i$.
+
+Let 
+
+\[\shf(V)\tensor_{\O_X(V)} \O_X(W) \rightarrow \shf(W),\]
+\[m \tensor \lambda \to \lambda r(m)\]
+
+be the map induced by the restriction $r:\shf(V) \rightarrow \shf(W)$.
+This is a map of $\O_X(W)$ modules, so tensoring up with $\O_X(D(g_i))$ yields the localised map
+
+\[(\shf(V)\tensor_{\O_X(V)}  \O_X(W)) \tensor_{\O_X(W)} \O_X(D(g_i)) \rightarrow \shf(W) \tensor \O_X(D(g_i)) \iso \shf(D(g_i)),\]
+\[(m \tensor \lambda)\tensor \kappa = (m\tensor 1) \tensor \lambda \kappa \to \lambda \kappa r(m).\]
+
+This map is the composition  $(m\tensor 1) \tensor \lambda \rightarrow m\tensor \lambda \rightarrow \lambda r(m)$.
+First map is an isomorphism by comm. algebra and the second is an isomorphism by assumption.
+This holds for every $i$, hence our map is an isomorphism.
+
+\end{Qanswer}
+
+\bigskip
+
+%% Affine map is not restrictive generally.
+\begin{question}
+Let $U \xrightarrow{f}  V$ be the inclusion of two opens inside $X$ such that $f$ is affine.
+Let $\shf$ be a quasi-coherent sheaf on $X$. 
+Is $\shf(V)\tensor_{\O_X(V)} \O_X(U) \xrightarrow{\varphi} \shf(U)$ an isomorphism of $\O_X(U)$ modules?
+\end{question}
+
+
+\begin{Qanswer}
+No. Counterexample:  $V = X = \P_k^1$, $U=D_+(x)$ and $\shf = \widetilde{k[x,y,z]}$.
+The map $\shf(V)\tensor_{\O_X(V)} \O_X(U) \xrightarrow{\varphi} \shf(U)$ is given by
+
+\[k \tensor_{k} k[x,y]_{(x)} \xrightarrow{\varphi} k[x,y,z]_{(x)},\]
+\[ a\tensor \frac{b}{x^n} \mapsto \frac{ab}{x^n}.\]
+
+Note that $\frac{z}{x}$ is not in the image of this map.
+
+Another counterexample is $\O(-1)$. This quasi-coherent locally free sheaf has no global sections, but restricted to $D_+(x)$ it is free so it has sections over this open.
+
+\end{Qanswer}
+
+\bigskip
+
+
+%% When is the canonical map A -> A\tensor B injective?
+\begin{question}
+Assume $\Spec A = U \subset V = \Spec B$ open affines of $X$.
+Let $\shf$ be a quasi-coherent sheaf on $X$.
+By the affine result, the restriction map $\shf(V) \rightarrow \shf(U)$ is injective \iff $\shf(V) \rightarrow \shf(V)\tensor_{\O_X(V)}\O_X(U)$ is injective.
+Is $\shf(V) \rightarrow \shf(V)\tensor_{\O_X(V)} \O_X(U) \iso \shf(U)$ always injective?
+\end{question}
+\begin{Qanswer}
+No.
+
+Let $X=V$, $B= \Z$, $\shf= \widetilde{\Z/2\Z}$ and $U= D(2)$.
+Then the localization map 
+
+\[ \Z/2\Z \rightarrow (\Z/2\Z)_2 = 0\]
+is not injective. 
+
+\bigskip
+When is it?
+Let's go back to the general setting. 
+Only let $\restr{\shf}{V}= \widetilde{M}$ and $U= D(f)$ for some $f \in B$.
+Let $m\in M$. If $m \tensor 1 = 0$ in $M\tensor_B A$, then $f^n m = 0$ in $M$ for some $n\in \N$.
+Hence the localization map $M\rightarrow M\tensor_B A$ is not injective \iff $f\in \sqrt{\Ann(m)}$ for some $m\in M$.
+\end{Qanswer}
+
+
+%% Can a non-affine have a restrictive inclusion?
+\begin{question}
+Let $U \xrightarrow{f} \Spec B = V$ be an open immersion.
+Let $\shf=\widetilde{M}$ be a quasi-coherent sheaf on $V$, with $M$ a $B$ module. 
+If U is not affine, can $\shf(V)\tensor_{\O_X(V)} \O_X(U) \rightarrow \shf(U)$ be an isomorphism of $\O_X(U)$ modules?
+\end{question}
+\begin{Qanswer}
+No.
+\end{Qanswer}
+
+
+%% Does the inclusion functor from the neighbourhood site commute with sheafifying?
+\begin{question}
+Does the inclusion functor $N(y)\xrightarrow{i} \Op(X)$ commute with sheafifying?
+\end{question}
+\begin{Qanswer}
+No. Counterexample: 
+
+Let $X=\bigcup_{i=0}^2 [0,1]$. Let $y=(1,0)$. Consider the constant $\presheaf{F}=\Z$ presheaf on $\Op(X)$. 
+Then $\presheaf{F}^{++}(U)=\{ f:X\rightarrow \Z \mid f \mbox{ locally constant}\}$ for any open $U\subset X$.
+For example, the global sections are isomorp $\Z\times\Z\times \Z$.
+($\presheaf{F}\circ i$ is a constant presheaf. No object has the empty cover, so this presheaf is separated)
+Let $(x)_j$ be a matching family of $\presheaf{F}\circ i$ on $X$ indexed by $\{U_j\rightarrow X\}$.
+Hence $x_j\in \presheaf{F}(U_j)=\Z$ for every $j$. 
+Note that $U_j\cap U_i \neq \emptyset$ for every $i,j$, so since $(x)_j$ is matching: $x_{ij} = x_i = x_j=k \in \Z$.
+Hence the section $k\in \presheaf{F}(X)=\Z$ is the only amalgamation of this matching family. This shows that $(\presheaf{F}\circ i)^{++}(X)=\Z$.
+Therefore 
+\[(\presheaf{F}\circ i)^{++}(X) \neq (\presheaf{F}^{++} \circ i)(X),\]
+
+which disproves the statement.
+
+\end{Qanswer}
+
+\end{document}

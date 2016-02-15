@@ -1,0 +1,125 @@
+\input{preamble.tex}
+\begin{document}
+
+%%%%%%%%%%%  General %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% restriction & pullback
+Let $X = (\cat{C},\topo{T},\sheaf{O})$ be a ringed site.
+Let $\sheaf{F}$ be a presheaf on $\cat{C}$.
+Let $I_Z: \cat{C}/Z \rightarrow \cat{C}$ be the inclusion functor, where $\cat{C}/Z$ is the category over $Z$.
+Define the restriction $\sheaf{F}_Z$ of $\sheaf{F}$ to $\cat{C}/Z$ to be the presheaf $\sheaf{F} \circ I_Z$.
+Let $A \xrightarrow{g} B$ be a morphism in $\cat{C}$, 
+this induces a functor $G:\cat{C}/A \rightarrow \cat{C}/B$ that sends $X\xrightarrow{b} A$ to $X\xrightarrow{gb} B$. 
+Define $g^*$ to be the induced functor $ - \circ G: \presheafcat{\cat{C}/B} \rightarrow \presheafcat{\cat{C}/A}$ on presheafs. 
+Note that $I_B \circ G = I_A$ en hence $g^*(\sheaf{F}_B)= \sheaf{F}_B \circ G = \sheaf{F} \circ I_B \circ G = \sheaf{F} \circ I_A =\sheaf{F}_A$.
+
+%%%%% Neighbourhoods: make it pointless?
+Let $X$ be a topological space and $Open(X)$ the corresponding category/poset of open subsets.
+Let $y\in X$. Define $N(y)$ to be the full subcategory of $Open(X)$ with all neighbourhoods $U$ of $y$.
+
+%%%%%%%%%% def quasi-coherence %%%%%%%%%%%%%%%%
+\begin{definition}
+Let $\sheaf{F}$ be a sheaf of modules on $\cat{C}$.
+It is called \emph{quasi-coherent} if for any object $C\in\cat{C}$ 
+there exists a covering sieve $S$ such that for any map $f:A\rightarrow C$ in $S$ there exists a presentation
+\[\coproduct_I \sheaf{O}_A \rightarrow \coproduct_J \sheaf{O}_A \rightarrow \sheaf{F}_A \rightarrow 0\]
+\end{definition}
+
+Quasi-coherent modules form a full subcategory of the category of sheafs of modules denoted $\Qcoh{X}$.
+
+Note that if $\sheaf{F}$ has a presentation with respect to all maps in the covering sieve $S$,
+then it also has it for $g(S)$ with $g:B\rightarrow C$ arbitrary.
+Let $h:A\rightarrow B$ be in $g(S)$, then $gh \in S$ and we get a presentation 
+\[\coproduct_I \sheaf{O}_A \rightarrow \coproduct_J \sheaf{O}_A \rightarrow \sheaf{F} \rightarrow 0\]
+which is the property we want.
+
+%STACKS chapter on quasi-coherence
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%% Restrictiveness %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%def of a restrictive map
+\begin{definition}
+Let $f:C\rightarrow D$ be a map in $\cat{C}$.
+We call it \emph{restrictive} if for any quasi-coherent $\sheaf{F}$ the map
+\[\sheaf{F}(D)\xrightarrow{\sheaf{F}(f)} \sheaf{F}(C)\]
+induces an isomorphism
+\[\sheaf{F}(D)\tensor_{\sheaf{O}(D)}\sheaf{O}(C) \rightarrow \sheaf{F}(C).\]
+
+We call it \emph{restrictive} if for any quasi-coherent $\sheaf{F}$ on $\cat{C}/D$ the map
+\[\sheaf{F}(D)\xrightarrow{\sheaf{F}(f)} \sheaf{F}(C)\]
+induces an isomorphism
+\[\sheaf{F}(D)\tensor_{\sheaf{O}(D)}\sheaf{O}(C) \rightarrow \sheaf{F}(C).\]
+
+\end{definition}
+
+
+
+%%%%% def of global section functor
+\begin{definition}
+Define the global sections functor $\Gamma(-):\presheafcat{\cat{C}}\rightarrow Set$ as $\Hom{\ast}{- }$.
+Equivalently, one can define it as the limit of the diagram $\cat{C}\xrightarrow{\presheaf{G}} Set$ for any presheaf $\presheaf{G}$.
+Taking limits is functorial so this gives a functor.
+\end{definition}
+\begin{remark}
+The forgetful functor from rings, modules or abelian groups has a right adjoint so it commutes with limits.
+Hence if $\presheaf{G}$ takes values in the category of rings,
+modules or abelian groups, then the set $\Gamma(\presheaf{G})$ can be endowed with extra structure making it into the limit taken of
+rings, modules or abelian groups respectively. 
+\end{remark}
+
+%%%%% definition of tilde
+
+Let $X = (\cat{C},\topo{T},\sheaf{O})$ be a ringed site.
+
+\begin{definition}
+The \emph{tilde} functor 
+\[\widetilde{-}:\Gamma(\O)-Mod\rightarrow \presheafcat{\cat{C}}\]
+is 
+%%Def 1
+\[\widetilde{M}(A) = M \tensor_{\Gamma(\sheaf{O})} \sheaf{O}(A),\]
+\[\widetilde{M}( A\xrightarrow{f} B) = 
+(M \tensor_{\Gamma(\sheaf{O})} \sheaf{O}(B) 
+\xrightarrow{id \tensor \sheaf{O}(f)} 
+M \tensor_{\Gamma(\sheaf{O})} \sheaf{O}(A)).\]
+
+%%Def 2
+Denote by $C$ the constant functor sending a set, module or ring to the corresponding constant presheaf.
+Equivalent to the other definition is $\widetilde{-} = (\sheaf{O} \tensor_{C(\Gamma(\sheaf{O}))} C(-))$.
+
+Let $\pi: X \rightarrow 1$ be the map to the terminal site. 
+The terminal site is the terminal category, with one object and one morphism, with the maximal sieve as only covering sieve. 
+Make it into a ringed site with the sheaf $\ast \mapsto \Gamma(\sheaf{O})$. This makes our map $\pi$ a morphism of ringed sites.
+Note that any module on the terminal ringed site is quasi-coherent and is unique determined by where it sends $\ast$.
+Define the tilde functor as the left adjoint to $\circ \pi$, which exists since the category of modules has all small limits and colimits.
+\end{definition}
+
+%prove adjunction between tilde and global sections
+\begin{lemma}
+The functor $\widetilde{(-)}$ is left adjoint to $\Gamma(-)$.
+\end{lemma}
+\begin{proof}
+Proof: Let $M$ be a $\Gamma(\sheaf{O}$ module and $\presheaf{G}$ a \sheaf{O} module.
+\begin{align*}
+\Hom_{\Gamma(\sheaf{O})}{M,\Gamma(\presheaf{G})} & = \Gamma(\Hom_{\Gamma(\sheaf{O})}{M,-} \circ G)\\
+&= \Gamma(\Hom_{\sheaf{O}(-)}{M\tensor_{\Gamma(\sheaf{O})} \sheaf{O}(-),G(-)})\\
+&= \Gamma(\Hom_{\sheaf{O}}{\widetilde{M}, G})
+\end{align*}
+\end{proof}
+
+%Extend it to sheaves
+
+
+\begin{definition}
+An object $C\in\cat{C}$ is called \emph{affine}
+if the unit and co-unit in the adjunction $(\widetilde{-}, \Gamma{})$ are isomorphisms.
+\end{definition}
+
+%Definition of an affine object
+%Lemma: scheme is affine in this sense iff if it is affine in the usual sense
+%lemma: restrictive affine covering makes the co-unit an isomorphism
+
+Let $A\xrightarrow{g} B$ be a map in $X$. Let $A$ and $B$ be affine objects.
+Then $g$ is restrictive.
+
+\end{document}

@@ -1,0 +1,62 @@
+\input{../preamble.tex}
+\begin{document}
+
+
+\begin{lemma}
+A ring homomorphism $R\rightarrow S$ is faithfully flat \iff it is flat and $S\tensor M=0 \Rightarrow M=0$.
+\end{lemma}
+\begin{proof}
+Let our map be faithfully flat and $S\tensor M=0$. Then $0\rightarrow S\tensor M\rightarrow 0$ is exact. 
+Hence $0\rightarrow M\rightarrow 0$ is also exact.
+
+Let the other condition hold. 
+Let \[0\rightarrow M \rightarrow P \rightarrow Q \rightarrow 0 \] be a sequence.
+Let \[0\rightarrow S\tensor M \rightarrow S\tensor P \rightarrow S\tensor Q \rightarrow 0 \]
+be exact. Then $S\tensor\frac{ker}{im}=0$ in all 3 places, hence by our property $\frac{ker}{im}=0$ therefore the sequence is exact.
+\end{proof}
+\begin{theorem}
+Let $X=\Spec R$ be an affine scheme and $\sheaf{F}\iso \Lambda_X(M)$ an quasi-coherent sheaf.
+Then $H^1(\sheaf{F})=0$.
+\end{theorem}
+\begin{proof}
+Let
+
+\[0 \rightarrow \sheaf{F} \rightarrow \sheaf{G} \rightarrow \sheaf{H} \rightarrow 0\]
+
+be exact.
+Let $c\in \Gamma(\sheaf{H})$. There exists an cover $\{U_i\rightarrow X\}$ of $X$ such that we have a family $g_i\in \sheaf{G}(U_i)$ with $g_i\mapsto c$.
+If this family is compatible, we are done by the glueing axiom. If this family is not compatible, we will fix this with sections from $\sheaf{F}$.
+We will look for elements $f_i\in \sheaf{F}(U_i)$ such that $g_i-f_i=g_j-f_j$ on $U_{ij}$ for all $i,j$. 
+Then the new family $(g_i-f_i)$ is compatible and must map to $c$.
+
+The requirement $g_i-f_i=g_j-f_j$ is equivalent to $f_j-f_i=g_j-g_i=f_{ij}$. 
+The problem becomes: given $f_{ij}$ such that $f_{ij}+f_{jk}=f_{ik}$ on $U_{ijk}$ find $f_i\in\sheaf{F}(U_i)$ such that $f_i-f_j =f_{ij}$.
+
+Assume(without loss of generality) that the cover is a cover of distinguised opens.
+Translated to the module $M$: given $m_{ij}\in M_{f_if_j}$ such that $m_{ij}+m_{jk}=m_{ik}$ on $U_{ijk}$ find $m_i\in M_{f_i}$ such that $m_i-m_j =m_{ij}$.
+
+Let $S=\prod_i R_{f_i}$, this is a faithfully flat $R$-algebra.
+We want to prove that
+
+\[S\tensor M \xrightarrow{h} S\tensor S\tensor M \xrightarrow{k} S\tensor S\tensor S\tensor M \]
+\[h:s\tensor m \mapsto s\tensor 1 \tensor m - 1\tensor s\tensor m\]
+\[k:s\tensor r\tensor m \mapsto s\tensor r \tensor 1 \tensor m - s\tensor 1 \tensor r \tensor m + 1\tensor s \tensor r \tensor m\]
+
+is exact. All elements send to zero by the last map are exactly the families $(m_{ij})$ for which the cocyle condition holds.
+We will use that $S$ is faithfully flat and prove exactness of 
+
+
+\[S\tensor S\tensor M \rightarrow S\tensor S\tensor S \tensor M \rightarrow S \tensor S\tensor S\tensor S\tensor M \]
+\[S\tensor h:s\tensor t \tensor m \mapsto s\tensor t\tensor 1 \tensor m - s\tensor 1\tensor 1\tensor m \]
+\[S\tensor k:s\tensor r\tensor t \tensor m \mapsto s\tensor r \tensor  t \tensor 1 \tensor m - s\tensor r \tensor 1 \tensor t \tensor m + s\tensor 1 \tensor r \tensor t\tensor m.\]
+
+
+Let $s\tensor r\tensor t\tensor m\mapsto 0$. Then
+\[s\tensor r \tensor  t \tensor 1 \tensor m - s\tensor r \tensor 1 \tensor t \tensor m + s\tensor 1 \tensor r \tensor t\tensor m = 0,\]
+\[-sr \tensor  t \tensor 1 \tensor m + sr \tensor 1 \tensor t \tensor m = s\tensor r \tensor t\tensor m.\]
+
+Hence $s\tensor r \tensor t\tensor m$ is in the image of the first map. 
+\end{proof}
+
+Only used that any cover can be refined to a faithfully flat cover.
+\end{document}

@@ -1,0 +1,135 @@
+% custom commands
+\newcommand{\colim}[1]{\underset{#1}{colim}}
+\newcommand{\limit}[1]{\underset{#1}{lim}}
+\newcommand{\se}{\ensuremath{\subseteq}}
+\newcommand{\tbs}{\textbackslash }
+\newcommand{\sh}{\backslash}
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+  
+\newcommand\restrict{\restr}
+\newcommand{\iso}{\cong}
+\newcommand{\kr}{\mbox{Ker}}
+\newcommand{\im}{\mbox{Im}}
+\newcommand{\Sup}{\mbox{Supp}}
+\newcommand{\Ht}{\mathfrak{h}\mathfrak{t}}
+\newcommand{\Dim}[1]{\mbox{Dim}(#1)}
+\newcommand{\Span}[1]{\mbox{Span}_{#1}}
+\renewcommand{\deg}{\mbox{deg }}
+\newcommand{\eq}{\sim}
+\renewcommand{\to}{\mapsto}
+\newcommand{\givenby}{,\quad}
+\newcommand{\Spec}[1]{\mbox{Spec }{#1}}
+\newcommand{\Rspec}{\mbox{Rspec }}
+\newcommand{\Ann}{\mbox{Ann}}
+\newcommand{\Der}{\mbox{Der}}
+\newcommand{\Trdg}{\mbox{Tr.dg }}
+\newcommand{\Proj}{\mbox{Proj }}
+\newcommand{\Sp}{\mbox{sp }}
+\newcommand{\Hom}[2]{\mbox{Hom}(#1,#2)}
+%\newcommand{\Hom}[3]{\mbox{Hom}_{#1}(#2,#3)}
+\newcommand{\Dom}[1]{\mbox{Dom}(#1)}
+\newcommand{\coproduct}{\bigoplus}
+\newcommand{\product}{\prod}
+\newcommand{\presheafcat}[1]{\widehat{#1}}
+
+\newcommand{\Dist}{\mbox{\textbf{Dist}}}
+%Category theory
+
+\newcommand{\Sch}{\mbox{\textbf{Sch}}}
+\newcommand{\Rng}{\mbox{\textbf{Rng}}}
+\newcommand{\CmRng}{\mbox{\textbf{CmRng}}}
+
+\newcommand{\union}{\bigcup}
+\newcommand{\opUnion}{\cup}
+\newcommand{\match}[2]{\mbox{Match}(#1,#2)}
+\newcommand{\cov}{\mbox{Cov}}
+\newcommand{\Opp}[1]{{#1}^{Opp}}
+\newcommand{\Opposite}[1]{{#1}^{Opp}}
+
+% Differential operators
+\renewcommand\qedsymbol{\rule{1ex}{1ex}}
+\newcommand{\from}{\ensuremath{\colon}}
+\renewcommand{\iff}{if and only if }
+\newcommand{\tensor}{\otimes}
+\newcommand{\heq}{\simeq}
+\newcommand{\st}{\;|\;}
+
+
+\newcommand{\copresheaves}[1]{\cat{#1}^{+}}
+\newcommand{\presheaves}{\copresheaves}
+\newcommand{\contrapresheaves}[1]{\cat{#1}^{-}}
+\newcommand{\functors}[2]{[\cat{#1},\cat{#2}]}
+\newcommand{\opposite}[1]{\cat{#1}^{op}}
+\newcommand{\opp}{\opposite}
+\newcommand{\coyoneda}[1]{h_{#1}}
+\newcommand{\ynd}{\coyoneda}
+\newcommand{\y}{{h}}
+\newcommand{\contrayoneda}[1]{h^{#1}}
+\newcommand{\overcat}[2]{\cat{#1}_{#2}}
+\newcommand{\undercat}[2]{\cat{#1}^{#2}}
+\newcommand{\obj}[1]{Obj(\cat{#1})}
+\newcommand{\signature}[3]{#1:#2\rightarrow #3}
+\newcommand{\suchthat}{ \mid }
+\newcommand{\definedAs}{:=}
+\newcommand{\basis}{\topo}
+\newcommand{\intersect}{\cap}
+
+\newcommand{\Sets}{\cat{Set}}
+\newcommand{\opens}[1]{\mbox{Open}(#1)}
+\newcommand{\site}[2]{(\cat{#1}, \topo{#2})}
+\newcommand{\ringedspace}[2]{({#1}, {\sheaf{#2}})}
+\newcommand{\ringedsite}[3]{(\cat{#1}, \topo{#2}, {\sheaf{#3}})}
+% \newcommand{\ringedsite}[2]{({\cat{#1}}, {\sheaf{#2}})}
+
+\newcommand{\adjunction}[2]{{#1} \dashv {#2}}
+\newcommand{\mainadjunction}{\adjunction{\globalsections{\blank}}{\Tildefunctor{\blank}}}
+
+\newcommand{\Tildefunctor}[1]{\Lambda(#1)} %todo: shorten tildefunctor
+\newcommand{\sheaves}[1]{\mbox{Shv}(#1)}
+\newcommand{\sheafmodules}[1]{\mbox{Mod}(#1)}
+\newcommand{\qcoh}[1]{\cat{Qcoh}(\sheaf{#1})}
+\newcommand{\plus}[1]{{\presheaf{#1}}^+}
+\newcommand{\sheafify}[1]{a(\presheaf{#1})}
+\newcommand{\id}{\mbox{Id}}
+\newcommand{\blank}{{-}}
+\newcommand{\prshfs}[2]{\presheaves{#1}(\cat{#2})}
+\newcommand{\sections}[2]{\Gamma( #1 ; \presheaf{#2} )}
+\newcommand{\globalsections}[1]{\sections{\terminal}{#1}}
+
+\newcommand{\cover}[2]{\{ {#1} \rightarrow {#2}\}}
+
+\newcommand{\module}[1]{\sheaf{#1}}
+\newcommand{\terminal}{1}
+\newcommand{\initial}{0}
+
+\newcommand{\schemes}{\cat{Sch}}
+\newcommand{\affschemes}{\cat{AffSch}}
+
+\newcommand{\direct}[1]{{#1}_*}
+\newcommand{\inverse}[1]{{#1}^*}
+\newcommand{\forward}[1]{{#1}_!}
+\newcommand{\interhom}[2]{{#1}^{#2}}
+\newcommand{\modules}[1]{#1\text{-}\cat{Mod}}
+\newcommand{\pullback}[1]{{#1}^*}
+\newcommand{\unit}{\eta}
+\newcommand{\counit}{\epsilon}
+
+\newcommand{\domain}[1]{\mbox{Dom}(#1)}
+\newcommand{\codomain}[1]{\mbox{Codom}(#1)}
+\newcommand{\kernel}[1]{\mbox{Ker}(#1)}
+\newcommand{\cokernel}[1]{\mbox{Coker}(#1)}
+\newcommand{\image}[1]{\mbox{Im}(#1)}
+\newcommand{\coimage}[1]{\mbox{Coim}(#1)}
+
+\newcommand{\affspace}[1]{\A^{1}}
+\newcommand{\projspace}[1]{\P^{1}}
+
+\newcommand{\pt}{\ast}
+
+%\renewcommand{\if}{\mbox{ if }}
+\newcommand{\otherwise}{\mbox{ otherwise }}

@@ -1,0 +1,35 @@
+\subsection{basic categorical definitions}
+
+\begin{notation}
+Let $\cat{C}$ be a category.
+\end{notation}
+
+\begin{definition}[Presheaf categories and yoneda functors]
+
+Let $\cat{C}$ be a category. Then we define
+\[\presheaves{C} := \functors{\opp{C}}{Set},\]
+
+\[\contrapresheaves{C} := \functors{\opp{C}}{\opp{Set}} \iso \functors{C}{Set},\]
+
+and the functors 
+\[\coyoneda{C} : \cat{C} \rightarrow \copresheaves{C} \definedAs X \mapsto \Hom{-}{X},\]
+\[\contrayoneda{C} : \cat{C} \rightarrow \contrapresheaves{C} \definedAs  X \mapsto \Hom{X}{-}.\]
+
+Both these functors are fully faithfull by the Yoneda lemma.
+\end{definition}
+
+\begin{definition}[Over/Under categories]
+Let $\cat{C}$ and $\cat{C'}$ be categories. Let $F:\cat{C}\rightarrow \cat{C'}$ and $Z\in C'$. 
+Define the category $\overcat{C}{Z}$ and $\undercat{C}{Z}$ as follows
+\[\obj{\overcat{C}{Z}} := \{(X,u) \suchthat X\in \cat{C}, u:F(X)\rightarrow Z\},\]
+\[\Hom{(X,u)}{(Y,v)} := \{f:X\rightarrow Y \suchthat v\circ F(f) = u  \},\]
+
+and
+
+\[\obj{\undercat{C}{Z}} := \{(X,u) \suchthat X\in \cat{C}, u:Z\rightarrow F(X)\},\]
+\[\Hom{(X,u)}{(Y,v)} := \{f:X\rightarrow Y \suchthat F(f)u = v  \}.\]
+
+We get faithfull functors 
+$\overcat{C}{Z} \rightarrow \cat{C}: (X,u)\rightarrow X$ and 
+$\undercat{C}{Z} \rightarrow \cat{C}: (X,u)\rightarrow X$.
+\end{definition}

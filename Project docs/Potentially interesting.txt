@@ -1,0 +1,7 @@
+Injectives and adjoints: http://stacks.math.columbia.edu/tag/015Y
+properties of adjoints: http://stacks.math.columbia.edu/tag/0036
+Example where the sheaf hom is not quasi-coherent: https://math216.wordpress.com/2011/01/30/tenth-notes-quasicoherent-and-coherent-sheaves/
+Definition of global sections if terminal object is gone:http://ncatlab.org/nlab/show/limit
+Quasi-coherent modules: http://stacks.math.columbia.edu/tag/01BD
+Brown representability: https://ncatlab.org/nlab/show/Brown+representability+theorem
+Algebraic spaces:http://www.math.washington.edu/~braggdan/notes/Algebraic Spaces.pdf

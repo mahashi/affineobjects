@@ -1,0 +1,32 @@
+- sheafs commute with directed limits?
+Bewijs dat de sheafification eindige limiten bewaard
+Wat zijn de eisen op een preshoof op Aff om een schema te zijn? Gevraagd aan David holmes, geen fijn antwoord.
+What is the analogue of stalks in a ringed site? The stalk of an object A on a point x is the inverse image of A under this geometric morphism. 
+What is the analogue of the cokernel description for vector bundles?
+Is every qc sheaf a cokernel of locally free sheafs globally?
+What are the global sections of the sheaf of rings on a presheaf? Mathoverflow. http://mathoverflow.net/questions/204452/induced-topology-on-site-reconstructing-global-sections-of-a-scheme-orlov
+ - Why does the inverse image functor always have a left and right adjoint? SGA I 5.1 for construction.
+ -- Proof of the fact that restricting u_! to representables gives u.
+If you look at descent for qc sheafs on fpqc topology, are the image presheafs sheafified wrt this topology or the Zariski?
+
+
+Is there an elementary proof that only affine schemes are affine objects in the category of schemes?
+Are there any sites with no affine objects? Can such sites have non-quasi-coherent sheafs?
+
+
+Bewijs dat de sheafification eindige limiten bewaard
+Wat zijn de eisen op een preshoof op Aff om een schema te zijn? Gevraagd aan David holmes, geen fijn antwoord.
+What is the analogue of stalks in a ringed site? The stalk of an object A on a point x is the inverse image of A under this geometric morphism. 
+What is the analogue of the cokernel description for vector bundles?
+Is every qc sheaf a cokernel of locally free sheafs globally?
+What are the global sections of the sheaf of rings on a presheaf? Mathoverflow. http://mathoverflow.net/questions/204452/induced-topology-on-site-reconstructing-global-sections-of-a-scheme-orlov
+ - Why does the inverse image functor always have a left and right adjoint? SGA I 5.1 for construction.
+ -- Proof of the fact that restricting u_! to representables gives u.
+If you look at descent for qc sheafs on fpqc topology, are the image presheafs sheafified wrt this topology or the Zariski?
+
+
+Is there an elementary proof that only affine schemes are affine objects in the category of schemes?
+Are there any sites with no affine objects? Can such sites have non-quasi-coherent sheafs?
+When does a functor commute with sheafifying?
+When is f^*?
+For which maps does the affine scheme proof carry over?

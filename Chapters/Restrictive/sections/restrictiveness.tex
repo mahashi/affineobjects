@@ -1,0 +1,55 @@
+\begin{definition}[Restrictive functor]
+A functor  $f:\ringedsite{C}{T}{O} \rightarrow \ringedsite{D}{S}{U}$ between ringed sites is called restrictive if for every quasi-coherent module $\module{G}$ the co-unit induces an isomorphism 
+\[\module{G} \rightarrow \direct{f}\inverse{f}\module{G},\]
+\[\sections{\terminal}{G} \rightarrow \sections{\terminal}{\direct{f}\inverse{f}G} \iso \sections{\terminal}{\inverse{f}G}\]
+\[\sections{\terminal}{G}\tensor_{\sections{\terminal}{O}} \sections{\terminal}{U} \rightarrow \direct{f}\inverse{f}\module{G}.\]
+
+Note that 
+\end{definition}
+
+\begin{definition}[Restrictive morphism]
+A morphism $f:X\rightarrow Y\in \cat{C}$ is called restrictive if the induced functor
+\[\overcat{C}{X}\rightarrow \overcat{C}{Y}\] is restrictive.
+\end{definition}
+
+\begin{example}
+In $\schemes$, the morphism $\Spec{A_f} \rightarrow \Spec{A}$ is restrictive.
+%TODO: functor that is restrictive. Yoneda embedding? AffSch in Sch?
+\end{example}
+
+\begin{nonexample}
+The open immersion $\Spec{R^2}\setminus 0 \rightarrow \Spec{R^2}$ is not restrictive.
+The quasi-coherent sheaf $\Lambda(\frac{R[x,y]}{xy})$  fails to satisfy the condition from the definition.
+% TODO: right it out completely
+\end{nonexample}
+
+\begin{lemma}[Restrictive to affines]
+If $f:X\rightarrow \Spec{R}$ is a restrictive open immersion. 
+then $X$ is affine.
+%TODO: What is an open immersion categorically?
+\end{lemma}
+\begin{proof}
+%TODO
+\end{proof}
+
+% Q: Let $X$ be covered by $\Spec{R_{f_i}}$. Let $S$ be the set of these $f_i$ and then multiplicatively closed.
+% Make $S$ into a category as in http://math.stackexchange.com/questions/664471/represent-localization-as-a-direct-limit
+% Is $X$ the limit over this category?
+
+\begin{nonexample}[Affine non-restrictive map]
+Both canonical inclusions $\affspace{i} \rightarrow \projspace{i}$ are not restrictive.
+Look at the quasi-coherent module $\sheaf{O}(-1)$. There are no global sections but on every affine chart this invertible sheaf is trivial.
+\end{nonexample}
+
+%Q: Is restrictiveness preserved under pullback? 
+
+\begin{nonexample}
+Any inclusion $\Spec{\kappa(\Ip)} \rightarrow \projspace{1}$ is not restrictive. Look at $\sheaf{O}(-1)$.
+\end{nonexample}
+
+\begin{lemma}
+The composition of two restrictive functors is restrictive. If the composition $gf$ is restrictive, then $g$ is restrictive
+\end{lemma}
+\begin{proof}
+%TODO
+\end{proof}

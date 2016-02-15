@@ -1,0 +1,53 @@
+%Setting
+Let $L = (\R, O_R)$ be the real line with the euclidean topology and the sheaf of continuous real valued functions as structure sheaf.
+Let \[X = \frac{\bigcup_{i=0}^\infty L_i}{\sim}\] with $[i,x] \sim [j,y]$ \iff $i=j$ and $x=y$ or $y=x=0$. 
+The real lines are glued to each other at zero.
+Define the open $U_n\subset X$ as $U_n\cap L_i=(-\frac{1}{n},\frac{1}{n})$. 
+These opens form a basis of neighbourhoods of $0$.
+Let $f:\R\rightarrow \R$ be any continuous function such that $f(x)=0$ 
+if $x\in (-1,1)$ and $f(x)=1$ if $x\in (-\infty,-2)\cup (2,\infty)$.
+Let $f_n(x)=f(nx)$.
+
+%Define map
+Define the sheaf map 
+\[\coproduct_i O_R \xrightarrow{\alpha} \coproduct_{ij} O_R,\]
+\[e_i \mapsto \sum_{j} f_i \indicator_{L_j} e_{ij}.\]
+
+To proof that this is well-defined, we need to show that the sum $\sum_{j} f_i \indicator_{L_j} e_{ij}$ 
+is locally finite for every $i$.
+Let $[k,y]\in X$. If $y\neq 0$, then \[W_{[k,y]}=\{[k,z]\in X \mid z\in(y-\delta, y+\delta\}\subset L_k\] is open in $X$
+and $\alpha_{W_{[k,y]}}(e_i)  = f_ie_{ik}$ for any $\delta< \abs{\frac{y}{2}}$.
+If $y=0$, then $\alpha_{U_n}(e_i) = 0$ if $n>i$ because $f_i$ is zero on $U_n$.
+Hence we found a cover on which our sum is locally finite, which makes $\alpha$ well-defined.
+
+
+%Tilde and restriction commute
+Let $U$ be any open of any topological space $X$. 
+Let $\presheaf{F}$ be any presheaf.
+Consider the map of presheafs
+\[\restr{\presheaf{F}}{U}^{+}\xrightarrow{g} \restr{\presheaf{F}^{+}}{U}\]
+
+defined by the components
+
+\[g_V: \colim{S\in \cov(V)} \match{S}{F} \xrightarrow{\mbox{id}} \colim{S\in \cov(V)} \match{S}{F}.\]
+
+Every component is a isomorphism, hence $g$ is an isomorphism.
+
+%Domain&codomain are associated sheafs
+The adjunction $(\Lambda(-),\Gamma(X,-))$ implies that $\Lambda(-)$ commutes with arbitrary colimits.
+Moreover
+\[O_X \iso \Lambda(\Gamma(X,O_X))\]
+
+so
+
+\[\coproduct_i O_R \iso \Lambda(\coproduct_i \Gamma(X,O_X)).\]
+
+This shows that $\alpha$ is a morphism between associated sheafs.
+Let $\beta: \coproduct_i \Gamma(U,O_X)\rightarrow \coproduct_{ij} \Gamma(U,O_X)$ for some open $U$.
+Then $\Lambda(\beta)(e_i) = \sum_{j\in J_i} a_{ij} e_{ij}$ where $J_i$ is finite for every $i$.
+
+%Contradiction
+Assume that $\alpha = \Lambda(\beta)$ over some neighbourhood $U$ of $0$.
+Then there exists a $m$ such that $U_m\subset U$. Let $k>2m$.
+Then $f_k\neq 0$ on $U_m$, hence $f_k \indicator_{L_j}\neq 0$ on $U_m$ for every $j$ and so no co{\"e}fficients vanish of $\alpha_{U_m}(e_k) =\sum_{j} f_k \indicator_{L_j} e_{kj}$. 
+This contradicts $\alpha=\Lambda(\beta)$.

@@ -1,0 +1,58 @@
+\subsection{P1}
+%todo: better title
+
+Quasi-coherent modules on a scheme $X$ can be defined for affine schemes first and  as module sheaves that are $\tilde{M}$ for some $\pullback{f}\sheaf{O}$-module $M$ pulled back to every affine $\Spec{R}\xrightarrow{f} X$. 
+Let's consider the following conjecture. 
+
+\begin{conjecture}[P1]
+Let $a\in \cat{C}$.
+A sheaf module $\sheaf{F}$ on $\ringedsite{C}{T}{O}/a$ is quasi-coherent \iff $\sheaf{F}$ is quasi-coherent on $\ringedsite{C}{T}{O}/b$ for any affine $b\rightarrow a$
+\end{conjecture}
+
+\begin{remark}
+The only if direction always holds.
+\end{remark}
+
+\begin{definition}
+We say that a ringed site $\ringedsite{C}{O}{T}$ has \emph{enough affines} if any object has an affine covering $\cover{b_i}{a}$.
+\end{definition}
+
+\begin{lemma}[P1 holds with enough affines]
+P1 holds for any ringed site with enough affines.
+\end{lemma}
+
+\begin{proof}
+Quasi-coherence is a local property. So if every object admits a affine cover P1 holds.
+\end{proof}
+
+\begin{lemma}[Finite poset has enough affines]
+Any finite poset has enough affines.
+\end{lemma}
+
+\begin{proof}[NA-chain proof]
+\input{../proofs/finite-poset-has-enough-affines}
+\end{proof}
+
+\begin{lemma}[Non-quasi-coherent sheaf]
+Any category admits a non-quasi-coherent sheaf.
+\end{lemma}
+
+\begin{proof}
+\input{../examples/non-quasi-coherentsheaf}
+\end{proof}
+
+\begin{example}[Stacks 01BL example]
+\input{../examples/stacks-01BL}
+\end{example}
+
+\begin{example}[Category without enough affines \#1]
+\input{../examples/Ny}
+\end{example}
+
+\begin{example}[Category without enough affines \#1]
+%TODO
+\end{example}
+
+\begin{example}[General P1 does not hold]
+\input{../examples/counterexample-general-P1}
+\end{example}

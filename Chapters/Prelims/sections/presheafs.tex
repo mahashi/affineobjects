@@ -1,0 +1,149 @@
+\subsection{Presheaves}
+
+\begin{definition}[Presheaves]
+Let $\cat{A}$ be any category. An $\cat{A}$-valued presheaf $\presheaf{F}$ is a functor $\opposite{C} \rightarrow \cat{A}$. 
+The category $\functors{\opposite{C}}{\cat{A}}$ of all $\cat{A}$-valued presheaves is denoted $\prshfs{C}{A}$. 
+If $\cat{A} = \Sets$, we will use $\presheaves{C}$.
+\end{definition}
+
+When it is obvious which presheaf is under consideration, then $\presheaf{F}(f)$ 
+we be denoted as $\pullback{f}$.
+ 
+%%%%%%%%%%%%%%%%%  Section functors
+\begin{definition}[Sections functor]
+For any $X\in \cat{C}$ define the functor 
+\[\sections{X}{\blank}:\prshfs{C}{A}\rightarrow \cat{A}\]
+by
+\[\presheaf{F} \rightarrow \presheaf{F}(X).\]
+
+Let $L:I\rightarrow \cat{C}$ be diagram and assume that $\colim{\ynd{\blank}\circ L}$ exists in $\prshfs{C}{A}$.
+Define 
+\[\sections{\colim{i\in I}L(i)}{\blank}: \prshfs{C}{A} \rightarrow \cat{A}\]
+by
+\[\presheaf{F} \rightarrow \Hom{\colim{i\in I}L(i)}{\presheaf{F}} = \limit{i\in I}\Hom{L(i)}{\presheaf{F}}.\]
+
+By definition of the colimit these definitions coincide when the colimits exists in $\cat{C}$.
+\end{definition}
+
+\begin{example}
+As we will see, $\presheaf{C}$ is (co)complete so even if $\cat{C}$ does not have a terminal object, we can still compute the 'global sections'.
+\end{example}
+
+
+%%%%%%%%%%%%%%%%% Transfering properties from target category
+\begin{lemma}[Complete]
+If $\cat{A}$ complete (or cocomplete) then $\prshfs{C}{A}$ is and all sections functors commute with arbitrary limits and colimits.
+\end{lemma}
+\begin{proof}
+Let $I\rightarrow \prshfs{C}{A}$ be an diagram, with $i\mapsto \presheaf{F}_i$.
+Then the presheaves $U\mapsto \limit{i\in I} F_i(U)$ and $U\rightarrow \colim{i \in i} F_i(U)$ are the limit and colimit of this diagram.
+\end{proof}
+
+\begin{lemma}[Abelian/Grothendieck]
+If $\cat{A}$ abelian (or Grothendieck) then $\prshfs{C}{A}$ is.
+\end{lemma}
+\begin{proof}
+Let $f,g:\presheaf{F} \rightarrow \presheaf{G}$. Let $U\in \cat{C}$.
+The sum $f+g$ will be defined such that all section functors are additive. Hence $(f+g)_U =f_U+g_U$, this completely determines $f+g$. Note that this makes $f+g$ into an actual morphism of presheaves because composition is bilinear in $\cat{A}$.
+
+Define $\kernel{f} \rightarrow \presheaf{F}$ to be $U \mapsto \kernel{f_U}$
+and $\cokernel{f} \rightarrow \presheaf{F}$ to be $U \mapsto \cokernel{f_U}$.
+Since $\cat{A}$ is abelian we have $\image{f} = \coimage{f}$.
+By the previous lemma $\prshfs{C}{A}$ has direct sums. It also has a zero object which is the presheaf $U\mapsto 0$.
+
+Hence $\prshfs{C}{A}$ is abelian as defined in tag 0109 of stacks.
+
+Assume $\cat{A}$ is also Grothendieck. Note that the section functions $\sections{U}{\blank}$ have adjoints : %TODO
+Then using this the family $\{c_!G: c\in \cat{C}\}$ is a small generating family. Taking the colimit over this family provides us with a generator in $\prshfs{C}{A}$.
+
+Exactness and taking colimits both are determined pointwise, so directed colimits aka direct limits are exact because they are in $\cat{A}$.
+
+%bserve that the functor F↦Fc:[C,D]→DF↦Fc:[C,D]→D has a left adjoint c!:D→[C,D]c!:D→[C,D], and using adjointness, if GG is a generator in DD, then the family {c!G:c∈obC}{c!G:c∈obC} is a small generating family in [C,D][C,D].
+\end{proof}
+
+\begin{remark}
+So $\presheaves{C}$ is a Grothendieck category.
+\end{remark}
+
+%%%%%%%%%%%%%%%%% Direct image/ Inverse image
+\begin{definition}[direct image]
+Let $f:\cat{C}\rightarrow \cat{D}$ and $X\in \cat{C}$. 
+Define the direct image $\direct{f}$ of $\presheaf{F}\in \prshfs{C}{A}$ to be 
+\[\direct{f}(F) = \presheaf{F} \circ f.\]
+\end{definition}
+
+\begin{lemma}[direct image commutes with limits]
+$\direct{f}$ commutes with limits.
+\end{lemma}
+\begin{proof}
+Let $\presheaf{G}=\limit{i\in I} \presheaf{F}_i$ be a limit of presheaves.
+Let $X\in \cat{C}$. Then 
+$\direct{f}\presheaf{G}(X) = \presheaf{G}(f(X)) = \limit{i\in I} \presheaf{F}_i(f(X)) = (\limit{i\in I} \direct{f}\presheaf{F}_i)(X)$. 
+Hence $\direct{f}$ commutes with limits and this also holds for colimits.
+\end{proof}
+
+\begin{definition}[Inverse image, direct image \& push-forward]
+Define the inverse image $\inverse{f}$ of $\presheaf{F}\in \prshfs{D}{A}$ to be 
+\[\inverse{f}(F)(X) = \colim{(Y,u)\in \overcat{C}{X}} \presheaf{F}(Y).\]
+
+Define the pushforward $\forward{f}$ of $\presheaf{F}\in \prshfs{D}{A}$ to be 
+\[\forward{f}(F)(X) = \limit{(Y,u)\in \undercat{C}{X}} \presheaf{F}(Y).\]
+
+Now $\inverse{f}$ is left adjoint to $\inverse{f}$ and $\forward{f}$ is right adjoint to $\inverse{f}$ by construction.
+This is a general construction to get adjoints, which works now because the indexing categories are small and the target contains all small (co)limits.
+
+See Stacks Tag 09YX for a different existence lemma for the push-forward.
+\end{definition}
+
+%%%%%%%%%%%%%%%% Restricting and extending
+Assume $\cat{C}$ has binary products.
+\begin{definition}
+Let $j_X:\overcat{C}{X}\rightarrow \cat{C}$ be the projection.
+Let $i_X:\cat{C}\rightarrow \overcat{C}{X}$ be defined by
+\[V\mapsto (U\times V,p_0)\]
+
+We will use $\restrict{F}{X}=\direct{j_X} \presheaf{F}$.
+\end{definition}
+
+\begin{lemma}
+Let $\presheaf{F}\in \prshfs{C}{A}$ and let $\presheaf{G}\in \prshfs{X}{A}$
+\[ \direct{j_X}\presheaf{F}(V\rightarrow X) = \presheaf{F}(V),\]
+\[\inverse{j_X}\presheaf{G}(V) = \coproduct_{s\in \Hom{V}{X}} \presheaf{F}(V\xrightarrow{s} X)\]
+\[\forward{j_X}\presheaf{G}(V) = \presheaf{F}(X\times V \rightarrow X)\]
+\end{lemma}
+
+%%%%%%%%%%%%%%% Closed Monoidal structure
+
+%% Internal Hom
+%% Vermoeden: alleen aanname dat \cat{A} zelf monoidal is nodig.
+% http://ncatlab.org/nlab/show/closed+monoidal+structure+on+presheaves
+\begin{definition}[Internal Hom]
+Let $\presheaf{F},\presheaf{G}\in \prshfs{C}{A}$. 
+Define $\interhom{F}{G}$ to be the presheaf $X \mapsto \Hom{\restrict{\presheaf{F}}{X}}{\restrict{\presheaf{G}}{X}}$.
+For $\cat{A} = \Sets$ or $\cat{A} = \modules{R}$, we have $\interhom{F}{G} \in \prshfs{C}{A}$.
+
+If we assume that the representable sheaves are $\cat{A}$-valued, then we can also define
+
+\[\interhom{F}{G}(X) = \Hom{\presheaf{F}\times \ynd{X}}{\presheaf{G}}.\]
+
+These two definitions are equal because the following functions are inverses of each other:
+\[r\mapsto (U:a\mapsto r(a,k)) \mbox{ where } U\xrightarrow{k} X,\]
+\[s\mapsto (U:(a,b)\mapsto s(a)).\]
+
+\end{definition}
+
+\begin{definition}[Monoidal structure]
+Let $\presheaf{F},\presheaf{G}\in \prshfs{C}{A}$. Let $\cat{A}$ have a monoidal structure.
+Define $\presheaf{F}\tensor \presheaf{G}$ as $X \mapsto \presheaf{F}(X) \tensor \presheaf{G}(X)$
+\end{definition}
+
+\begin{lemma}[Adjunction/monoidal closed structure]
+Let $\presheaf{F}$ be fixed. Then $\blank \tensor \presheaf{F}$ is left adjoint to $\Hom{\presheaf{F}}{\blank}$.
+\end{lemma}
+
+
+%%%%%%%%%%%%%%% Stalks
+
+%%%%%%%%%%%%%%% Rings
+
+%%%%%%%%%%%%%%% Modules

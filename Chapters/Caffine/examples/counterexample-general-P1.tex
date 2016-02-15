@@ -1,0 +1,21 @@
+The category $C$ is $\Z \times \Z$ with the usual ordering.
+An element $(i,j)$ is only non-trivially covered by $\{(i,j-1)\rightarrow (i,j),(i-1,j)\rightarrow (i,j)\}$.
+Let $k$ be any field.
+Let $R = k[x_{ij}| i,j\in \Z]$. 
+Define the structure sheaf as $O(i,j) = R[x_{kl}^{-1}| i\leq k \; \& \; j \leq l]$.
+
+Fix $(a,b)\in C$. Consider the over category $C\downarrow (a,b)$ at this point.
+Let $(i,j)\rightarrow (a,b)$ be an object of $C\downarrow (a,b)$.
+Define the presheaf of modules $F(i,j)= O(i,j)/(x_{a-1,b}x_{a,b-1})$ on $X$.
+Then $a > i$ or $b > j$ or ($i=a$ and $j=b$).
+If $a>i$ or $b>j$, then $x_{a-1,b}$ or $x_{a,b-1}$ is invertible in $O(i,j)$, hence $F(i,j) = 0$ in both cases.
+This presheaf is zero everywhere except at $(a,b)$, hence sheafifies to the zero sheaf.
+In other words: $\Lambda{(\frac{O(a,b)}{(x_{a-1,b}x_{a,b-1})})} = 0$, where $\Lambda$ is the 'tilde' functor.
+Hence $(a,b)$ is not affine, which shows that $C$ has no affine objects.
+
+Consider $G = O(i,j)[y_{kl}| k\leq i \; \& \; l \leq j]$. 
+Let $\coproduct_{k\in I} O \xrightarrow{\alpha} G$ be any sheaf map.
+Let $\alpha_{00}(e_k)$ be the image of the generators $e_k\in \coproduct_{k\in I} O$ in the global sections. 
+The section $y_{1,1}\in G(1,1)$ cannot be written as a finite sum $\sum_k \lambda_k \alpha_{00}(e_k)$ 
+for scalars $\lambda_k\in O(i,j)$ for any $(i,j)$.
+This shows that $\alpha$ is not surjective hence $G$ is not quasi-coherent(locally presentable).
