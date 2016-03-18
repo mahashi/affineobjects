@@ -1,30 +1,44 @@
 Let $\module{F}$ be a quasi-coherent module on $\overcat{C}{a}$.
-We have to show that $\sections{a}{F} \tensor_{\sections{a}{O}} \sections{b}{O} \xrightarrow{f} \sections{b}{F}$ is an isomorphism, 
-where $k$ is the adjunct of $\module{F}(f)$ with respect to the adjunction between restricting scalars and extending scalars along the map 
-$\sections{a}{O} \rightarrow \sections{b}{O}$. More concretely, 
+We have to show that $\sections{a}{F} \tensor_{\sections{a}{O}} \sections{b}{O} \xrightarrow{k} \sections{b}{F}$ is an isomorphism. 
+The map $k$ is the adjunct of $\module{F}(f)$ with respect to the adjunction between restricting scalars and extending scalars along the map 
+$\sections{a}{O} \rightarrow \sections{b}{O}$. 
+More concretely, this map is
 
 \[k: x \tensor m \mapsto \module{F}(f)(x)m.\]
 
-Since $a$ is caffine, $\module{F}= \Tildefunctor{\globalsections{F}}$.
-Since $\Tildefunctor = \sheafify{\blank} \circ \Kappa{\blank}$, we know that $\module{F}$ is the sheafification of $c \rightarrow \sections{a}{F} \tensor_{\sections{a}{O}} \sections{c}{O}$.
+The argument will go as follows. 
+First we observe that the morphism $\counit_{\module{F}}:\module{F} \rightarrow \Tildefunctor{\globalsections{F}}$ is an isomorphism because $a$ is caffine.
+Second $i_{a}:\Kappa{\globalsections{F}}(a) \rightarrow \Tildefunctor{\globalsections{F}}(a)$ is an isomorphism by lemma .. . 
+This holds for any caffine objects, so also for $b$. 
+The consequence is that $\Kappa{\globalsections{F}}(f) = i_b^{-1} \module{F}(f) \circ i_a$, by naturality of the transformation 
+$i: \Kappa{\globalsections{F}}\rightarrow \module{F}$.
+Third, show that $\Kappa{\globalsections{F}}(f)$ has an isomorphism as adjunct along the same extension/restriction adjunction. Call this adjunct $k'$.
+Fourth, use naturality of adjunction bijections to conclude that $k$ must also be an isomorphism.
+
+Since $a$ is caffine, $\module{F} = \Tildefunctor{\globalsections{F}}$.
+Since $\Tildefunctor{\blank} = \sheafify{\blank} \circ \Kappa{\blank}$, we know that $\module{F}$ is the sheafification of the presheaf 
+\[\Kappa{\globalsections{F}} = c \rightarrow \sections{a}{F} \tensor_{\sections{a}{O}} \sections{c}{O}.\]
 Set $M = \sections{a}{F}$.
 
-Define $k´: \sections{a}{\Kappa{M}} \tensor_{\sections{a}{O}} \sections{b}{O} \rightarrow \sections{b}{\Kappa{B}}$
-By $k':x \tensor m \mapsto \kappa{F}(f)(x) m$.
-If you unfold the constructions, it follows that $k'(x\tensor m) = x\tensor m \in \sections{b}{\Kappa{B}} = M \tensor \sections{b}{O}$ is actually the identity.
+Define $k': \sections{a}{\Kappa{M}} \tensor_{\sections{a}{O}} \sections{b}{O} \rightarrow \sections{b}{\Kappa{M}}$
+By $k':x \tensor m \mapsto \Kappa{M}(f)(x) m$.
+If you unfold the constructions, it follows that 
+\[k'(x\tensor m) = x\tensor m \in \sections{b}{\Kappa{M}} = M \tensor \sections{b}{O}\]
+ is actually the identity.
 
+We will prove that $
 A) The component at a caffine object of the unversal sheafification morphism $i$ is an isomorphism
-As is stated in lemma .. , we have $\globalsections{i} = \counit{\Tildefunctor{\blank}}$. 
+As is stated in lemma .. , we have $\globalsections{i} = \counit_{T,a}$. 
+Hence when $a$ is caffine then $\globalsections{i}$ on is an iso.
+Note that $\globalsections{i}:\cat{C}/x \rightarrow \modules{\sheaf{O}(x)}$ is equal to $\sections{x}{i}: \cat{C}{y} \rightarrow \
 
-Note that the sheafification morphism $i: \Kappa{M} \rightarrow \Tildefunctor{M}$ is the adjunct of the identity $\Tildefunctor{M} \rightarrow \Tildefunctor{M}$ along the sheafification adjunction. So taking the adjunct of $i$ along the $\adjunction{\Kappa}{\globalsection{\blank}}$ yields the adjunct of the identity along the $\mainadjunction$, because $\Tildefunctor = \Kappa \circ \globalsections{\blank}$. which is the counit.
-Note that $\globalsections$ is full,
-
-at $\terminal$ has as adjunct the co-unit of $\mainadjunction$, by moving $\Kappa$ to the right to get $\counit: M \rightarrow \globalsections{\Tildefuntor{M}}$. 
-Since the global sections on presheaves are an equivalence of categories it reflects isos. So $i$ is an iso for any caffine object.
-
+%By naturality of the universal sheafification transformation $i$, $\sections{a}{i}$ is an iso for all caffine $a$. 
 
 
 B) Adjunction bijection respects composition with isos
+We have now that $\Kappa{M}(f) = i_b^{-1} \circ \Tildefunctor{F}(f) \circ i_a$. Let $F$ be the bijection from the adjunction $\mainadjunction$.
+Then $
+
 C) Hence $k$ is also an iso.
 
 
@@ -50,3 +64,6 @@ because the triangle
 
 must commute by naturality. This is exactly the component of the unit $\eta$ of the $\mainadjunction$ on $\site{C}{T}{O}/b$ for $\sections{a}{F} \tensor \sections{b}{O}$.
 Since $b$ is caffine, this is an isomorphism by assumption.
+
+Let $\ringedsite{C}{T}{O}$ be a ringed site.
+Let $R=\globalsections{O}$. Let $a\in C$ and $f:x\rightarrow y \in C$.

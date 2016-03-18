@@ -1,0 +1,48 @@
+The functor $\pshtilde$ is left adjoint to $\globalsections{\blank}:\pshmodules{Y} \rightarrow \modules{R}$.
+
+Let $a$ be an object of $C$ and $f:a \rightarrow 1$.
+Let $M,N$ be $R$-modules. 
+Let $\presheaf{F},\presheaf{G} \in \pshmodules{Y}$ be presheaf modules.
+
+Let $\varphi:\pshtilde{M} \rightarrow \presheaf{G}$ be a morphism of presheaf modules.
+Let $\phi:\M \rightarrow \globalsections{G}$ be a morphism of presheaf modules.
+Define 
+\[\alpha = H_{M,\presheaf{G}}: \Hom{\pshtilde{M}}{\presheaf{G}} \rightarrow \Hom{M}{\globalsections{G}}\]
+by
+\[ \alpha(\varphi) = \globalsections{\varphi}.\]
+
+Define $\beta = L_{M,\presheaf{G}}:\Hom{M}{\globalsections{G}} \rightarrow \Hom{\pshtilde{M}}{\presheaf{G}}$ by
+\[ \beta(\phi)_a = \phi \tensor_R \sections{a}{O}.\]
+
+%These are mutually inverse for any $M$ and $\presheaf{G}$ and natural in these two arguments.
+Let $d = \beta(\alpha(\varphi)$. 
+Let $g \tensor m \in M \tensor_R \sections{a}{O}$.
+Then $d_a(g \tensor m) = \globalsections{\varphi}(m) \tensor g$
+and 
+\begin*{align}
+	\varphi_a(g \tensor m) &=  g \varphi_a(1 \tensor m) \reason{linearity}\\
+		&= g \varphi_a(\pshtilde(M)(f)(m))
+		&= g \presheaf{G}(f)(\globalsections{\varphi}(m)) \reason{naturality of \varphi}\\
+		&= g (\globalsections{\varphi}(m) \tensor 1) \\
+		&= \globalsections{\varphi}(m) \tensor g.
+\end{align}
+
+Hence $d = \varphi$. 
+In words, the natural transformations from presheaves of the from $\pshtilde(M)$ are unique determined by their global sections component.
+
+Let $p = \alpha(\beta(\phi))$. 
+Let $m \in M$.
+Then $p(m) = (\phi \tensor_R R)(m) = \phi(m)$.
+Hence $p = \phi$, which makes $H$ and $L$ mutual inverses.
+
+%Naturality in M and \presheaf{G}
+
+Let $g:N\rightarrow M$ and $h:\presheaf{F} \rightarrow \presheaf{G}$.
+Let $\rho \in \Hom{\pshtilde(N)}{\presheaf{F}}$.
+Let $k = H_{M,\presheaf{G}} (h \circ \rho \circ \pshtilde(f))$.
+Let $l = \globalsections{h} \circ H_{N,\presheaf{F}}(\rho) \circ f$.
+
+We have $k = \globalsections{h}\globalsections{\rho}f$
+and $l(m) = \globalsections{h}\globalsections{\rho}f$.
+This proves naturality in $M$ and $\presheaf{G}$ and the adjunction between $\pshtilde$ and $\globalsections{\blank}$.
+

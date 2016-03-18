@@ -1,0 +1,44 @@
+Let $C,D,E$ be categories. Let $c\in C, d\in D, e\in E$.
+Let $F:C \rightarrow D$ and $G:D \rightarrow E$ be functors.
+Let $H:E \rightarrow D$ and $K:D \rightarrow C$ be functors.
+Assume that $\adj{F}{K}$ and $\adj{G}{H}$ are adjunction with adjunction bijections $B$ and $T$ respectievely.
+
+%To proof: G \circ F is left adjoint to K \circ H
+
+By using the bijections from the two adjunctions, we get
+\begin*{align}
+\Hom{GF(c)}{e} & \iso \Hom{F(c)}{H(e)},\\
+	& \iso \Hom{c}{KH(e)}.\\
+\end{align}
+
+Call this isomorphism $H_{c,e} = B_{c,H(e)} \circ T{F(c),e}$. 
+We need to prove naturality in $c$ and $e$.
+Let $f:c'\rightarrow c$ and $g:e'\rightarrow e$.
+
+Consider the following diagram.
+
+\begin{center}
+	\begin{tikzpicture}[]
+		\node (lu) {$\Hom{GF(c')}{e}$}
+		\node (mu) [right of = lu] {$\Hom{F(c')}{H(e)}$} 
+		\node (ru) [right of = mu] {$\Hom{c'}{KH(e)}$}
+		\node (ld) {$\Hom{GF(c)}{e'}$}
+		\node (md) [right of = ld] {$\Hom{F(c)}{H(e')}$} 
+		\node (rd) [right of = md] {$\Hom{c}{KH(e')}$}
+
+		\draw[->] (lu) to node {$T{F(c'),e}$} (mu)
+		\draw[->] (mu) to node {$B_{c',H(e)}$} (ru)
+
+		\draw[->] (ld) to node {$T{F(c),e'}$} (md)
+		\draw[->] (md) to node {$B_{c,H(e')}$} (rd)
+
+		\draw[->] (ld) to node {$GF(f),g$} (lu)
+		\draw[->] (md) to node {$F(f), H(g)$} (mu)
+		\draw[->] (rd) to node {$f,KH(g)$} (ru)
+	\end{tikzpicture}
+\end{center}
+
+The commutativity of the outer diagram is what we want to prove.
+The two inner diagrams commute because they are the naturality squares for the given adjunctions, hence the outer diagram commutes.
+
+\begin

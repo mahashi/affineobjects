@@ -1,0 +1,13 @@
+Done - Define Kappa        
+Done - Kappa is ff
+Done - Proof adjunction Kappa with globalsections
+Done - Changed xymatrix in definition of presheaf modules
+Done - Define Lambda
+Done - Proof composition of adjunctions fact
+Done - conclude that Lambda is the adjunct of globalsections composed with i
+
+- Setup functor macros that work without parameters
+- Define natural transformations and their notation
+- Define globalsections functor and say that we suppress the composition with the inclusion functor.
+- Give explicitely the unit-counit for pstilde and stilde
+- Proof the counit of stilde is the globalsections component of the sheafification functor
