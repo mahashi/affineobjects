@@ -1,0 +1,14 @@
+\begin{definition}[Grothendieck Topology]
+A Grothendieck topology $\topo{T}$ is a family $\topo{T}(a)$ 
+of 'covering' sieves for every $a\in \cat{C}$ with the following conditions:
+\begin{itemize}
+\item  $\maxsieve{a} \in \topo{T}(a)$
+\item $f^*R\in \topo{T}(a')$ if $R\in \topo{T}(a)$ 
+for any $f:a'\rightarrow a$
+\item if $f^*R\in \topo{T}(a')$ for all $f\in S$ 
+with $S\in \topo{T}(a)$ then $R\in \topo{T}(a)$
+\end{itemize}
+%Note that if $f\in R$ then $f^*R = \maxsieve{a'}$. 
+%So if $R\subset S$ and $R$ is covering then $S$ is covering. 
+%Also $R\intersect S$ is covering \iff $R$ and $S$ are covering.
+\end{definition}

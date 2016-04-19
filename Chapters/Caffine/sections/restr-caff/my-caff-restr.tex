@@ -1,0 +1,21 @@
+\begin{proof}
+Consider
+ \begin{center}
+ 	\begin{tikzcd}[row sep = large, column sep = large]
+ 		\restrictOpt{b}{\stilde{M}}
+ 		& \stilde( M \tensor \sections{b}{O}) \arrow{l}{s} \\
+ 		\pstilde( M \tensor \sections{b}{O}) \arrow{u}{\restrictOpt{b}{i}} \arrow{ru}{j}
+ 	\end{tikzcd}
+ \end{center}
+
+The natural transformation $j$ is the universal sheafification morphism coming from $\sheafify_b$.
+We have seen that $\sections{b}{j}$ and $s$ are isomorphisms
+
+Let $g: c \rightarrow b$.
+Let $x = m \tensor r \in \pstilde( M \tensor \sections{c}{O})$.
+Then $j_g(x) = (x_{i})$ indexed by the maximal sieve on $g$
+and $i_g(x) = i_{fg}(x) = (x_{i})$ indexed by the maximal sieve on $gf$.
+Hence we get  $s_g(j_g(x)) = i_g(x)$, so the triangle commutes.
+Evaluating everything on the terminal, in this case on $b$, 
+shows that two out of three maps are isomorphisms, hence $i_b$ is an isomorphism.
+\end{proof}

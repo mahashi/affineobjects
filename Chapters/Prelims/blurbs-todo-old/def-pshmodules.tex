@@ -1,4 +1,4 @@
-Let $Y = \ringedsite{X}{T}{O}$ be a ringed site.
+Let $Y = \rsite{X}{T}{O}$ be a ringed site.
 Let $R = \globalsections{O}$.
 
 A presheaf module on $Y$  is a presheaf of sets $\presheaf{F}$ on $\cat{X}$ together with a map of presheaves
@@ -10,7 +10,7 @@ defines a $\sections{a}{O}$-module structure on $\sections{a}{F}$.
 A morphism $$\presheaf{F} \rightarrow \presheaf{G}$$ is a morphism of presheaf modules if 
 
 \begin{center}
-	\begin{tikzpicture}[]
+	\begin{tikzpicture}[node distance=2cm, auto]
 		\node (lu) {$\presheaf{O} \times \presheaf{F}$}
 		\node (ru) [right of = lu] {$\presheaf{F}$}
 		\node (lb) [below of = lu] {$\presheaf{O} \times \presheaf{G}$}
@@ -22,5 +22,6 @@ A morphism $$\presheaf{F} \rightarrow \presheaf{G}$$ is a morphism of presheaf m
 		\draw[->] (ru) to node (rb)
 	\end{tikzpicture}
 \end{center}
+
 commutes.
 The category of presheaf modules on $Y$ will be denoted $\pshmodules{Y}$.

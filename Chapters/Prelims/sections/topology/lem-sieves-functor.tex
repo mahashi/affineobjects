@@ -1,0 +1,21 @@
+\begin{lemma}
+Let $X, X'$ be a category.
+Let $F:X\rightarrow X'$.
+Let $f\in X$ be faithfull.
+Let $S$ be a collection of sets indexed by the objects of $X$
+and $S(b)$ be a subset of $\Hom{b}{f}$.
+Then $F(S)$ is a sieve on $F(f)$ \iff $S$ is a sieve on $f$.
+\end{lemma}
+
+\begin{proof}
+=>:
+Let $h: b \rightarrow f \in S$ 
+and $k: d \rightarrow b$ be arbitrary.
+By assumption $F(hk)\in F(S)$.
+The functor $F$ is faithfull, so $hk \in S$.
+
+<=:
+Let $h: b \rightarrow F(f) \in F(S)$ 
+and $k: d \rightarrow b$ be arbitrary.
+%FOUT
+\end{proof}

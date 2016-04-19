@@ -1,6 +1,6 @@
         %%%%%%%%%%%%
-		% PACKAGES %
-		%%%%%%%%%%%%
+    % PACKAGES %
+    %%%%%%%%%%%%
 
 % book example for classicthesis.sty
 \documentclass[
@@ -19,7 +19,10 @@
 \setlength{\parskip}{2.5mm}
 \usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
+% \usepackage{tikz}
 \usepackage{tikz-cd}
+% \usetikzlibrary{external}
+% \tikzexternalize
 \usepackage{hyperref}
 \usepackage{verbatim}
 \usepackage{amsmath, amsthm, amsfonts, mathrsfs,bbm}
@@ -29,13 +32,13 @@
 \usepackage{eulervm}
 \usepackage{concrete}
 \usepackage{wasysym}
+\usepackage{xparse}
 %\usepackage[linedheaders,parts,pdfspacing]{classicthesis}
 
-		%%%%%%%%%%
-		% MACROS %
-		%%%%%%%%%%
+    %%%%%%%%%%
+    % MACROS %
+    %%%%%%%%%%
 
-% Dit is beter dan environments
 \newcounter{dummy}
 \theoremstyle{plain}% default
 \newtheorem{theorem}{Theorem}
@@ -217,6 +220,8 @@
 \newcommand{\contrayoneda}[1]{h^{#1}}
 \newcommand{\overcat}[2]{\cat{#1}_{#2}}
 \newcommand{\undercat}[2]{\cat{#1}^{#2}}
+\newcommand{\oversite}{\overcat}
+\newcommand{\undersite}{\overcat}
 \newcommand{\obj}[1]{Obj(\cat{#1})}
 \newcommand{\signature}[3]{#1:#2\rightarrow #3}
 \newcommand{\suchthat}{ \mid }
@@ -228,23 +233,69 @@
 \newcommand{\opens}[1]{\mbox{Open}(#1)}
 \newcommand{\site}[2]{(\cat{#1}, \topo{#2})}
 \newcommand{\ringedspace}[2]{({#1}, {\sheaf{#2}})}
-\newcommand{\ringedsite}[3]{(\cat{#1}, \topo{#2}, {\sheaf{#3}})}
-% \newcommand{\ringedsite}[2]{({\cat{#1}}, {\sheaf{#2}})}
+\newcommand{\rsite}[3]{(\cat{#1}, \topo{#2}, {\sheaf{#3}})}
+
+% \newcommand{\rsite}[2]{({\cat{#1}}, {\sheaf{#2}})}
 
 \newcommand{\adjunction}[2]{{#1} \dashv {#2}}
-\newcommand{\mainadjunction}{\adjunction{\globalsections{\blank}}{\Tildefunctor{\blank}}}
+\newcommand{\adj}{\adjunction}
+\newcommand{\mainadjunction}{\adjunction{\globalsections{\blank}}{\stilde{\blank}}}
 
-\newcommand{\Tildefunctor}[1]{\Lambda(#1)} %todo: shorten tildefunctor
+%\newcommand{\stilde}[1]{\Lambda(#1)}
+\DeclareDocumentCommand{\stilde}{ g }{%
+ \IfNoValueTF{#1}%
+          {\Lambda}%
+          {\Lambda(#1)}%
+}
+\DeclareDocumentCommand{\pstilde}{ g }{%
+ \IfNoValueTF{#1}%
+          {\lambda}%
+          {\lambda(#1)}%
+}
+
+\DeclareDocumentCommand{\restrictOpt}{ m g }{%
+ \IfNoValueTF{#2}%
+          {\restrict{\pt}{#1}}%
+          {\restrict{#2}{#1}}%
+}
+
+\DeclareDocumentCommand{\sheafify}{ g }{%
+ \IfNoValueTF{#1}%
+          {sh}%
+          {sh(#1)}%
+}
+\DeclareDocumentCommand{\globalsections}{ g }{%
+ \IfNoValueTF{#1}%
+          {\sections{\terminal}{\blank}}%
+          {\sections{\terminal}{#1}}%
+}
+
+\DeclareDocumentCommand{\sections}{ mg }{%
+ \IfNoValueTF{#2}%
+          {\Gamma( #1 ; \blank)}%
+          {\Gamma( #1 ; \presheaf{#2})}%
+}
+
+\DeclareDocumentCommand{\top}{ m g }{%
+ \IfNoValueTF{#2}%
+          {\topo{#1}}%
+          {\topo{#1}(#2)}%
+}
+
+
+\newcommand{\maxsieve}[1]{\mbox{max}(#1)}
 \newcommand{\sheaves}[1]{\mbox{Shv}(#1)}
 \newcommand{\sheafmodules}[1]{\mbox{Mod}(#1)}
+\newcommand\shmodules{\sheafmodules}
+\newcommand{\pshmodules}[1]{\mbox{PMod}(#1)}
 \newcommand{\qcoh}[1]{\cat{Qcoh}(\sheaf{#1})}
 \newcommand{\plus}[1]{{\presheaf{#1}}^+}
-\newcommand{\sheafify}[1]{a(\presheaf{#1})}
+%\newcommand{\sheafify}[1]{a(\presheaf{#1})}
 \newcommand{\id}{\mbox{Id}}
 \newcommand{\blank}{{-}}
 \newcommand{\prshfs}[2]{\presheaves{#1}(\cat{#2})}
-\newcommand{\sections}[2]{\Gamma( #1 ; \presheaf{#2} )}
-\newcommand{\globalsections}[1]{\sections{\terminal}{#1}}
+%\newcommand{\sections}[2]{\Gamma( #1 ; \presheaf{#2} )}
+%\newcommand{\globalsections}[1]{\sections{\terminal}{#1}}
 
 \newcommand{\cover}[2]{\{ {#1} \rightarrow {#2}\}}
 
@@ -265,6 +316,7 @@
 \newcommand{\counit}{\epsilon}
 
 \newcommand{\domain}[1]{\mbox{Dom}(#1)}
+\newcommand\dom{\domain}
 \newcommand{\codomain}[1]{\mbox{Codom}(#1)}
 \newcommand{\kernel}[1]{\mbox{Ker}(#1)}
 \newcommand{\cokernel}[1]{\mbox{Coker}(#1)}
@@ -278,6 +330,7 @@
 
 %\renewcommand{\if}{\mbox{ if }}
 \newcommand{\otherwise}{\mbox{ otherwise }}
+\newcommand{\reason}[1]{\mbox{ #1}}
 
 %------------------------------------------------------------------------------ 
 % ADMINISTRATION 

@@ -29,14 +29,16 @@ This is just shorthand notation for the above definition. There is a bijection b
 \end{definition}
 
 \begin{definition}[Plus construction Shapiro]
-Let $(\cat{C},\topo{T})$ be a site. Let $\presheaf{F}\in \presheaves{C}$.
-Define the category $\cat{I}$ whose objects are pairs $(R,\varphi)$ with $R\in \topo{T}(X)$ and $R\xrightarrow{\varphi} F$.
+Let $(\cat{C},\topo{T})$ be a site. 
+Let $\presheaf{F}\in \presheaves{C}$.
+Define the category $\cat{I}$ whose objects are pairs $(R,\varphi)$ 
+with $R\in \topo{T}(X)$ and $R\xrightarrow{\varphi} F$.
 A morphism between $(R,\varphi)\rightarrow (S,\phi)$ are inclusions $R\rightarrow S$ such that $\varphi=\phi$ restricted to $R$.
 
 Then
 \[\plus{F}(X) = \limit{(R,\varphi)\in \cat{I}} F(R).\]
 
-More concretely, $\plus{F}(X)$ is the set of all objects $(R,\varphi)$ with the equivalence relation that $(R, \varphi)\sim (S,\phi)$ if $\varphi=\phi$ on $R\cap S$. Or equivalently the set all compatible families with the equivalence relation that $(x_f)_R \sim (y_g)_S$ if $(x_f)_{R\cap S} = (y_g)_{R\cap S}$. 
+More concretely, $\plus{F}(X)$ is the set of all objects $(R,\varphi)$ with the equivalence relation that $(R, \varphi)\sim (S,\phi)$ if $\varphi=\phi$ on $R\cap S$. Or equivalently the set all compatible families with the equivalence relation that $(x_f)_R \sim (y_g)_S$ if $(x_h)_{R\cap S} = (y_h)_{R\cap S}$. 
 
 We have the map
 \[\unit:\presheaf{F}(X)\rightarrow \product{f\in R} \presheaf{F}(\domain{f})\]
@@ -70,10 +72,12 @@ Then
 \end{proof}
 
 \begin{definition}[Sheafification]
-Define $\sheafify{F}=\plus{\plus{F}}: \presheaves{C} \rightarrow \sheaves{C}$. 
-This is a left adjoint to the inclusion functor.
+Define $\sheafify{F}=\plus{\plus{F}}: \presheaves{C} \rightarrow \sheaves{C}$.
+This is a left adjoint to the inclusion functor $\sheaves{C} \rightarrow \presheaves{C}$.
 
-The functor $\sheafify{\blank}$ commutes with finite limits. There are two different proofs: Moerdijk and stack+Shapiro. Shapiro defines the plus with as a colimit over a directed set, hence this commutes with limits.
+The functor $\sheafify$ commutes with finite limits.
+There are two different proofs: Moerdijk and stacks+Shapiro. 
+Shapiro defines the plus with as a colimit over a directed set, hence this commutes with limits.
 \end{definition}
 
 \begin{theorem}

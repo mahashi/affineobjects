@@ -1,0 +1,178 @@
+\input{preamble}
+
+\begin{document}
+
+\section*{Prelims}
+
+%declarations
+Let $Y = \rsite{X}{T}{O}$ be a ringed site.
+Let $R = \globalsections{O}$. Let $a,b,c,c'\in X$.
+Let $\module{F}$ be a quasi-coherent module on $\oversite{Y}{a}$.
+Let $M = \sections{a}{F} = \globalsections{F}$.
+Let $f:b \rightarrow a$.
+
+Some basic definitions and constructions.
+
+\begin{definition}[Over/Under categories]
+Let $\cat{C}$ and $\cat{C'}$ be categories. Let $F:\cat{C}\rightarrow \cat{C'}$ and $Z\in C'$. 
+Define the category $\overcat{C}{Z}$ and $\undercat{C}{Z}$ as follows
+\[\obj{\overcat{C}{Z}} := \{(a,w) \suchthat a\in \cat{C}, w:F(a)\rightarrow Z\},\]
+\[\Hom{(a,w)}{(Y,v)} := \{f:a\rightarrow Y \suchthat v\circ F(f) = w  \},\]
+
+and
+
+\[\obj{\undercat{C}{Z}} := \{(a,w) \suchthat a\in \cat{C}, w:Z\rightarrow F(a)\},\]
+\[\Hom{(a,w)}{(Y,v)} := \{f:a\rightarrow Y \suchthat F(f)w = v  \}.\]
+
+We get faithfull functors 
+$\overcat{C}{Z} \rightarrow \cat{C}: (a,w)\rightarrow a$ and 
+$\undercat{C}{Z} \rightarrow \cat{C}: (a,w)\rightarrow a$.
+We will call both functors $u$ and suppress the functor $F$ where there can be no confusion.
+\end{definition}
+
+
+\begin{definition}
+Let $M,N$ be an $R$-module.
+Let $g:M \rightarrow N$.
+Define 
+\[\pstilde: \modules{R} \rightarrow \pshmodules{Y}\]
+by
+\[\pstilde(M)(a) = M \tensor_R \sections{a}{O} ,\]
+\[\pstilde(M)(f): \id \tensor \sheaf{O}(f) ,\]
+\[\pstilde(g) = (a: g \tensor \id ).\]
+\end{definition}
+
+\begin{definition}
+Define
+\[\stilde: \modules{R} \rightarrow \shmodules{Y}\]
+by
+$\sheafify \circ \pstilde$.
+\end{definition}
+
+This functor is left adjoing to the global sections functor, which I will prove in the next episode.
+
+
+
+\begin{lemma}
+Let $X$ be a category.
+Let $f\in X$.
+Let $S$ be a collection of sets indexed by the objects of $X$
+and $S(b)$ be a subset of $\Hom{b}{f}$.
+Then $u(S)$ is a sieve on $u(f)$ \iff $S$ is a sieve on $f$.
+\end{lemma}
+
+\begin{proof}
+=>:
+Let $h: d \rightarrow b \in S$ 
+and $k: e \rightarrow d$ be arbitrary.
+By assumption $u(hk)\in u(S)$.
+The functor $u$ is faithfull, so $hk \in S$.
+
+<=:
+Let $h: d \rightarrow u(f) \in u(S)$ 
+and $k: e \rightarrow d$ be arbitrary.
+By assumption $hk \in S$, hence $u(hk) \in u(S)$.
+\end{proof}
+
+We will define the induced topology $\top{S}$ on $\overcat{C}{a}$.
+That $u$ considered as a map on sieves commutes with the pullback of sieves is used and will not be proved.
+
+\begin{definition}
+Let $\top{T}{u(f)}$ be the set of covering sieves on $u(f) \in a$.
+By the previous lemma sieves on $u(f)$ are sieves on $f$.
+Let $\top{S}{f} = \{R \suchthat u(R) \in \top{T}{u(f)}$ be the induced topology.
+So $u(R)$ is covering on $u(f)$ \iff $R$ is covering on $f$.
+
+a) Since u commutes with pullback of sieves, 
+we have $\maxsieve{u(f)} = u(\maxsieve{f}) = \maxsieve{f}$,
+hence $\maxsieve{f} \in \top{S}{f}$.
+
+b) Let $R$ be a covering sieve on $f$.
+Let $h:b'\rightarrow a$
+and $p:b' \rightarrow b$ with $fp = h$.
+Commutativity of $u$ and pulling back implies that $u(p)^*u(R) = u(p^*R)$.
+Hence $p^*R$ is covering since $u(p^*R)$ is.
+
+c) Let $R$ be a covering sieve on $f$
+and $Q$ be a sieve on $f$.
+Let $h:b'\rightarrow a$
+and $p:b' \rightarrow b \in R$,
+hence with $fp = h$.
+Assume $p^*Q$ is covering for every such $p$.
+Then $u(p^*Q) = u(p)^*u(Q)$ is covering for every $p$.
+We know that $u(R)$ is covering hence $u(Q)$ must be, which implies that $Q$ is covering.
+
+We proved that $\top{S}$ is indeed a Grothendieck topology.
+\end{definition}
+
+\section*{Main}
+
+\begin{lemma}
+Let $a$ be caffine.
+The global component of the sheafification morphism is equal to the unit of $\adj{\stilde}{\globalsections}$ in $\overcat{C}{a}$.
+\end{lemma}
+
+\begin{proof}
+Let $M$ be a $\sections{a}{O}$-module.
+Consider the following maps, which you get by repeatedly calling on an adjunction bijection.
+Let $i$ be the universal sheafification morphism.
+
+\[\stilde(M) \rightarrow \stilde(M)\]
+\[	i : \pstilde(M) \rightarrow \stilde(M) \mbox{ use sheafification adjunction}\]
+\[ M \rightarrow \sections{a}{\stilde(M)} \mbox{ use } \adj{\pstilde}{\sections{a}}\]
+
+If you compose the two adjunction bijections used, 
+you get the bijection of $\adj{\stilde}{\sections{a}}$
+by definition, so the last map is actually $\unit_M$.
+Hence $i_a = \unit_{M}$, which is an iso by assumption.
+\end{proof}
+
+\begin{proposition}
+The adjunct of $f$
+\[\sections{a}{F} \tensor_{\sections{a}{O}} \sections{b}{O} \rightarrow \sections{b}{F}\]
+is an isomorphism.
+\end{proposition}
+Consider
+\begin{center}
+ 	\begin{tikzcd}[row sep = large, column sep = large]
+		\pshmodules{\oversite{Y}{a}} \arrow{r}{\sheafify_a}\arrow{d}{\restrictOpt{b}} 
+		& \shmodules{\oversite{Y}{a}} \arrow{d}{\restrictOpt{b}}
+		& \modules{\sections{a}{O}} \arrow{l}{\stilde} \arrow[bend right]{ll}{\pstilde} 
+		\arrow{d}{\blank \tensor \sections{b}{O}}\\
+		\pshmodules{\oversite{Y}{b}} \arrow{r}{\sheafify_a}
+		& \shmodules{\oversite{Y}{b}}
+		& \modules{\sections{b}{O}} \arrow{l}{\stilde}\arrow[bend left]{ll}{\pstilde}
+
+ 	\end{tikzcd}
+ \end{center}
+
+By a previous lemma, the left square commutes. 
+By definition the two `triangles' commute too and the outer square commute,
+hence the right square also commutes. 
+Therefore $M \tensor \sections{b}{\sheaf{O}} \iso \sections{b}{\sheaf{F}}$.
+This is the proof you wrote down friday.
+
+The requirement is not to find any isomorphism but a specific one.
+So I think this is not enough and we need to do some bookkeeping and see if the witnessing isomorphism is our map.
+
+Consider
+ \begin{center}
+ 	\begin{tikzcd}[row sep = large, column sep = large]
+ 		\restrictOpt{b}{\stilde{M}}
+ 		& \stilde( M \tensor \sections{b}{O}) \arrow{l}{s} \\
+ 		\pstilde( M \tensor \sections{b}{O}) \arrow{u}{\restrictOpt{b}{i}} \arrow{ru}{j}
+ 	\end{tikzcd}
+ \end{center}
+
+The natural transformation $j$ is the universal sheafification morphism coming from $\sheafify_b$.
+We have seen that $\sections{b}{j}$ and $s$ are isomorphisms
+
+Let $g: c \rightarrow b$.
+Let $x = m \tensor r \in \pstilde( M \tensor \sections{c}{O})$.
+Then $j_g(x) = (x_{i})$ indexed by the maximal sieve on $g$
+and $i_g(x) = i_{fg}(x) = (x_{i})$ indexed by the maximal sieve on $gf$.
+Hence we get  $s_g(j_g(x)) = i_g(x)$, so the triangle commutes.
+Evaluating everything on the terminal, in this case on $b$, 
+shows that two out of three maps are isomorphisms, hence $i_b$ is an isomorphism.
+
+\end{document}

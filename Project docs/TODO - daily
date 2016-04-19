@@ -1,13 +1,46 @@
-Done - Define Kappa        
-Done - Kappa is ff
-Done - Proof adjunction Kappa with globalsections
+Done - Define pstilde        
+Done - pstilde is ff
+Done - Proof adjunction pstilde with globalsections
 Done - Changed xymatrix in definition of presheaf modules
-Done - Define Lambda
+Done - Define stilde
 Done - Proof composition of adjunctions fact
-Done - conclude that Lambda is the adjunct of globalsections composed with i
+Done - conclude that stilde is the adjunct of globalsections composed with i
+Done - We will prove that global component of the universal sheafification morphism is an isomorphism.
+Done - $S, T$ are still sieves on $fg$
+Done - this is a compatible family
+Done - injective and surjectivity of $s$
+Done - naturality of $s$
+Done - Proof \sheafify \restrict = \restrict \sheafify
+Done - Enable building from any file
+Done - Proof commutativity of triangle.
+Done - Proof the counit(or unit?) of stilde is the globalsections component of the sheafification functor
+Done - Look up definition of induced topology on localized site. Show that by definition covering sieves stay 			covering.
+Done - Fix issue "I can't write on file 'main.pdf'"
+Done - Install and configure TexLive
+Done - Download Latexing docs.
 
+= Latex
 - Setup functor macros that work without parameters
+- Setup symbols in tikz cd : http://tex.stackexchange.com/questions/279187/adjunction-of-functors-command-tikzcd/279192
+- Add names and references to lemmas/definitions/examples
+- Clean preamble
+
+= Project
+- Clean project
+- Put everything back and make it build
+
+= Prelims
 - Define natural transformations and their notation
 - Define globalsections functor and say that we suppress the composition with the inclusion functor.
-- Give explicitely the unit-counit for pstilde and stilde
-- Proof the counit of stilde is the globalsections component of the sheafification functor
+- section functors and restricting/localizing commute
+- canonical way to write restricting/localizing.
+- Extent localizing/restricting to sites
+
+= Topology
+- Finish definition of relative topology
+- Proof/reference oostens diktaat properties of plus.
+
+= Caffines x restrictive
+- exhibit iso and show that pullback along u and and u commute
+- Owens comments
+

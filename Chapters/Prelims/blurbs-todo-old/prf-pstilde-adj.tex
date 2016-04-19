@@ -1,5 +1,9 @@
-The functor $\pshtilde$ is left adjoint to $\globalsections{\blank}:\pshmodules{Y} \rightarrow \modules{R}$.
+\begin{lemma}
+Let $Y = \rsite{X}{T}{O}$ be a site.
+The functor $\pshtilde$ is left adjoint to $\globalsections:\pshmodules{Y} \rightarrow \modules{R}$.
+\end{lemma}
 
+\begin{proof}
 Let $a$ be an object of $C$ and $f:a \rightarrow 1$.
 Let $M,N$ be $R$-modules. 
 Let $\presheaf{F},\presheaf{G} \in \pshmodules{Y}$ be presheaf modules.
@@ -15,6 +19,7 @@ Define $\beta = L_{M,\presheaf{G}}:\Hom{M}{\globalsections{G}} \rightarrow \Hom{
 \[ \beta(\phi)_a = \phi \tensor_R \sections{a}{O}.\]
 
 %These are mutually inverse for any $M$ and $\presheaf{G}$ and natural in these two arguments.
+
 Let $d = \beta(\alpha(\varphi)$. 
 Let $g \tensor m \in M \tensor_R \sections{a}{O}$.
 Then $d_a(g \tensor m) = \globalsections{\varphi}(m) \tensor g$
@@ -44,5 +49,5 @@ Let $l = \globalsections{h} \circ H_{N,\presheaf{F}}(\rho) \circ f$.
 
 We have $k = \globalsections{h}\globalsections{\rho}f$
 and $l(m) = \globalsections{h}\globalsections{\rho}f$.
-This proves naturality in $M$ and $\presheaf{G}$ and the adjunction between $\pshtilde$ and $\globalsections{\blank}$.
-
+This proves naturality in $M$ and $\presheaf{G}$ and the adjunction between $\pshtilde$ and $\globalsections$.
+\end{proof}

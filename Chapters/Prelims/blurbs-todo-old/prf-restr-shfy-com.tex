@@ -1,0 +1,57 @@
+\begin{lemma}
+Sheafifying and restricting commute.
+In formula form
+\[\sheafify_b \circ \restrictOpt{b} \iso \restrictOpt{b} \circ \sheafify_a.\]
+\end{lemma}
+
+\begin{proof}
+I will prove that we have a natural isomorphism 
+\[s : \sheafify_b \circ \restrictOpt{b} \rightarrow \restrictOpt{b} \circ \sheafify_a.\]
+
+Let $\presheaf{F}$ be a presheaf on $\overcat{Y}{a}$.
+Let $\sheaf{H} = \sheafify{\restrictOpt{b}{F}}$
+and $\sheaf{K} = \restrictOpt{b}{\sheafify{F}}$.
+Let $T$ be a covering sieve on $g$ in $\overcat{Y}{b}$
+and $j\in T$.
+Let $S_j$ be a covering sieve on $\dom{j}$ in $\overcat{Y}{b}$
+and $i\in S_j$.
+
+Let $x = (x_{i,j}) \in \sheafify{\restrictOpt{b}{F}}$ 
+be indexed by $S_j$ and $T$.
+We have $x_{i,j} \in \sections{\dom{i}}{F}$.
+Define $s_g(x) = (x_{u(i),u(j)})$ with indexing covering sieves $u(S_j), u(T)$.
+
+\textit{well-definedness}
+Let $x \sim y$.
+Let $R$ be the covering sieve on which they are the same.
+Then $s_g(x) \sim s_g(y)$ because they are the same on $u(R)$.
+Hence this map is well-defined.
+
+\textit{injectivity}
+Let $s_g(x) = s_g(y)$. Then there is some covering sieve $R$ on $fg$ on which they agree.
+Consider $\inverse{u}(R)$ as a covering sieve on $g$ and its is clear that $x$ and $y$ must agree on it,
+hence the map is injective.
+
+\textit{surjectivity}
+Let $y=(y_{k,l})$ be an element of $\sections{c}{K}$ which is indexed by $V,W$.
+Then $s_g(y') = y$ where $y'$ has the same elements as $y$ but is indexed by $u(V), u(W)$,
+so $y' \in \sections{c}{H}$. Hence $s_g$ is surjective.
+
+\textit{Naturality}
+Let $h: c' \rightarrow b$ and $p: c' \rightarrow c$, such that $gp = h$.
+We will show that $s_h\sheaf{H}(t) = \sheaf{K}(t)s_g$. See below diagram.
+Let $x = (x_{i,j}) \in \sections{c}{H}$ with indexing covering sieves $S_j$ and $T$.
+Then $\sheaf{K}(t)(s_g(x)) = (x_{k,l})$ with indexing covering sieves $t^*S_l$ and $t^*T$.
+The other one becomes $s_h(\sheaf{H}(t)(x)) = (x_{k,l})$ with indexing covering sieves $t^*S_l$ and $t^*T$.
+Hence $s$ is natural.
+
+%Diagram
+\begin{center}
+	\begin{tikzcd}[row sep = large, column sep = large]
+		\sections{h}{H} \arrow{r}{s_h} 
+		& \sections{h}{K}\\
+		\sections{g}{H} \arrow{r}{s_g} \arrow{u}{\sheaf{H}(t)}
+		& \sections{g}{K} \arrow{u}{\sheaf{K}(t)}
+	\end{tikzcd}
+\end{center}
+\end{proof}

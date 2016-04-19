@@ -1,0 +1,27 @@
+\begin{definition}[Relative topology]
+Let $\site{C}{T}$ be a site.
+Let $a \in \cat{C}$.
+
+The topology $\topo{T}$ induces a topology $\topo{T_a}$
+on $\overcat{C}{a}$ as follows.
+Let $f : b \rightarrow a \in \overcat{C}{a}$.
+Let $R \in \topo{T}{b}$.
+Define the subfunctor $R_f \subset \y{f}$ as
+\[ y : b' \rightarrow b 
+	\mapsto \set{g: b' \rightarrow a \in R(b') \suchthat y = f \circ g}.
+\]
+
+This is well-defined because if $g\in R_f(y)$ 
+and $h:y'\rightarrow y$ arbitrary, 
+then $yh=fgh$ so $gh \in R_f(gh)$.
+
+Set $\topo{T_a}{f} = \set{ R_f \with R \in \topo{T}{b}}$.
+
+%Axiom 1
+
+%Axiom 2
+
+%Axiom 3
+
+
+\end{definition}

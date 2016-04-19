@@ -1,0 +1,19 @@
+\begin{definition}[Over/Under categories]
+Let $\cat{C}$ and $\cat{C'}$ be categories. 
+Let $F:\cat{C}\rightarrow \cat{C'}$ and $Z\in C'$. 
+Define the category $\overcat{C}{Z}$ and $\undercat{C}{Z}$ as 
+
+\[\obj{\overcat{C}{Z}} := \{(a,w) \suchthat a\in \cat{C}, w:F(a)\rightarrow Z\},\]
+\[\Hom{(a,w)}{(b,v)} := \{f:a\rightarrow b \suchthat v\circ F(f) = w  \},\]
+
+and
+
+\[\obj{\undercat{C}{Z}} := \{(a,w) \suchthat a\in \cat{C}, w:Z\rightarrow F(a)\},\]
+\[\Hom{(a,w)}{(b,v)} := \{f:a\rightarrow b \suchthat F(f)w = v  \}.\]
+
+We get faithfull functors 
+$\overcat{C}{Z} \rightarrow \cat{C}: (a,w)\rightarrow a$ 
+and 
+$\undercat{C}{Z} \rightarrow \cat{C}: (a,w)\rightarrow a$.
+We will call both functors $u$ and suppress the functor $F$ where there can be no confusion.
+\end{definition}

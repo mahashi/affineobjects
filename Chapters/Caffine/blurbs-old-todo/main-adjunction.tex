@@ -4,10 +4,10 @@
 
 \begin{lemma}[Main adjunction]
 The functors 
-\[\Tildefunctor{\blank}: \modules{\globalsections{O}} \rightarrow \qcoh{O},\]
+\[\stilde{\blank}: \modules{\globalsections{O}} \rightarrow \qcoh{O},\]
 \[\globalsections{\blank}: \qcoh{O} \rightarrow \modules{\globalsections{O}}\]
 
-form an adjunction $\adjunction{\Tildefunctor{\blank}}{\globalsections{\blank}}$.
+form an adjunction $\adjunction{\stilde{\blank}}{\globalsections{\blank}}$.
 \end{lemma}
 
 \begin{proof}
@@ -15,13 +15,13 @@ Let $M$ be a $\globalsections{O}$ module.
 Let $\module{G}$ be a $\sheaf{O}$ module.
 
 Define 
-\[\varphi_{M,\module{G}}: \Hom{\Tildefunctor{M}}{\module{G}} \rightarrow \Hom{M}{\globalsections{G}}\]
+\[\varphi_{M,\module{G}}: \Hom{\stilde{M}}{\module{G}} \rightarrow \Hom{M}{\globalsections{G}}\]
 \[ f \mapsto \globalsections{fi}\]
 
 where $i$ is the canonical map from a presheaf to its sheafification.
 
 Define 
-\[\phi_{M,\module{G}}: \Hom{M}{\globalsections{G}} \rightarrow \Hom{\Tildefunctor{M}}{\module{G}}\]
+\[\phi_{M,\module{G}}: \Hom{M}{\globalsections{G}} \rightarrow \Hom{\stilde{M}}{\module{G}}\]
 \[ g \mapsto \sheafify{U: m\tensor u \mapsto g(m)u}\]
 
 The subscripts will be suppressed when no confusion can arise.
@@ -35,7 +35,7 @@ Then
 &= g
 \end{align*}
 
-Let $f\in \Hom{\Tildefunctor{M}}{G}$. 
+Let $f\in \Hom{\stilde{M}}{G}$. 
 Then 
 \begin{align*}
 \phi(\varphi(f))i &= \sheafify{U: m\tensor u \mapsto \globalsections{fi}(m)u}i \\

@@ -1,0 +1,22 @@
+Consider
+\begin{center}
+ 	\begin{tikzcd}[row sep = large, column sep = large]
+		\pshmodules{\oversite{Y}{a}} \arrow{r}{\sheafify_a}\arrow{d}{\restrictOpt{b}} 
+		& \shmodules{\oversite{Y}{a}} \arrow{d}{\restrictOpt{b}}
+		& \modules{\sections{a}{O}} \arrow{l}{\stilde} \arrow[bend right]{ll}{\pstilde} 
+		\arrow{d}{\blank \tensor \sections{b}{O}}\\
+		\pshmodules{\oversite{Y}{b}} \arrow{r}{\sheafify_a}
+		& \shmodules{\oversite{Y}{b}}
+		& \modules{\sections{b}{O}} \arrow{l}{\stilde}\arrow[bend left]{ll}{\pstilde}
+
+ 	\end{tikzcd}
+ \end{center}
+
+By a previous lemma, the left square commutes. 
+By definition the two `triangles' commute too and the outer square commute,
+hence the right square also commutes. 
+Therefore $M \tensor \sections{b}{\sheaf{O}} \iso \sections{b}{\sheaf{F}}$.
+This is the proof you wrote down friday.
+
+The requirement is not to find any isomorphism but a specific one.
+So I think this is not enough and we need to do some bookkeeping and see if the witnessing isomorphism is our map.
