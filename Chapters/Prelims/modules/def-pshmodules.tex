@@ -1,0 +1,27 @@
+\begin{definition}[Presheaf modules]
+Let $Y = \rsite{C}{T}{O}$ be a ringed site.
+Let $R = \globalsections{O}$.
+
+A presheaf module on $Y$  is a presheaf of sets $\presheaf{F}$ 
+on $\cat{C}$ together with a map of presheaves
+
+\[ \presheaf{O} \times \presheaf{F} \rightarrow \presheaf{F}\]
+
+such that for every object $a \in C$ 
+the map $\sections{a}{O} \times \sections{a}{F} \rightarrow \sections{a}{F}$
+defines a $\sections{a}{O}$-module structure on $\sections{a}{F}$.
+
+A morphism $$\presheaf{F} \rightarrow \presheaf{G}$$ is a morphism of presheaf modules if 
+
+\begin{center}
+ 	\begin{tikzcd}[row sep = large, column sep = large]
+		\presheaf{O} \times \presheaf{F} \arrow{r}\arrow{d}
+		& \presheaf{F} \arrow{d} \\
+		\presheaf{O} \times \presheaf{G}\arrow{r}
+		& \presheaf{G} \\
+ 	\end{tikzcd}
+ \end{center}
+
+commutes.
+The category of presheaf modules on $Y$ will be denoted $\pshmodules{Y}$.
+\end{definition}

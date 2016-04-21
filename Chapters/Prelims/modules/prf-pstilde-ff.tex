@@ -1,0 +1,25 @@
+\begin{proof}
+Let $M,N$ be an $R$-module.
+Let $a$ be an object of $C$. 
+Let $f:a \rightarrow 1$.
+Let $\varphi: \pstilde{M} \rightarrow \pstilde{N}$ be a morphism of presheaf modules.
+
+Let $\pstilde{\varphi_1} = g : \pstilde{M} \rightarrow \pstilde{N}$.
+Let $m \tensor r \in M \tensor_R \sheaf{O}(a)$. 
+Then $g(m \tensor r) = \varphi_1(m) \tensor r$
+and 
+
+\begin*{align}
+	\varphi_a(m \tensor r) &= r \varphi_a(m \tensor 1) \reason{linearity} \\
+		&= r \varphi_a(\pstilde(M)(f)(m)) \\
+		&= r \pstilde(N)(f)(\varphi_1(m)) \reason{naturality of transformation}\\
+		&= r (\varphi_1(m) \tensor 1) \\
+		&= \varphi_1(m) \tensor r.
+\end*{align}
+
+Hence $g = \varphi$.
+
+Let $g,h: M\rightarrow N$. Assume that $g\neq h$. Then $\pstilde(g)_1 = g \neq h = \pstilde(h)$.
+Hence $\pstilde$ is full and faithfull.
+
+\end{proof}

@@ -1,4 +1,5 @@
-        %%%%%%%%%%%%
+%TODO
+    %%%%%%%%%%%%
     % PACKAGES %
     %%%%%%%%%%%%
 
@@ -208,15 +209,14 @@
 \newcommand{\st}{\;|\;}
 
 
-\newcommand{\copresheaves}[1]{\cat{#1}^{+}}
+\newcommand{\copresheaves}[1]{\hat{\cat{#1}}}
 \newcommand{\presheaves}{\copresheaves}
-\newcommand{\contrapresheaves}[1]{\cat{#1}^{-}}
 \newcommand{\functors}[2]{[\cat{#1},\cat{#2}]}
 \newcommand{\opposite}[1]{\cat{#1}^{op}}
 \newcommand{\opp}{\opposite}
-\newcommand{\coyoneda}[1]{h_{#1}}
-\newcommand{\ynd}{\coyoneda}
-\newcommand{\y}{{h}}
+%\newcommand{\coyoneda}[1]{h_{#1}}
+\newcommand\ynd\yoneda
+\newcommand\y\ynd
 \newcommand{\contrayoneda}[1]{h^{#1}}
 \newcommand{\overcat}[2]{\cat{#1}_{#2}}
 \newcommand{\undercat}[2]{\cat{#1}^{#2}}
@@ -259,11 +259,24 @@
           {\restrict{#2}{#1}}%
 }
 
+\DeclareDocumentCommand{\yoneda}{ g }{%
+ \IfNoValueTF{#1}%
+          {h}%
+          {h(#1)}%
+}
+
 \DeclareDocumentCommand{\sheafify}{ g }{%
  \IfNoValueTF{#1}%
           {sh}%
           {sh(#1)}%
 }
+
+\DeclareDocumentCommand{\plus}{ g }{%
+ \IfNoValueTF{#1}%
+          {(\blank)^+}%
+          {{#1}^+}%
+}
+
 \DeclareDocumentCommand{\globalsections}{ g }{%
  \IfNoValueTF{#1}%
           {\sections{\terminal}{\blank}}%
@@ -281,7 +294,16 @@
           {\topo{#1}}%
           {\topo{#1}(#2)}%
 }
-
+\DeclareDocumentCommand{\sieve}{ m g }{%
+ \IfNoValueTF{#2}%
+          {#1}%
+          {{#1}(#2)}%
+}
+\DeclareDocumentCommand{\incsh}{ g }{%
+ \IfNoValueTF{#1}%
+          {i}%
+          {i(#1)}%
+}
 
 \newcommand{\maxsieve}[1]{\mbox{max}(#1)}
 \newcommand{\sheaves}[1]{\mbox{Shv}(#1)}
@@ -289,7 +311,7 @@
 \newcommand\shmodules{\sheafmodules}
 \newcommand{\pshmodules}[1]{\mbox{PMod}(#1)}
 \newcommand{\qcoh}[1]{\cat{Qcoh}(\sheaf{#1})}
-\newcommand{\plus}[1]{{\presheaf{#1}}^+}
+%\newcommand{\plus}[1]{{\presheaf{#1}}^+}
 %\newcommand{\sheafify}[1]{a(\presheaf{#1})}
 \newcommand{\id}{\mbox{Id}}
 \newcommand{\blank}{{-}}
@@ -327,11 +349,15 @@
 \newcommand{\projspace}[1]{\P^{1}}
 
 \newcommand{\pt}{\ast}
+\newcommand\eqclass[1]{[#1]}
 
+\newcommand\set[1]{\{#1\}}
 %\renewcommand{\if}{\mbox{ if }}
 \newcommand{\otherwise}{\mbox{ otherwise }}
 \newcommand{\reason}[1]{\mbox{ #1}}
-
+\newcommand\onsome{\mbox{ on some }}
+\newcommand\with{\mbox{ : }}
+\renewcommand\and{\mbox{,  }}
 %------------------------------------------------------------------------------ 
 % ADMINISTRATION 
 %------------------------------------------------------------------------------ 

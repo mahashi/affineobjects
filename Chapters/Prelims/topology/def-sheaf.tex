@@ -1,0 +1,19 @@
+\begin{definition}[Sheaves]
+Let $\site{C}{T}$ be a site. 
+Let $\presheaf{F} \in \presheaves{C}$.
+
+A presheaf that admits a unique amalgamation of every matching family is called a sheaf.
+The category $\sheaves{C}$ is the full subcategory in $\presheaves{C}$  all sheaves. 
+Let $\incsh$ be the inclusion functor $\sheaves{C}\rightarrow \presheaves{C}$.
+\end{definition}
+
+\begin{definition}[Sheaves \#2]
+Let $\site{C}{T}$ be a site. 
+Let $\presheaf{F} \in \presheaves{C}$.
+Let $R$ be a sieve on $a \in \cat{C}$.
+
+We call $\presheaf{F}$ a sheaf if the map 
+\[\presheaf{F}(a) \rightarrow \presheaf{F}(R)\] 
+\[ a: x \mapsto \set{ \presheaf{F}(i)(x) }_{i \in R} \]
+is an isomorphism.
+\end{definition}

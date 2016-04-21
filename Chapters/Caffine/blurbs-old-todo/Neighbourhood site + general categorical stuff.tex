@@ -5,7 +5,8 @@
 %%%%%% restriction & pullback
 Let $X = (\cat{C},\topo{T},\sheaf{O})$ be a ringed site.
 Let $\sheaf{F}$ be a presheaf on $\cat{C}$.
-Let $I_Z: \cat{C}/Z \rightarrow \cat{C}$ be the inclusion functor, where $\cat{C}/Z$ is the category over $Z$.
+Let $I_Z: \cat{C}/Z \rightarrow \cat{C}$ be the inclusion functor, 
+where $\cat{C}/Z$ is the category over $Z$.
 Define the restriction $\sheaf{F}_Z$ of $\sheaf{F}$ to $\cat{C}/Z$ to be the presheaf $\sheaf{F} \circ I_Z$.
 Let $A \xrightarrow{g} B$ be a morphism in $\cat{C}$, 
 this induces a functor $G:\cat{C}/A \rightarrow \cat{C}/B$ that sends $X\xrightarrow{b} A$ to $X\xrightarrow{gb} B$. 
@@ -17,20 +18,6 @@ Let $X$ be a topological space and $Open(X)$ the corresponding category/poset of
 Let $y\in X$. Define $N(y)$ to be the full subcategory of $Open(X)$ with all neighbourhoods $U$ of $y$.
 
 %%%%%%%%%% def quasi-coherence %%%%%%%%%%%%%%%%
-\begin{definition}
-Let $\sheaf{F}$ be a sheaf of modules on $\cat{C}$.
-It is called \emph{quasi-coherent} if for any object $C\in\cat{C}$ 
-there exists a covering sieve $S$ such that for any map $f:A\rightarrow C$ in $S$ there exists a presentation
-\[\coproduct_I \sheaf{O}_A \rightarrow \coproduct_J \sheaf{O}_A \rightarrow \sheaf{F}_A \rightarrow 0\]
-\end{definition}
-
-Quasi-coherent modules form a full subcategory of the category of sheafs of modules denoted $\Qcoh{X}$.
-
-Note that if $\sheaf{F}$ has a presentation with respect to all maps in the covering sieve $S$,
-then it also has it for $g(S)$ with $g:B\rightarrow C$ arbitrary.
-Let $h:A\rightarrow B$ be in $g(S)$, then $gh \in S$ and we get a presentation 
-\[\coproduct_I \sheaf{O}_A \rightarrow \coproduct_J \sheaf{O}_A \rightarrow \sheaf{F} \rightarrow 0\]
-which is the property we want.
 
 %STACKS chapter on quasi-coherence
 

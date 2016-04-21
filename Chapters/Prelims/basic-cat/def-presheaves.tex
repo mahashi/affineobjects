@@ -1,0 +1,13 @@
+\begin{definition}[Presheaf category]
+Let $\cat{C}$ be a category.
+Let $a\in C$.
+Let $f: a' \rightarrow a$
+We define
+\[\presheaves{C} := \functors{\opp{C}}{Set},\]
+
+and the functor $\yoneda: \cat{C} \rightarrow  \presheaves{C}$ as follows 
+\[a \mapsto \Hom{-}{a},\]
+\[f \mapsto f \circ \blank.\]
+
+This functor is fully faithfull by the Yoneda lemma.
+\end{definition}

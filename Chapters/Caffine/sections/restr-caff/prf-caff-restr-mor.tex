@@ -1,26 +1,73 @@
+\begin{theorem}[Morphism between caffines is restrictive]
+Let $Y = \rsite{C}{T}{O}$.
+Let $f: b \rightarrow a \in \cat{C}$ be a morphism between caffine objects, 
+then $f$ is restrictive.
+\end{theorem}
+
 \begin{proof}
-Let $a,b$ be caffine. Let $f:b \rightarrow a$.
 Let $\module{F}$ be a quasi-coherent module on $\oversite{Y}{a}$.
-Let $M = \sections{a}{F} = \globalsections{F}$.
-Since $a$ is caffine, we have $\sheaf{F} = \stilde(M)$.
+Let $M = \sections{a}{F}$.
+Since $a$ is caffine, we have $\sheaf{F} = \stilde{M}$.
 
 We have to show that the adjunct of $f$
 \[\sections{a}{F} \tensor_{\sections{a}{O}} \sections{b}{O} \rightarrow \sections{b}{F}\]
 is an isomorphism.
 
 
-\input{../../../../Prelims/todo-blurbs-old/prf-loc-sieves.tex}
+%owen-caff-restr.tex
+Consider
+\begin{center}
+ 	\begin{tikzcd}[row sep = large, column sep = large]
+		\pshmodules{\oversite{Y}{a}} \arrow{r}{\sheafify_a}\arrow{d}{\restrictOpt{b}} 
+		& \shmodules{\oversite{Y}{a}} \arrow{d}{\restrictOpt{b}}
+		& \modules{\sections{a}{O}} \arrow{l}{\stilde} \arrow[bend right]{ll}{\pstilde} 
+		\arrow{d}{\blank \tensor \sections{b}{O}}\\
+		\pshmodules{\oversite{Y}{b}} \arrow{r}{\sheafify_a}
+		& \shmodules{\oversite{Y}{b}}
+		& \modules{\sections{b}{O}} \arrow{l}{\stilde}\arrow[bend left]{ll}{\pstilde}
 
-\input{../../../../Prelims/todo-blurbs-old/def-loc-top.tex}
+ 	\end{tikzcd}
+ \end{center}
 
-\input{../../../../Prelims/todo-blurbs-old/prf-glbl-shfy-map-iso.tex}
+By a previous lemma, the left square commutes. 
+By definition the two `triangles' commute too and the outer square commute,
+hence the right square also commutes. 
+Therefore $M \tensor \sections{b}{\sheaf{O}} \iso \sections{b}{\sheaf{F}}$.
+This is the proof you wrote down friday.
 
-\input{prf-restr-shfy-com.tex}
+The requirement is not to find any isomorphism but a specific one.
+So I think this is not enough and we need to do some bookkeeping and see if the witnessing isomorphism is our map.
 
-\input{owen-caff-restr.tex}
+Let $i$ be the morphism of presheaves at $\pstilde(M)$ of the natural transformation $\omega^2$ coming with $\sheafify_a$ as defined in lemma ?.
+Let $j$ be the morphism at $\pstilde( M \tensor \sections{b}{O})$ of the natural transformation $\omega^2$ coming with $\sheafify_a$ as defined in lemma ? .
 
-\input{my-caff-restr.tex}
+%my-caff-restr.tex
+Consider
+ \begin{center}
+ 	\begin{tikzcd}[row sep = large, column sep = large]
+ 		\restrictOpt{b}{\stilde{M}}
+ 		& \stilde( M \tensor \sections{b}{O}) \arrow{l}{s_{\pstilde(M)}} \\
+ 		\pstilde( M \tensor \sections{b}{O}) \arrow{u}{\restrictOpt{b}{i}} \arrow{ru}{j}
+ 	\end{tikzcd}
+ \end{center}
 
+
+We have seen that the component $j_b$ at $b$, the global component, 
+is an isomorphism in lemma ?. since $b$ is caffine 
+and that $s_{\pstilde(M)}$ is an isomorphism as constructed in lemma ?.
+
+We will prove commutativity of the triangle.
+Let $g: c \rightarrow b \in \oversite{Y}{b}$.
+Let $\presheaf{M} = \pstilde( M \tensor \sections{c}{O})$.
+Let $x = m \tensor r \in \presheaf{M}$.
+
+- TODO% $\omega^2$ creates 2 dimensional( indexed by 2 sieves) families
+% Then $j_g(x) = (\presheaf{M}(i)x)_{i \in \max{g}}$ indexed by the maximal sieve on $g$
+% and $i_g(x) = i_{fg}(x) = (x_{i})$ indexed by the maximal sieve on $gf$.
+% Hence we get  $s_g(j_g(x)) = i_g(x)$, so the triangle commutes.
+
+Evaluating everything on the terminal object, in this case on $b$, 
+shows that two out of three maps are isomorphisms, hence $i_b$ is an isomorphism.
 \end{proof}
 
 % The map $k$ is the adjunct of $\module{F}(f)$ with respect to the adjunction between restricting scalars and extending scalars along the map 

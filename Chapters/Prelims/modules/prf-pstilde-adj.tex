@@ -1,0 +1,67 @@
+\begin{lemma}
+Let $Y = \rsite{X}{T}{O}$ be a site.
+The functor $\pstilde$ is left adjoint to 
+\[\globalsections:\pshmodules{Y} \rightarrow \modules{R}\].
+\end{lemma}
+
+\begin{proof}
+Let $a$ be an object of $C$.
+Let $M,N$ be $R$-modules. 
+Let $\presheaf{F},\presheaf{G} \in \pshmodules{Y}$ be presheaf modules.
+
+Let $\varphi:\pstilde{M} \rightarrow \presheaf{G}$ be a morphism of presheaf modules.
+Let $\phi: M \rightarrow \globalsections{G}$ be a morphism of presheaf modules.
+
+Define 
+\[\alpha = H_{M,\presheaf{G}}: 
+	\Hom{\pstilde{M}}{\presheaf{G}} \rightarrow \Hom{M}{\globalsections{G}}
+\]
+by
+\[ \alpha(\varphi) = \varphi_1,\]
+where $\varphi_1$ is the component of $\varphi$ on the globalsections.
+
+Define 
+\[\beta = L_{M,\presheaf{G}}: 
+	\Hom{M}{\globalsections{G}} \rightarrow \Hom{\pstilde{M}}{\presheaf{G}}
+\] 
+by
+\[ \beta(\phi)_a = \phi \tensor_R \sections{a}{O}.\]
+
+We will show that $\beta$ and $\alpha$ are mutually inverse. 
+
+Let $d = \beta(\alpha(\varphi))$. 
+Let $m \tensor g \in M \tensor_R \sections{a}{O}$.
+Let $p: \pstilde(M)(1)\rightarrow \pstilde(M)(a)$ be the projection map.
+Let $q: \presheaf{G}(1)\rightarrow \presheaf{G}(a)$ be the projection map.
+Then $d_a(m \tensor g) = \varphi_1(m) \tensor g$
+and
+
+\begin{align*}
+	\varphi_a(m \tensor g) &=  g \varphi_a(m \tensor 1) \reason{ linearity }\\
+		&= g \varphi_a(p(m)) \\
+		&= g q(\varphi_1(m)) \reason{ naturality of $\varphi$ }\\
+		&= g (\varphi_1(m) \tensor 1) \\
+		&= \varphi_1(m) \tensor g.
+\end{align*}
+
+Hence $d = \varphi$. 
+In words, the natural transformations from presheaves of the from $\pstilde(M)$ 
+are unique determined by their global sections component.
+
+Let $d = \alpha(\beta(\phi))$. 
+Let $m \in M$.
+Then $d(m) = (\phi \tensor_R R)(m) = \phi(m)$.
+Hence $d = \phi$, which makes $H$ and $L$ mutual inverses.
+
+\textit{Naturality in $M$ and $\presheaf{G}$}
+
+Let $g:N\rightarrow M$ and $h:\presheaf{F} \rightarrow \presheaf{G}$.
+Let $\rho \in \Hom{\pstilde(N)}{\presheaf{F}}$.
+Let $k = H_{M,\presheaf{G}} (h \circ \rho \circ \pstilde(f))$.
+Let $l = h_1 \circ H_{N,\presheaf{F}}(\rho) \circ f$.
+
+Unfolding the definition for $H$ shows that $k = h_1\rho_1 f$
+and $l = h_1\rho_1 f$ as well.
+This proves naturality in $M$ and $\presheaf{G}$ 
+and the adjunction between $\pstilde$ and $\globalsections$.
+\end{proof}

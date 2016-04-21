@@ -8,39 +8,72 @@
 	"buffers":
 	[
 		{
-			"file": "Chapters/Prelims/sections/topology/lem-sieves-functor.tex",
+			"file": "Project docs/Owens notes 11-4-2016",
 			"settings":
 			{
-				"buffer_size": 533,
+				"buffer_size": 390,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Chapters/Prelims/sections/topology/def-plus-funct.tex",
+			"file": "Chapters/Prelims/topology/def-plus-funct.tex",
 			"settings":
 			{
-				"buffer_size": 1745,
+				"buffer_size": 2022,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Chapters/Prelims/sections/topology/def-rel-topo.tex",
+			"file": "Chapters/Prelims/topology/def-sheafification.tex",
 			"settings":
 			{
-				"buffer_size": 617,
-				"line_ending": "Windows",
-				"name": "\\begin{definition}"
+				"buffer_size": 601,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Done - Define pstilde        \nDone - pstilde is ff\nDone - Proof adjunction pstilde with globalsections\nDone - Changed xymatrix in definition of presheaf modules\nDone - Define stilde\nDone - Proof composition of adjunctions fact\nDone - conclude that stilde is the adjunct of globalsections composed with i\nDone - We will prove that global component of the universal sheafification morphism is an isomorphism.\nDone - $S, T$ are still sieves on $fg$\nDone - this is a compatible family\nDone - injective and surjectivity of $s$\nDone - naturality of $s$\nDone - Proof \\sheafify \\restrict = \\restrict \\sheafify\nDone - Enable building from any file\nDone - Proof commutativity of triangle.\nDone - Proof the counit(or unit?) of stilde is the globalsections component of the sheafification functor\nDone - Look up definition of induced topology on localized site. Show that by definition covering sieves stay 			covering.\nDone - Fix issue \"I can't write on file 'main.pdf'\"\nDone - Install and configure TexLive\nDone - Download Latexing docs.\n\n= Latex\n- Setup functor macros that work without parameters\n- Setup symbols in tikz cd : http://tex.stackexchange.com/questions/279187/adjunction-of-functors-command-tikzcd/279192\n- Add names and references to lemmas/definitions/examples\n- Clean preamble\n\n= Project\n- Clean project\n- Put everything back and make it build\n\n= Prelims\n- Define natural transformations and their notation\n- Define globalsections functor and say that we suppress the composition with the inclusion functor.\n- section functors and restricting/localizing commute\n- canonical way to write restricting/localizing.\n- Extent localizing/restricting to sites\n\n= Topology\n- Finish definition of relative topology\n- Proof/reference oostens diktaat properties of plus.\n\n= Caffines x restrictive\n- exhibit iso and show that pullback along u and and u commute\n- Owens comments\n\n",
+			"file": "Chapters/Prelims/modules/def-stilde.tex",
+			"settings":
+			{
+				"buffer_size": 1872,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "Project docs/TODO - daily",
-			"file_size": 1834,
-			"file_write_time": 131050946007611754,
 			"settings":
 			{
-				"buffer_size": 1873,
+				"buffer_size": 1916,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 100 files for \"sheafification morphism\" (case sensitive)\n\nC:\\Users\\Sadari\\Documents\\Math\\Affine Objects\\Chapters\\Caffine\\prf-glbl-shfy-map-iso.tex:\n    1  \\begin{lemma}\n    2  Let $a$ be caffine.\n    3: The global component of the sheafification morphism is equal to the unit of $\\adj{\\stilde}{\\globalsections}$ in $\\overcat{C}{a}$.\n    4  \\end{lemma}\n    5  \n    .\n    7  Let $M$ be a $\\sections{a}{O}$-module.\n    8  Consider the following maps, which you get by repeatedly calling on an adjunction bijection.\n    9: Let $i$ be the universal sheafification morphism.\n   10  \n   11  \\[\\stilde(M) \\rightarrow \\stilde(M)\\]\n\nC:\\Users\\Sadari\\Documents\\Math\\Affine Objects\\Chapters\\Caffine\\sections\\restr-caff\\prf-caff-restr-mor.tex:\n   49   \\end{center}\n   50  \n   51: The natural transformation $j$ is the universal sheafification morphism coming from $\\sheafify_b$.\n   52  We have seen that $\\sections{b}{j}$ and $s$ are isomorphisms\n   53  \n   ..\n   88  \n   89  % We will prove that $\n   90: % A) The component at a caffine object of the unversal sheafification morphism $i$ is an isomorphism\n   91  % As is stated in lemma .. , we have $\\globalsections{i} = \\counit_{T,a}$. \n   92  % Hence when $a$ is caffine then $\\globalsections{i}$ on is an iso.\n   ..\n  106  % Note that restricting and sheafification commute.%TODO: explain\n  107  % We can first restrict our presheaf to $\\cat{C}/b$ and then sheafify. \n  108: % The global sections component of the universal sheafification morphism will be \n  109  % \\[M \\tensor \\sections{b}{O} \\rightarrow \\sections{b}{F},\\]\n  110  % \\[m \\tensor r \\mapsto mr\\]\n\nC:\\Users\\Sadari\\Documents\\Math\\Affine Objects\\Chapters\\Caffine\\sections\\restr-caff\\prf-glbl-shfy-map-iso.tex:\n    2  Let $a$ be caffine. Let $M$ be a $\\sections{a}{O}$-module.\n    3  Consider the following maps, which you get by repeatedly calling on an adjunction.\n    4: Let $i$ be the universal sheafification morphism.\n    5  \n    6  \\begin{align*}\n\nC:\\Users\\Sadari\\Documents\\Math\\Affine Objects\\Project docs\\Owens notes 11-4-2016:\n    3  Done - Define max sieve\n    4  - Define sheafification\n    5: - Define universal sheafification morphism and choose notation\n    6  - Make explicit that \\pstilde( M \\tensor ...) = \\sheafify\\restrict\\pstilde\n    7  - Define adjunctions for pstilde and stilde and give bijections explicitely.\n\nC:\\Users\\Sadari\\Documents\\Math\\Affine Objects\\Project docs\\TODO - daily:\n    6  Done - Proof composition of adjunctions fact\n    7  Done - conclude that stilde is the adjunct of globalsections composed with i\n    8: Done - We will prove that global component of the universal sheafification morphism is an isomorphism.\n    9  Done - $S, T$ are still sieves on $fg$\n   10  Done - this is a compatible family\n\nC:\\Users\\Sadari\\Documents\\Math\\Affine Objects\\restr-caff.tex:\n  108  \\begin{lemma}\n  109  Let $a$ be caffine.\n  110: The global component of the sheafification morphism is equal to the unit of $\\adj{\\stilde}{\\globalsections}$ in $\\overcat{C}{a}$.\n  111  \\end{lemma}\n  112  \n  ...\n  114  Let $M$ be a $\\sections{a}{O}$-module.\n  115  Consider the following maps, which you get by repeatedly calling on an adjunction bijection.\n  116: Let $i$ be the universal sheafification morphism.\n  117  \n  118  \\[\\stilde(M) \\rightarrow \\stilde(M)\\]\n  ...\n  163   \\end{center}\n  164  \n  165: The natural transformation $j$ is the universal sheafification morphism coming from $\\sheafify_b$.\n  166  We have seen that $\\sections{b}{j}$ and $s$ are isomorphisms\n  167  \n\n11 matches across 6 files\n",
+			"settings":
+			{
+				"buffer_size": 3536,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Chapters/Caffine/prf-glbl-shfy-map-iso.tex",
+			"settings":
+			{
+				"buffer_size": 914,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nLaTeXing\n--------\n\n  LaTeXing 1.2.19\n  ===============\n  \n  Fixed\n  -----\n  \n  - Problem while using an embed bib file inside your LaTeX document\n",
+			"settings":
+			{
+				"buffer_size": 197,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
 			}
 		}
 	],
@@ -147,57 +180,86 @@
 	[
 		"/C/Users/Sadari/Documents/Math/Affine Objects",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/basic cat",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/basic-cat",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Project docs"
 	],
 	"file_history":
 	[
+		"/C/Users/Sadari/Documents/Math/Affine Objects/restr-caff.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/prf-compfam-loc.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/modules/def-pshmodules.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/modules/def-pstilde.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/def-plus-funct.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/def-sheafification.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff/prf-caff-restr-mor.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Project docs/TODO - daily",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/basic-cat/def-over-cat.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/modules/prf-pstilde-adj.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/preamble.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/basic-cat/def-presheaves.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/def-rel-topo.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/def-match-family.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/def-sieve.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/modules/main.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/introduction.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/caffine-objects/def-caff-obj.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/blurbs-old-todo/Neighbourhood site + general categorical stuff.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/def-sheaf.tex",
+		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/modules/def-quasi-coh-shf.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/blurbs-old-todo/main-adjunction.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/modules/def-stilde.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/main.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/modules/prf-pstilde-ff.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections - obsolete/presheafs.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/basic-cat/def-sections-funct.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/basic-cat/main.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/modules/cor-stilde-adj.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restrictiveness-caffine.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/main.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/basic cat/main.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff/my-caff-restr.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-rel-topo.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/main.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/def-grthdck-top.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/topology/def-basis.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/sheaves.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/basic cat/def-presheaves.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/basic-cat.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/lem-sieves-functor.tex",
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-grthdck-top.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/def-match-family.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-sieve.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-plus-funct.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-sheafification.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/sheaves.tex",
 		"/C/Users/Sadari/Documents/022202",
 		"/C/Users/Sadari/Downloads/common-pb-variables.xsl",
 		"/C/Users/Sadari/Downloads/Olympic-intermediate.xml",
 		"/C/Users/Sadari/Downloads/olympic - error.xml",
 		"/C/Users/Sadari/Downloads/Olympic-catalog.xml",
 		"/C/Users/Sadari/Programs/SuperSmash/20XX 4.05 Creator/ReadMe and MD5s.txt",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Project docs/TODO - daily",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Project docs/Owens notes 11-4-2016",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-basis.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-indcd-topology.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/basic cat/def-over-cat.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/lem-sieves-functor.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-grthdck-top.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/introduction.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/P1.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff/morphism-between-caffines-is-restrictive.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/def-pshmodules.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/main.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Restrictive/sections/restrictiveness.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Lambda.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/preamble.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Preamble/commands.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/prf-pstilde-adj.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/restr-caff.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/basic cat/lem-yoneda.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/basic cat/def-presheaves.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/basic-cat.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/presheafs.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restrictiveness-caffine.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/def-induced-top.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/sections/topology/def-cont-func.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff/owen-caff-restr.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/prf-restr-shfy-com.tex",
 		"/C/Program Files (x86)/KeePass Password Safe 2/XSL/KDBX_DetailsFull.xsl",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff/my-caff-restr.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/prf-glbl-shfy-map-iso.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/def-loc-top.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/prf-loc-sieves.tex",
@@ -211,7 +273,6 @@
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff/def-pstilde.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff/def-stilde.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff/prf-pstilde-adj.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/main.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/sections/restr-caff.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/main.synctex.gz",
 		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/LaTeXing/LaTeX.sublime-build",
@@ -224,7 +285,6 @@
 		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/proofs/counit-is-iso-if-locally.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/blurbs-old-todo/restricting-functors-and-counit.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/blurbs-old-todo/main-adjunction.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/main.pdf",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Caffine/proofs/my-caff-restr.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Project docs/math-questions",
@@ -254,28 +314,7 @@
 		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Project docs/math-questions",
 		"/C/Users/Sadari/Downloads/Age of Empires II/Readme.rtf",
 		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/Lambda.tex",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Caffine/proofs/morphism-between-caffines-is-restrictive.tex",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Caffine/sections/restrictiveness-caffine.tex",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/Kappa.tex",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/Presheaf modules.tex",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/Kappa adjunction.tex",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Lambda.tex",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/FrontBackMatter/symbols.aux",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/.gitignore",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/main.synctex.gz",
-		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Prelims/sections/basic-cat.tex",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/main.log",
-		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Caffine/examples/Ny.tex",
-		"/home/sadar/request-getquote_futureprotect.xml",
-		"/home/sadar/Downloads/example-joint-amount-issue.xml",
-		"/home/sadar/Documents/Math/Affine Objects/get-sharelatex-source.sh",
-		"/home/sadar/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/todo.tex",
-		"/home/sadar/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/Presheaf modules.tex",
-		"/home/sadar/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/Kappa adjunction.tex",
-		"/home/sadar/Documents/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/Lambda.tex",
-		"/home/sadar/Documents/Math/Affine Objects/Chapters/Caffine/proofs/morphism-between-caffines-is-restrictive.tex"
+		"/C/Users/Sadari/Downloads/Documents/Math/Affine Objects/Chapters/Caffine/proofs/morphism-between-caffines-is-restrictive.tex"
 	],
 	"find":
 	{
@@ -287,6 +326,8 @@
 		"where_history":
 		[
 			"C:\\Users\\Sadari\\Documents\\Math\\Affine Objects",
+			"C:\\Users\\Sadari\\Documents\\Math\\Affine Objects\\Chapters\\Prelims\\topology",
+			"C:\\Users\\Sadari\\Documents\\Math\\Affine Objects",
 			""
 		]
 	},
@@ -295,6 +336,35 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"sheafification morphism",
+			"next episode",
+			"TODO",
+			"modules",
+			"X",
+			"ij",
+			"S_j",
+			"compatible",
+			"\\topo",
+			"\\topo{T_a}",
+			"and",
+			"\\and",
+			"and",
+			"X",
+			", X'",
+			"mini",
+			"show",
+			"whitespace",
+			"QUASI-coherent",
+			"Z",
+			"pshtilde",
+			"X",
+			"ringed",
+			"y",
+			"compatible",
+			"\\topo{",
+			"\\topo",
+			"sieve",
+			"y",
 			"\\ringedsite",
 			"site",
 			"Y",
@@ -339,6 +409,20 @@
 		"regex": false,
 		"replace_history":
 		[
+			"C",
+			"i,j",
+			"S^j",
+			"matching",
+			"\\top",
+			"\\topo{T}_a",
+			"a",
+			"z",
+			"pstilde",
+			"a",
+			"matching",
+			"\\top{",
+			"\\top",
+			"p",
 			"\\rsite",
 			"b",
 			"a",
@@ -365,52 +449,80 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Chapters/Prelims/sections/topology/lem-sieves-functor.tex",
+					"file": "Project docs/Owens notes 11-4-2016",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 533,
+						"buffer_size": 390,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								521,
-								521
+								390,
+								390
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Chapters/Prelims/sections/topology/def-plus-funct.tex",
-					"semi_transient": true,
+					"file": "Chapters/Prelims/topology/def-plus-funct.tex",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1745,
+						"buffer_size": 2022,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								993,
+								993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 217.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Chapters/Prelims/topology/def-sheafification.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								339,
+								343
 							]
 						],
 						"settings":
@@ -421,29 +533,28 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Chapters/Prelims/sections/topology/def-rel-topo.tex",
+					"buffer": 3,
+					"file": "Chapters/Prelims/modules/def-stilde.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 617,
+						"buffer_size": 1872,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								598,
-								598
+								133,
+								133
 							]
 						],
 						"settings":
 						{
-							"auto_name": "\\begin{definition}",
 							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -454,20 +565,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "Project docs/TODO - daily",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1873,
+						"buffer_size": 1916,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1765,
-								1765
+								1796,
+								1796
 							]
 						],
 						"settings":
@@ -475,10 +586,154 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 396.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3536,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										241,
+										264
+									],
+									[
+										554,
+										577
+									],
+									[
+										824,
+										847
+									],
+									[
+										1057,
+										1080
+									],
+									[
+										1475,
+										1498
+									],
+									[
+										1911,
+										1934
+									],
+									[
+										2137,
+										2160
+									],
+									[
+										2624,
+										2647
+									],
+									[
+										2901,
+										2924
+									],
+									[
+										3214,
+										3237
+									],
+									[
+										3382,
+										3405
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Chapters/Caffine/prf-glbl-shfy-map-iso.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 914,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								108
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -486,7 +741,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -568,8 +823,8 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 291.0,
+	"side_bar_visible": true,
+	"side_bar_width": 406.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

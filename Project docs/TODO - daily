@@ -24,6 +24,7 @@ Done - Download Latexing docs.
 - Setup symbols in tikz cd : http://tex.stackexchange.com/questions/279187/adjunction-of-functors-command-tikzcd/279192
 - Add names and references to lemmas/definitions/examples
 - Clean preamble
+- Remove nesting of macros for functors.
 
 = Project
 - Clean project
@@ -37,10 +38,9 @@ Done - Download Latexing docs.
 - Extent localizing/restricting to sites
 
 = Topology
-- Finish definition of relative topology
 - Proof/reference oostens diktaat properties of plus.
+- localizing a Site definition
 
 = Caffines x restrictive
 - exhibit iso and show that pullback along u and and u commute
-- Owens comments
-
+- Make diagram of dependencies
