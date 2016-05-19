@@ -1,5 +1,5 @@
 \begin{lemma}
-Let $Y = \rsite{X}{T}{O}$ be a site.
+Let $Y = \rsite{X}{T}{O}$ be a ringed site.
 The functor $\pstilde$ is left adjoint to 
 \[\globalsections:\pshmodules{Y} \rightarrow \modules{R}\].
 \end{lemma}
@@ -18,7 +18,7 @@ Define
 \]
 by
 \[ \alpha(\varphi) = \varphi_1,\]
-where $\varphi_1$ is the component of $\varphi$ on the globalsections.
+where $\varphi_1$ is the component of $\varphi$ on the global sections.
 
 Define 
 \[\beta = L_{M,\presheaf{G}}: 
@@ -37,16 +37,16 @@ Then $d_a(m \tensor g) = \varphi_1(m) \tensor g$
 and
 
 \begin{align*}
-	\varphi_a(m \tensor g) &=  g \varphi_a(m \tensor 1) \reason{ linearity }\\
+	\varphi_a(m \tensor g) &=  g \varphi_a(m \tensor 1) \reason{linearity}\\
 		&= g \varphi_a(p(m)) \\
-		&= g q(\varphi_1(m)) \reason{ naturality of $\varphi$ }\\
+		&= g q(\varphi_1(m)) \reason{naturality of $\varphi$}\\
 		&= g (\varphi_1(m) \tensor 1) \\
 		&= \varphi_1(m) \tensor g.
 \end{align*}
 
 Hence $d = \varphi$. 
 In words, the natural transformations from presheaves of the from $\pstilde(M)$ 
-are unique determined by their global sections component.
+are uniquely determined by their global sections component.
 
 Let $d = \alpha(\beta(\phi))$. 
 Let $m \in M$.

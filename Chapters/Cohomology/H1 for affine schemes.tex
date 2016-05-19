@@ -3,10 +3,10 @@
 
 
 \begin{lemma}
-A ring homomorphism $R\rightarrow S$ is faithfully flat \iff it is flat and $S\tensor M=0 \Rightarrow M=0$.
+A ring homomorphism $R\rightarrow S$ is faithfuly flat \iff it is flat and $S\tensor M=0 \Rightarrow M=0$.
 \end{lemma}
 \begin{proof}
-Let our map be faithfully flat and $S\tensor M=0$. Then $0\rightarrow S\tensor M\rightarrow 0$ is exact. 
+Let our map be faithfuly flat and $S\tensor M=0$. Then $0\rightarrow S\tensor M\rightarrow 0$ is exact. 
 Hence $0\rightarrow M\rightarrow 0$ is also exact.
 
 Let the other condition hold. 
@@ -35,7 +35,7 @@ The problem becomes: given $f_{ij}$ such that $f_{ij}+f_{jk}=f_{ik}$ on $U_{ijk}
 Assume(without loss of generality) that the cover is a cover of distinguised opens.
 Translated to the module $M$: given $m_{ij}\in M_{f_if_j}$ such that $m_{ij}+m_{jk}=m_{ik}$ on $U_{ijk}$ find $m_i\in M_{f_i}$ such that $m_i-m_j =m_{ij}$.
 
-Let $S=\prod_i R_{f_i}$, this is a faithfully flat $R$-algebra.
+Let $S=\prod_i R_{f_i}$, this is a faithfuly flat $R$-algebra.
 We want to prove that
 
 \[S\tensor M \xrightarrow{h} S\tensor S\tensor M \xrightarrow{k} S\tensor S\tensor S\tensor M \]
@@ -43,7 +43,7 @@ We want to prove that
 \[k:s\tensor r\tensor m \mapsto s\tensor r \tensor 1 \tensor m - s\tensor 1 \tensor r \tensor m + 1\tensor s \tensor r \tensor m\]
 
 is exact. All elements send to zero by the last map are exactly the families $(m_{ij})$ for which the cocyle condition holds.
-We will use that $S$ is faithfully flat and prove exactness of 
+We will use that $S$ is faithfuly flat and prove exactness of 
 
 
 \[S\tensor S\tensor M \rightarrow S\tensor S\tensor S \tensor M \rightarrow S \tensor S\tensor S\tensor S\tensor M \]
@@ -58,5 +58,5 @@ Let $s\tensor r\tensor t\tensor m\mapsto 0$. Then
 Hence $s\tensor r \tensor t\tensor m$ is in the image of the first map. 
 \end{proof}
 
-Only used that any cover can be refined to a faithfully flat cover.
+Only used that any cover can be refined to a faithfuly flat cover.
 \end{document}

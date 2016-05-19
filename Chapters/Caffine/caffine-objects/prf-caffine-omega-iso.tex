@@ -1,0 +1,34 @@
+\begin{lemma}
+Let $\rsite{C}{T}{O}$ be a ringed site.
+Let $a \in \cat{C}$.
+Let $M$ be a $\sections{a}{O}$-module.
+The component 
+\[\omega^2_{\pstilde{M},a}: \pstilde(M) \rightarrow \stilde(M)\] 
+at $\id_a$
+of the sheafification morphism 
+\[\omega^2_{\stilde{M}}: \pstilde{M} \rightarrow \stilde{M}\]
+is equal to 
+the unit of $\adj{\stilde}{\globalsections}$ 
+in $\overcat{C}{a}$.
+\end{lemma}
+
+\begin{proof}
+Consider the following maps, which you get by repeatedly calling on an adjunction.
+
+\[\id :\stilde(M) \rightarrow \stilde(M)\]
+\[\omega^2_{\stilde{M}} : \pstilde(M) \rightarrow \stilde(M) 
+	\mbox{ use sheafification adjunction, see lemma ..}
+\]
+\[\omega^2_{\pstilde{M},a} M \rightarrow \sections{a}{\stilde(M)} \mbox{ take sections at $a$}\]
+
+We took the adjunct of $\id$ with respect to the sheafification adjunction as the first step.
+Then we took the adjunct of the result wrt the $\pstilde$ ajunction.
+Hence we get the adjunct of $\id$ wrt the $\stilde$ adjunction.
+so the last map is actually the unit of the $\stilde$ adjunction.
+\end{proof}
+
+\begin{corollary}
+Let $\rsite{C}{T}{O}$ be a ringed site.
+Let $a \in \cat{C}$ be caffine.
+Then $\omega^2_{\pstilde(M),a}$ is an isomorphism for any $\sheaf{O}(a)$-module $M$.
+\end{corollary}

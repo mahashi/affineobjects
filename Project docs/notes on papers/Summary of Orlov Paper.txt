@@ -14,7 +14,7 @@ Category is (small?) cocomplete.
 %Ass. modules
 Definition. Tilde functor.
 Definition. Quasi-coherent presheaf module. (Orlov)
-Fully faithfull embedding of modules in module presheafs.
+Fully faithful embedding of modules in module presheafs.
 Lemma. Tilde is left adjoint to global sections.
 Definition. Quasi-coherent module on a presheaf.
 Use of sheafification after tilde, adjunction is preserved but no longer full. This is exact since both functors are.

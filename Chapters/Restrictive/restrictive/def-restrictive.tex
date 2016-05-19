@@ -1,0 +1,22 @@
+\begin{definition}[Restrictive functor]
+A functor  $F: \rsite{C}{T}{O} \rightarrow \rsite{D}{S}{U}$ 
+between ringed sites is called restrictive 
+if for every quasi-coherent module $\module{G}$ on $\rsite{D}{S}{U}$
+the co-unit $\counit$ of $\mainadjunction$ 
+induces an isomorphism 
+\[\counit_{\module{G}} : 
+	\module{G} \rightarrow \direct{f}\inverse{f}\module{G},
+\]
+\[\counit_{\module{G}, \terminal} : 
+	\globalsections{G} \rightarrow \globalsections{\direct{f}\inverse{f}G}
+	\]
+\[\counit_{\module{G}, \terminal} \tensor_{\globalsections{O}} \globalsections{U} :
+	\globalsections{G} \tensor_{\globalsections{O}} \globalsections{U} \rightarrow \globalsections{\direct{f}\inverse{f}\module{G}}.
+\]
+\end{definition}
+
+\begin{definition}[Restrictive morphism]
+A morphism $f: a \rightarrow b \in \cat{C}$ is called restrictive 
+if the induced functor 
+\[\overcat{C}{a} \rightarrow \overcat{C}{b}\] is restrictive.
+\end{definition}

@@ -1,0 +1,24 @@
+\begin{lemma}
+Let $I \subset \globalsections{O}$ be an ideal.
+The set $V_X(I)$ is closed.
+\end{lemma}
+
+\begin{proof}
+Let $z\in X$ and $M$ a $\sheaf{O}$-module. Assume $z$ is in the support of $M$, then $g\neq 0$ for any generating element $g\in M_z$. 
+
+Consider the exact sequence 
+\[\sheaf{O}(X)\rightarrow \frac{\sheaf{O}(X)}{I} \rightarrow 0.\]
+The functor $\Lambda_X$ is a left adjoint hence right exact so 
+\[\sheaf{O} \xrightarrow{f} \Lambda_X(\frac{\sheaf{O}(X)}{I}) \rightarrow 0\]
+is exact.
+Hence the sequence
+\[\sheaf{O}_x \xrightarrow{f_x} \Lambda_X(\frac{\sheaf{O}(X)}{I})_x \rightarrow 0\]
+is exact. 
+The global section $f(1)$ must generate $\Lambda_X(\frac{\sheaf{O}(X)}{I})$ as a module by surjectivity of $f$.
+Similarly $f_x(1_x)$ generates $\Lambda_X(\frac{\sheaf{O}(X)}{I})_x$.
+
+Note that $f_x(1_x) = f(1)_x$ by definition of $f_x$, hence $f(1)_x$ is a generating element.
+Hence $\Lambda_X(\frac{\sheaf{O}(X)}{I})_x \neq 0$ \iff $f(1)_x \neq 0$. 
+
+This implies $V_X(I) = \Sup(f(1))$ which makes $V_X(I)$ closed as the support of a global section.
+\end{proof}

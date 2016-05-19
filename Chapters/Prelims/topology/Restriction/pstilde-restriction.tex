@@ -1,0 +1,22 @@
+\begin{lemma}[$\pstilde$ commutes with restriction]
+Let $\rsite{C}{T}{O}$ be a ringed site.
+Let $f:b \rightarrow a \in \cat{C}$.
+The functors $u \circ \pstilde$ 
+and $\pstilde \circ (\blank \tensor \sections{a}{O})$ are the same functor.
+\end{lemma}
+
+\begin{lemma}[$\pstilde$ counit commute with restriction]
+Let $\cat{C}$ be a category.
+Let $a\in \cat{C}$.
+Let $\counit$ be the counit of the adjunction $\adj{\pstilde}{\globalsections}$ on $\cat{C}$.
+Let $\counit_a$ be the counit of the adjunction $\adj{\pstilde_a}{\globalsections}$ on $\overcat{C}{a}$.
+Let $\module{F}$ be a presheaf module on $\cat{C}$.
+By lemma ?, $\restr{\pstilde{\globalsections{F}}}{a} = \pstilde{\globalsections{F} \tensor \sections{a}{O}}$.
+We have $u\circ(\counit) = \counit_a$ on this presheaf module. 
+\end{lemma}
+
+\begin{proof}
+Let $f:b\rightarrow a \in \overcat{C}{a}$.
+Let $m\tensor r \in \pstilde{\globalsections{F} \tensor \sections{a}{O}}(f) = \globalsections{F} \tensor \sections{b}{O}$.
+Then both maps do $m\tensor r \mapsto rm$.
+\end{proof}

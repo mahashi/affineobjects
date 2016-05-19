@@ -1,0 +1,103 @@
+\subsection{Caffine = Affine for schemes}
+
+Let $(X,\sheaf{O})$ be a caffine scheme.
+Let $X \xrightarrow{F} \Spec{\globalsections{O}} = Y$ be the adjunct of the identity map via the adjunction $(\Spec{\blank}, \globalsections{\blank})$.
+Equivalently, let $F$ be the component at $X$ of the unit from this adjunction.
+
+Let's introduce our variables.
+Let $x,y\in X$. 
+Let $\Ip,I,J\subset \sheaf{O}(X)$ be ideals with $\Ip$ prime.
+Let $a,b\in \sheaf{O}(X)$ be global sections.
+
+\begin{remark}
+Recall that $F(x) = \ker(x)$ for $x\in X$.
+I will use $D_Y(a)$ for the distinguished open defined by $a$ in the affine $Y$.
+Note that $D_X(ab) = D_X(a) \cap D_X(b)$ since $\ker(x)$ is a prime ideal.
+\end{remark}
+
+\begin{remark}
+If the support of a sheaf $\sheaf{G}$ is empty, then locally all sections are zero. 
+Hence all sections are equal to the zero section and $\sheaf{G} = 0$.
+\end{remark}
+
+
+
+
+\begin{comment}
+\begin{lemma}
+Let $U_i\subset X$ be an affine open of $X$.
+Then in the sequence $I\tensor \sheaf{O}(U_i)\xrightarrow{j}\Lambda_X(I)(U_i) \xrightarrow{i} \sheaf{O}(U_i)$ the map $j$ is an iso and the map $i$ is injective
+\end{lemma}
+\begin{proof}
+Let $I\xrightarrow{g}\sheaf{O}(X)$ be the inclusion.
+The map $i$ is the component at $U_i$ of $\Lambda_X(i)$, which is injective by left exactness of $\Lambda_X$.
+The inclusion $U_i\subset X$ is restrictive because $U_i$ is affine, hence $j$ is an isomorphism.
+\end{proof}
+
+\begin{remark}
+I will use both $I\tensor \sheaf{O}(U_i)$ and $I \sheaf{O}(U_i)$ to denote the image (ideal) of the composition of these maps.
+\end{remark}
+
+\begin{lemma} Let $K,L\subset \sheaf{O}(X)$ be ideals. Then
+\[V_X(K)\subset V_X(L) \Rightarrow \sqrt{L}\subset \sqrt{K}.\]
+\end{lemma}
+\begin{proof}
+Assume \[V_X(K)\subset V_X(L).\]
+Let $U_i = \Spec A_i \rightarrow X$ be a family of affine opens that covers $X$.
+Note that $V_X$ restricts to the familiar 'zero-locus' function $V(\cdot)$ on any affine open.
+Hence on $U_i$, we get
+\[V(K A_i)  \subset V(L A_i).\]
+
+For any ideal $N\subset \sheaf{O}(X)$, we get $\sqrt{N (A_i)_d}=\sqrt{N} (A_i)_d$ for every $d\in A_i$.
+This implies $\Lambda_{U_i}(\sqrt{N} A_i)= \Lambda_{U_i}(\sqrt{N A_i})$ as follows.
+Let $a\in \sqrt{N A_i}$, then we can get a finite cover of $U_i$ by distinguished opens which provides a matching family of restrictions $a_d\in \sqrt{N (A_i)_d}=\sqrt{N} (A_i)_d$.
+By the sheaf property $a\in \sqrt{N} A_i$.
+We use this for
+\[\sqrt{L A_i} = \sqrt{L} A_i \subset \sqrt{K A_i} = \sqrt{K} A_i\] 
+as ideals of $A_i$.
+Hence we get an injection
+\[\restr{\Lambda_X(\sqrt{L})}{U_i} \xrightarrow{f_i} \restr{\Lambda_X(\sqrt{K})}{U_i}\] 
+that respects the inclusions \[g:\Lambda_X(\sqrt{L}) \rightarrow \sheaf{O}\]
+and \[h:\Lambda_X(\sqrt{K}) \rightarrow \sheaf{O}.\] 
+This ensures moreover that $f_i = f_j$ on $U_{ij}$ because $h$ is a mono.
+We get an injection
+\[\Lambda_X(\sqrt{L}) \xrightarrow{f} \Lambda_X(\sqrt{K})\]
+by glueing. Since $\Lambda_X$ is an equivalence, we get an injection of modules $\sqrt{L} \rightarrow \sqrt{K}$ 
+that respects the inclusions $\sqrt{K}\subset \sheaf{O}(X)$ and $\sqrt{L}\subset \sheaf{O}(X)$.
+\end{proof}
+\end{comment}
+
+
+
+\begin{comment}
+\begin{definition}
+Define $G(\Ip)$ to be the generic point of $V_X(\Ip)$.
+\end{definition}
+\begin{lemma}
+The functions $F$ is a bijection.
+\end{lemma}
+\begin{proof}
+Let $F(z)=\Ip$.
+Note that $a\in F(G(\Ip))$ \iff $a\in \ker(x)$ for all $x\in V_X(\Ip)$.
+We have
+\begin{align*}
+a\in \Ip &\Rightarrow a\in \ker(x), \forall x\in V_X(\Ip)\\
+&\Rightarrow D_X(a) \cap V_X(\Ip) =\emptyset\\
+&\Rightarrow a\in \ker(z)=\Ip\\
+\end{align*}
+
+Hence $FG = id_X$ and $F$ is surjective so a bijection.
+
+
+Let $x\in X$. By construction $x\in V_X(F(x))$, because $F(x)=\ker(x)$.
+Let $w\in V_X(F(x))$. Then $\ker(\sheaf{O}(X)\rightarrow \kappa(x))\subset \ker(\sheaf{O}(X)\rightarrow \kappa(w))$, so any open nhood $D_X(a)$ of $w$ contains $x$.
+Therefore $x$ is the generic point of $V_X(F(x))$. Hence $GF = id_X$.
+
+
+\end{proof}
+\end{comment}
+
+
+
+
+

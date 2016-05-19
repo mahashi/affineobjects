@@ -1,0 +1,14 @@
+\begin{definition}
+Let $\cat{C}$ be a category.
+Let $a\in \cat{C}$.
+Assume that all pullbacks exist in $\cat{C}$.
+
+Then we get a right adjoint of $u:\overcat{C}{a} \rightarrow \cat{C}$.
+Namely, $v: C \rightarrow \overcat{C}{a}$, defined by:
+
+for each $b\in \cat{C}$
+\[ v(b) = (b\times a, \mbox{pr}_a),\]
+where $\mbox{pr}_a$ is the projection onto $a$.
+For each $f:c\rightarrow b \in \cat{C}$
+\[ v(f) = f \times \Id_a.\]
+\end{definition}

@@ -1,0 +1,8 @@
+- Setup functor macros that work without parameters
+- Setup symbols in tikz cd : http://tex.stackexchange.com/questions/279187/adjunction-of-functors-command-tikzcd/279192
+- Add names and references to lemmas/definitions/examples
+- Clean preamble
+- Split preamble
+- Remove nesting of macros for functors.
+- Choose one way to denote sections.
+- Clean project

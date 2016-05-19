@@ -1,0 +1,23 @@
+%% When is the canonical map A -> A\tensor B injective?
+\begin{question}
+Assume $\Spec A = U \subset V = \Spec B$ open affines of $X$.
+Let $\shf$ be a quasi-coherent sheaf on $X$.
+By the affine result, the restriction map $\shf(V) \rightarrow \shf(U)$ is injective \iff $\shf(V) \rightarrow \shf(V)\tensor_{\O_X(V)}\O_X(U)$ is injective.
+Is $\shf(V) \rightarrow \shf(V)\tensor_{\O_X(V)} \O_X(U) \iso \shf(U)$ always injective?
+\end{question}
+\begin{Qanswer}
+No.
+
+Let $X=V$, $B= \Z$, $\shf= \widetilde{\Z/2\Z}$ and $U= D(2)$.
+Then the localization map 
+
+\[ \Z/2\Z \rightarrow (\Z/2\Z)_2 = 0\]
+is not injective. 
+
+\bigskip
+When is it?
+Let's go back to the general setting. 
+Only let $\restr{\shf}{V}= \widetilde{M}$ and $U= D(f)$ for some $f \in B$.
+Let $m\in M$. If $m \tensor 1 = 0$ in $M\tensor_B A$, then $f^n m = 0$ in $M$ for some $n\in \N$.
+Hence the localization map $M\rightarrow M\tensor_B A$ is not injective \iff $f\in \sqrt{\Ann(m)}$ for some $m\in M$.
+\end{Qanswer}

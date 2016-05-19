@@ -1,0 +1,37 @@
+\begin{lemma}
+Let $\cat{C}$ be a category.
+Let $a,b \in \cat{C}$.
+Let $f:b \rightarrow a \in \overcat{C}{a}$.
+We have the equalities $L^fQ^f = \id$ and $Q^fL^f = \id$.
+\end{lemma}
+\begin{proof}
+Let $w: c \rightarrow a$.
+Let $g:w \rightarrow f \in \overcat{C}{a}$.
+
+Let $S\in \sievecat{f}$.
+Let $h\in Q^fL^f(S)(g)$.
+Hence $g=fh$ and $h\in L^f(S)(c)$.
+This implies $h\in S(fh) = S(g)$.
+Let $h\in S(g)$.
+So $g=fh$ and $h \in L^f(S)(\dom{g})= L^f(S)(c)$.
+This implies $h\in Q^fL^f(S)(g)$.
+Therefore $Q^fL^f(S)$ and $S$ are the same sieve.
+
+Let $h:S \rightarrow R \in \sievecat{f}$.
+Let $p \in S(g)$.
+Then by construction $L^fQ^f(h)_g(p) = Q^f(h)'_{c}(p) = h_{c}(p)$.
+
+Let $R\in \sievecat{b}$.
+Let $h\in L^fQ^f(R)(c)$.
+Hence $h\in Q^f(R)(g)$ for some $g:c\rightarrow a$.
+So $g=hf$ and $h\in R(c)$.
+Let $h\in R(c)$.
+Hence $h\in Q^f(R)(hf)$ and since $\dom{hf} = c$ we get $h\in L^fQ^f(R)(c)$.
+Therefore $L^fQ^f$ and $R$ are the same sieve.
+
+Let $h:S \rightarrow R \in \sievecat{b}$.
+Let $p \in S(c)$.
+Then by construction $Q^fL^f(h)_{c}(p) = L^f(h)_{pf}(p) = h_{c}(p)$.
+
+So $L^fQ^f = \id$ and $Q^fL^f = \id$.
+\end{proof}

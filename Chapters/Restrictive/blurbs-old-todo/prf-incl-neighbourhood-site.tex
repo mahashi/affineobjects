@@ -1,0 +1,21 @@
+%% Does the inclusion functor from the neighbourhood site commute with sheafifying?
+\begin{question}
+Does the inclusion functor $N(y)\xrightarrow{i} \Op(X)$ commute with sheafifying?
+\end{question}
+\begin{Qanswer}
+No. Counterexample: 
+
+Let $X=\bigcup_{i=0}^2 [0,1]$. Let $y=(1,0)$. Consider the constant $\presheaf{F}=\Z$ presheaf on $\Op(X)$. 
+Then $\presheaf{F}^{++}(U)=\{ f:X\rightarrow \Z \mid f \mbox{ locally constant}\}$ for any open $U\subset X$.
+For example, the global sections are isomorp $\Z\times\Z\times \Z$.
+($\presheaf{F}\circ i$ is a constant presheaf. No object has the empty cover, so this presheaf is separated)
+Let $(x)_j$ be a matching family of $\presheaf{F}\circ i$ on $X$ indexed by $\{U_j\rightarrow X\}$.
+Hence $x_j\in \presheaf{F}(U_j)=\Z$ for every $j$. 
+Note that $U_j\cap U_i \neq \emptyset$ for every $i,j$, so since $(x)_j$ is matching: $x_{ij} = x_i = x_j=k \in \Z$.
+Hence the section $k\in \presheaf{F}(X)=\Z$ is the only amalgamation of this matching family. This shows that $(\presheaf{F}\circ i)^{++}(X)=\Z$.
+Therefore 
+\[(\presheaf{F}\circ i)^{++}(X) \neq (\presheaf{F}^{++} \circ i)(X),\]
+
+which disproves the statement.
+
+\end{Qanswer}

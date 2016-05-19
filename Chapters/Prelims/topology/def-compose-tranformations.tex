@@ -1,0 +1,16 @@
+\begin{definition}[Composing natural transformations]
+Let $\cat{C}$ be a categories.
+Let $F,f:\cat{C} \rightarrow \cat{D}$
+and $G,g: \cat{D} \rightarrow \cat{E}$ be functors.
+Let $T: F \rightarrow f$
+and $V: G \rightarrow g$ be a natural transformations.
+
+Let $a \in \cat{C}$.
+Define $V\circ T: G\circ F \rightarrow g \circ f$ by
+\[(V \circ T)_a = V_{f(a)}\circ G(T_a).\]
+
+In particular for $F,f: \cat{C} \rightarrow \cat{C}$
+and $T:F\rightarrow f$, we have
+\[T^2: F^2 \rightarrow f^2,\]
+\[(T^2)_a = T_{f(a)} \circ F(T_a).\]
+\end{definition}

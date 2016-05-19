@@ -1,0 +1,46 @@
+\begin{definition}[Sieve functors]
+Let $\cat{C}$ be a category.
+Let $a,b \in \cat{C}$.
+Let $f:b \rightarrow a \in \overcat{C}{a}$.
+Let $w: c \rightarrow a$.
+Let $g:w \rightarrow f \in \overcat{C}{a}$.
+
+For every sieve $S\in \sievecat{f}$
+define the sieve $S'$ on $b$
+by $S'(c) = \bigcup_{g\in \Hom{c}{b}} S(g)$.
+Let $h\in S'(c)$ and $k: c \rightarrow b$.
+Note that $hk \in S(gk)$ 
+since $S$ is a sieve on $f$, 
+hence $hk \in S'(c)$. 
+This shows that $S'$ is a subpresheaf of $\y{b}$.
+Let $S \xrightarrow{\alpha} R$ be a map of sieves.
+Define $\alpha':S' \rightarrow R'$ to be
+\[(\alpha')_{c} = \bigcup_{g \in \Hom{c}{b}} \alpha_g.\]
+
+For every sieve $R \in \sievecat{b}$
+define the sieve $R^f \subset \y{f}$ as follows.
+For each $g : c \rightarrow a \in \overcat{C}{a}$,
+\[ R^f(g) = \set{p: c \rightarrow b \in R(c) \suchthat g = f \circ p}.\]
+This is a sieve because if $p\in R^f(g)$ 
+and $h : g' \rightarrow g$ arbitrary, 
+then $gh=fph$ so $ph \in R^f(gh)$.
+Let $S,R\in \sievecat{b}$.
+Let $\alpha:S \rightarrow R$.
+Define $\alpha^f: S^f \rightarrow R^f$ by setting 
+for each $g:c \rightarrow a \in \overcat{C}{a}$
+\[(\alpha^f)_g = \restrict{\alpha_b}{S^f(g)}\]
+
+Define functors
+\[L^f: \sievecat{f} \rightarrow \sievecat{b} ,\]
+\[Q^f: \sievecat{b} \rightarrow \sievecat{f}.\]
+
+By,
+for every sieve $S\in \sievecat{f}$
+\[L^f(S) = S',\]
+for every $h:S \rightarrow R \in \sievecat{f}$.
+\[L^f(h) = h',\]
+For every sieve $R \in \sievecat{b}$
+\[Q^f(R) = R^f\]
+For every sieve $k:S \rightarrow R \in \sievecat{b}$.
+\[Q^f(k) = k^f.\]
+\end{definition}

@@ -1,0 +1,22 @@
+\begin{lemma}
+If $\unit_X$ is a homeomorphism, then $X$ is affine.
+\end{lemma}
+
+\begin{proof}
+Let $\Spec A_i = U_i \subset X$ be open affines
+and let $\union_i U_i = X$.
+Assume it is a finite affine cover.
+Using our base, 
+we get a cover of $U_i = \union_j D_X(a_{ij})$ 
+with $a_{ij}$ global sections.
+Observe that $D_X(a_{ij})\subset U_i$, 
+hence $D_{U_i}(\restr{a_{ij}}{U_i}) = D_X(a_{ij})$
+which makes them affine.
+Continuing like this, 
+we get a finite cover of affines $D_X(a_{ij})$ of $X$.
+Since 
+\[ F(X) = F(\union_{ij} D_X(a_{ij})) = \union_{ij} D_Y(a_{ij}) = \Spec R,\]
+we have $(a_{ij})=(1)$.
+Affine-ness satisfies the two requirements for the affine communication lemma[HAG II Ex.2.17], 
+hence $X$ is affine.
+\end{proof}

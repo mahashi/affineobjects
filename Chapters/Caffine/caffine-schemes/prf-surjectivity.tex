@@ -1,0 +1,29 @@
+\begin{lemma}
+The map $\counit_X$ is surjective.
+\end{lemma}
+\begin{proof}
+Let $\Ip\in \Spec R$ be a point in the target of $\counit_X$.
+Then $\Lambda_X(\kappa(\Ip))$ is a quasi-coherent sheaf of modules.
+In fact $\kappa(\Ip)\tensor_\Gamma(\sheaf{O}) \sheaf{O}(U)$ is a $\sheaf{O}(U)$ algebra, hence $\Lambda_X(\kappa(\Ip))$ is a quasi-coherent sheaf of algebras.
+Hence we can compute the relative spec $\Rspec(\Lambda_X(\kappa(\Ip)))\rightarrow X$. The adjunct of the map
+\[\Rspec(\Lambda_X(\kappa(\Ip)))\rightarrow \Spec R\] is the canonical morphism $g:R\rightarrow \kappa(\Ip)$. 
+This morphism is also the adjunct of the composition
+\[\Rspec(\Lambda_X(\kappa(\Ip)))\rightarrow \Spec \kappa(\Ip)\rightarrow X,\]
+so both maps must be equal. This gives us a commutative square
+
+\begin{center}
+\begin{tikzpicture}[node distance=3cm, auto]
+  \node (C) {$X$};
+  \node (B) [right of =C] {$\Spec R$};
+  \node (D) [below of= C]{$\Rspec(\Lambda_X(\kappa(\Ip)))$};
+  \node (A) [below of= B]{$\Spec \kappa(\Ip)$};
+  \draw[->] (C) to node {$\counit_X$} (B);
+  \draw[->] (A) to node [swap] {}  (B);
+  \draw[->] (D) to node [swap] {} (A);
+   \draw[->] (D) to node [swap] {} (C);
+\end{tikzpicture}
+\end{center}
+
+By lemma .., we know that $\Lambda_X(\kappa(\Ip))$ is not the zero sheaf hence the structure sheaf of $\Rspec(\Lambda_X(\kappa(\Ip)))$ non-zero.
+This implies that the scheme is not the empty scheme. Therefore the point $\Ip$ is in the image of $\counit_X$.
+\end{proof}

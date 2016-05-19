@@ -1,0 +1,93 @@
+\begin{corollary}
+Let $Y = \site{C}{T}$.
+Let $a,b \in \cat{C}$.
+Let $f: b\rightarrow a$.
+Sheafifying and restricting commute via the iso
+\[s^2: \sheafify_b \circ \restrictOpt{b} \rightarrow \restrictOpt{b} \circ \sheafify_a.\]
+\end{corollary}
+
+
+% \begin{lemma}
+% Let $Y = \site{C}{T}$.
+% Let $a,b \in \cat{C}$.
+% Let $f: b\rightarrow a$.
+% Sheafifying and restricting commute.
+% We will exhibit an natural isomorphism
+% \[s: \sheafify_b \circ \restrictOpt{b} \rightarrow \restrictOpt{b} \circ \sheafify_a.\]
+% \end{lemma}
+% \begin{proof}
+% We will construct the natural transformation
+% \[s : \sheafify_b \circ \restrictOpt{b} \rightarrow \restrictOpt{b} \circ \sheafify_a\]
+% and prove it is an isomorphism.
+
+% Let $g:c \rightarrow b \in \overcat{Y}{b}$
+% Let $\presheaf{F}$ be a presheaf on $\overcat{Y}{a}$.
+% Let $\sheaf{H} = \sheafify{\restrictOpt{b}{F}}$
+% and $\sheaf{K} = \restrictOpt{b}{\sheafify{F}}$.
+
+% Let $T^f$ be a covering sieve
+% on $g$ in $\overcat{Y}{b}$
+% coming from a covering sieve $T$ on $c$.
+% For every $j\in T$
+% let $S_{j,f}$ be a covering sieve 
+% on $\dom{j}$ in $\overcat{Y}{b}$
+% coming from a covering sieve $S_j$ on $\dom{j}\in \cat{C}$.
+
+% Let $x = \set{x_{i,j}}_{i \in S_{j}^f, j \in T^f} \in \sheaf{H}$ 
+% be a matching family of matching families
+% indexed by $S_{j}^f$ and $T^f$.
+% By definition of a matching family,
+% we have $x_{i,j} \in \sections{\dom{i}}{F}$.
+% Define the component at $g$ of $s$ to be
+% \[ s_g(x) = \set{x_{u(i),u(j)}}_{} \] 
+% with indexing covering sieves $S_j$ and $T$.
+
+%TODO:  elements version is better! use that one. 
+% Considering the matching families as morphisms,
+% $s$ is given by
+% \[ (\varphi, R) \mapsto (\varphi', R').\]
+
+% Let $g:c \rightarrow b \in \overcat{Y}{b}$.
+
+% \textit{Well-definedness: }
+
+% Suppose $x = (\varphi, V)$ and $y = (\phi,W)$ are equivalent sections,
+% or matching families, over $g$.
+% Let $L^g(R)$ be the covering sieve
+% on which they are the same.
+% Then $\varphi' = \phi'$ on $Q^gL^g(R) = R$.
+% So $s_g(x) = s_g(y)$ 
+% Hence this map is well-defined.
+
+% \textit{Injectivity: }
+% Let $s_g(\varphi, V) = s_g(\phi, W)$. 
+% Then there is some covering sieve $R \subset V'^f \intersect W'^f$ 
+% on $c$ on which they agree.
+% Hence $\varphi$ and $\phi$ coincide on $R'_g$ by the equivalence.
+
+% \textit{Surjectivity: }
+% Let $y=(\varphi, V)$ be an element of $\sections{g}{K}$.
+% Then $s_g(\varphi'^g, V'^g) = y$.
+% Hence $s_g$ is surjective.
+
+% \textit{Naturality: }
+% Let $h: d \rightarrow b$ 
+% and $t: d \rightarrow c$, 
+% such that $gt = h$.
+% We will show that $s_h\sheaf{H}(t) = \sheaf{K}(t)s_g$. 
+% See below diagram.
+
+% \begin{center}
+% 	\begin{tikzcd}[row sep = large, column sep = large]
+% 		\sections{h}{H} \arrow{r}{s_h} 
+% 		& \sections{h}{K}\\
+% 		\sections{g}{H} \arrow{r}{s_g} \arrow{u}{\sheaf{H}(t)}
+% 		& \sections{g}{K} \arrow{u}{\sheaf{K}(t)}
+% 	\end{tikzcd}
+% \end{center}
+
+% Let $x = (\varphi, V) \in \sections{g}{H}$.
+% Then $\sheaf{K}(t)(s_g(x)) = (\varphi' \ynd{u(f)}, \spull{t}(V'))$
+% and  $s_h(\sheaf{H}(t)(x)) = ((\varphi\ynd{f})', (\spull{t}V)') = (\varphi'\ynd{u(f)}, (\spull{t}V)')$.
+% Hence $s$ is natural.
+% \end{proof}

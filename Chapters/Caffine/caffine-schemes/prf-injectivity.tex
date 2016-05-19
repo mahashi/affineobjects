@@ -1,0 +1,29 @@
+\begin{lemma}
+The closed set $V_X(\Ip)$ is irreducible. This implies that $\counit_X$ is injective.
+\end{lemma}
+\begin{proof}
+Let $F(z)=\Ip$ for some $z\in X$. By lemma .. this is possible.
+Let $y\in V_X(\Ip)$. Then $\ker(z)\subset \ker(y)$, hence if $y\in D_X(a)$ then $x\in D_X(a)$.
+Therefore $y$ specialises to $z$, which thus must be $V_X(\Ip)$. This shows that it is irreducible.
+Uniqueness of generic points of closed irreducible subsets of schemes implies injectivity of $F$.
+\begin{comment}
+Let $U \cup V = V_X(\Ip)$ with $U,V$ closed. 
+The inclusions $u,v$ of closed sets $U,V$ is a quasi-compact map, because a closed set of a quasi-compact is quasi-compact. 
+Therefore $u_*,v_*$ sends quasi-coherent modules to quasi-coherent modules [Reference].
+
+Let $\sheaf{I},\sheaf{J}$ be the ideal sheaves corresponding to the reduced induced subscheme structure $(U,\sheaf{O}_U),(V,\sheaf{O}_V)$
+on the closed sets $U$ and $V$. Hence the sequences
+\[\sheaf{I}\rightarrow \sheaf{O}_X \rightarrow u_*(\sheaf{O}_U)\rightarrow 0,\]
+\[\sheaf{J}\rightarrow \sheaf{O}_X \rightarrow v_*(\sheaf{O}_V)\rightarrow 0\]
+are exact and so $\sheaf{I},\sheaf{J}$ are quasi-coherent.
+Let $I,J$ be the global sections of $\sheaf{I}$ and $\sheaf{J}$.
+Because of our adjoint equivalence $\Lambda_X(I)=\sheaf{I}$ and $\Lambda_X(J)=\sheaf{J}$, hence also $U=V_X(I)$ and $V=V_X(J)$.
+We now have $V_X(IJ)=V_X(\Ip)$.
+Moreover $\Lambda_X(\frac{\sheaf{O}(X)}{I}) \iso \frac{\sheaf{O}}{\sheaf{I}} \iso u_*(\sheaf{O}_U)$ and similar for $J,v,V$.
+Since $\sheaf{O}_U$ is a reduced sheaf, $\sheaf{I}(W)$ is radical for every open $W \subset X$.
+
+Now invoke the previous lemma for both inclusions wrt $IJ$ and $\Ip$. 
+This yields $I\cap J = \Ip$, hence $I=\Ip$ or $J=\Ip$.
+Now one of the closed sets $U,V$ is the whole of $V_X(\Ip)$.
+\end{comment}
+\end{proof}

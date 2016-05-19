@@ -1,0 +1,33 @@
+\begin{lemma}
+Let $\presheaf{F}$ be a presheaf on $\site{C}{T}$.
+Let $f:b\rightarrow a \in \cat{C}$.
+Let $\presheaf{F}$ be a presheaf on $\cat{C}$.
+Then $\omega^2_{u\circ \presheaf{F}} = s^2_{\presheaf{F}} \circ (u \circ \omega^2_{\presheaf{F}})$.
+\end{lemma}
+
+\begin{proof}
+Let $a\in \cat{C}$.
+We have
+\[\omega^2_{u\circ \presheaf{F}} = \omega_{\plus{u\circ \presheaf{F}}} \circ \omega_{u\circ \presheaf{F}},\]
+
+\[s^2_{\presheaf{F}} = \plus{s_{\presheaf{F}}} \circ s_{\plus{\presheaf{F}}},\]
+
+\[u \circ \omega^2_{\presheaf{F}} = u\circ (\omega_{\plus{\presheaf{F}}} \circ \omega_{\presheaf{F}}).\]
+
+Let $x \in \sections{b}{u \circ \presheaf{F}}$.
+
+Then 
+\[\omega^2_{u\circ \presheaf{F},f}(x) = \matchfam{\matchfam{x}{i}{\maxsieve{\dom{j}}}}{j}{\maxsieve{f}}\]
+with $x_i = \presheaf{F}{i}(x)$.
+We also have 
+\[u \circ \omega^2_{\presheaf{F},f}(x) = \matchfam{\matchfam{x}{i}{\maxsieve{\dom{j}}}} {j}{\maxsieve{b}},\]
+where $\dom{j} \in \overcat{C}{a}$.
+Apply 
+$s_{\plus{\presheaf{F}}}$ on this to get 
+\[\matchfam{\matchfam{x}{i}{\maxsieve{\dom{j}}}}{j}{\maxsieve{f}},\]
+where $\dom{j} \in \cat{C}$.
+Lastly, apply $\plus{s_{\plus{\presheaf{F}}}}$ to get
+\[\matchfam{\matchfam{x}{i}{\maxsieve{\dom{j}}}}{j}{\maxsieve{f}}\]
+where $\dom{j} \in \overcat{C}{a}$. 
+The statement of the lemma is established.
+\end{proof}

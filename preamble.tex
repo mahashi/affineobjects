@@ -148,7 +148,7 @@
 \DeclarePairedDelimiter{\card}\lVert\rVert
 
 % custom commands
-\newcommand{\colim}[1]{\underset{#1}{colim}}
+%\newcommand{\colim}[1]{\underset{#1}{colim}}
 \newcommand{\limit}[1]{\underset{#1}{lim}}
 \newcommand{\se}{\ensuremath{\subseteq}}
 \newcommand{\tbs}{\textbackslash }
@@ -159,7 +159,8 @@
   \vphantom{\big|} % pretend it's a little taller at normal size
   \right|_{#2} % this is the delimiter
   }}
-  
+
+\newcommand\compl[1]{{#1}^c}
 \newcommand\restrict{\restr}
 \newcommand{\iso}{\cong}
 \newcommand{\kr}{\mbox{Ker}}
@@ -172,7 +173,7 @@
 \newcommand{\eq}{\sim}
 \renewcommand{\to}{\mapsto}
 \newcommand{\givenby}{,\quad}
-\newcommand{\Spec}[1]{\mbox{Spec }{#1}}
+%\newcommand{\Spec}[1]{\mbox{Spec }{#1}}
 \newcommand{\Rspec}{\mbox{Rspec }}
 \newcommand{\Ann}{\mbox{Ann}}
 \newcommand{\Der}{\mbox{Der}}
@@ -190,12 +191,16 @@
 %Category theory
 
 \newcommand{\Sch}{\mbox{\textbf{Sch}}}
+\newcommand\Schemes\Sch
 \newcommand{\Rng}{\mbox{\textbf{Rng}}}
+\newcommand\Rings\Rng
 \newcommand{\CmRng}{\mbox{\textbf{CmRng}}}
+\newcommand\LocRingSpaces{\textbf{LRSpaces}}
 
 \newcommand{\union}{\bigcup}
 \newcommand{\opUnion}{\cup}
 \newcommand{\match}[2]{\mbox{Match}(#1,#2)}
+\newcommand\matchfam[3]{({#1}_{#2})_{{#2}\in {#3}}}
 \newcommand{\cov}{\mbox{Cov}}
 \newcommand{\Opp}[1]{{#1}^{Opp}}
 \newcommand{\Opposite}[1]{{#1}^{Opp}}
@@ -221,7 +226,7 @@
 \newcommand{\overcat}[2]{\cat{#1}_{#2}}
 \newcommand{\undercat}[2]{\cat{#1}^{#2}}
 \newcommand{\oversite}{\overcat}
-\newcommand{\undersite}{\overcat}
+\newcommand{\undersite}{\undercat}
 \newcommand{\obj}[1]{Obj(\cat{#1})}
 \newcommand{\signature}[3]{#1:#2\rightarrow #3}
 \newcommand{\suchthat}{ \mid }
@@ -233,7 +238,10 @@
 \newcommand{\opens}[1]{\mbox{Open}(#1)}
 \newcommand{\site}[2]{(\cat{#1}, \topo{#2})}
 \newcommand{\ringedspace}[2]{({#1}, {\sheaf{#2}})}
+\newcommand\rspace\ringedspace
+\newcommand\scheme\ringedspace
 \newcommand{\rsite}[3]{(\cat{#1}, \topo{#2}, {\sheaf{#3}})}
+
 
 % \newcommand{\rsite}[2]{({\cat{#1}}, {\sheaf{#2}})}
 
@@ -259,6 +267,14 @@
           {\restrict{#2}{#1}}%
 }
 
+\DeclareDocumentCommand{\colim}{ m m }{%
+%First argument is category, second is the functor
+ % \IfNoValueTF{#2}%
+ %          {\underset{#1}{colim}}%
+ %          {\underset{#1}{colim}}%
+ \underset{#1}{colim } #2 %
+}
+
 \DeclareDocumentCommand{\yoneda}{ g }{%
  \IfNoValueTF{#1}%
           {h}%
@@ -271,10 +287,17 @@
           {sh(#1)}%
 }
 
+\DeclareDocumentCommand{\Spec}{ g }{%
+ \IfNoValueTF{#1}%
+          {\mbox{Spec}}%
+          {\mbox{Spec}(#1)}%
+}
+\newcommand\spec\Spec
+
 \DeclareDocumentCommand{\plus}{ g }{%
  \IfNoValueTF{#1}%
           {(\blank)^+}%
-          {{#1}^+}%
+          {({#1})^+}%
 }
 
 \DeclareDocumentCommand{\globalsections}{ g }{%
@@ -305,6 +328,7 @@
           {i(#1)}%
 }
 
+
 \newcommand{\maxsieve}[1]{\mbox{max}(#1)}
 \newcommand{\sheaves}[1]{\mbox{Shv}(#1)}
 \newcommand{\sheafmodules}[1]{\mbox{Mod}(#1)}
@@ -318,25 +342,25 @@
 \newcommand{\prshfs}[2]{\presheaves{#1}(\cat{#2})}
 %\newcommand{\sections}[2]{\Gamma( #1 ; \presheaf{#2} )}
 %\newcommand{\globalsections}[1]{\sections{\terminal}{#1}}
-
+\newcommand\spull[1]{{#1}^*}
 \newcommand{\cover}[2]{\{ {#1} \rightarrow {#2}\}}
 
 \newcommand{\module}[1]{\sheaf{#1}}
 \newcommand{\terminal}{1}
 \newcommand{\initial}{0}
-
+\newcommand\sievecat[1]{\cat{Sieves}({#1})}
 \newcommand{\schemes}{\cat{Sch}}
 \newcommand{\affschemes}{\cat{AffSch}}
-
+\newcommand\inverse[1]{{#1}^{-1}}
 \newcommand{\direct}[1]{{#1}_*}
-\newcommand{\inverse}[1]{{#1}^*}
+\newcommand{\inverseimg}[1]{{#1}^*}
 \newcommand{\forward}[1]{{#1}_!}
 \newcommand{\interhom}[2]{{#1}^{#2}}
 \newcommand{\modules}[1]{#1\text{-}\cat{Mod}}
 \newcommand{\pullback}[1]{{#1}^*}
 \newcommand{\unit}{\eta}
 \newcommand{\counit}{\epsilon}
-
+\newcommand\subobjects[1]{\mbox{Sub}({#1})}
 \newcommand{\domain}[1]{\mbox{Dom}(#1)}
 \newcommand\dom{\domain}
 \newcommand{\codomain}[1]{\mbox{Codom}(#1)}
@@ -354,7 +378,7 @@
 \newcommand\set[1]{\{#1\}}
 %\renewcommand{\if}{\mbox{ if }}
 \newcommand{\otherwise}{\mbox{ otherwise }}
-\newcommand{\reason}[1]{\mbox{ #1}}
+\newcommand{\reason}[1]{\mbox{ by #1}}
 \newcommand\onsome{\mbox{ on some }}
 \newcommand\with{\mbox{ : }}
 \renewcommand\and{\mbox{,  }}

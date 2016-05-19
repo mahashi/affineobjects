@@ -1,0 +1,21 @@
+\begin{lemma}[equivalence respects pullback]
+Let $\cat{C}$ be a category.
+Let $a,b,c \in \cat{C}$.
+Let $f: b\rightarrow a$ and $g: c \rightarrow a$.
+Let $p: g \rightarrow f \in \overcat{C}{a}$.
+Let $R\in \sievecat{f}$.
+Then $L^w \spull{u(g)}= \spull{g} Q^f$
+\end{lemma}
+
+\begin{proof}
+Let $h \in \spull{p}R^f(t)$ for some $t\in \overcat{C}{a}$. 
+Then $ph \in R^f(t)$, so $ph \in R(\dom{t})$ and $t = fph$.
+This implies $h\in \spull{p}R(\dom{t})$ and since $g = fp$ also that $t = gh$.
+Hence $h\in (\spull{u(p)}R)_g(t)$.
+
+Let $h \in (\spull{u(p)}R)_g(t)$ for some $t\in \overcat{C}{a}$.
+Then $h \in \spull{u(p)}R(\dom{t})$ and $t = gh$.
+So we get $ph \in R(\dom{t})$ and $t = fph$, 
+so $ph\in R^f(t)$.
+Hence also $h\in \spull{p}R^f(t)$.
+\end{proof}

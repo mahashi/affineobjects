@@ -1,0 +1,12 @@
+\begin{lemma}
+Every closed set $W \subset X$ can be written as $V_X(I)$ for some ideal $I \subset \globalsections{O}$.
+\end{lemma}
+\begin{proof}
+Let $\sheaf{I}$ be some ideal sheaf inducing a closed subscheme structure on $W$.
+This is always a quasi-coherent module.
+Let $I = \globalsections{I} = \stilde{I}$.
+Let $\sheaf{O}_W$ be the structure sheaf of this closed subscheme. 
+By construction $\pushforward{i}\sheaf{O}_W  = {\inverseimg{i}}\frac{\sheaf{O}}{\sheaf{I}}$ 
+along the inclusion $W\xrightarrow{i} X$.
+Hence $V_X(I) = \Supp\pushforward{i}\sheaf{O}_W = W $
+\end{proof}

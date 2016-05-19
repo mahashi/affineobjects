@@ -1,0 +1,44 @@
+
+\begin{lemma}
+For $x\in X$ TFAE:
+\begin{enumerate}
+\item $x\in V_X(I)$
+\item $I\sheaf{O}_x\neq \sheaf{O}_x$ 
+\item $I\subset \ker(x)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+1 $\Rightarrow$ 2:
+
+Assume $x\in V_X(I)$. 
+Then $\Lambda_X(\frac{\sheaf{O}(X)}{I})_x = \frac{\sheaf{O}_x}{I\sheaf{O}_x} \neq 0$. 
+Hence $I\sheaf{O}_x \neq \sheaf{O}_x$.
+
+2 $\Rightarrow$ 3: 
+
+Assume $I\sheaf{O}_x\neq \sheaf{O}_x$. 
+Then $I\sheaf{O}_x$ is proper hence contained in the unique maximal ideal of the local ring $\sheaf{O}_x$, 
+therefore $I\mapsto 0$ in $k(x)$ or equivalently $I\subset \ker(x)$.
+
+3 $\Rightarrow$ 1:
+
+Assume $I \subset \ker(x)$. Then $I$ maps into $\Im_x$, hence $I\sheaf{O}_x \subset \Im_x$. Therefore 
+\[\frac{\sheaf{O}_x}{\Lambda_X(I)_x} = \frac{\sheaf{O}_x}{I\sheaf{O}_x} \neq 0.\]
+
+\end{proof}
+\begin{corollary}
+If $y\in I$ then $D_X(y)\cap V_X(I)= \emptyset$ 
+\end{corollary} 
+\begin{proof}
+Assume $y\in I$.
+Let $z\in V_X(I)$, then $y\in \ker(z)$ by the previous lemma.
+This implies $z\not\in D_X(y)$
+\end{proof}
+\begin{corollary}
+$V_X(I)\cup V_X(J) = V_X(IJ)$
+\end{corollary}
+\begin{proof}
+Let $z\in V_X(I)\cup V_X(J)$. Then $I\subset \ker(z)$ and $J\subset \ker(z)$ by the lemma, hence $IJ\subset \ker(z)$.
+Apply the lemma again to get $z\in V_X(IJ)$.
+Let $z\in V_X(IJ)$. Then $IJ \subset \ker(z)$ by the lemma. The ideal $\ker(z)$ is prime, so $I\subset \ker(z)$ or $J\subset \ker(z)$. Invoke the lemma again to get $z\in V_X(I)\cup V_X(J)$.
+\end{proof}

@@ -1,0 +1,42 @@
+\begin{definition}[Matching family]
+Let $\cat{C}$ be a category.
+Let $\presheaf{F}$ be a presheaf on on $\cat{C}$.
+Let $a \in \cat{C}$ be an object.
+Let $\sieve{R}$ be a sieve on $a$.
+A set $\set{x_i}_{i \in \sieve{R}}$ 
+with $x_i \in \sections{\dom{i}}{\presheaf{F}}$ 
+indexed by a sieve $\sieve{R}$
+and such that $x_{g \circ i} = \presheaf{F}(g)(x_i)$ 
+for any $g:b \rightarrow \dom{i}$ 
+and $b \in \cat{C}$ is called a `matching family'.
+\end{definition}
+
+\begin{definition}[Matching family/Morphisms]
+Let $\cat{C}$ be a category.
+Let $\presheaf{F}$ be a presheaf on on $\cat{C}$.
+Let $a \in \cat{C}$ be an object.
+Let $\sieve{R}$ be a sieve on $a$.
+Define $\sections{\sieve{R}}{\presheaf{F}} = \Hom{\sieve{R}}{\presheaf{F}}$.
+An element $\varphi \in \sections{\sieve{R}}{\presheaf{F}}$ is uniquely identified 
+by the matching family $\set{\varphi(i)}_{i\in\sieve{R}}$ of images. 
+Conversely, any matching family $\set{x_i}_{i \in \sieve{R}}$, 
+with $x_i \in \sections{\dom{i}}{\presheaf{F}}$ indexed by $\sieve{R}$
+and such that $x_{g \circ i} = \presheaf{F}(g)(x_i)$ 
+for any $g:b \rightarrow \dom{i}$ and $b \in \cat{C}$, uniquely identifies 
+a map $\varphi: \sieve{R} \rightarrow \presheaf{F}$.
+Namely, take $\varphi_a(y) = x_y$.
+\end{definition}
+
+\begin{definition}[Amalgamation]
+An amalgamation of a matching family $\set{x_i}_R$ 
+is an element $x\in \globalsections{F}$
+such that $\presheaf{F}(i)(x) = x_i$.
+
+When you consider the matching family as a morphism $\varphi$,
+an amalgamation is a morphism $\phi: \y{a} \rightarrow \presheaf{F}$
+that extends $\varphi$.
+\end{definition}
+
+\begin{definition}[Separated presheaf]
+A presheaf $\presheaf{F}$ is separated if any matching family has at most one amalgamation.
+\end{definition}

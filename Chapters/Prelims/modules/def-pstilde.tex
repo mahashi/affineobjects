@@ -1,11 +1,13 @@
 \begin{definition}
 Let $M,N$ be an $R$-module.
-Let $f:b \rightarrow a \in \cat{C}$.
-Let $g:M \rightarrow N \in \modules{R}$.
+
 Define 
 \[\pstilde: \modules{R} \rightarrow \pshmodules{Y}\]
 by
+for all $a \in \cat{C}$, 
 \[\pstilde(M)(a) = M \tensor_R \sections{a}{O} ,\]
+for all $f:b \rightarrow a \in \cat{C}$, 
 \[\pstilde(M)(f): \id \tensor \sheaf{O}(f) ,\]
+for all $g:M \rightarrow N \in \modules{R}$,
 \[\pstilde(g) = (a: g \tensor \id ).\]
 \end{definition}
