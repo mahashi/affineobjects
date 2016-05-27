@@ -1,0 +1,14 @@
+Only use '\circ' only for the functors 'precomposition' and 'postcomposition'
+Use small latin letters for objects
+Use capital latin letters for categories
+Use capital latin letters for presheaves
+Use \iso when we have an isomorphism and '=' when there is an equality
+Use '=' when defining an object, instead of ':='.
+Leave the topology implicit and refer to the category as if it is the site.
+Define functors as a macro with optional argument.
+Always use curly brackets to enclose argument of functor.
+Make frequency table of macros.
+Start every section with a plaintext introduction.
+Natural transformations denoted by double arrows.(morphisms of presheaves not)
+Lines no longer than 80 characters
+Every 'statement'/sentence on a new line

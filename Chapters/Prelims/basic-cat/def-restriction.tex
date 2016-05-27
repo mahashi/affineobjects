@@ -1,8 +1,7 @@
 \begin{definition}[Restriction]
-Let $\cat{C}$ be a category.
-Let $a \in \cat{C}$.
-Let $\presheaf{F} \in \presheaves{\cat{C}}$.
-
-The restriction of $\presheaf{F}$ along a functor $\alpha:\cat{C} \rightarrow \cat{D}$ 
-is defined to be $\pushforward{\alpha}\presheaf{F}: \cat{D} \rightarrow \Sets$.
+Let $\cat{C},\cat{D}$ be categories.
+Let $\presheaf{F} \in \presheaves{\cat{D}}$.
+Let $\alpha: \cat{C}\rightarrow \cat{D}$ be a functor.
+The restriction of $\psh{F}$ to $\cat{C}$ along $\alpha$
+is defined to be $\psh{F} \circ \alpha$.
 \end{definition}

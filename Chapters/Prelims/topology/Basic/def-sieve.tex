@@ -1,14 +1,36 @@
+% \begin{definition}[Sieve]
+% Let $\cat{C}$ be a category 
+% and $a \in \cat{C}$.
+% A sieve $S$ on $a$ is a subpresheaf of $\y{a}$.
+% Explicitly, for each $c\in \cat{C}$, 
+% $\sieve{S}{c}$ is a subset of $\Hom{c}{a}$
+% such that $fg \in \sieve{S}(\dom{g})$ 
+% for all $f \in \sieve{S}{c}$
+% and for all $g \in \y{c}$.
+
+% The maximal sieve on $a$, 
+% which is $\y{a}$, 
+% will be denoted by $\maxsieve{a}$.
+% \end{definition}
+
 \begin{definition}[Sieve]
 Let $\cat{C}$ be a category 
 and $a \in \cat{C}$.
-A sieve $S$ on $a$ is a subpresheaf of $\y{a}$.
-Explicitly, for each $c\in \cat{C}$, 
-$\sieve{S}{c}$ is a subset of $\Hom{c}{a}$
-such that $fg \in \sieve{S}(\dom{g})$ 
-for all $f \in \sieve{S}{c}$
-and for all $g \in \y{c}$.
+Define the maximal sieve $\maxsieve{a}$ on $a$ to be the set of all morphisms to $a$.
+In formula,
+\[\maxsieve{a} = \set{ f \in \cat{C} \suchthat \codomain{f} = a}.\]
 
-The maximal sieve on $a$, 
-which is $\y{a}$, 
-will be denoted by $\maxsieve{a}$.
+A sieve $S$ is a subset of $\maxsieve{a}$ such that 
+$gf \in S$ for any $f\in S$ and any $g$.
 \end{definition}
+
+\begin{remark}
+Let $\cat{C}$ be a category 
+and $a,b \in \cat{C}$.
+Let $f:b\rightarrow a \in \overcat{C}{a}$.
+
+Any morphism to $b$ is also a morphism to $f$ and vice versa.
+This observation yields us that $\sievecat{b} = \sievecat{f}$.
+Moreover composition in $\cat{C}$ and $\overcat{C}{a}$ are the same,
+so this identification respects pullback of sieves.
+\end{remark}

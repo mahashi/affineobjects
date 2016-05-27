@@ -1,0 +1,20 @@
+\begin{lemma}[$\pstilde$ commutes with restriction]
+Let $\rsite{C}{T}{O}$ be a ringed site.
+Let $a \in \cat{C}$.
+We have a natural isomorphism 
+$t:\direct{u} \circ \pstilde \Rightarrow \pstilde \circ (\blank \tensor_{\sect{1}{O}} \sections{a}{O})$.
+\end{lemma}
+
+\begin{proof}
+Define the natural transformation
+$t: \pstilde \circ (\blank \tensor_{\sect{1}{O}} \sections{a}{O}) \Rightarrow \direct{u} \circ \pstilde,$
+by 
+for each $\sect{1}{O}$-module $M$
+and for each $f:b\rightarrow a\in \overcat{C}{a}$,
+\[t_{M,f}: M \tensor_{\sect{1}{O}} \sect{a}{O} \tensor_{\sect{a}{O}} \sect{b}{O}  
+	\rightarrow  M \tensor_{\sect{1}{O}} \sect{b}{O},\]
+\[m\tensor r \tensor s \mapsto m \tensor rs.\]
+
+Every component $t_{M,f}$ is an isomorphism by basic commutative algebra.
+\end{proof}
+

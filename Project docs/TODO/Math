@@ -1,0 +1,11 @@
+- Use \matchfam everywhere
+- induced functor of a morphism on overcategories
+- Add refs to all results
+- Come up with way to distinguish functors(sheafification, stilde, pstilde) on different categories.
+Done - Replace (u \circ) with \direct{u}
+- Add domain and codomain to everything
+- Supply proofs: restriction commutes with functors(sheafify, tilde, pstilde)
+- define composition of natural transformations with functors 
+- Write example with spec R
+- isomorphism of morphism
+- The counit of pstilde is the identity for \pstilde{M} presheaves.

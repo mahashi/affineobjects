@@ -1,22 +1,23 @@
 \begin{lemma}[$s$ and $\omega$ commute]
 Let $\presheaf{F}$ be a presheaf on $\site{C}{T}$.
 Let $f:b\rightarrow a \in \cat{C}$.
-Then $\omega_{u\circ \presheaf{F}} = s_{\presheaf{F}} \circ (u\circ\omega_{\presheaf{F}})$.
+Let $u:\oversite{C}{a} \rightarrow C$ be the localisation morphism.
+Then $\omega_{\direct{u} \presheaf{F}} = s_{\presheaf{F}} \circ \direct{u}\omega_{\presheaf{F}}$.
 \end{lemma}
 
 \begin{proof}
 For any section $x \in \sections{b}{F}$.
 Let $x_i = \presheaf{F}(i)(x)$ for any morphism $i \in \cat{C}$. 
-Note that $Q^f(\maxsieve{f}) = \maxsieve{b}$.
+Note that $\maxsieve{f} = \maxsieve{b}$.
 This implies that the compatible family $\set{x_i}$ indexed by the maximal sieve on $f$
 is sent by $s$ to the same set $\set{x_i}$ indexed by the maximal sieve on $b$.
 In diagram form, that
 
 \begin{center}
 	\begin{tikzcd}
-		u \circ \presheaf{F} \arrow{d}{u\circ\omega_{\presheaf{F}}} \arrow{dr}{\omega_{u\circ \presheaf{F}}} \\
-		u \circ \plus{\presheaf{F}}  \arrow{r}{s} &
-		\plus{u \circ \presheaf{F}}
+		\direct{u} \presheaf{F} \arrow{d}{\direct{u}\omega_{\presheaf{F}}} \arrow{dr}{\omega_{\direct{u} \presheaf{F}}} \\
+		\direct{u} \plus{\presheaf{F}}  \arrow{r}{s} &
+		\plus{(\direct{u} \presheaf{F})}
 	\end{tikzcd}
 \end{center}
 

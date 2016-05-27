@@ -1,17 +1,17 @@
 \begin{definition}[Basis]
 Let $\cat{C}$ be a category with pullbacks.
 A Grothendieck pretopology $\basis{B}$ is a collection $\basis{B}(a)$ 
-of families $\set{f_i:a_i\rightarrow a}$ of 'covering' morphisms 
+of `covering' families $\set{f_i:a_i\rightarrow a}$ of  morphisms 
 for every $a\in \cat{C}$ with the following conditions.
 
-\begin{itemize}
+\begin{enumerate}
 	\item  every isomorphism is a covering singleton family,
 	\item (Stability) The pullback of a covering family is a covering family. 
 		If  $\set{f_i:a_i\rightarrow a}$ is covering and $g:b\rightarrow a$, then $\set{f'_i:a_i\times_a b\rightarrow b}$ is covering.
 	\item (Transitivity) If $\set{f_i:a_i\rightarrow a}$ is a covering family 
 		and $\set{ f_{ij}: a_{ij} \rightarrow a_i}$ for every $i$, 
 		then $\set{f_{ij}:a_{ij}\rightarrow a}$ is a covering family.
-\end{itemize}
+\end{enumerate}
 
 Generating a topology from a basis: take any sieve containing a covering family to be a covering sieve.
 \end{definition}

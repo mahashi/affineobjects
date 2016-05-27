@@ -3,11 +3,11 @@ Let $\cat{C}$ be a category.
 Let $a,b,c \in \cat{C}$.
 Let $f: b\rightarrow a$ and $g: c \rightarrow a$.
 Let $p: g \rightarrow f \in \overcat{C}{a}$.
-Let $R\in \sievecat{f}$.
-Then $L^w \spull{u(g)}= \spull{g} Q^f$
+Then $Q^g \spull{u(p)}= \spull{p} Q^f$
 \end{lemma}
 
 \begin{proof}
+Let $R\in \sievecat{f}$.
 Let $h \in \spull{p}R^f(t)$ for some $t\in \overcat{C}{a}$. 
 Then $ph \in R^f(t)$, so $ph \in R(\dom{t})$ and $t = fph$.
 This implies $h\in \spull{p}R(\dom{t})$ and since $g = fp$ also that $t = gh$.

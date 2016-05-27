@@ -2,23 +2,23 @@
 Let $\site{C}{T}$ be a site.
 Let $a, a' \in \cat{C}$ and $f:a \rightarrow a'$. 
 Let $\presheaf{F} \in \presheaves{C}$.
-Define the functor $\plus: \presheaves{C} \rightarrow \presheaves{C}$ as follows
+Define the functor $\plus: \presheaves{C} \rightarrow \presheaves{C}$ as follows.
 
-On objects:
+For all $a\in \cat{C}$,
 \[\plus{\presheaf{F}}(a) = \frac{\set{(\sieve{R},\varphi) 
 	\suchthat \sieve{R} \in \top{T}{a},
 	\varphi \in \sections{\sieve{R}}{\presheaf{F}}}}
 	{\sim},
 \]
 
-
+for all morphisms $f \in \cat{C}$,
 \[ \plus{\presheaf{F}}(f)(\eqclass{(\sieve{R},\varphi)}) 
 	= \eqclass{(\spull{f}\sieve{R}, \varphi\ynd(f) )}.
 \]
 
-The equivalence relation is defined as:
-\[(\sieve{R},\varphi) \sim (\sieve{S},\phi)\]
-if $\varphi = \phi$ on some $\sieve{Q} \subset \sieve{R} \intersect \sieve{S}$
+The equivalence relation is defined as
+$(\sieve{R},\varphi) \sim (\sieve{S},\phi)$
+if $\varphi = \phi$ on some covering sieve $\sieve{Q} \subset \sieve{R} \intersect \sieve{S}$.
 
 Let $L: \presheaf{F} \rightarrow \presheaf{F}'$.
 Then 
@@ -29,18 +29,20 @@ Then
 This functor comes with a natural transformation $\omega: \id \rightarrow \plus$
 defined by
 \[\omega_{\presheaf{F},a}(x) = \eqclass{(\maxsieve{a}, y}\]
+where
 \[y(i) = \presheaf{F}(i)(x).\]
 \end{definition}
 
-\begin{lemma}
+
+\begin{lemma}[2.10 \cite{toposUU}]
 Let $\presheaf{F}$ be a presheaf, $\sheaf{G}$ a sheaf and $g:\presheaf{F} \rightarrow \sheaf{G}$ a morphism in $\presheaves{C}$.
 Then $g$ factors through $\omega_{\presheaf{F}}$ via a unique $g'$.
 \end{lemma}
 
-\begin{lemma}
+\begin{lemma}[2.11 \cite{toposUU}]
 For every presheaf $\presheaf{F}$, $\plus{\presheaf{F}}$ is separated.
 \end{lemma}
 
-\begin{lemma}
-If $\presheaf{F}$ is separated, then $\presheaf{F}$ is a sheaf.
+\begin{lemma}[2.12 \cite{toposUU}]
+If $\presheaf{F}$ is separated, then $\plus{\presheaf{F}}$ is a sheaf.
 \end{lemma}

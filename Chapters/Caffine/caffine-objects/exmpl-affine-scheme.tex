@@ -1,4 +1,30 @@
 \begin{example}[Examples of caffine objects]
 The main example to keep in mind is $\Spec{R} \in \schemes$.
-%Work out why affine schemes are caffine.
+Let $\module{F}$ be a quasi-coherent module on $\Spec{R}$
+via the presentation
+\[\coproduct_{I} \restrict{U_i}{\sheaf{O}} \rightarrow \coproduct_J \restrict{U_i}{\sheaf{O}} 
+	\rightarrow \restrict{U_i}{\module{F}} \rightarrow 0\]
+
+for some cover $\cover{U_i}{\Spec{R}}$.
+We know from lemma ? that $\module{F} = \tilde{\gblsect{F}}$.
+Let $M$ be a $R$ module.
+
+We will show that
+\[\stilde{\gblsect{F}} \xrightarrow{\counit} \module{F}\]
+and
+\[M \xrightarrow{\unit} \gblsect{\stilde{M}}\]
+\[m \mapsto \omega^2(m)\]
+are isomorphisms.
+
+Let $f \in \gblsect{O}$.
+Note that 
+\[\counit_{D(f)}: \sect{D(f)}{\stilde{\gblsect{F}}} \rightarrow \sect{D(f)}{\module{F}}\]
+is the map
+\[\gblsect{F}\tensor \sect{D(f)}{O} \rightarrow \gblsect{F}_f,\]
+\[m \tensor r \mapsto mr.\]
+
+This is an isomorphism by basic commutative algebra. Hence $\counit$ is an isomorphism, since domain and codomain are sheafs and $\counit$ is an isomorphism on the base of opens $D(f)$.
+
+By lemma ? in Stacks, $\gblsect{\stilde{M}} = M$.
+We have $\unit = \id_M$.
 \end{example}

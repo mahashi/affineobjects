@@ -3,12 +3,17 @@ Let $\site{C}{T}$ be a site.
 Let $\presheaf{F} \in \presheaves{C}$.
 
 A presheaf that admits a unique amalgamation for every matching family is called a sheaf.
-The category $\sheaves{C}$ is the full subcategory in $\presheaves{C}$  all sheaves. 
-Let $\incsh$ be the inclusion functor $\sheaves{C}\rightarrow \presheaves{C}$.
+The category $\sheaves{C}$ is the full subcategory in $\presheaves{C}$ of all sheaves.
 
 In other words, 
-we call $\presheaf{F}$ a sheaf if the map 
-\[\presheaf{F}(a) \rightarrow \presheaf{F}(R)\] 
-\[ a: x \mapsto \set{ \presheaf{F}(i)(x) }_{i \in R} \]
+we call $\presheaf{F}$ a sheaf 
+if for each $a \in \cat{C}$ 
+and $R\in \top{T}{a}$ 
+the map 
+\begin{align*}
+	\sections{a}{F} 	& \rightarrow \sections{R}{F}\\
+	x 					& \mapsto \matchfam{x}{i}{R}
+\end{align*}
+where $x_i = \presheaf{F}(i)(x)$
 is an isomorphism.
 \end{definition}

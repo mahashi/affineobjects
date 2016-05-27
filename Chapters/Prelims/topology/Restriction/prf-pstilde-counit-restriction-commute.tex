@@ -1,0 +1,20 @@
+Let $\cat{C}$ be a category.
+Let $a\in \cat{C}$.
+Let $\counit$ be the counit of the adjunction $\adj{\pstilde}{\globalsections}$ on $\cat{C}$.
+Let $\counit_a$ be the counit of the adjunction $\adj{\pstilde_a}{\sections{a}}$ on $\overcat{C}{a}$.
+\begin{lemma}[$\pstilde$ counit commute with restriction]
+We have $\direct{u}\counit \iso \counit_a$ on 
+presheaves of the form $\pstilde{a}{M\tensor \sect{b}{O}}$
+with $M$ a $\sect{1}{O}$-module
+via 
+\[t \circ \direct{u}\counit \circ \inverse{t} 
+	= \counit_{a}.\]
+\end{lemma}
+
+\begin{proof}
+Both maps are the identity map if you unfold them.
+% Let $f:b\rightarrow a \in \overcat{C}{a}$.
+% Let 
+% \[m\tensor r \in \pstilde{\globalsections{F} \tensor_{\sect{1}{O}} \sections{a}{O}}(f) = \globalsections{F} 	\tensor_{\sect{1}{O}} \sections{b}{O}\].
+% Then both maps do $m\tensor r \mapsto rm$.
+\end{proof}

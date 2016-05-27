@@ -1,16 +1,15 @@
 - Define natural transformations and their notation
 - Define globalsections functor and say that we suppress the composition with the inclusion functor.
 - canonical way to write restricting/localizing.
-- Extent localizing/restricting to sites
+Done - Extent localizing/restricting to sites
 
 = Topology
-- Proof/reference oostens diktaat properties of plus.
+Done - Proof/reference oostens diktaat properties of plus.
 - What is restriction?
 - inverse image, pushforward
-- define continuity for functors
-- define morphism of sites
-- define relative topology as the biggest topology making u continuous
-	- work out explicitely with union construction
-- oversite definition
-- change natural iso from restr-shfy to use matchingfamilies
+Done - define morphism of sites
+Done - define relative topology as the biggest topology making u continuous
+	 	done - work out explicitely with union construction
+Done - oversite definition
+Done - change natural iso from restr-shfy to use matchingfamilies
 

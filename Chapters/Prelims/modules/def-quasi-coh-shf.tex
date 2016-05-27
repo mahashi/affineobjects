@@ -1,18 +1,15 @@
 \begin{definition}
-Let $\sheaf{F}$ be a sheaf of modules on $\cat{C}$.
+Let $\sheaf{F}$ be a sheaf of modules on $\rsite{C}{T}{O}$.
 It is called quasi-coherent if the following holds.
 For any object $a\in\cat{C}$ 
 there exists a covering sieve $S$ 
 such that for any map $f:b\rightarrow a$ in $S$ 
 there exists a presentation
-\[\coproduct_I \restrict{b}{\sheaf{O}} \rightarrow \coproduct_J \restrict{b}{\sheaf{O}} 
-	\rightarrow \restrict{b}{\sheaf{F}} \rightarrow 0\]
+\[\coproduct_I \restrict{\sheaf{O}}{b} \rightarrow \coproduct_J \restrict{\sheaf{O}}{b} 
+	\rightarrow \restrict{\sheaf{F}}{b} \rightarrow 0\]
 
-Quasi-coherent modules form a full subcategory of the category of sheafs of modules denoted $\Qcoh{X}$.
+Quasi-coherent modules form a full subcategory 
+of the category of sheafs of modules over $\rsite{C}{T}{O}$ 
+which are denoted by $\qcoh{O}$.
 \end{definition}
-
-% Note that if $\sheaf{F}$ has a presentation with respect to all maps in the covering sieve $S$,
-% then it also has it for $g(S)$ with $g:B\rightarrow C$ arbitrary.
-% Let $h:A\rightarrow B$ be in $g(S)$, then $gh \in S$ and we get a presentation 
-% \[\coproduct_I \sheaf{O}_A \rightarrow \coproduct_J \sheaf{O}_A \rightarrow \sheaf{F} \rightarrow 0\]
-% which is the property we want.
+%ref: Tag 03DL stacks

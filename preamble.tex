@@ -19,12 +19,16 @@
 \setlength\parindent{0pt}
 \setlength{\parskip}{2.5mm}
 \usepackage[T1]{fontenc}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 % \usepackage{tikz}
 \usepackage{tikz-cd}
+\usepackage{csquotes}
+\usepackage{biblatex}
+\addbibresource{affineobjects.bib}
 % \usetikzlibrary{external}
 % \tikzexternalize
 \usepackage{hyperref}
+\usepackage{url}
 \usepackage{verbatim}
 \usepackage{amsmath, amsthm, amsfonts, mathrsfs,bbm}
 \usepackage{amssymb}
@@ -124,6 +128,7 @@
 % frakd
 \newcommand{\sheaf}[1]{\ensuremath{\mathfrak{#1}}}
 \newcommand{\presheaf}[1]{\ensuremath{\mathfrak{#1}}}
+\newcommand\psh\presheaf
 \newcommand{\Ip}{\ensuremath{\mathfrak{p}}}
 \newcommand{\Iq}{\ensuremath{\mathfrak{q}}}
 \newcommand{\Ia}{\ensuremath{\mathfrak{a}}}
@@ -190,17 +195,17 @@
 \newcommand{\Dist}{\mbox{\textbf{Dist}}}
 %Category theory
 
-\newcommand{\Sch}{\mbox{\textbf{Sch}}}
+\newcommand{\Sch}{\cat{Sch}}
 \newcommand\Schemes\Sch
-\newcommand{\Rng}{\mbox{\textbf{Rng}}}
+\newcommand{\Rng}{\cat{Rng}}
 \newcommand\Rings\Rng
-\newcommand{\CmRng}{\mbox{\textbf{CmRng}}}
-\newcommand\LocRingSpaces{\textbf{LRSpaces}}
+\newcommand{\CmRng}{\cat{CmRng}}
+\newcommand\LocRingSpaces{\cat{LRSpaces}}
 
 \newcommand{\union}{\bigcup}
 \newcommand{\opUnion}{\cup}
 \newcommand{\match}[2]{\mbox{Match}(#1,#2)}
-\newcommand\matchfam[3]{({#1}_{#2})_{{#2}\in {#3}}}
+\newcommand\matchfam[3]{\set{{#1}_{#2} \suchthat #2 \in #3}}
 \newcommand{\cov}{\mbox{Cov}}
 \newcommand{\Opp}[1]{{#1}^{Opp}}
 \newcommand{\Opposite}[1]{{#1}^{Opp}}
@@ -235,7 +240,7 @@
 \newcommand{\intersect}{\cap}
 
 \newcommand{\Sets}{\cat{Set}}
-\newcommand{\opens}[1]{\mbox{Open}(#1)}
+\newcommand{\opens}[1]{\cat{Open}(#1)}
 \newcommand{\site}[2]{(\cat{#1}, \topo{#2})}
 \newcommand{\ringedspace}[2]{({#1}, {\sheaf{#2}})}
 \newcommand\rspace\ringedspace
@@ -247,18 +252,24 @@
 
 \newcommand{\adjunction}[2]{{#1} \dashv {#2}}
 \newcommand{\adj}{\adjunction}
-\newcommand{\mainadjunction}{\adjunction{\globalsections{\blank}}{\stilde{\blank}}}
+
 
 %\newcommand{\stilde}[1]{\Lambda(#1)}
-\DeclareDocumentCommand{\stilde}{ g }{%
- \IfNoValueTF{#1}%
-          {\Lambda}%
-          {\Lambda(#1)}%
+\DeclareDocumentCommand{\stilde}{ g g }{%
+ \IfNoValueTF{#2}%
+          {\IfNoValueTF{#1}%
+            {\Lambda}%
+            {\Lambda(#1)}%
+          }%
+          {\Lambda_{#1}(#2)}%
 }
-\DeclareDocumentCommand{\pstilde}{ g }{%
- \IfNoValueTF{#1}%
-          {\lambda}%
-          {\lambda(#1)}%
+\DeclareDocumentCommand{\pstilde}{ g g }{%
+ \IfNoValueTF{#2}%
+          {\IfNoValueTF{#1}%
+            {\lambda}%
+            {\lambda(#1)}%
+          }%
+          {\lambda_{#1}(#2)}%
 }
 
 \DeclareDocumentCommand{\restrictOpt}{ m g }{%
@@ -267,12 +278,18 @@
           {\restrict{#2}{#1}}%
 }
 
-\DeclareDocumentCommand{\colim}{ m m }{%
-%First argument is category, second is the functor
- % \IfNoValueTF{#2}%
- %          {\underset{#1}{colim}}%
- %          {\underset{#1}{colim}}%
- \underset{#1}{colim } #2 %
+\DeclareDocumentCommand{\colimit}{ m g }{%
+ \underset{#1}{\mbox{colim} } 
+ \IfNoValueTF{#2} 
+    {}
+    {\; #2}%
+}
+\newcommand\colim\colimit
+\DeclareDocumentCommand{\limit}{ m g }{%
+ \underset{#1}{\mbox{lim} } 
+ \IfNoValueTF{#2} 
+    {}
+    {\; #2}%
 }
 
 \DeclareDocumentCommand{\yoneda}{ g }{%
@@ -280,6 +297,13 @@
           {h}%
           {h(#1)}%
 }
+
+\DeclareDocumentCommand{\mainadjunction}{ g }{%
+ \IfNoValueTF{#1}%
+          {\adj{\stilde{\blank}}{\globalsections{\blank}}}%
+          {\adj{\stilde{#1}{\blank}}{\sections{#1}}}%
+}
+%\newcommand{\mainadjunction}{\adj{\stilde{\blank}}{\globalsections{\blank}}}
 
 \DeclareDocumentCommand{\sheafify}{ g }{%
  \IfNoValueTF{#1}%
@@ -297,7 +321,7 @@
 \DeclareDocumentCommand{\plus}{ g }{%
  \IfNoValueTF{#1}%
           {(\blank)^+}%
-          {({#1})^+}%
+          {{#1}^+}%
 }
 
 \DeclareDocumentCommand{\globalsections}{ g }{%
@@ -305,12 +329,15 @@
           {\sections{\terminal}{\blank}}%
           {\sections{\terminal}{#1}}%
 }
+\newcommand\gblsect\globalsections
 
 \DeclareDocumentCommand{\sections}{ mg }{%
  \IfNoValueTF{#2}%
           {\Gamma( #1 ; \blank)}%
           {\Gamma( #1 ; \presheaf{#2})}%
 }
+
+\newcommand\sect\sections
 
 \DeclareDocumentCommand{\top}{ m g }{%
  \IfNoValueTF{#2}%
@@ -329,21 +356,24 @@
 }
 
 
-\newcommand{\maxsieve}[1]{\mbox{max}(#1)}
-\newcommand{\sheaves}[1]{\mbox{Shv}(#1)}
-\newcommand{\sheafmodules}[1]{\mbox{Mod}(#1)}
+\newcommand\Supp{\mbox{Supp }}
+\newcommand{\maxsieve}[1]{\cat{max}(#1)}
+\newcommand{\sheaves}[1]{\cat{Shv}(#1)}
+\newcommand{\sheafmodules}[1]{\cat{Mod}(#1)}
 \newcommand\shmodules{\sheafmodules}
-\newcommand{\pshmodules}[1]{\mbox{PMod}(#1)}
+\newcommand{\pshmodules}[1]{\cat{PMod}(#1)}
 \newcommand{\qcoh}[1]{\cat{Qcoh}(\sheaf{#1})}
 %\newcommand{\plus}[1]{{\presheaf{#1}}^+}
 %\newcommand{\sheafify}[1]{a(\presheaf{#1})}
 \newcommand{\id}{\mbox{Id}}
 \newcommand{\blank}{{-}}
 \newcommand{\prshfs}[2]{\presheaves{#1}(\cat{#2})}
+\newcommand\pshs\presheaves
+\newcommand\shs\sheaves
 %\newcommand{\sections}[2]{\Gamma( #1 ; \presheaf{#2} )}
 %\newcommand{\globalsections}[1]{\sections{\terminal}{#1}}
 \newcommand\spull[1]{{#1}^*}
-\newcommand{\cover}[2]{\{ {#1} \rightarrow {#2}\}}
+\newcommand{\cover}[2]{\set{{#1} \rightarrow {#2}}}
 
 \newcommand{\module}[1]{\sheaf{#1}}
 \newcommand{\terminal}{1}
@@ -351,10 +381,12 @@
 \newcommand\sievecat[1]{\cat{Sieves}({#1})}
 \newcommand{\schemes}{\cat{Sch}}
 \newcommand{\affschemes}{\cat{AffSch}}
+\newcommand\sites{\cat{Sites}}
 \newcommand\inverse[1]{{#1}^{-1}}
 \newcommand{\direct}[1]{{#1}_*}
 \newcommand{\inverseimg}[1]{{#1}^*}
 \newcommand{\forward}[1]{{#1}_!}
+\newcommand\pushforward\forward
 \newcommand{\interhom}[2]{{#1}^{#2}}
 \newcommand{\modules}[1]{#1\text{-}\cat{Mod}}
 \newcommand{\pullback}[1]{{#1}^*}

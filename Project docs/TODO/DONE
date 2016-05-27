@@ -26,3 +26,7 @@ Done - Define inverse image and pushforward
 Done - define subobjects of \ynd{a}
 Done - Proof the equivalence of sieve categories
 Done - Q^f sends maximal sieves to maximal sieves
+Done - Reference to Oosten proofs of plus properties and sheaf adjunction
+Done - Remove parenthesis from plus construction
+Done - Category names should not be in a mbox
+Done - Change how matching families look to \{ x_i | i \in R}
