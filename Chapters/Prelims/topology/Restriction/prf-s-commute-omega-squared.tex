@@ -1,4 +1,4 @@
-\begin{lemma}
+\begin{lemma}\label[lemma]{a78}
 Let $\presheaf{F}$ be a presheaf on $\site{C}{T}$.
 Let $f:b\rightarrow a \in \cat{C}$.
 Let $\presheaf{F}$ be a presheaf on $\cat{C}$.
@@ -14,12 +14,12 @@ We have the following identities.
 		&= \omega_{\plus{\direct{u} \presheaf{F}}} \circ \omega_{\direct{u} \presheaf{F}}
 		\reason{definition} \\
 		&= \omega_{\plus{\direct{u} \presheaf{F}}} \circ s_{\presheaf{F}} \circ \direct{u}\omega_{\presheaf{F}}
-		\reason{applying lemma ?} \\
+		\reason{applying \Cref{a94}} \\
 		&= \plus{s_{\presheaf{F}}} \circ \plus{\direct{u}\omega_{\psh{F}}} \circ \direct{u}\omega_{\presheaf{F}}
 		\reason{naturality of $\omega$} \\
 		&= \plus{s_{\presheaf{F}}} \circ \plus{\direct{u}\omega_{\psh{F}}} \circ
 		s_{\presheaf{F}} \circ \direct{u}\omega_{\psh{F}}
-		\reason{applying lemma ?} \\
+		\reason{applying \Cref{a94}} \\
 		&= \plus{s_{\presheaf{F}}} \circ s_{\plus{\presheaf{F}}} \circ \direct{u}\omega_{\plus{\psh{F}}} \circ \direct{u}\omega_{\psh{F}}
 		\reason{naturality of $s\circ \direct{u}\omega$}\\
 		&= s^2_{\psh{F}} \circ \direct{u}\omega^2_{\psh{F}}\\

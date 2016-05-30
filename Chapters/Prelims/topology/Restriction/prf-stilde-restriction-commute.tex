@@ -1,4 +1,4 @@
-\begin{lemma}[$\stilde$ commutes with restriction]
+\begin{lemma}[$\stilde$ commutes with restriction]\label[lemma]{ab7}
 Let $\rsite{C}{T}{O}$ be a ringed site.
 We have a natural isomorphism  
 \[q:\direct{u} \circ \stilde \rightarrow \stilde \circ (\blank \tensor_{\sect{1}{O}} \sections{a}{O}).\]
@@ -8,66 +8,9 @@ We have a natural isomorphism
 Define $q$ to be the composition
 \begin{align*}
 	\direct{u} \circ \sheafify \circ \pstilde 
-	& \xRightarrow{s^2\pstilde} \sheafify \circ \direct{u} \circ \pstilde \reason{lemma ?}\\
-	& \xRightarrow{\sheafify{t}} \sheafify \circ \pstilde \circ \blank \tensor_{\sect{1}{O}} \sections{a}{O})\ \reason{lemma ?}
+	& \xRightarrow{s^2\pstilde} \sheafify \circ \direct{u} \circ \pstilde\\
+	& \xRightarrow{\sheafify{t}} \sheafify \circ \pstilde \circ \blank \tensor_{\sect{1}{O}} \sections{a}{O})
 \end{align*}
 
-From lemma ? and lemma ?, $t$ and $s^2$ are isomorphisms so $q$ is an isomorphism as well.
+By \Cref{9b0,9fe}, $t$ and $s^2$ are isomorphisms so $q$ is an isomorphism as well.
 \end{proof}
-
-% \begin{lemma}[$\stilde$ counit commute with restriction]
-% Let $\rsite{C}{T}{O}$ be a ringed site.
-% Let $a\in \cat{C}$.
-% Let $\counit$ be the counit of the adjunction $\adj{\stilde}{\globalsections}$ on $\cat{C}$.
-% Let $\counit_a$ be the counit of the adjunction $\adj{\stilde_a}{\globalsections}$ on $\overcat{C}{a}$.
-% Let $M$ be a $\sect{a}{O}$-module.
-% We have $\restr{\counit}{a} \iso \counit_a$ on modules of the form $\stilde{M}$.
-% \end{lemma}
-
-% \begin{proof}
-% Fix $\stilde{M}$. 
-% Let $N = \gblsect{F}$.
-
-% Let $\counit_{\pstilde}$ be the counit of the adjunction $\adj{\pstilde}{\sections{1}}$.
-% By lemma ?, restricting this counit yields the counit $\counit_{a, \pstilde}$ of the adjunction $\adj{\pstilde_a}{\sections{a}}$.
-% We have the commuting diagram
-
-% \begin{center}
-% 	\begin{tikzcd}[row sep = large, column sep = large]
-% 		\pstilde{N} \arrow{d}{\omega^2} \arrow{dr}{\counit_{\pstilde}} \\
-% 		\stilde{N} \arrow{r}{\counit}
-% 		& \stilde{M}
-% 	\end{tikzcd}
-% \end{center}
-
-% After restriction and applying some natural isomorphisms, we have the commuting diagram
-% \begin{center}
-% 	\begin{tikzcd}[row sep = large, column sep = large]
-% 		\pstilde{N \tensor_{\sect{1}{O}} \sect{a}{O}} 
-% 			\arrow{d}{\omega^2_a} \arrow{drr}{\counit_{a,\pstilde}} \\
-% 		\stilde{N \tensor_{\sect{1}{O}} \sect{a}{O}} \arrow[shift left]{rr}{\counit_a} 
-% 		\arrow[shift right, swap]{rr}{\direct{u}(\counit)}
-% 		&& \stilde{M \tensor_{\sect{1}{O}} \sect{a}{O} }
-% 	\end{tikzcd}
-% \end{center}
-
-% By the universal property of $\omega^2_a$, it follows that $\inverse{q}\counit_a q = \restr{\counit}{a}$.
-% \end{proof}
-
-% \begin{lemma}
-% Let $\site{C}{T}$ be a site.
-% Let $a \in \cat{C}$.
-% Consider the conunit $\counit$ of $\mainadjunction$ on $\cat{C}$
-% and the counit $\counit_a$ of the same adjunction on $\overcat{C}{a}$. 
-% Then $\restr{\counit}{a} = \counit_a$.
-% \end{lemma}
-% \begin{proof}
-% Let $\module{F}$ be a sheaf module on $\cat{C}$.
-% Let $f:b\rightarrow a\in \cat{C}$.
-% We want to show that 
-% $\counit_{\module{F},a,f}: \stilde{\globalsections{F}} \rightarrow \module{F}$
-% is the same map as $\restr{\counit_{\module{F}}}{a}_{f}: \stilde{\globalsections{F}} \rightarrow \module{F} $
-% \[\alpha:\pstilde(\globalsections{F}) \rightarrow \module{F},\]
-% \[m\tensor r \mapsto mr\]
-% composed with $\omega^2_{\pstilde{\globalsections{F}}}$.
-% \end{proof}

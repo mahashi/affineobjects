@@ -1,18 +1,18 @@
-\begin{definition}[Plus construction]
+\begin{definition}[Plus construction]\label[definition]{Plus construction}
 Let $\site{C}{T}$ be a site.
 Let $a, a' \in \cat{C}$ and $f:a \rightarrow a'$. 
 Let $\presheaf{F} \in \presheaves{C}$.
 Define the functor $\plus: \presheaves{C} \rightarrow \presheaves{C}$ as follows.
 
 For all $a\in \cat{C}$,
-\[\plus{\presheaf{F}}(a) = \frac{\set{(\sieve{R},\varphi) 
+\[\plus{F}(a) = \frac{\set{(\sieve{R},\varphi) 
 	\suchthat \sieve{R} \in \top{T}{a},
-	\varphi \in \sections{\sieve{R}}{\presheaf{F}}}}
+	\varphi \in \sections{\sieve{R}}{F}}}
 	{\sim},
 \]
 
 for all morphisms $f \in \cat{C}$,
-\[ \plus{\presheaf{F}}(f)(\eqclass{(\sieve{R},\varphi)}) 
+\[ \plus{F}(f)(\eqclass{(\sieve{R},\varphi)}) 
 	= \eqclass{(\spull{f}\sieve{R}, \varphi\ynd(f) )}.
 \]
 
@@ -34,15 +34,15 @@ where
 \end{definition}
 
 
-\begin{lemma}[2.10 \cite{toposUU}]
+\begin{lemma}[2.10 \cite{toposUU}]\label[lemma]{b4e}
 Let $\presheaf{F}$ be a presheaf, $\sheaf{G}$ a sheaf and $g:\presheaf{F} \rightarrow \sheaf{G}$ a morphism in $\presheaves{C}$.
-Then $g$ factors through $\omega_{\presheaf{F}}$ via a unique $g'$.
+Then $g$ factors through $\omega_{F}$ via a unique $g'$.
 \end{lemma}
 
-\begin{lemma}[2.11 \cite{toposUU}]
-For every presheaf $\presheaf{F}$, $\plus{\presheaf{F}}$ is separated.
+\begin{lemma}[2.11 \cite{toposUU}]\label[lemma]{b53}
+For every presheaf $\presheaf{F}$, $\plus{F}$ is separated.
 \end{lemma}
 
-\begin{lemma}[2.12 \cite{toposUU}]
-If $\presheaf{F}$ is separated, then $\plus{\presheaf{F}}$ is a sheaf.
+\begin{lemma}[2.12 \cite{toposUU}]\label[lemma]{b57}
+If $\presheaf{F}$ is separated, then $\plus{F}$ is a sheaf.
 \end{lemma}

@@ -1,4 +1,4 @@
-\begin{definition}[Relative topology]
+\begin{definition}[Relative topology]\label[definition]{Relative topology}
 Let $\site{C}{T}$ be a site.
 Let $a \in \cat{C}$.
 
@@ -6,49 +6,6 @@ Define the induced topology $\top{T}_a$ on $\overcat{C}{a}$
 by, for each $f \in \overcat{C}{a}$
 \[\top{T}_a(f) = \top{T}(\dom{f}).\]
 
-The identification from remark ? implies that $\top{T}_a$ is a Grothendieck topology.
+The identification from \Cref{8fe} implies that $\top{T}_a$ is a Grothendieck topology.
 \end{definition}
 
-% \begin{lemma}
-% $\top{T}_a$ defines a Grothendieck topology
-% \end{lemma}
-
-% \begin{proof}
-% Axiom 1: $Q^f$ is an equivalence of posets. 
-% So the terminal object is send to the terminal object.
-% Hence $\maxsieve{f}\in \top{T}_a(f)$.
-
-% Axiom 2 \& 3 are consequences of: $Q^f$ is an equivalence and $Q^f$ commutes with sieve pullback.
-% \end{proof}
-
-% \begin{proof}
-% We will prove the axioms one by one.
-
-% - Axiom 1
-
-% Let $p: b' \rightarrow b \in \y{f}(g)$ with $g: b' \rightarrow a$.
-% Then $g = f \circ p$ hence $p \in \maxsieve{b}^f(g)$
-% so $\maxsieve{b}^f = \y{f} = \maxsieve{f}$. 
-% This proves that $\maxsieve{f} \in \top{T}_a(f)$.
-
-% - Axiom 2
-
-% Let $p: b' \rightarrow b \in \y{f}{g}$ with $g: b' \rightarrow a$.
-% Let $R^f \in \top{T}_a(f)$ coming from $R \in \top{T}(b)$.
-% We have to show that $\spull{p}R^f \in \top{T}_a(g)$.
-% But $\spull{p}R^f = (\spull{p}R)^g$ by lemma ?, which implies the desired result.
-
-% - Axiom 3
-
-% Let $R^f \in \top{T}_a(f)$ coming from $R\in \top{T}(b)$.
-% Let $S$ be any sieve on $f$.
-% Note that $S = (S')^f$. 
-% Assume that $\spull{p}S \in \top{T}_a(g)$ 
-% for any $p: b' \rightarrow b \in R^f(g)$
-% with $g: b' \rightarrow a$.
-
-% By assumption $\spull{p}S = \spull{p}((S')^f) = (\spull{p}S')^g$ 
-% is a covering sieve for any $p \in R^f(g)$,
-% hence $\spull{p}S'$ is a covering sieve.
-% This implies that $S'$ is a covering sieve so $S$ is too.
-% \end{proof}

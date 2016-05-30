@@ -1,4 +1,4 @@
-\begin{definition}[Restrictive functor]
+\begin{definition}[Restrictive functor]\label[definition]{Restrictive functor}
 A functor  $f:\rsite{C}{T}{O} \rightarrow \rsite{D}{S}{U}$ between ringed sites is called restrictive if for every quasi-coherent module $\module{G}$ the co-unit induces an isomorphism 
 \[\module{G} \rightarrow \direct{f}\inverse{f}\module{G},\]
 \[\sections{\terminal}{G} \rightarrow \sections{\terminal}{\direct{f}\inverse{f}G} \iso \sections{\terminal}{\inverse{f}G}\]
@@ -7,7 +7,7 @@ A functor  $f:\rsite{C}{T}{O} \rightarrow \rsite{D}{S}{U}$ between ringed sites 
 Note that 
 \end{definition}
 
-\begin{definition}[Restrictive morphism]
+\begin{definition}[Restrictive morphism]\label[definition]{Restrictive morphism}
 A morphism $f:X\rightarrow Y\in \cat{C}$ is called restrictive if the induced functor
 \[\overcat{C}{X}\rightarrow \overcat{C}{Y}\] is restrictive.
 \end{definition}
@@ -23,7 +23,7 @@ The quasi-coherent sheaf $\Lambda(\frac{R[x,y]}{xy})$  fails to satisfy the cond
 % TODO: right it out completely
 \end{nonexample}
 
-\begin{lemma}[Restrictive to affines]
+\begin{lemma}[Restrictive to affines]\label[lemma]{Restrictive to affines}
 If $f:X\rightarrow \Spec{R}$ is a restrictive open immersion. 
 then $X$ is affine.
 %TODO: What is an open immersion categorically?
@@ -47,7 +47,7 @@ Look at the quasi-coherent module $\sheaf{O}(-1)$. There are no global sections 
 Any inclusion $\Spec{\kappa(\Ip)} \rightarrow \projspace{1}$ is not restrictive. Look at $\sheaf{O}(-1)$.
 \end{nonexample}
 
-\begin{lemma}
+\begin{lemma}\label[lemma]{ca7}
 The composition of two restrictive functors is restrictive. If the composition $gf$ is restrictive, then $g$ is restrictive
 \end{lemma}
 \begin{proof}
