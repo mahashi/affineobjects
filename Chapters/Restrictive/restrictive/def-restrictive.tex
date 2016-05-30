@@ -2,21 +2,19 @@
 A functor  $f: \rsite{C}{T}{O} \rightarrow \rsite{D}{S}{U}$ 
 between ringed sites is called restrictive 
 if for every quasi-coherent module $\module{G}$ on $\rsite{D}{S}{U}$
-the co-unit $\unit$ of $\adj{\inverse{f}}{\direct{f}}$ 
-induces an isomorphism 
-\[\unit_{\module{G}} : 
-	\module{G} \rightarrow \direct{f}\inverseimg{f}\module{G},
-\]
-\[\unit_{\module{G}, \terminal} : 
-	\globalsections{G} \rightarrow \globalsections{\direct{f}\inverseimg{f}G}
-	\]
-\[\unit_{\module{G}, \terminal} \tensor_{\globalsections{O}} \globalsections{U} :
-	\globalsections{G} \tensor_{\globalsections{O}} \globalsections{U} \rightarrow \globalsections{\direct{f}\inverseimg{f}G}.
-\]
+the unit $\unit$ of $\adj{\inverse{f}}{\direct{f}}$ 
+induces an isomorphism
+\begin{align*}
+\unit_{\module{G}} :& \module{G} \rightarrow \direct{f}\inverseimg{f}\module{G},\\
+\unit_{\module{G}, \terminal} :& \globalsections{G} \rightarrow \globalsections{\direct{f}\inverseimg{f}G}\\
+\unit_{\module{G}, \terminal} \tensor_{\globalsections{O}} \globalsections{U} :
+	&\globalsections{G} \tensor_{\globalsections{O}} \globalsections{U} 
+	\rightarrow \globalsections{\direct{f}\inverseimg{f}G}.
+\end{align*}
+
 \end{definition}
 
 \begin{definition}[Restrictive morphism]\label[definition]{Restrictive morphism}
 A morphism $f: a \rightarrow b \in \cat{C}$ is called restrictive 
-if the induced functor 
-\[\overcat{C}{a} \rightarrow \overcat{C}{b}\] is restrictive.
+if the induced functor $\overcat{C}{a} \rightarrow \overcat{C}{b}$ is restrictive.
 \end{definition}
