@@ -2,16 +2,16 @@
 A functor  $f: \rsite{C}{T}{O} \rightarrow \rsite{D}{S}{U}$ 
 between ringed sites is called restrictive 
 if for every quasi-coherent module $\module{G}$ on $\rsite{D}{S}{U}$
-the co-unit $\counit$ of $\adj{\inverse{f}}{\direct{f}}$ 
+the co-unit $\unit$ of $\adj{\inverse{f}}{\direct{f}}$ 
 induces an isomorphism 
-\[\counit_{\module{G}} : 
-	\module{G} \rightarrow \direct{f}\inverse{f}\module{G},
+\[\unit_{\module{G}} : 
+	\module{G} \rightarrow \direct{f}\inverseimg{f}\module{G},
 \]
-\[\counit_{\module{G}, \terminal} : 
-	\globalsections{G} \rightarrow \globalsections{\direct{f}\inverse{f}G}
+\[\unit_{\module{G}, \terminal} : 
+	\globalsections{G} \rightarrow \globalsections{\direct{f}\inverseimg{f}G}
 	\]
-\[\counit_{\module{G}, \terminal} \tensor_{\globalsections{O}} \globalsections{U} :
-	\globalsections{G} \tensor_{\globalsections{O}} \globalsections{U} \rightarrow \globalsections{\direct{f}\inverse{f}\module{G}}.
+\[\unit_{\module{G}, \terminal} \tensor_{\globalsections{O}} \globalsections{U} :
+	\globalsections{G} \tensor_{\globalsections{O}} \globalsections{U} \rightarrow \globalsections{\direct{f}\inverseimg{f}G}.
 \]
 \end{definition}
 
@@ -20,12 +20,3 @@ A morphism $f: a \rightarrow b \in \cat{C}$ is called restrictive
 if the induced functor 
 \[\overcat{C}{a} \rightarrow \overcat{C}{b}\] is restrictive.
 \end{definition}
-
-\begin{definition}[Category of ringed sites]
-The category $\ringedsites$ has as objects ringed sites 
-and as morphisms pairs $\pair{f}{f^#}$ 
-with $f: \site{C}{T} \rightarrow \site{D}{S}$ a morphism of sites
-and $f^#: \direct{f}\sheaf{U} \rightarrow \sheaf{O}$ a morphism of sheaf of rings.
-We will denote the pair $\pair{f}{f^#}$ by just $f$ when no confusion can arise.
-\end{definition}
-%todo: rewrite definition

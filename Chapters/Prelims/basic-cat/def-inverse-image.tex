@@ -1,10 +1,35 @@
-\begin{definition}[inverse image]
-% Let $\cat{C}, \cat{D}$ be a categories.
-% Let $f: \cat{C} \rightarrow \cat{D}$ be a functor.
-% Define the inverse image functor
-% $\inverseimg{f}: \presheaves{C} \rightarrow \presheaves{D}$
-% as follows.
-% Let $\presheaf{F} \in \presheaves{C}$.
-% For any $d \in \cat{D}$ 
-% \[\inverseimg{f}(F)(d) = \colim{\overcat{D}{d}}{\presheaf{F}u} .\]
+\begin{definition}[inverse image of presheaves]
+Let $\cat{C}, \cat{D}$ be a categories.
+Let $f: \cat{C} \rightarrow \cat{D}$ be a functor.
+Define the inverse image functor
+$\inverseimg{f}: \presheaves{C} \rightarrow \presheaves{D}$
+as follows.
+Let $\presheaf{F} \in \presheaves{C}$.
+For any $d \in \cat{D}$ 
+\[\inverseimg{f}(F)(d) = \colim{\overcat{D}{d}}{\presheaf{F}u} .\]
 \end{definition}
+
+\begin{definition}[inverse image of sheaves]
+Let $\site{C}{T}, \site{D}{S}$ be sites.
+Let $f: \cat{C} \rightarrow \cat{D}$ be a morphism of sites.
+Define the inverse image functor 
+$\inverseimg{f}: \sheaves{C} \rightarrow \sheaves{D}$
+of sheaves to be
+\[\shs{C} \xrightarrow{\inverseimg{f}} \pshs{D} \xrightarrow{\sheafify} \shs{C}.\]
+the inverse image of presheaves composed with sheafification.
+\end{definition}
+
+\begin{definition}[inverse image of modules]
+Let $\site{C}{T}{O}, \site{D}{S}{U}$ be ringed sites.
+Let $f: \cat{C} \rightarrow \cat{D}$ be a morphism of ringed sites.
+Define the inverse image functor
+$\inverseimg{f}: \shmod{O} \rightarrow \shmod{U}$
+of modules to be
+\[\shmod{O} \xrightarrow{\inverseimg{f}} \shmod{\inverseimg{f}O} \xrightarrow{} \shmod{U}.\]
+the inverse image of sheaves composed with tensoring with $\sheaf{U}$
+along the map $f^#:\inverseimg{f}O \rightarrow U$.
+\end{definition}
+
+\begin{lemma}
+All these are left adjoint to $\direct{f}$.
+\end{lemma}

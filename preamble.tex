@@ -1,4 +1,3 @@
-%TODO
     %%%%%%%%%%%%
     % PACKAGES %
     %%%%%%%%%%%%
@@ -22,12 +21,14 @@
 \usepackage[utf8]{inputenc}
 % \usepackage{tikz}
 \usepackage{tikz-cd}
+\usepackage{xstring}
 \usepackage{csquotes}
 \usepackage{biblatex}
 \addbibresource{affineobjects.bib}
 % \usetikzlibrary{external}
 % \tikzexternalize
 \usepackage{hyperref}
+\usepackage{cleveref}
 \usepackage{url}
 \usepackage{verbatim}
 \usepackage{amsmath, amsthm, amsfonts, mathrsfs,bbm}
@@ -332,9 +333,13 @@
 \newcommand\gblsect\globalsections
 
 \DeclareDocumentCommand{\sections}{ mg }{%
- \IfNoValueTF{#2}%
-          {\Gamma( #1 ; \blank)}%
-          {\Gamma( #1 ; \presheaf{#2})}%
+  \StrRight{#2}{1}[\lastletter]%
+  \StrBefore{#2}{\lastletter}[\beforelastletter]%
+  \IfNoValueTF{#2}%
+    {\Gamma( #1 ; \blank)}%
+    { 
+      \Gamma( #1 ; \beforelastletter\presheaf{\lastletter})%
+    }%
 }
 
 \newcommand\sect\sections
@@ -359,8 +364,14 @@
 \newcommand\Supp{\mbox{Supp }}
 \newcommand{\maxsieve}[1]{\cat{max}(#1)}
 \newcommand{\sheaves}[1]{\cat{Shv}(#1)}
-\newcommand{\sheafmodules}[1]{\cat{Mod}(#1)}
+\newcommand{\sheafmodules}[1]
+  {
+    \StrRight{#1}{1}[\lastletter]%
+    \StrBefore{#1}{\lastletter}[\beforelastletter]%
+    \beforelastletter\cat{Mod}(\lastletter)
+  }
 \newcommand\shmodules{\sheafmodules}
+\newcommand\shmod\sheafmodules
 \newcommand{\pshmodules}[1]{\cat{PMod}(#1)}
 \newcommand{\qcoh}[1]{\cat{Qcoh}(\sheaf{#1})}
 %\newcommand{\plus}[1]{{\presheaf{#1}}^+}
@@ -384,7 +395,7 @@
 \newcommand\sites{\cat{Sites}}
 \newcommand\inverse[1]{{#1}^{-1}}
 \newcommand{\direct}[1]{{#1}_*}
-\newcommand{\inverseimg}[1]{{#1}^*}
+\newcommand{\inverseimg}[1]{{#1}^{-1}}
 \newcommand{\forward}[1]{{#1}_!}
 \newcommand\pushforward\forward
 \newcommand{\interhom}[2]{{#1}^{#2}}
