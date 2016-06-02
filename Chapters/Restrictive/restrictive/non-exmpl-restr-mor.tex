@@ -1,5 +1,15 @@
-\begin{nonexample}
-The open immersion $\Spec{R^2}\setminus 0 \rightarrow \Spec{R^2}$ is not restrictive.
-The quasi-coherent sheaf $\Lambda(\frac{R[x,y]}{xy})$  fails to satisfy the condition from the definition.
-% TODO: right it out completely
-\end{nonexample}
+\begin{example}
+Let $R$ be a ring.
+Consider the open immersion $U = \Spec{R[x,y]} \setminus \set{\idealgen{x,y}} \rightarrow \Spec{R[x,y]}$
+and the quasi-coherent sheaf $\sheaf{G} = \stilde(\frac{R[x,y]}{xy})$.
+The global sections of this sheaf are $\frac{R[x,y]}{xy}$, because for affine schemes the counit is an isomorphism.
+
+Define $U_1 = D(x) \rightarrow U$ and $U_2 = D(y) \rightarrow U$. 
+Note that these cover $U$ together.
+We have $\sect{U_1}{G} = 0$ and $\sect{U_1}{G} = 0$, since $\frac{R[x,y]}{xy}_x = 0$ and $\frac{R[x,y]}{xy}_y = 0$.
+Hence since $\sheaf{G}$ is a sheaf, we get $\sect{U}{G} = 0$.%TODO: introduce kernel definition of sheaf property
+
+The sections over $U$ of $\stilde{R[x,y]}$ are (also) $R[x,y]$. %TODO: write this out
+We conclude that $\gblsect{G} \tensor_{\gblsect{O}} \sect{U}{O} \rightarrow \sect{U}{G}$
+is not an isomorphism.
+\end{example}

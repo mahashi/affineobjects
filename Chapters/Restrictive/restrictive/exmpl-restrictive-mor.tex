@@ -1,6 +1,12 @@
-\begin{example}
-In $\schemes$, the morphism $\Spec{A_f} \rightarrow \Spec{A}$ is restrictive.
-%TODO: expand this example
-
-%TODO: functor that is restrictive. Yoneda embedding? AffSch in Sch?
+\begin{example}\label[example]{c1f}
+In $\overschemes{\Spec{A}}$
+the morphism $\Spec{A_f} \xrightarrow{f} \Spec{A}$ is restrictive.
+Let $\sheaf{G}$ be a quasi-coherent sheaf on $\overschemes{\Spec{A}}$.
+This implies that $\sheaf{G} = \widetilde{\sections{\Spec{A}}{G}}$.
+The morphism
+\[
+\sections{\Spec{A}}{G} \tensor_{\gblsect{O}} \sections{\Spec{A_f}}{O} \rightarrow  \sections{\Spec{A_f}}{G} = \sections{A}{G}_f,
+\]
+\[ m \tensor r \rightarrow rm\]
+is an isomorphism by basic commutative algebra.
 \end{example}
