@@ -3,6 +3,13 @@ If $f:X \rightarrow \Spec{R}$ is a restrictive open immersion.
 then $X$ is affine.
 \end{lemma}
 \begin{proof}
-%TODO: remember proof
-%TODO: read about affiness being a local property: if a cover of dist opens has it and this cover generates the unit ideal then the scheme has it
+Since $X$ is an open in $\Spec{R}$, we get a distinguised covering $\Union_i D(f_i) = X$ with $f_i\in R$.
+We will prove that $(f_i) = (1)$ in $S = \sect{X}{O}$ and 
+then invoke the result from Ex. 2.1.7 in \cite{harts}.
+
+Consider $M = \frac{R}{(f_i)}$ as an $R$-module and look at $\stilde{M}$.
+By restrictiveness we get $M \tensor_R S = \stilde{M}(S)$ and  
+by $M \tensor_R R_{f_i} = \stilde{M}(D(f_i)) = M_{f_i} = 0$. 
+Hence $\stilde{M}(S) = 0$ by the sheaf axiom.
+This implies that $(f_i) = (1)$ in $S$.
 \end{proof}

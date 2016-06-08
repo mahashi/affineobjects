@@ -1,23 +1,24 @@
 \begin{lemma}\label[lemma]{7cc}
-Let $Y = \rsite{X}{T}{O}$ be a ringed site.
+Let $Y = \rsite{C}{T}{O}$ be a ringed site.
 The functor $\pstilde$ is left adjoint to 
-\[\globalsections:\pshmodules{Y} \rightarrow \modules{R}\].
+\[\globalsections:\pshmodules{\sheaf{O}} \rightarrow \modules{R}.\]
 \end{lemma}
 
 \begin{proof}
 Let $a$ be an object of $C$.
 Let $M,N$ be $R$-modules. 
-Let $\presheaf{F},\presheaf{G} \in \pshmodules{Y}$ be presheaf modules.
+Let $\presheaf{F},\presheaf{G} \in \pshmodules{\sheaf{O}}$ be presheaf modules.
 
 Let $\varphi:\pstilde{M} \rightarrow \presheaf{G}$ be a morphism of presheaf modules.
 Let $\phi: M \rightarrow \globalsections{G}$ be a morphism of presheaf modules.
 
-Define 
-\[\alpha = H_{M,\presheaf{G}}: 
-	\Hom{\pstilde{M}}{\presheaf{G}} \rightarrow \Hom{M}{\globalsections{G}}
-\]
-by
-\[ \alpha(\varphi) = \varphi_1,\]
+Define
+\begin{align}
+\alpha = H_{M,\presheaf{G}} :& 
+	\Hom{\pstilde{M}}{\presheaf{G}} \rightarrow \Hom{M}{\globalsections{G}} \\
+	:& \varphi \mapsto \varphi_1
+\end{align}
+
 where $\varphi_1$ is the component of $\varphi$ on the global sections.
 
 Define 
@@ -63,5 +64,6 @@ Let $l = h_1 \circ H_{N,\presheaf{F}}(\rho) \circ f$.
 Unfolding the definition for $H$ shows that $k = h_1\rho_1 f$
 and $l = h_1\rho_1 f$ as well.
 This proves naturality in $M$ and $\presheaf{G}$ 
-and the adjunction between $\pstilde$ and $\globalsections$.
+and the adjunction between $\pstilde$ and $\globalsections$
+between $\modules{R}$ and $\pshmodules{\sheaf{O}}$.
 \end{proof}

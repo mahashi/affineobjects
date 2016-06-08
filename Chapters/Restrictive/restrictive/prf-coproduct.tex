@@ -1,0 +1,28 @@
+\begin{lemma}
+Let $X,Y$ be a schemes.
+The canonical morphism $X \rightarrow X \disjointunion Y$ is restrictive.
+\end{lemma}
+
+\begin{proof}
+Let $\shf{G}$ be a quasi-coherent sheaf on $X \disjointunion Y$.
+By the sheaf property $\sect{X \disjointunion Y}{G} = \sect{X}{G} \times \sect{Y}{G}$.
+The same holds also for $\shf{O}$.
+
+We are considering the morphism
+\[
+\sect{X \disjointunion Y}{G} \tensor_{\sect{X \disjointunion Y}{O}} \sect{X}{O} \rightarrow \sect{X}{G}.
+\]
+
+By the previous and some basic commutative algebra one sees that this becomes the projection
+\[
+(\sect{X}{G} \tensor \sect{X}{O}) \times (\sect{Y}{G} \tensor \sect{X}{O}) \rightarrow \sect{X}{G}.
+\]
+
+Since $\sect{Y}{G} \tensor \sect{X}{O} = 0$, this map is an isomorphism.
+\end{proof}
+
+
+%TODO: small object argument?
+\begin{lemma}
+
+\end{lemma}

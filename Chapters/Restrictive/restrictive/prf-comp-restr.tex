@@ -1,24 +1,27 @@
 \begin{lemma}\label[lemma]{ce1}
 Let $\rsite{C}{T}{O}$ be a ringed site.
-If $f:b\rightarrow a \in \cat{C}$ and $g:c\rightarrow b \in \cat{C}$ are restrictive,
-then $fg$ is.
+Let $f:b\rightarrow a \in \cat{C}$ and $g:c\rightarrow b \in \cat{C}$ be morphisms.
+\begin{enumerate}
+	\item If $fg$ and $f$ are restrictive, then $g$ is.
+	\item if $f$ and $g$ are restrictive, then $fg$. 
+\end{enumerate}
 \end{lemma}
+
 \begin{proof}
 Let $\sheaf{G}$ be a quasi-coherent sheaf on $\cat{C}$.
-Note that the morphism
-$$
-\sheaf{G}(fg)\tensor_{\sect{a}{O}} \sect{c}{G}:\sect{a}{G} \tensor_{\sect{a}{O}} \sect{c}{G} \rightarrow \sect{c}{G}
-$$
-is equal to $(\sheaf{G}(g)(\sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{G}))\tensor_{\sect{b}{O}} \sect{c}{G}$.
-By assumption
-$$
-\sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{G}:\sect{a}{G} \tensor_{\sect{a}{O}} \sect{b}{G} \rightarrow \sect{b}{G}
-$$
-and
-$$
-\sheaf{G}(g)\tensor_{\sect{b}{O}} \sect{c}{G}\sect{b}{G} \tensor_{\sect{b}{O}} \sect{c}{G} \rightarrow \sect{c}{G}
-$$
-are isomorphisms, hence 
-$$(\sheaf{G}(g)(\sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{G}))\tensor_{\sect{b}{O}} \sect{c}{G}$$ is an isomorphism.
+We have the following identities.
+\begin{align*}
+\sheaf{G}(fg)\tensor_{\sect{a}{O}} \sect{c}{O} 
+	&=(\sheaf{G}(g)(\sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{O}))\tensor_{\sect{b}{O}} \sect{c}{O}\\
+	&= \sheaf{G}(g)\tensor_{\sect{b}{O}} \sect{c}{O} \circ \sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{O}\tensor_{\sect{b}{O}} \sect{c}{G}
+\end{align*}
+
+From this both results follow.
 \end{proof}
- 
+
+\begin{remark}
+Knowing that $fg$ and $g$ are restrictive only implies that
+$$\sheaf{G}(f) \tensor_{\sect{a}{O}} \sect{b}{G} \tensor_{\sect{b}{O}} \sect{c}{G}$$
+is an isomorphism. 
+Only when $\sect{c}{G}$ is faithfully flat over $\sect{b}{O}$ this would imply that $f$ is restrictive.
+\end{remark}

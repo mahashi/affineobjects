@@ -1,21 +1,10 @@
 \begin{definition}[Sieve]\label[definition]{Sieve}
 Let $\cat{C}$ be a category 
 and $a \in \cat{C}$.
-Define the maximal sieve $\maxsieve{a}$ on $a$ to be the set of all morphisms to $a$.
+Define the maximal sieve $\maxsieve{a}$ on $a$ to be the collection of all morphisms to $a$.
 In formula,
 \[\maxsieve{a} = \set{ f \in \cat{C} \suchthat \codomain{f} = a}.\]
 
-A sieve $S$ is a subset of $\maxsieve{a}$ such that 
+A sieve $S$ on $a$ is a subcollection of $\maxsieve{a}$ such that 
 $gf \in S$ for any $f\in S$ and any $g$.
 \end{definition}
-
-\begin{remark}\label[remark]{8fe}
-Let $\cat{C}$ be a category 
-and $a,b \in \cat{C}$.
-Let $f:b\rightarrow a \in \overcat{C}{a}$.
-
-Any morphism to $b$ is also a morphism to $f$ and vice versa.
-This observation yields us that $\sievecat{b} = \sievecat{f}$.
-Moreover composition in $\cat{C}$ and $\overcat{C}{a}$ are the same,
-so this identification respects pullback of sieves.
-\end{remark}

@@ -1,13 +1,15 @@
 \begin{definition}\label[definition]{76d}
+Let $\rsite{C}{T}{O}$ be a ringed site.
+Let $R = \globalsections{O}$.
 Let $M,N$ be an $R$-module.
 
 Define 
-\[\pstilde: \modules{R} \rightarrow \pshmodules{Y}\]
+\[\pstilde: \modules{R} \rightarrow \pshmodules{\sheaf{O}}\]
 by
 for all $a \in \cat{C}$, 
 \[\pstilde(M)(a) = M \tensor_R \sections{a}{O} ,\]
 for all $f:b \rightarrow a \in \cat{C}$, 
-\[\pstilde(M)(f): \id \tensor \sheaf{O}(f) ,\]
+\[\pstilde(M)(f) = \id \tensor \sheaf{O}(f) ,\]
 for all $g:M \rightarrow N \in \modules{R}$,
 \[\pstilde(g) = (a: g \tensor \id ).\]
 \end{definition}

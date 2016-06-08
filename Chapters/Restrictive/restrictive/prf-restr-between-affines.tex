@@ -1,0 +1,21 @@
+\begin{lemma}
+Any morphism $\Spec{S} \xrightarrow{f} \Spec{R} \in \overcat{Sch}{\Spec{R}}$ 
+between affine schemes is restrictive.
+\end{lemma}
+\begin{proof}
+%TODO: new proof
+%1: f is restrictive  if \widetilde{M} \rightarrow f^*f_* \widetilde{M} has a iso as global component
+%2:
+
+Let $\sheaf{G}$ be a quasi-coherent module on $\overcat{Sch}{\Spec{R}}$.
+Set $M = \sect{\Spec{R}}{G}$
+We want to prove that 
+\[
+M \tensor_{\sect{\Spec{R}}{O}} \sect{\Spec{S}}{O} \rightarrow \sect{\Spec{S}}{G}
+\]
+is an isomorphism.
+
+Note that $\sheaf{G} = \stilde{M}$ since $\Spec{R}$ is affine. %TODO: prove that this holds
+For the same reason, we get $\restr{\sheaf{G}}{\Spec{S}} = \stilde{M \tensor \sect{\Spec{S}}{O}}$
+and 
+\end{proof}

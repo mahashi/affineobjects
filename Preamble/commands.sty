@@ -1,87 +1,3 @@
-%TODO: remove formatting of arguments out of functors. 
-%TODO: Make shorthand notation for letters in different fonts See https://github.com/mikeshulman/basictex/blob/master/decls.tex
-%TODO: Investigate usage of mbox  for functors
-
-\documentclass[
-  % Replace twoside with oneside if you are printing your thesis on a single side
-  % of the paper, or for viewing on screen.
-  %oneside,
-  oneside,
-  11pt, a4paper,
-  footinclude=true,
-  headinclude=true,
-  cleardoublepage=empty
-]{scrbook}
-
-\usepackage[english]{babel}
-\setlength\parindent{0pt}
-\setlength{\parskip}{2.5mm}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-% \usepackage{tikz}
-\usepackage{tikz-cd}
-\usepackage{xstring}
-\usepackage{csquotes}
-\usepackage{biblatex}
-\addbibresource{affineobjects.bib}
-% \usetikzlibrary{external}
-% \tikzexternalize
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{cleveref}
-\usepackage{verbatim}
-\usepackage{amsmath, amsthm, amsfonts, mathrsfs,bbm}
-\usepackage{amssymb}
-\usepackage{import}
-\usepackage{mathtools}
-\usepackage{eulervm}
-\usepackage{concrete}
-\usepackage{wasysym}
-\usepackage{xparse}
-
-%\usepackage[linedheaders,parts,pdfspacing]{classicthesis}
-
-    %%%%%%%%%%
-    % MACROS %
-    %%%%%%%%%%
-
-\newcounter{dummy}
-\theoremstyle{plain}% default
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{question}[theorem]{Question}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{notation}[theorem]{Notation}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{nonexample}[theorem]{Non-Example}
-\newtheorem{exercise}[dummy]{Exercise}
-\newtheorem*{solution}{Solution}
-\newtheorem{construction}[theorem]{Construction}
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-
-\newtheorem*{todo}{\begin{color}{red}{TODO}\end{color}}
-\newtheorem*{Qanswer}{\textbf{Answer}}
-\newtheorem{note}{Note}
-\newtheorem*{case}{Case}
-
-% solution environment
-\newenvironment{answer}[1]
-{\section*{Exercise #1}}
-{}
-
-% sub solution environment
-\newenvironment{subanswer}[1]
-{\subsection*{#1}}
-{\qed}
-
-
-
-
 %mathbb
 \newcommand{\F}{\ensuremath{\mathbb{F}}}
 \newcommand{\N}{\ensuremath{\mathbb{N}}}
@@ -93,7 +9,6 @@
 \renewcommand{\S}{\ensuremath{\mathbb{S}}}
 \renewcommand{\P}{\ensuremath{\mathbb}{P}}
 \newcommand{\G}{\ensuremath{\mathbb}{G}}
-
 \newcommand{\indicator}{\ensuremath{\mathbbm}{1}}
 
 
@@ -143,7 +58,6 @@
 \newcommand{\Gs}{\ensuremath{\mathfrak{G}}}
 \newcommand{\Nil}{\ensuremath{\mathfrak{N}}}
 
-
 % Delimiters
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\brac[]
@@ -153,12 +67,11 @@
 \DeclarePairedDelimiter{\nrm}\lVert\rVert
 \DeclarePairedDelimiter{\card}\lVert\rVert
 \newcommand\idealgen\paren
-% custom commands
-%\newcommand{\colim}[1]{\underset{#1}{colim}}
-\newcommand{\limit}[1]{\underset{#1}{lim}}
+
 \newcommand{\se}{\ensuremath{\subseteq}}
-\newcommand{\tbs}{\textbackslash }
+\newcommand{\tbs}{\textbackslash}
 \newcommand{\sh}{\backslash}
+
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol
   \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
   #1 % the function
@@ -187,7 +100,6 @@
 \newcommand{\Proj}{\mbox{Proj }}
 \newcommand{\Sp}{\mbox{sp }}
 \newcommand{\Hom}[2]{\mbox{Hom}(#1,#2)}
-%\newcommand{\Hom}[3]{\mbox{Hom}_{#1}(#2,#3)}
 \newcommand{\Dom}[1]{\mbox{Dom}(#1)}
 \newcommand{\coproduct}{\bigoplus}
 \newcommand{\product}{\prod}
@@ -196,8 +108,6 @@
 \newcommand{\Dist}{\mbox{\textbf{Dist}}}
 %Category theory
 
-\newcommand\disjointunion\sqcup
-\newcommand\Disjointunion\bigsqcup
 \newcommand{\Sch}{\cat{Sch}}
 \newcommand\Schemes\Sch
 \newcommand{\Rng}{\cat{Rng}}
@@ -206,7 +116,6 @@
 \newcommand\LocRingSpaces{\cat{LRSpaces}}
 
 \newcommand{\union}{\bigcup}
-\newcommand\Union\union
 \newcommand{\opUnion}{\cup}
 \newcommand{\match}[2]{\mbox{Match}(#1,#2)}
 \newcommand\matchfam[3]{\set{{#1}_{#2} \suchthat #2 \in #3}}
@@ -236,7 +145,7 @@
 \newcommand{\undercat}[2]{\cat{#1}^{#2}}
 \newcommand{\oversite}{\overcat}
 \newcommand{\undersite}{\undercat}
-\newcommand\overschemes[1]{\overcat{\schemes}{#1}}
+\newcommand\overschemes[1]{\schemes_{/{#1}}}
 \newcommand{\obj}[1]{Obj(\cat{#1})}
 \newcommand{\signature}[3]{#1:#2\rightarrow #3}
 \newcommand{\suchthat}{ \mid }
@@ -429,14 +338,3 @@
 \newcommand\onsome{\mbox{ on some }}
 \newcommand\with{\mbox{ : }}
 \renewcommand\and{\mbox{,  }}
-%------------------------------------------------------------------------------ 
-% ADMINISTRATION 
-%------------------------------------------------------------------------------ 
-\newcommand{\homeworkset}{5} %%% UPDATE THIS NUMBER 
-\title{Affine Objects}
-\newcommand{\firstName}  {Mohamed} 
-\newcommand{\lastName}   {Hashi} 
-\newcommand{\studId}     {1408593} 
-\newcommand{\email}    {maxamedhashi@gmail.com} 
-\newcommand{\uni} {Universiteit Leiden}
-\author{Mohamed Hashi}

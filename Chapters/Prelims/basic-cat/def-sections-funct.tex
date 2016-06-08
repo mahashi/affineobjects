@@ -1,22 +1,13 @@
 \begin{definition}[Sections functor]\label[definition]{Sections functor}
 For any $a\in \cat{C}$ define the functor 
-\[\sections{c}: \pshs{C} \rightarrow \Sets\]
+\[\sections{a}: \pshs{C} \rightarrow \Sets\]
 by
-\[\presheaf{F} \rightarrow \sect{a}{F}.\]
+\[\presheaf{F} \rightarrow \psh{F}(a).\]
 
-Let $L: I \rightarrow \cat{C}$ be a small diagram. 
-Define 
-\[\sect{\colim{i \in I}{L(i)}}: \pshs{C} \rightarrow \Sets\]
-by
-\[\presheaf{F} \rightarrow \Hom{\colim{i\in I}{L(i)}}{\presheaf{F}} 
-	= \limit{i\in I}{\Hom{L(i)}{\presheaf{F}}}.
-\]
+For any presheaf $\psh{G}$, we define
+\[ \sect{\psh{G}} : \pshs{C} \rightarrow \Sets,\]
+\[ \psh{F} \rightarrow \Hom{\psh{G}}{\psh{F}}.\]
 
-By definition of a colimit these definitions coincide when a colimit exists in $\cat{C}$.
+We will mostly use this for the terminal presheaf, 
+which will allow us to compute the global sections.
 \end{definition}
-
-\begin{remark}\label[remark]{5c3}
-The category $\presheaves{C}$ is cocomplete 
-so even if $\cat{C}$ does not have a terminal object, 
-we can still compute the global sections as $\gblsect$
-\end{remark}

@@ -6,14 +6,14 @@ Let $f:b \rightarrow a$.
 
 The sieve $\spull{f}S$
 on $b$ is given by
-$\spull{f}S(c) = \set{g \in \Hom{c}{b} \with fg \in S(c)}$
+$\spull{f}S = \set{g \in \max{b} \with fg \in S}$
 for any $c \in \cat{C}$.
 
-To show that this is actually a subpresheaf of $\y{b}$,
+To show that this is actually a sieve on $b$,
 let $k: c \rightarrow c'$ 
-and $h \in \spull{f}S(c')$. 
-Hence $fh \in S(c')$ and so $fhk \in S(c)$.
-Conclude that $hk \in \spull{f}S(c')$.
+and $h \in \spull{f}S$. 
+Hence $fh \in S$ and so $fhk \in S$.
+Conclude that $hk \in \spull{f}S$.
 
 This defines a functor $\spull{f}: \sievecat{a} \rightarrow \sievecat{b}$.
 \end{definition}
