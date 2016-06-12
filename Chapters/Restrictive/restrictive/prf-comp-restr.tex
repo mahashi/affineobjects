@@ -5,23 +5,44 @@ Let $f:b\rightarrow a \in \cat{C}$ and $g:c\rightarrow b \in \cat{C}$ be morphis
 	\item If $fg$ and $f$ are restrictive, then $g$ is.
 	\item if $f$ and $g$ are restrictive, then $fg$. 
 \end{enumerate}
+
+If $\sect{b}{O} \rightarrow \sect{c}{O}$ is faithfully flat
+then $fg$ and $g$ restrictive implies $f$ is restrictive
 \end{lemma}
 
 \begin{proof}
-Let $\sheaf{G}$ be a quasi-coherent sheaf on $\cat{C}$.
-We have the following identities.
-\begin{align*}
-\sheaf{G}(fg)\tensor_{\sect{a}{O}} \sect{c}{O} 
-	&=(\sheaf{G}(g)(\sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{O}))\tensor_{\sect{b}{O}} \sect{c}{O}\\
-	&= \sheaf{G}(g)\tensor_{\sect{b}{O}} \sect{c}{O} \circ \sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{O}\tensor_{\sect{b}{O}} \sect{c}{G}
-\end{align*}
 
-From this both results follow.
+Consider the following diagram
+\begin{center}
+	\begin{tikzcd}[row sep = large, column sep = large]
+		\sect{a}{G} \tensor_{\sect{a}{O}} \sect{c}{O} \ar{r}{\hat{f} \tensor_{\sect{b}{O}} \sect{c}{O}} \ar[equal]{d}
+		& \sect{b}{G} \tensor_{\sect{b}{O}} \sect{c}{O} \ar{d}{\hat{g}} \\
+		\sect{a}{G} \tensor_{\sect{a}{O}} \sect{c}{O} \ar{r}{\hat{fg}} 
+		& \sect{c}{G},\\
+	\end{tikzcd}
+\end{center}
+
+where $\hat{\blank}$ is the adjunct map of $\sheaf{G}(\blank)$ with respect to the extension/restriction of scalars adjunction.
+
+This diagram commutes: going either direction sends $g\tensor r$ to $rg$.
+The results follows from commutativity.
 \end{proof}
 
-\begin{remark}
-Knowing that $fg$ and $g$ are restrictive only implies that
-$$\sheaf{G}(f) \tensor_{\sect{a}{O}} \sect{b}{G} \tensor_{\sect{b}{O}} \sect{c}{G}$$
-is an isomorphism. 
-Only when $\sect{c}{G}$ is faithfully flat over $\sect{b}{O}$ this would imply that $f$ is restrictive.
-\end{remark}
+% Let $\sheaf{G}$ be a quasi-coherent sheaf on $\cat{C}$.
+% We have the following identities.
+
+% \begin{align*}
+% \sheaf{G}(fg)\tensor_{\sect{a}{O}} \sect{c}{O} 
+% 	&=(\sheaf{G}(g)(\sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{O}))\tensor_{\sect{b}{O}} \sect{c}{O}\\
+% 	&= \sheaf{G}(g)\tensor_{\sect{b}{O}} \sect{c}{O} \circ \sheaf{G}(f)\tensor_{\sect{a}{O}} \sect{b}{O}\tensor_{\sect{b}{O}} \sect{c}{G}
+% \end{align*}
+
+% From this both results follow.
+
+
+% \begin{remark}\label[remark]{c72}
+% Knowing that $fg$ and $g$ are restrictive only implies that
+% $$\sheaf{G}(f) \tensor_{\sect{a}{O}} \sect{b}{G} \tensor_{\sect{b}{O}} \sect{c}{G}$$
+% is an isomorphism. 
+% Only when $\sect{c}{O}$ is faithfully flat over $\sect{b}{O}$ would this imply that $f$ is restrictive.
+% \end{remark}

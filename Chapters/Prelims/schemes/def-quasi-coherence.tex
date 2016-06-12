@@ -4,10 +4,14 @@ Then $\sheaf{F}$ is quasi-coherent \iff
 for any $\Spec{R} \subset X$ it is of the form $\stilde{M}$ for some $R$-module after restricting.
 \end{definition}
 
-\begin{definition}[Restrictive definition]\label[definition]{Restrictive definition}
+\begin{lemma}
 Let $\sheaf{F}$ be a sheaf of modules on scheme $X$.
 Then $\sheaf{F}$ is quasi-coherent \iff 
-for any $\Spec{R} \rightarrow \Spec{S}$ the induced map
-\[ \sect{\Spec{S}}{F} \tensor_{\sect{X}{O}} \sect{\Spec{R}}{O} \rightarrow \sect{\Spec{R}}{F}\]
+for any $D(f) = \Spec{S_f} \rightarrow \Spec{S}$ opens in $X$ with $f\in S$ 
+the induced map
+\[ \sect{\Spec{S}}{F} \tensor_{S} S_f \rightarrow \sect{D(f)}{F}\]
 is an isomorphism.
-\end{definition}
+\end{lemma}
+\begin{proof}
+%TODO: proof
+\end{proof}

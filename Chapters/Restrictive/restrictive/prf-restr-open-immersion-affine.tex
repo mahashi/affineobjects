@@ -1,12 +1,17 @@
+%TODO: make clear when sections are restricted or say somewhere that we ignore that
+%TODO: make indexing set for the f_i.
+%TODO: Define X_{f_i}
 \begin{lemma}[Restrictive to affines]\label[lemma]{Restrictive to affines}
-If $f:X \rightarrow \Spec{R}$ is a restrictive open immersion. 
+If $f:X \rightarrow \Spec{R}$ is a restrictive open immersion,
 then $X$ is affine.
 \end{lemma}
 \begin{proof}
-Since $X$ is an open in $\Spec{R}$, we get a distinguised covering $\Union_i D(f_i) = X$ with $f_i\in R$.
-We will prove that $(f_i) = (1)$ in $S = \sect{X}{O}$ and 
-then invoke the result from Ex. 2.1.7 in \cite{harts}.
+Since $X$ is an open in $\Spec{R}$, 
+we get a distinguised covering $\Union_i D(f_i) = X$ with $f_i\in R$.
+We will prove that $(f_i) = (1)$ in $S = \sect{X}{O}$.
+Then we invoke the result in \cite[Ex. 2.1.7]{harts}: if $X_{f_i}$ are all affine and $(f_i)=(1)$ then $X$ is affine. 
 
+%TODO: Prove that X_{f_i} = D(f_i)
 Consider $M = \frac{R}{(f_i)}$ as an $R$-module and look at $\stilde{M}$.
 By restrictiveness we get $M \tensor_R S = \stilde{M}(S)$ and  
 by $M \tensor_R R_{f_i} = \stilde{M}(D(f_i)) = M_{f_i} = 0$. 

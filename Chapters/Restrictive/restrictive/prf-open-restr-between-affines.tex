@@ -1,66 +1,75 @@
-\begin{lemma}
-Let $\Spec{S} \xrightarrow{f} \Spec{R} \in \overcat{Sch}{\Spec{R}}$
+\begin{lemma}\label[lemma]{0}
+Let $\Spec{S} \xrightarrow{f} \Spec{R} = V \in \overcat{Sch}{\Spec{R}}$
 be an open immersion, then $f$ is restrictive.
 \end{lemma}
 
 \begin{proof}
-We will use the Affine Communication lemma from \cite{vakil}.
-Define the property P as:
-an affine $W\subset V$ has $P$ if $\shf(V)\tensor_{\O_X(V)} \O_X(W) \xrightarrow{\varphi} \shf(W)$ an isomorphism of $\O_X(W)$ modules.
+As shown in \Cref{c1f} any $\Spec{R_f} \rightarrow \Spec{R}$ is restrictive.
+Since $f$ is an open immersion 
+we can find a cover $\Union_i D(f_i)$ of $\Spec{S}$
+that consists of distinguised opens of $\Spec{R}$
+that are simultaneously distinguised opens of $\Spec{S}$.
+Note that $S \rightarrow \coproduct_{f_i} S_{f_i}$ is faithfully flat since $(f_i) = S$.
+Hence we can invoke \Cref{ce1,2} to get that $f$ is restrictive. 
 
-Let $W$ have property $P$ and $D(g)\subset W$ is a distinguised open of $W$.
-Let $r$ stand for any restriction map of $\shf$.
+% We will use the Affine Communication lemma from \cite{vakil}.
+% Define the property P as:
+% an affine $\Spec{T}= W \subset V$ has $P$ 
+% if $\sect{V}{F} \tensor_{R} T \xrightarrow{\varphi} \sect{W}{F}$ 
+% an isomorphism of $T$ modules for any quasi-coherent module $\sheaf{F}$ on $V$.
 
-Since $\shf$ is quasi-coherent
-\[\shf(W)\tensor_{\O_X(W)} \O_X(D(g)) \rightarrow \shf(D(g))= M_g,\]
-\[ n \tensor \lambda \to \lambda r(n)\]
-is an isomorphism.
+% Let $\sheaf{F}$ be a quasi-coherent module on $V$.
+% Let $r$ stand for any restriction map of $\shf$.
 
-Also $W$ has property $P$, so 
-\[\shf(V)\tensor_{\O_X(V)} \O_X(W) \rightarrow \shf(W),\]
-\[ m \tensor \lambda \to \lambda r(m)\]
-is an isomorphism.
-We will use this to prove that 
+% Let $W$ have property $P$ and $D(g)\subset W$ be a distinguised open of $W$.
+% Since $\shf$ is quasi-coherent
+% \[\sect{W}{F} \tensor_{T} T_g \rightarrow \sect{D(g)}{F},\]
+% \[ n \tensor \lambda \to \lambda r(n)\]
+% is an isomorphism. See \Cref{873}.
 
-\[\shf(V)\tensor_{O_X(V)} O_X(D(g)) \rightarrow \shf(D(g)),\]
-\[m \tensor \lambda \to \lambda r(m)\]
-is an isomorphism.
+% By assumption $W$ has property $P$, so 
+% \[\sect{V}{F} \tensor_{R} T \rightarrow \sect{W}{F},\]
+% \[ m \tensor \lambda \to \lambda r(m)\]
+% is an isomorphism. It follows that 
+% \[\sect{V}{F}\tensor_{R} T_g \rightarrow \sect{D(g)}{F},\]
+% \[m \tensor \lambda \to \lambda r(m).\]
+% See the proof of \Cref{ce1}.
 
-Let $c \in \shf(D(g))$. 
-Then $c= \sum_j \lambda_j r(n_j)$ for some $\lambda_j\in \O_X(D(g))$ and $n_j\in\shf(W)$.
-There exist $\kappa_{(i,j)} \in \O_X(W)$ and $m_{(i,j)}\in \shf(V)$ such that $\sum_i \kappa_{(i,j)} r(m_{(i,j)})= n_j$.
-Hence $\sum_{(i,j)} m_{(i,j)} \tensor (\kappa_{(i,j)}\lambda_j)\to c$, so our map is surjective.
+% % Let $c \in \sect{D(g)}{F}$. 
+% % Then $c= \sum_j \lambda_j r(n_j)$ for some $\lambda_j\in T_g$ and $n_j\in\sect{W}{F}$.
+% % There exist $\kappa_{(i,j)} \in T$ and $m_{(i,j)}\in \sect{V}{F}$ such that $\sum_i \kappa_{(i,j)} r(m_{(i,j)})= n_j$.
+% % Hence $\sum_{(i,j)} m_{(i,j)} \tensor (\kappa_{(i,j)}\lambda_j)\to c$, so our map is surjective.
 
-Let $\lambda\in \O_X(D(g))$ and $m\in \shf(V)$ be such that $\lambda r(m)=0$.
-Then $r(m) \tensor \lambda = 0$ in $\shf(W)\tensor_{\O_X(W)} \O_X(D(g))$ and
+% % Let $\lambda\in T_g$ and $m\in \sect{V}{F}$ be such that $\lambda r(m)=0$.
+% % Then $r(m) \tensor \lambda = 0$ in $\sect{W}{F}\tensor_{T} T_g$ and
 
-\[ r(m) \tensor_{\O_X(W)} \lambda = 0\]
-\[(m\tensor_{\O_X(V)} 1) \tensor_{\O_X(W)} \lambda = 0,\]
-\[ m\tensor \lambda = 0 .\]
+% % \[ r(m) \tensor_{T} \lambda = 0\]
+% % \[(m\tensor_{\R} 1) \tensor_{T} \lambda = 0,\]
+% % \[ m\tensor \lambda = 0 .\]
 
-So our map is an isomorphism.
+% % So our map is an isomorphism.
 
-Let $\cup D(g_i) = W$ be a cover of distinguised opens, so $g_i\in \O_X(W)$.
-Assume that every $D(g_i)$ has property P.
-This amounts to
+% Let $\cup D(g_i) = W$ be a cover of distinguised opens, so $g_i\in T$.
+% Assume that every $D(g_i)$ has property P.
+% This amounts to
 
-\[\shf(V)\tensor_{\O_X(V)} \O_X(D(g_i)) \rightarrow \shf(D(g_i)),\]
-\[m \tensor \lambda \to \lambda r(m)\]
+% \[\sect{V}{F}\tensor_{\R} T_{g_i} \rightarrow \shf(D(g_i)),\]
+% \[m \tensor \lambda \to \lambda r(m)\]
 
-being an isomorphism for every $i$.
+% being an isomorphism for every $i$.
 
-Let 
+% Let 
 
-\[\shf(V)\tensor_{\O_X(V)} \O_X(W) \rightarrow \shf(W),\]
-\[m \tensor \lambda \to \lambda r(m)\]
+% \[\sect{V}{F}\tensor_{\R} T \rightarrow \sect{W}{F},\]
+% \[m \tensor \lambda \to \lambda r(m)\]
 
-be the map induced by the restriction $r:\shf(V) \rightarrow \shf(W)$.
-This is a map of $\O_X(W)$ modules, so tensoring up with $\O_X(D(g_i))$ yields the localised map
+% be the map induced by the restriction $r:\sect{V}{F} \rightarrow \sect{W}{F}$.
+% This is a map of $T$ modules, so tensoring up with $T_{g_i}$ yields the localised map
 
-\[(\shf(V)\tensor_{\O_X(V)}  \O_X(W)) \tensor_{\O_X(W)} \O_X(D(g_i)) \rightarrow \shf(W) \tensor \O_X(D(g_i)) \iso \shf(D(g_i)),\]
-\[(m \tensor \lambda)\tensor \kappa = (m\tensor 1) \tensor \lambda \kappa \to \lambda \kappa r(m).\]
+% \[(\sect{V}{F}\tensor_{R}  T) \tensor_{T} T_{g_i} \rightarrow \sect{W}{F} \tensor T_{g_i} \iso \shf(D(g_i)),\]
+% \[(m \tensor \lambda)\tensor \kappa = (m\tensor 1) \tensor \lambda \kappa \to \lambda \kappa r(m).\]
 
-This map is the composition  $(m\tensor 1) \tensor \lambda \rightarrow m\tensor \lambda \rightarrow \lambda r(m)$.
-First map is an isomorphism by comm. algebra and the second is an isomorphism by assumption.
-This holds for every $i$, hence our map is an isomorphism.
+% This map is the composition  $(m\tensor 1) \tensor \lambda \rightarrow m\tensor \lambda \rightarrow \lambda r(m)$.
+% First map is an isomorphism by comm. algebra and the second is an isomorphism by assumption.
+% This holds for every $i$, hence our map is an isomorphism.
 \end{proof}

@@ -2,14 +2,17 @@
 Let $R$ be a ring.
 Consider the open immersion $U = \Spec{R[x,y]} \setminus \set{(x,y)} \rightarrow \Spec{R[x,y]}$
 and the quasi-coherent sheaf $\sheaf{G} = \stilde(\frac{R[x,y]}{xy})$.
-The global sections of this sheaf are $\frac{R[x,y]}{xy}$, because for affine schemes the counit is an isomorphism.
+The global sections of this sheaf are $\frac{R[x,y]}{xy}$,
+as shown in %ref: definition of widetilde and proof that it is an isomorphism
 
-Define $U_1 = D(x) \rightarrow U$ and $U_2 = D(y) \rightarrow U$. 
+Define $U_1 = D(x) \rightarrow U$ 
+and $U_2 = D(y) \rightarrow U$. 
 Note that these cover $U$ together.
-We have $\sect{U_1}{G} = 0$ and $\sect{U_1}{G} = 0$, since $\frac{R[x,y]}{xy}_x = 0$ and $\frac{R[x,y]}{xy}_y = 0$.
+We have $\sect{U_1}{G} = 0$ and $\sect{U_1}{G} = 0$,
+since $\frac{R[x,y]}{xy}_x = 0$ and $\frac{R[x,y]}{xy}_y = 0$.
 Hence since $\sheaf{G}$ is a sheaf, we get $\sect{U}{G} = 0$.
 
-The sections over $U$ of $\stilde{R[x,y]}$ are (also) $R[x,y]$. See \cite{vakil} 4.4.1.
+The sections over $U$ of $\stilde{R[x,y]}$ are (also) $R[x,y]$. See \cite[4.4.1]{vakil}. 
 We conclude that $\gblsect{G} \tensor_{\gblsect{O}} \sect{U}{O} \rightarrow \sect{U}{G}$
 is not an isomorphism.
 \end{example}

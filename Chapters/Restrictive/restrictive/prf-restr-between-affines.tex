@@ -1,21 +1,27 @@
-\begin{lemma}
+\begin{lemma}\label[lemma]{3}
 Any morphism $\Spec{S} \xrightarrow{f} \Spec{R} \in \overcat{Sch}{\Spec{R}}$ 
 between affine schemes is restrictive.
 \end{lemma}
 \begin{proof}
-%TODO: new proof
-%1: f is restrictive  if \widetilde{M} \rightarrow f^*f_* \widetilde{M} has a iso as global component
-%2:
-
-Let $\sheaf{G}$ be a quasi-coherent module on $\overcat{Sch}{\Spec{R}}$.
+Let $\sheaf{G}$ be a quasi-coherent module on $\overschemes{\Spec{R}}$.
 Set $M = \sect{\Spec{R}}{G}$
 We want to prove that 
 \[
-M \tensor_{\sect{\Spec{R}}{O}} \sect{\Spec{S}}{O} \rightarrow \sect{\Spec{S}}{G}
+M \tensor_{R} S \rightarrow \sect{\Spec{S}}{G}
 \]
 is an isomorphism.
+%TODO: note that this map is a component of \omega
 
-Note that $\sheaf{G} = \stilde{M}$ since $\Spec{R}$ is affine. %TODO: prove that this holds
-For the same reason, we get $\restr{\sheaf{G}}{\Spec{S}} = \stilde{M \tensor \sect{\Spec{S}}{O}}$
-and 
+Note that $\sheaf{G} = \stilde{M}$ since $\Spec{R}$ is affine. See \Cref{873}.
+For the same reason, we get $\restr{\sheaf{G}}{\Spec{S}} = \stilde{M \tensor \sect{\Spec{S}}{O}}$.
+%TODO: use the fact that restriction and stilde commute for the above fact.
+By lemma ?, we know that $\omega^2$ is an isomorphism at affine schemes.
+
+By lemma ?, we know that for a module of the form $\stilde{M}$ 
+the $\omega^2$ at the codomain of $f$ is equal to $\hat{f}$
+if both domain and codomain are affine schemes.
 \end{proof}
+
+%TODO: Define \hat{\blank} somewhere
+%TODO: Proof that that $\omega^2$ is equal to $\hat{f}$ in certain situation
+%TODO: remind reader what \omega is

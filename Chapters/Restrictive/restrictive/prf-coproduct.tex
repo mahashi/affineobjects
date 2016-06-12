@@ -1,28 +1,69 @@
-\begin{lemma}
+\begin{lemma}\label[lemma]{1}
 Let $X,Y$ be a schemes.
 The canonical morphism $X \rightarrow X \disjointunion Y$ is restrictive.
 \end{lemma}
 
 \begin{proof}
-Let $\shf{G}$ be a quasi-coherent sheaf on $X \disjointunion Y$.
+Let $\sheaf{G}$ be a quasi-coherent sheaf on $X \disjointunion Y$.
 By the sheaf property $\sect{X \disjointunion Y}{G} = \sect{X}{G} \times \sect{Y}{G}$.
-The same holds also for $\shf{O}$.
+The same holds also for $\sheaf{O}$.
 
 We are considering the morphism
 \[
 \sect{X \disjointunion Y}{G} \tensor_{\sect{X \disjointunion Y}{O}} \sect{X}{O} \rightarrow \sect{X}{G}.
 \]
 
-By the previous and some basic commutative algebra one sees that this becomes the projection
+By the previous remark about disjoint unions and the sheaf property and some basic commutative algebra one sees that this becomes 
 \[
 (\sect{X}{G} \tensor \sect{X}{O}) \times (\sect{Y}{G} \tensor \sect{X}{O}) \rightarrow \sect{X}{G}.
 \]
 
-Since $\sect{Y}{G} \tensor \sect{X}{O} = 0$, this map is an isomorphism.
+Since $\sect{Y}{G} \tensor \sect{X}{O} = 0$, we are left with
+
+\[
+(\sect{X}{G} \tensor \sect{X}{O}) \rightarrow \sect{X}{G}
+\]
+\[
+g \tensor r \rightarrow rg.
+\]
+
+Note that $\sect{X}{G}$ already is an $\sect{X}{O}$-module and conclude that hence this morphism is an isomorphism.
+\end{proof}
+
+\begin{lemma}\label[lemma]{2}
+If $X_i \rightarrow Y$ is restrictive for each $i\in I$, 
+where $I$ is an (possibly infinite) indexing set,
+Then $\Disjointunion_{i\in I} X_i \rightarrow Y$ is restrictive.
+\end{lemma}
+\begin{proof}
+%TODO: proof
 \end{proof}
 
 
-%TODO: small object argument?
-\begin{lemma}
-
+\begin{lemma}[coproduct van restrictive]\label[lemma]{coproduct van restrictive}
+Let $X_1,X_2,Y$ be a schemes.
+$X_1 \rightarrow Y$ and $X_2 \rightarrow Y$ are restrictive morphisms \iff
+the corresponding morphism $X_1 \disjointunion X_2 \rightarrow Y$ is restrictive.
 \end{lemma}
+
+\begin{proof}
+Note that $\sect{X_1 \disjointunion X_2} = \sect{X_1} \times \sect{X_2}$ by the sheaf property.
+We will show that
+\[
+\sect{Y}{G} \tensor_{\sect{Y}{O}} \sect{X_1 \disjointunion X_2}{O} \rightarrow \sect{X_1 \disjointunion X_2}{G}
+\]
+is an isomorphism.
+
+Let $g \tensor (r,s) \in \sect{Y}{G} \tensor_{\sect{Y}{O}} \sect{X_1 \disjointunion X_2}{O}$.
+This map sends it to $(rg,sg)$. 
+By assumption the maps 
+\begin{align*}
+\sect{Y}{G} &\tensor_{\sect{Y}{O}} \sect{X_1}{O} \rightarrow \sect{X_1}{G}\\
+ g &\tensor r \mapsto rg\\
+\sect{Y}{G} &\tensor_{\sect{Y}{O}} \sect{X_2}{O} \rightarrow \sect{X_2}{G}\\
+g &\tensor s \mapsto sg
+\end{align*}
+are isomorphisms. 
+This implies directly that our map $g\tensor (r,s) \rightarrow (rg,sg)$ is an isomorphism.
+
+\end{proof}
