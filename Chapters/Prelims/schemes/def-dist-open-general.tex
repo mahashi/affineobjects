@@ -1,0 +1,23 @@
+\begin{definition}[General distinguised open]
+Let $X$ be a scheme. We will generalize distinguised opens to general schemes.
+Let $f\in \sect{X}{O}$.
+Define $D_X(f)$, or what \cite{harts} calls $X_f$, for $X$ to be the open subscheme
+defined by $x\in D_X(f)$ \iff $f\not\in \ker{x}$.
+
+Let $X = \Union_i U_i$ be a affine covering of $X$ with $U_i = \Spec{R_i}$.
+Equivalently we can define $D_X(f) = \Union_i D_{X,i}(f)$, 
+where $D_{X,i}(f)$ is the distinguised open of $U_i$ 
+that corresponds to the image of $f$ in $R_i$.
+
+When no confusion can arise, we leave the subscript $X$ out.
+\end{definition}
+
+\begin{lemma}
+Let $f\in \sect{X}{O}$.
+The restriction of $f$ is invertible on $D(f)$.
+\end{lemma}
+\begin{proof}
+We know that $f$ is invertible in the stalk of each point of $D(f)$.
+This gives us a compatible family of local inverses.
+By the sheaf axiom these have a global amalgamation, which is the inverse of $f$.
+\end{proof}

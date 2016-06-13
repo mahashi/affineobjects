@@ -1,13 +1,22 @@
-%TODO: State that it is not an ordinary adjunction but that both functors occur on the right side. 
-%TODO: One cannot speak of a unit. Spell out the map out
 \begin{lemma}\label[lemma]{85d}
-The functor \[\Spec: \Rings \rightarrow \LocRingSpaces\]
+For any $X \in \LocRingSpaces$ and $R\in \Rings$
+we have an isomorphism
+\[\Hom{X}{\Spec{R}}{\LocRingSpaces} \rightarrow \Hom{R}{\sect{X}{O}}{\Rings}\]
+that is natural in $X$ and $R$.
+In short \[\Spec: \Rings \rightarrow \LocRingSpaces\]
 is adjoint to \[\globalsections: \LocRingSpaces \rightarrow \Rings.\]
-With canonical map 
-\[\rspace{X}{O} \rightarrow \Spec{\globalsections{O}}.\]
-\[ x \mapsto \ker(x),\]
 \end{lemma}
 
 \begin{proof}
-%todo: ref
+Sending a morphism of locally ringed spaces to its global component will turn out to be an isomorphism.
+The inverse is the following map. 
+
+Let $\varphi: R \rightarrow \sect{X}{O}$ be given.
+We need to construct a morphism of locally ringed spaces $(f,f^{\#})$.
+Define $f(x) = \ker{x}$.
+For distinguised open $D(f)\subset \Spec{R}$,
+define $f^{\#}_{D(f)}(\frac{s}{f}) = \frac{s}{f}$.
+This makes sense because $f \in \sect{X}{O}$ is invertible in $D_X(f)$
+
+These maps are mutually inverses and we have naturality.
 \end{proof}

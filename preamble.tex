@@ -1,6 +1,6 @@
 %TODO: remove formatting of arguments out of functors. 
 %TODO: Make shorthand notation for letters in different fonts See https://github.com/mikeshulman/basictex/blob/master/decls.tex
-%TODO: Investigate usage of mbox  for functors
+%TODO: Investigate usage of mbox for functors. It is sensitive to italics
 
 \documentclass[
   % Replace twoside with oneside if you are printing your thesis on a single side
@@ -186,7 +186,7 @@
 \newcommand{\Trdg}{\mbox{Tr.dg }}
 \newcommand{\Proj}{\mbox{Proj }}
 \newcommand{\Sp}{\mbox{sp }}
-\newcommand{\Hom}[2]{\mbox{Hom}(#1,#2)}
+%\newcommand{\Hom}[2]{\mbox{Hom}(#1,#2)}
 %\newcommand{\Hom}[3]{\mbox{Hom}_{#1}(#2,#3)}
 \newcommand{\Dom}[1]{\mbox{Dom}(#1)}
 \newcommand{\coproduct}{\bigoplus}
@@ -282,6 +282,13 @@
           {\restrict{\pt}{#1}}%
           {\restrict{#2}{#1}}%
 }
+
+\DeclareDocumentCommand{\Hom}{ m m g }{%
+ \IfNoValueTF{#3}%
+          {\mbox{Hom}(#1,#2)}%
+          {\mbox{Hom}_{#3}(#1,#2)}%
+}
+
 
 \DeclareDocumentCommand{\colimit}{ m g }{%
  \underset{#1}{\mbox{colim} } 

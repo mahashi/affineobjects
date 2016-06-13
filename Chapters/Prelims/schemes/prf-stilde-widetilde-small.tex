@@ -1,0 +1,31 @@
+\begin{lemma}
+Let $R$ be a ring.
+Let $M$ be a $R$-module.
+
+Then $\widetilde{M} = \stilde{M}$ on the small zariski site coming from $\Spec{R}$.
+\end{lemma}
+
+\begin{proof}
+Let $U\subset \Spec{R}$ be any open subset.
+Let $\Union_{i\in I} D(f_i) = U$ be a cover of $U$.
+Define $\pstilde{M} \rightarrow \widetilde{M}$
+at $U$ to be $m\tensor u \mapsto mu$.
+
+There is a unique morphism $\widetilde{M} \rightarrow \stilde{M}$
+such that 
+\begin{center}
+	\begin{tikzcd}
+		\widetilde{M} \arr{r}
+		& \stilde{M}\\
+		\pstilde{M} \arr{u} \arr{ur}
+	\end{tikzcd}
+\end{center}
+commutes.
+
+We will give this morphism only on $D(f)$ for some $f\in R$.
+To make this diagram commute we must send $\frac{m}{f}$
+to $\matchfam{m\tensor \frac{1}{f}}{j}{\maxsieve{D(f)}}$.
+This defines a sheaf morphism and moreover this the unique way to make the diagram commute.
+By the universal property of the sheafification $\widetilde{M} = \stilde{M}$.
+Note that the witnessing isomorphism is functorial in $M$. 
+\end{proof}

@@ -1,17 +1,26 @@
-\begin{definition}[Tilde definition]\label[definition]{Tilde definition}
-Let $\sheaf{F}$ be a sheaf of modules on scheme $X$.
-Then $\sheaf{F}$ is quasi-coherent \iff 
-for any $\Spec{R} \subset X$ it is of the form $\stilde{M}$ for some $R$-module after restricting.
-\end{definition}
+The next result will prove that our definition of quasi-coherence in the sense of \Cref{77a}
+coincides with the usual definition for schemes using $\widetilde{\blank}$.
+See \cite[13.2.2]{vakil} for the usual definition.
 
-\begin{lemma}
+\begin{lemma}\label[lemma]{tildeqc}
 Let $\sheaf{F}$ be a sheaf of modules on scheme $X$.
-Then $\sheaf{F}$ is quasi-coherent \iff 
-for any $D(f) = \Spec{S_f} \rightarrow \Spec{S}$ opens in $X$ with $f\in S$ 
-the induced map
-\[ \sect{\Spec{S}}{F} \tensor_{S} S_f \rightarrow \sect{D(f)}{F}\]
-is an isomorphism.
+Then $\sheaf{F}$ is quasi-coherent on $X$ 
+ \iff 
+for any open $\Spec{R} \subset X$ 
+the sheaf $\restr{\Spec{R}}{\sheaf{F}}$ is isomorphic to $\widetilde{M}$ 
+for some $R$-module $M$.
 \end{lemma}
+
 \begin{proof}
+$\Rightarrow$:
 %TODO: proof
+
+$\Leftarrow$:
+Take a presentation $R^I \rightarrow R^J \rightarrow M$
+and apply $\widetilde{\blank}$. 
+Then note that $\widetilde{\blank}$ commutes with infinite coproducts
+and $\widetilde{R} = \sheaf{O}_{\Spec{R}}$.
+So we get a presentation 
+$\sheaf{O}_{\Spec{R}}^I \rightarrow \sheaf{O}_{\Spec{R}}^J \rightarrow \sheaf{F}$ 
+on every affine open subset $\Spec{R}\subset X$, hence $\sheaf{F}$ is quasi-coherent.
 \end{proof}
