@@ -1,6 +1,3 @@
-%TODO: remove formatting of arguments out of functors. 
-%TODO: Make shorthand notation for letters in different fonts See https://github.com/mikeshulman/basictex/blob/master/decls.tex
-%TODO: Investigate usage of mbox for functors. It is sensitive to italics
 
 \documentclass[
   % Replace twoside with oneside if you are printing your thesis on a single side
@@ -18,14 +15,11 @@
 \setlength{\parskip}{2.5mm}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-% \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{xstring}
 \usepackage{csquotes}
 \usepackage{biblatex}
 \addbibresource{affineobjects.bib}
-% \usetikzlibrary{external}
-% \tikzexternalize
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{cleveref}
@@ -159,15 +153,9 @@
 \newcommand{\se}{\ensuremath{\subseteq}}
 \newcommand{\tbs}{\textbackslash }
 \newcommand{\sh}{\backslash}
-\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
-  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
-  #1 % the function
-  \vphantom{\big|} % pretend it's a little taller at normal size
-  \right|_{#2} % this is the delimiter
-  }}
+
 
 \newcommand\compl[1]{{#1}^c}
-\newcommand\restrict{\restr}
 \newcommand{\iso}{\cong}
 \newcommand{\kr}{\mbox{Ker}}
 \newcommand{\im}{\mbox{Im}}
@@ -277,11 +265,19 @@
           {\lambda_{#1}(#2)}%
 }
 
-\DeclareDocumentCommand{\restrictOpt}{ m g }{%
+\DeclareDocumentCommand{\restrict}{ m g }{%
  \IfNoValueTF{#2}%
-          {\restrict{\pt}{#1}}%
-          {\restrict{#2}{#1}}%
+          {\restrictie{\pt}{#1}}%
+          {\restrictie{#2}{#1}}%
 }
+\newcommand\restrictOpt\restrict
+\newcommand\restr\restrict
+\newcommand\restrictie[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+}}
 
 \DeclareDocumentCommand{\Hom}{ m m g }{%
  \IfNoValueTF{#3}%
@@ -401,6 +397,7 @@
 \newcommand{\terminal}{1}
 \newcommand{\initial}{0}
 \newcommand\sievecat[1]{\cat{Sieves}({#1})}
+\newcommand\sieves\sievecat
 \newcommand{\schemes}{\cat{Sch}}
 \newcommand{\affschemes}{\cat{AffSch}}
 \newcommand\sites{\cat{Sites}}

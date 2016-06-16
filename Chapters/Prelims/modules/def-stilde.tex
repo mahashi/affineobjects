@@ -6,55 +6,10 @@ by
 $\sheafify \circ \pstilde$.
 
 It follows that we have the adjunction $\adj{\stilde}{\globalsections}$.
+This functor is generalisation of \cite[Tag 01BH]{stacks-project}
 \end{definition}
-This functor is a direct extention of \cite[Tag 01BH]{stacks-project}
 
-
-% OLD PROOF OF ADJUNCTION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{lemma}[Main adjunction]\label[lemma]{Main adjunction}
-% The functors 
-% \[\stilde{\blank}: \modules{\globalsections{O}} \rightarrow \qcoh{O},\]
-% \[\globalsections{\blank}: \qcoh{O} \rightarrow \modules{\globalsections{O}}\]
-
-% form an adjunction $\adjunction{\stilde{\blank}}{\globalsections{\blank}}$.
-% \end{lemma}
-
-% \begin{proof}
-% Let $M$ be a $\globalsections{O}$ module.
-% Let $\module{G}$ be a $\sheaf{O}$ module.
-
-% Define 
-% \[\varphi_{M,\module{G}}: \Hom{\stilde{M}}{\module{G}} \rightarrow \Hom{M}{\globalsections{G}}\]
-% \[ f \mapsto \globalsections{fi}\]
-
-% where $i$ is the canonical map from a presheaf to its sheafification.
-
-% Define 
-% \[\phi_{M,\module{G}}: \Hom{M}{\globalsections{G}} \rightarrow \Hom{\stilde{M}}{\module{G}}\]
-% \[ g \mapsto \sheafify{U: m\tensor u \mapsto g(m)u}\]
-
-% The subscripts will be suppressed when no confusion can arise.
-
-% Let $g\in \Hom{M}{\globalsections{G}}$. 
-% Then 
-% \begin{align*}
-% \varphi(\phi(g)) &= \globalsections{\sheafify{U: m\tensor u \mapsto g(m)u}i} \\
-% &= \globalsections{U: m\tensor u \mapsto g(m)u} \\
-% &= (m \tensor u = mu \tensor 1 \mapsto g(mu)) \\
-% &= g
-% \end{align*}
-
-% Let $f\in \Hom{\stilde{M}}{G}$. 
-% Then 
-% \begin{align*}
-% \phi(\varphi(f))i &= \sheafify{U: m\tensor u \mapsto \globalsections{fi}(m)u}i \\
-% &= (U: m\tensor u \mapsto \globalsections{fi}(m)u) \\
-% &= fi
-% \end{align*}
-
-% Note that precomposition with $i$ is a bijection. So $\phi(\varphi(f)) = f$.
-
-
-% Let $M\xrightarrow{\alpha} N$ and $\module{G}\xrightarrow{\beta} \module{H}$.
-% \end{proof}
+\begin{remark}
+By lemma ?, any morphism of sites that is a bijection of covers commutes with $\stilde$.
+In the sense that if $F$ is a bijection of covers, then $\direct{F}\stilde = \sheafify\direct{F}\pstilde$.
+\end{remark}

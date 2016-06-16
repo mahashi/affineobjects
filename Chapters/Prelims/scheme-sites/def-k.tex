@@ -1,0 +1,18 @@
+\begin{definition}[k]
+Let $X$ be a scheme.
+Define the functor $k:\opens{X} \rightarrow \overschemes{X}$
+by $U \mapsto (\rspace{U}{\sheaf{O}_U},i)$
+where $i: U\rightarrow X$ is the inclusion of the open subscheme into $X$.
+
+We will show that it preserves limits and covers.
+The terminal $X \in \opens{X}$ is send to the terminal $X \rightarrow X$.
+Let $U\rightarrow V$ and $W\rightarrow V$ be two morphism in $\opens{X}$.
+We have $k(U\intersect W) = U \intersect W \rightarrow X$ which is the pullback
+of $k(U) \rightarrow k(V)$ and $k(W) \rightarrow k(V)$. 
+
+Let $S= \set{D(f_i) \rightarrow \Spec{R}}$ be one of the generating family in $\opens{X}$.
+Note that $k(D(f_i))$ is isomorphic to the object $\Spec{R_{f_i}} \rightarrow \Spec{R}$.
+Hence $k(S)$ generates a covering sieve on $\schemes$ and hence on $\overschemes{X}$.
+
+So $k$ is morphism of sites.
+\end{definition}

@@ -1,0 +1,15 @@
+\begin{lemma}
+Let $F: \cat{C} \rightarrow \cat{D}$ be a morphism of sites that is a bijection on covers.
+Then $\direct{F}\sheafify = \sheafify \direct{F}$.
+\end{lemma}
+\begin{proof}
+Let $\presheaf{G}$ be a presheaf on $\cat{D}$.
+By lemma ?, we get a morphism 
+$\sheaf{A} = \sheafify{\direct{F}{\presheaf{G}}} \rightarrow \direct{F}\sheafify{\presheaf{G}} = \sheaf{B}$.
+Let $c\in \cat{C}$.
+Let $s = \matchfam{x}{i}{R} \in \sect{c}{A}$ with $R$ a covering sieve on $c$.
+This map sends $s$ to the amalgamation of $\matchfam{x}{F(i)}{F(R)}$.
+The inverse of this map is the morphism sending the amalgamation of a matching family $\matchfam{x}{i}{S}$ with $S$ a sieve on $F(c)$
+to the amalgamation of $\matchfam{x}{i}{\inverse{F}(S)}$.
+These maps form a natural isomorphism together.
+\end{proof}
