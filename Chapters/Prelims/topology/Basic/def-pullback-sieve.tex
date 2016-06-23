@@ -3,17 +3,14 @@ Let $\cat{C}$ be a category
 and $a,b \in \cat{C}$.
 Let $S$ be a sieve on $a$.
 Let $f:b \rightarrow a$.
-
 The sieve $\spull{f}S$
 on $b$ is given by
 $\spull{f}S = \set{g \in \max{b} \with fg \in S}$
 for any $c \in \cat{C}$.
-
 To show that this is actually a sieve on $b$,
 let $k: c \rightarrow c'$ 
 and $h \in \spull{f}S$. 
 Hence $fh \in S$ and so $fhk \in S$.
 Conclude that $hk \in \spull{f}S$.
-
 This defines a functor $\spull{f}: \sievecat{a} \rightarrow \sievecat{b}$.
 \end{definition}

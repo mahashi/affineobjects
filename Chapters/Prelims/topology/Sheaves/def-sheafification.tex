@@ -1,24 +1,7 @@
 \begin{definition}\label[definition]{b6d}
 Define $\sheafify = \plus \circ \plus$.
-\end{definition}
-
-\begin{lemma}[Sheafification adjunction]\label[lemma]{Sheafification adjunction}
-Let $\site{C}{T}$ be a site.
-The functor $\sheafify$ is left adjoint 
+This functor is left adjoint 
 to the inclusion $\pshs{C} \rightarrow \shs{C}$
 with unit 
 \[\omega^2_{\presheaf{F}} = \omega_{\plus{\presheaf{F}}} \circ \omega_{\presheaf{F}}.\]
-\end{lemma}
-
-\begin{lemma}
-Let $F:\site{C}{T} \rightarrow \site{D}{S}$ be a morphism of sites,
-that is a bijection of covers.
-Then $\direct{F}\plus = \plus \direct{F}$.
-\end{lemma}
-\begin{proof}
-%TODO: proof
-\end{proof}
-
-\begin{remark}
-It follows that $\direct{F}\sheafify = \sheafify \direct{F}$.
-\end{remark}
+\end{definition}

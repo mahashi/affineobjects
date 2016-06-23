@@ -1,0 +1,30 @@
+\begin{lemma}[coproduct]\label[lemma]{coproduct}
+Let $X_1,X_2,Y$ be a schemes.
+$X_1 \xrightarrow{f_1} Y$ and $X_2 \xrightarrow{f_2} Y$ are restrictive morphisms \iff
+the corresponding morphism $X_1 \disjointunion X_2 \xrightarrow{f_1\disjointunion f_2} Y$ is restrictive.
+\end{lemma}
+
+\begin{proof}
+$\Rightarrow$:
+
+Note that $\sect{X_1 \disjointunion X_2} = \sect{X_1} \times \sect{X_2}$ by the sheaf property.
+We will show that
+\[
+\widehat{f_1\disjointunion f_2}:\sect{Y}{G} \tensor_{\sect{Y}{O}} \sect{X_1 \disjointunion X_2}{O} \rightarrow \sect{X_1 \disjointunion X_2}{G}
+\]
+is an isomorphism. 
+Tensor commutes over products, so this becomes
+
+\[
+\widehat{f_1} \times \widehat{f_2}:(\sect{Y}{G} \tensor_{\sect{Y}{O}} \sect{X_1}{O}) 
+\times (\sect{Y}{G} \tensor_{\sect{Y}{O}} \sect{X_2}{O}) 
+\rightarrow \sect{X_1}{G} \times \sect{X_2}{G}.
+\]
+
+By assumption $\widehat{f_1}$ and $\widehat{f_2}$ are isos, so their product is.
+
+$\Leftarrow$:
+By \Cref{1}, the canonical morphism $X_i \rightarrow X_1 \disjointunion X_2$ is restrictive.
+By assumption $X_1 \disjointunion X_2 \rightarrow Y$ is restrictive.
+Composing these morphisms yields $f_i$, by \Cref{ce1} this morphism is restrictive.
+\end{proof}

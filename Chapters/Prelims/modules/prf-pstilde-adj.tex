@@ -13,11 +13,11 @@ Let $\varphi:\pstilde{M} \rightarrow \presheaf{G}$ be a morphism of presheaf mod
 Let $\phi: M \rightarrow \globalsections{G}$ be a morphism of presheaf modules.
 
 Define
-\begin{align}
+\begin{align*}
 \alpha = H_{M,\presheaf{G}} :& 
 	\Hom{\pstilde{M}}{\presheaf{G}} \rightarrow \Hom{M}{\globalsections{G}} \\
 	:& \varphi \mapsto \varphi_1
-\end{align}
+\end{align*}
 
 where $\varphi_1$ is the component of $\varphi$ on the global sections.
 
@@ -54,8 +54,7 @@ Let $m \in M$.
 Then $d(m) = (\phi \tensor_R R)(m) = \phi(m)$.
 Hence $d = \phi$, which makes $H$ and $L$ mutual inverses.
 
-\textit{Naturality in $M$ and $\presheaf{G}$}
-
+Now we will show naturality in $M$ and $\presheaf{G}$.
 Let $g:N\rightarrow M$ and $h:\presheaf{F} \rightarrow \presheaf{G}$.
 Let $\rho \in \Hom{\pstilde(N)}{\presheaf{F}}$.
 Let $k = H_{M,\presheaf{G}} (h \circ \rho \circ \pstilde(f))$.

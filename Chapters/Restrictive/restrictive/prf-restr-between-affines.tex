@@ -4,24 +4,17 @@ between affine schemes is restrictive.
 \end{lemma}
 \begin{proof}
 Let $\sheaf{G}$ be a quasi-coherent module on $\overschemes{\Spec{R}}$.
-Set $M = \sect{\Spec{R}}{G}$
+Set $M = \sect{\Spec{R}}{G}$.
 We want to prove that 
 \[
-M \tensor_{R} S \rightarrow \sect{\Spec{S}}{G}
+\widehat{f}:M \tensor_{R} S \rightarrow \sect{\Spec{S}}{G}
 \]
 is an isomorphism.
-%TODO: note that this map is a component of \omega
 
-Note that $\sheaf{G} = \stilde{M}$ since $\Spec{R}$ is affine. See \Cref{873}.
-For the same reason, we get $\restr{\sheaf{G}}{\Spec{S}} = \stilde{M \tensor \sect{\Spec{S}}{O}}$.
-%TODO: use the fact that restriction and stilde commute for the above fact.
+By lemma ?, we get $\sheaf{G} = \stilde{M}$.
+As said in definition ?, in this case $\widehat{f} = \omega^2_{\Spec{S}}$.
 By lemma ?, we know that $\omega^2$ is an isomorphism at affine schemes.
-
-By lemma ?, we know that for a module of the form $\stilde{M}$ 
-the $\omega^2$ at the codomain of $f$ is equal to $\hat{f}$
-if both domain and codomain are affine schemes.
 \end{proof}
 
-%TODO: Define \hat{\blank} somewhere
-%TODO: Proof that that $\omega^2$ is equal to $\hat{f}$ in certain situation
-%TODO: remind reader what \omega is
+%TODO: proof that any qc sheaf on big site is stilde on big site
+%TODO: proof that \omega^2 is a iso over affine schemes for \pstilde->\stilde

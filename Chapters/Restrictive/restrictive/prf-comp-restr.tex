@@ -15,14 +15,14 @@ then $fg$ and $g$ restrictive implies $f$ is restrictive
 Consider the following diagram
 \begin{center}
 	\begin{tikzcd}[row sep = large, column sep = large]
-		\sect{a}{G} \tensor_{\sect{a}{O}} \sect{c}{O} \ar{r}{\hat{f} \tensor_{\sect{b}{O}} \sect{c}{O}} \ar[equal]{d}
-		& \sect{b}{G} \tensor_{\sect{b}{O}} \sect{c}{O} \ar{d}{\hat{g}} \\
-		\sect{a}{G} \tensor_{\sect{a}{O}} \sect{c}{O} \ar{r}{\hat{fg}} 
+		\sect{a}{G} \tensor_{\sect{a}{O}} \sect{c}{O} \ar{r}{\widehat{f} \tensor_{\sect{b}{O}} \sect{c}{O}} \ar[equal]{d}
+		& \sect{b}{G} \tensor_{\sect{b}{O}} \sect{c}{O} \ar{d}{\widehat{g}} \\
+		\sect{a}{G} \tensor_{\sect{a}{O}} \sect{c}{O} \ar{r}{\widehat{fg}} 
 		& \sect{c}{G},\\
 	\end{tikzcd}
 \end{center}
 
-where $\hat{\blank}$ is the adjunct map of $\sheaf{G}(\blank)$ with respect to the extension/restriction of scalars adjunction.
+where $\widehat{\blank}$ is the adjunct map of $\sheaf{G}(\blank)$ with respect to the extension/restriction of scalars adjunction.
 
 This diagram commutes: going either direction sends $g\tensor r$ to $rg$.
 The results follows from commutativity.

@@ -1,4 +1,4 @@
-
+%TODO: Fix italization of macros in lemma statement. 
 \documentclass[
   % Replace twoside with oneside if you are printing your thesis on a single side
   % of the paper, or for viewing on screen.
@@ -18,7 +18,7 @@
 \usepackage{tikz-cd}
 \usepackage{xstring}
 \usepackage{csquotes}
-\usepackage{biblatex}
+\usepackage[backend=biber]{biblatex}
 \addbibresource{affineobjects.bib}
 \usepackage{url}
 \usepackage{hyperref}
@@ -167,15 +167,12 @@
 \newcommand{\eq}{\sim}
 \renewcommand{\to}{\mapsto}
 \newcommand{\givenby}{,\quad}
-%\newcommand{\Spec}[1]{\mbox{Spec }{#1}}
 \newcommand{\Rspec}{\mbox{Rspec }}
 \newcommand{\Ann}{\mbox{Ann}}
 \newcommand{\Der}{\mbox{Der}}
 \newcommand{\Trdg}{\mbox{Tr.dg }}
 \newcommand{\Proj}{\mbox{Proj }}
 \newcommand{\Sp}{\mbox{sp }}
-%\newcommand{\Hom}[2]{\mbox{Hom}(#1,#2)}
-%\newcommand{\Hom}[3]{\mbox{Hom}_{#1}(#2,#3)}
 \newcommand{\Dom}[1]{\mbox{Dom}(#1)}
 \newcommand{\coproduct}{\bigoplus}
 \newcommand{\product}{\prod}
@@ -375,7 +372,7 @@
   {
     \StrRight{#1}{1}[\lastletter]%
     \StrBefore{#1}{\lastletter}[\beforelastletter]%
-    \beforelastletter\cat{Mod}(\lastletter)
+    \beforelastletter\cat{Mod}(\sheaf{\lastletter})
   }
 \newcommand\shmodules{\sheafmodules}
 \newcommand\shmod\sheafmodules
@@ -433,6 +430,7 @@
 \newcommand\onsome{\mbox{ on some }}
 \newcommand\with{\mbox{ : }}
 \renewcommand\and{\mbox{,  }}
+\newcommand\wt\widetilde
 %------------------------------------------------------------------------------ 
 % ADMINISTRATION 
 %------------------------------------------------------------------------------ 

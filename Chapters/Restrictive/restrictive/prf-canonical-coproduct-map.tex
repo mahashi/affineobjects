@@ -1,0 +1,32 @@
+\begin{lemma}\label[lemma]{1}
+Let $X,Y$ be a schemes.
+The canonical morphism $X \rightarrow X \disjointunion Y$ is restrictive.
+\end{lemma}
+
+\begin{proof}
+Let $\sheaf{G}$ be a quasi-coherent sheaf on $X \disjointunion Y$.
+By the sheaf property $\sect{X \disjointunion Y}{G} = \sect{X}{G} \times \sect{Y}{G}$.
+The same holds also for $\sheaf{O}$.
+
+We are considering the morphism
+\[
+\sect{X \disjointunion Y}{G} \tensor_{\sect{X \disjointunion Y}{O}} \sect{X}{O} \rightarrow \sect{X}{G}.
+\]
+
+By the previous remark about disjoint unions and the sheaf property and some basic commutative algebra one sees that this becomes 
+\[
+(\sect{X}{G} \tensor_{\sect{X \disjointunion Y}{O}} \sect{X}{O}) 
+\times (\sect{Y}{G} \tensor_{\sect{X \disjointunion Y}{O}} \sect{X}{O}) \rightarrow \sect{X}{G}.
+\]
+
+Since $\sect{Y}{G} \tensor_{\sect{X \disjointunion Y}{O}} \sect{X}{O} = 0$, we are left with
+
+\[
+(\sect{X}{G} \tensor_{\sect{X \disjointunion Y}{O}} \sect{X}{O}) \rightarrow \sect{X}{G}
+\]
+\[
+g \tensor r \rightarrow rg.
+\]
+
+Note that $\sect{X}{G}$ already is an $\sect{X}{O}$-module and conclude that hence this morphism is an isomorphism.
+\end{proof}

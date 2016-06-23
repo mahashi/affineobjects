@@ -1,0 +1,41 @@
+\begin{lemma}\label[lemma]{tildeqc}
+Let $\sheaf{F}$ be a sheaf of modules on scheme $X$.
+$\sheaf{F}$ is quasi-coherent on $X$ 
+ \iff 
+for any open $\Spec{R} \subset X$ 
+the sheaf $\restr{\Spec{R}}{\sheaf{F}}$ is isomorphic 
+to $\widetilde{M}$
+with $M = \sect{\Spec{R}}{F}$.
+\end{lemma}
+
+\begin{proof}
+$\Rightarrow$:
+By assumption we get local presentations indexed by a covering.
+Let $\Union_{i\in I} U_i = X$ be this covering.
+Assume without loss of generality that it is an affine open covering.
+Let $U_i = \Spec{R_i}$.
+Let $\sheaf{O}_{U_i}^{\coproduct K} \rightarrow \sheaf{O}_{U_i}^{\coproduct J} \rightarrow \restr{U_i}{\sheaf{F}} \rightarrow 0$
+be one of the given presentations.
+Taking global sections gives us an exact sequence
+\[R_i^{\coproduct K} \rightarrow R_i^{\coproduct J} \rightarrow \sect{U_i}{F} \rightarrow 0.\]
+Tensoring it with the localisation $R_{i,f}$ for any $f\in R_i$ yields
+\[R_{i,f}^{\coproduct K} \rightarrow R_{i,f}^{\coproduct J} \rightarrow \sect{U_i}{F}\tensor R_{i,f} \rightarrow 0.\]
+Taking sections at $D(f)$ from the sheaf sequence yields
+\[R_{i,f}^{\coproduct K} \rightarrow R_{i,f}^{\coproduct J} \rightarrow \sect{D(f)}{F} \rightarrow 0.\]
+Hence $\restr{U_i}{\sheaf{F}}$ is the unique sheaf with 
+$D(f) \mapsto \sect{U_i}{F}_f$,
+which we defined to be $\widetilde{\sect{U_i}{F}}$.
+By the affine communication lemma, 
+this property holds for any affine and not just for the affines in this covering.
+
+$\Leftarrow$:
+Let $M = \sect{X}{F}$.
+Take a presentation $R^{\coproduct I} \rightarrow R^{\coproduct J} \rightarrow M$
+and apply $\widetilde{\blank}$. 
+Then note that $\widetilde{\blank}$ commutes with arbitrary colimits
+since it is a left adjoint, see lemma ?.
+We have $\widetilde{R} = \sheaf{O}_{\Spec{R}}$
+so we get a presentation 
+$\sheaf{O}_{\Spec{R}}^{\coproduct I} \rightarrow \sheaf{O}_{\Spec{R}}^{\coproduct J} \rightarrow \sheaf{F}$ 
+on every affine open subset $\Spec{R}\subset X$, hence $\sheaf{F}$ is quasi-coherent.
+\end{proof}
