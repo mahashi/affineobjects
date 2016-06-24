@@ -1,32 +1,21 @@
-\begin{lemma}\label[lemma]{8a9}
+\begin{lemma}\label[lemma]{87c}
 Let $R$ be a ring.
 Let $M$ be a $R$-module.
 $\widetilde{M} = \stilde{M}$ on the small Zariski site coming from $\Spec{R}$.
 \end{lemma}
 
 \begin{proof}
-Let $U\subset \Spec{R}$ be any open subset.
-Let $\Union_{i\in I} D(f_i) = U$ be a cover of $U$.
-Define $\pstilde{M} \rightarrow \widetilde{M}$
-at $U$ to be $m\tensor u \mapsto mu$.
+Note that $D(f)$ is affine for any $f\in R$.
+So by lemma ? $\sect{D(f)}{\stilde{M}}= \sect{D(f)}{\pstilde{M}} = M \tensor R_f$.
+By construction $\sect{D(f)}{\widetilde{M}} = M_f$.
+So for every $D(f)$ we get an isomorphism $\sect{D(f)}{\stilde{M}} \rightarrow \sect{D(f)}{\widetilde{M}}$. 
+These distinguised opens form a basis of the topology and our isos are compatible in the usual sense, 
+so there is an unique sheaf isomorphism extending this collection of isomorphism.
 
-There is a unique morphism $\widetilde{M} \rightarrow \stilde{M}$
-such that 
-\begin{center}
-	\begin{tikzcd}
-		\widetilde{M} \ar{r}
-		& \stilde{M}\\
-		\pstilde{M} \ar{u} \ar{ur}
-	\end{tikzcd}
-\end{center}
-commutes.
-
-We will give this morphism only on $D(f)$ for some $f\in R$.
-To make this diagram commute we must send $\frac{m}{f}$
-to $\matchfam{m\tensor \frac{1}{f}}{j}{\maxsieve{D(f)}}$. %TODO: what does this matching family mean?
-This defines a sheaf morphism and moreover this the unique way to make the diagram commute.
-By the universal property of the sheafification $\widetilde{M} = \stilde{M}$.
-Note that the witnessing isomorphism is functorial in $M$. 
+This sheaf isomorphism actually is the map $\stilde{M} \rightarrow \widetilde{M}$
+coming from $M\rightarrow \sect{\Spec{R}}{\widetilde{M}}$
+via the adjunction $\adj{\stilde}{\sect{\Spec{R}}}$.
+Both maps send $m\tensor \frac{a}{f}$ to $\frac{am}{f}$ on $D(f)$.
 \end{proof}
 
 See \cite[Tag 01I7]{stacks}.

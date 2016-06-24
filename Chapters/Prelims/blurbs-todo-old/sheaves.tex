@@ -2,7 +2,7 @@
 %todo: sheaves with values in arbitraty categories.
 \subsection{Sheaves}
 
-\begin{definition}[Sheaves of sets]\label[definition]{Sheaves of sets}
+\begin{definition}[Sheaves of sets]\label[definition]{698}
 Let $(\cat{C},\topo{T})$ be a site. Let $\presheaf{F}\in \presheaves{C}$.
 A compatible family on $X$ is a family of elements $x_f\in \presheaf{F}(X_f)$ indexed by a sieve $R$ on $X$, where $X_f=\domain{f}$ 
 and such that $\pullback{g}(x_{f})=x_{fg}$. This is the same as a morphism $R\rightarrow \presheaf{F}$ as presheaves.
@@ -17,7 +17,7 @@ The category $\sheaves{C}$ is the full subcategory on these sheaves.
 Let $i$ be the inclusion functor $\sheaves{C}\rightarrow \presheaves{C}$.
 \end{definition}
 
-\begin{definition}[Sheaves \#2]\label[definition]{6de}
+\begin{definition}[Sheaves \#2]\label[definition]{6a7}
 Let $(\cat{C},\topo{T})$ be a site. Let $\presheaf{F}\in \presheaves{C}{A}$. 
 Let $\cat{A}$ be (small) complete. Define $\presheaf{F}(R)$ for a sieve $R$ on $X$ to be 
 \[\Hom{R}{F}.\]
@@ -28,7 +28,7 @@ We call $\presheaf{F}$ a sheaf if the map
 This is just shorthand notation for the above definition. There is a bijection between $\Hom{R}{F}$ and matching families and the map sends a section to the unique matching family indexed by $R$ it is an amalgamation of.
 \end{definition}
 
-\begin{definition}[Plus construction Shapiro]\label[definition]{Plus construction Shapiro}
+\begin{definition}[Plus construction Shapiro]\label[definition]{6b2}
 Let $(\cat{C},\topo{T})$ be a site. 
 Let $\presheaf{F}\in \presheaves{C}$.
 Define the category $\cat{I}$ whose objects are pairs $(R,\varphi)$ 
@@ -47,20 +47,20 @@ We have the map
 This defines a natural transformation from $\id$ to $\plus{\blank}$.
 \end{definition}
 
-\begin{definition}[Plus construction Moerdijk]\label[definition]{Plus construction Moerdijk}
+\begin{definition}[Plus construction Moerdijk]\label[definition]{6c5}
 %TODO: fill in moerdijks construction
 \end{definition}
 
-\begin{lemma}\label[lemma]{700}
+\begin{lemma}\label[lemma]{6c9}
 $\plus{F}$ is separated
 \end{lemma}
 
-\begin{lemma}\label[lemma]{704}
+\begin{lemma}\label[lemma]{6cd}
 If $\presheaf{F}$ is separated then $\plus{F}$ is a sheaf.
 \end{lemma}
 
 
-\begin{lemma} \label[lemma]{709}
+\begin{lemma} \label[lemma]{6d2}
 Let $\site{C}{S} \xrightarrow{g} \site{D}{T}$. 
 Let $\presheaf{F}$ be a presheaf on $\cat{D}$. 
 Then 
@@ -71,7 +71,7 @@ Then
 
 \end{proof}
 
-\begin{definition}[Sheafification]\label[definition]{Sheafification}
+\begin{definition}[Sheafification]\label[definition]{6dd}
 Define $\sheafify{F}=\plus{\plus{F}}: \presheaves{C} \rightarrow \sheaves{C}$.
 This is a left adjoint to the inclusion functor $\sheaves{C} \rightarrow \presheaves{C}$.
 
@@ -80,7 +80,7 @@ There are two different proofs: Moerdijk and stacks+Shapiro.
 Shapiro defines the plus with as a colimit over a directed set, hence this commutes with limits.
 \end{definition}
 
-\begin{theorem}\label[theorem]{71d}
+\begin{theorem}\label[theorem]{6e6}
 The following this are equivalent for a category $\cat{C}$.
 \begin{itemize}
 \item A Grothendieck topology
@@ -89,7 +89,7 @@ The following this are equivalent for a category $\cat{C}$.
 \end{theorem}
 
 %% Properties
-\begin{remark}[Properties]\label[remark]{Properties}
+\begin{remark}[Properties]\label[remark]{6ef}
 \begin{itemize}
 \item The restriction of a sheaf is a sheaf
 \end{itemize}

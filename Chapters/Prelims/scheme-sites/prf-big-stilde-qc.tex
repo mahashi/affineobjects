@@ -1,0 +1,27 @@
+\begin{lemma}\label[lemma]{d43}
+Let $X = \Spec{R}$ be a scheme.
+Let $\sheaf{F}$ be a quasi-coherent sheaf on $\overschemes{X}$.
+Let $M = \sect{X}{F}$.
+
+Restricting a quasi-coherent sheaf gives a quasi-coherent sheaf,
+so $\direct{k}\sheaf{F} = \stilde{M}$ by lemma ?.
+Hence $\sect{D(f)}{F} = \sect{D(f)}{\stilde{M}} = M_f$ 
+for any $f\in R$.
+
+Let 
+$\restr{\sheaf{O}}{D(f_i)}^{\coproduct J} \xrightarrow{\alpha_i} \restr{\sheaf{O}}{D(f_i)}^{\coproduct K} \rightarrow \restr{\sheaf{F}}{D(f_i)} \rightarrow 0$ be a presentation with $(f_i) = (1)$.
+Note that the presheaf cokernel $\coker{\alpha_i}$ of the sheaf morphism is
+$\pstilde{\coker{\alpha_{i,D(f_i)}}}$ where $\alpha_{i,D(f_i)}$ is the component at $D(f_i)$ of $\alpha_i$.
+So $\restr{\sheaf{F}}{D(f_i)} = \stilde{M_f}$ since $\omega^2$ is iso for affines.
+
+Hence 
+\begin{align*}
+\sect{D(f) \times_X \Spec{S}}{F} &= \sect{D(f) \times_X \Spec{S}}{\stilde{F}}\\
+&= \sect{\Spec{S_f}}{\stilde{M_f}} \\ 
+&= M_f \tensor S_f\\
+& = M \tensor S_f.
+\end{align*}
+
+By the sheaf property it follows that $\sect{\Spec{S}}{F} = \sect{X}{F} \tensor S$,
+hence the counit $\stilde{M} \rightarrow \sheaf{F}$ is an isomorphism.
+\end{lemma}
