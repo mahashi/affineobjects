@@ -1,13 +1,14 @@
-\begin{lemma}[$\pstilde$ commutes with restriction]\label[lemma]{7ec}
+\begin{lemma}[$\pstilde$ commutes with restriction]\label[lemma]{7cd}
 Let $\rsite{C}{T}{O}$ be a ringed site.
-Let $a \in \cat{C}$.
+Let $a \in \cat{C}$ 
+and $u:\overcat{C}{a} \rightarrow \cat{C}$ the forgetful functor.
 We have a natural isomorphism 
-$t:\direct{u} \circ \pstilde \Rightarrow \pstilde \circ (\blank \tensor_{\sect{1}{O}} \sections{a}{O})$.
+$t:\direct{u} \circ \pstilde \Rightarrow \pstilde_a \circ (\blank \tensor_{\sect{1}{O}} \sections{a}{O})$.
 \end{lemma}
 
 \begin{proof}
 Define the natural transformation
-$t: \pstilde \circ (\blank \tensor_{\sect{1}{O}} \sections{a}{O}) \Rightarrow \direct{u} \circ \pstilde,$
+$t: \pstilde_a \circ (\blank \tensor_{\sect{1}{O}} \sections{a}{O}) \Rightarrow \direct{u} \circ \pstilde,$
 by 
 for each $\sect{1}{O}$-module $M$
 and for each $f:b\rightarrow a\in \overcat{C}{a}$,
@@ -17,4 +18,3 @@ and for each $f:b\rightarrow a\in \overcat{C}{a}$,
 
 Every component $t_{M,f}$ is an isomorphism by basic commutative algebra.
 \end{proof}
-

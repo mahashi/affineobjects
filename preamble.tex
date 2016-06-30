@@ -276,10 +276,11 @@
   \right|_{#2} % this is the delimiter
 }}
 
+\DeclareMathOperator{\HHom}{Hom}
 \DeclareDocumentCommand{\Hom}{ m m g }{%
  \IfNoValueTF{#3}%
-          {\mbox{Hom}(#1,#2)}%
-          {\mbox{Hom}_{#3}(#1,#2)}%
+          {\HHom(#1,#2)}%
+          {\HHom_{#3}(#1,#2)}%
 }
 
 
@@ -316,10 +317,11 @@
           {sh(#1)}%
 }
 
+\DeclareMathOperator{\HSpec}{Spec}
 \DeclareDocumentCommand{\Spec}{ g }{%
  \IfNoValueTF{#1}%
-          {\mbox{Spec}}%
-          {\mbox{Spec}(#1)}%
+          {\HSpec}%
+          {\HSpec(#1)}%
 }
 \newcommand\spec\Spec
 

@@ -1,4 +1,4 @@
-\begin{definition}[Restrictive functor]\label[definition]{cc5}
+\begin{definition}[Restrictive functor]\label[definition]{cda}
 A functor  $f:\rsite{C}{T}{O} \rightarrow \rsite{D}{S}{U}$ between ringed sites is called restrictive if for every quasi-coherent module $\module{G}$ the co-unit induces an isomorphism 
 \[\module{G} \rightarrow \direct{f}\inverse{f}\module{G},\]
 \[\sections{\terminal}{G} \rightarrow \sections{\terminal}{\direct{f}\inverse{f}G} \iso \sections{\terminal}{\inverse{f}G}\]
@@ -7,23 +7,23 @@ A functor  $f:\rsite{C}{T}{O} \rightarrow \rsite{D}{S}{U}$ between ringed sites 
 Note that 
 \end{definition}
 
-\begin{definition}[Restrictive morphism]\label[definition]{cce}
+\begin{definition}[Restrictive morphism]\label[definition]{ce3}
 A morphism $f:X\rightarrow Y\in \cat{C}$ is called restrictive if the induced functor
 \[\overcat{C}{X}\rightarrow \overcat{C}{Y}\] is restrictive.
 \end{definition}
 
-\begin{example}\label[example]{cd3}
+\begin{example}\label[example]{ce8}
 In $\schemes$, the morphism $\Spec{A_f} \rightarrow \Spec{A}$ is restrictive.
 %TODO: functor that is restrictive. Yoneda embedding? AffSch in Sch?
 \end{example}
 
-\begin{example}\label[example]{cd8}
+\begin{example}\label[example]{ced}
 The open immersion $\Spec{R^2}\setminus 0 \rightarrow \Spec{R^2}$ is not restrictive.
 The quasi-coherent sheaf $\Lambda(\frac{R[x,y]}{xy})$  fails to satisfy the condition from the definition.
 % TODO: right it out completely
 \end{example}
 
-\begin{lemma}[Restrictive to affines]\label[lemma]{cde}
+\begin{lemma}[Restrictive to affines]\label[lemma]{cf3}
 If $f:X\rightarrow \Spec{R}$ is a restrictive open immersion. 
 then $X$ is affine.
 %TODO: What is an open immersion categorically?
@@ -36,18 +36,18 @@ then $X$ is affine.
 % Make $S$ into a category as in http://math.stackexchange.com/questions/664471/represent-localization-as-a-direct-limit
 % Is $X$ the limit over this category?
 
-\begin{example}[Affine non-restrictive map]\label[example]{ceb}
+\begin{example}[Affine non-restrictive map]\label[example]{d00}
 Both canonical inclusions $\affspace{i} \rightarrow \projspace{i}$ are not restrictive.
 Look at the quasi-coherent module $\sheaf{O}(-1)$. There are no global sections but on every affine chart this invertible sheaf is trivial.
 \end{example}
 
 %Q: Is restrictiveness preserved under pullback? 
 
-\begin{example}\label[example]{cf2}
+\begin{example}\label[example]{d07}
 Any inclusion $\Spec{\kappa(\Ip)} \rightarrow \projspace{1}$ is not restrictive. Look at $\sheaf{O}(-1)$.
 \end{example}
 
-\begin{lemma}\label[lemma]{cf6}
+\begin{lemma}\label[lemma]{d0b}
 The composition of two restrictive functors is restrictive. If the composition $gf$ is restrictive, then $g$ is restrictive
 \end{lemma}
 \begin{proof}

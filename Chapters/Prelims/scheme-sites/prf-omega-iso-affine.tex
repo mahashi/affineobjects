@@ -1,22 +1,22 @@
-\begin{lemma}\label[lemma]{862}
+\begin{lemma}\label[lemma]{86f}
 Let $R$ be a ring.
 Let $M$ be a $R$-module.
-$\omega^2: \sect{\Spec{R}}{\pstilde{M}} \rightarrow \sect{\Spec{R}}{\stilde{M}}$ is an isomorphism.
+Then $\omega^2_{\pstilde{M},\Spec{R}}: \Gamma(\Spec{R};\pstilde{M}) \rightarrow \Gamma(\Spec{R};\stilde{M})$ is an isomorphism.
 \end{lemma}
 
 \begin{proof}
 Let $\Ip \subset R$ be a prime ideal.
-As stated in \Cref{75a}, we may use results from \cite[Tag 01BH]{stacks} in this setting.
+As stated in \Cref{759}, we may use results from \cite[Tag 01BH]{stacks} in this setting.
 We will use that $\stilde{M}_{\Ip} = M \tensor_R R_{\Ip}$.
-Localized at every prime ideal of $R$
-the map $\omega^2$ sends $m$ to $m\tensor 1$,
+By naturality, localized at $\Ip$,
+the map $\omega^2$ sends $m$ to $m\tensor 1 \in M \tensor_R R_{\Ip}$,
 hence is the inverse of the multiplication map which is an isomorphism.
-Hence non-localized $\omega^2$ is an isomorphism.
+Hence globally $\omega^2$ is an isomorphism.
 \end{proof}
 
-\begin{corollary}\label[corollary]{872}
+\begin{corollary}\label[corollary]{87f}
 Let $X$ be a scheme.
 Let $\Spec{R}$ be an open subset of $X$.
 Let $M$ be a $\sect{X}{O}$-module.
-Then $\omega^2: \sect{\Spec{R}}{\pstilde{M}} \rightarrow \sect{\Spec{R}}{\stilde{M}}$ is an isomorphism. 
+Then $\omega^2_{\pstilde{M},\Spec{R}}: \Gamma(\Spec{R};\pstilde{M}) \rightarrow \Gamma(\Spec{R};\stilde{M})$ is an isomorphism. 
 \end{corollary}

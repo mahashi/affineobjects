@@ -80,10 +80,60 @@
 	"buffers":
 	[
 		{
+			"file": "Chapters/Prelims/scheme-sites/prf-affine-scheme-caffine.tex",
+			"settings":
+			{
+				"buffer_size": 343,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "Chapters/Prelims/scheme-sites/main.tex",
 			"settings":
 			{
-				"buffer_size": 875,
+				"buffer_size": 644,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Sadari/Documents/Writings/Code/Gintonic/gintonic/bootstrap.sh",
+			"settings":
+			{
+				"buffer_size": 4941,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Sadari/Downloads/hw2-sample.tex",
+			"settings":
+			{
+				"buffer_size": 4714,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 12 files for \"tikz\" (case sensitive)\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Restrictive\\restrictive\\prf-comp-restr.tex:\n   15  Consider the following diagram\n   16  \\begin{center}\n   17: 	\\begin{tikzcd}[row sep = large, column sep = large]\n   18  		\\sect{a}{G} \\tensor_{\\sect{a}{O}} \\sect{c}{O} \\ar{r}{\\widehat{f} \\tensor_{\\sect{b}{O}} \\sect{c}{O}} \\ar[equal]{d}\n   19  		& \\sect{b}{G} \\tensor_{\\sect{b}{O}} \\sect{c}{O} \\ar{d}{\\widehat{g}} \\\\\n   20  		\\sect{a}{G} \\tensor_{\\sect{a}{O}} \\sect{c}{O} \\ar{r}{\\widehat{fg}} \n   21  		& \\sect{c}{G},\\\\\n   22: 	\\end{tikzcd}\n   23  \\end{center}\n   24  \n\n2 matches in 1 file\n\n\nSearching 196 files for \"tikz\" (case sensitive)\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Caffine\\caffine-objects\\prf-caff-restr-mor.tex:\n   20  % Consider\n   21  % \\begin{center}\n   22: %  	\\begin{tikzcd}[row sep = large, column sep = large]\n   23  % 		\\pshmodules{\\oversite{Y}{a}} \\arrow{r}{\\sheafify_a}\\arrow{d}{\\restrictOpt{b}} \n   24  % 		& \\shmodules{\\oversite{Y}{a}} \\arrow{d}{\\restrictOpt{b}}\n   ..\n   29  % 		& \\modules{\\sections{b}{O}} \\arrow{l}{\\stilde}\\arrow[bend left]{ll}{\\pstilde}\n   30  \n   31: %  	\\end{tikzcd}\n   32  %  \\end{center}\n   33  \n   ..\n   46  % Consider\n   47  %  \\begin{center}\n   48: %  	\\begin{tikzcd}[row sep = large, column sep = large]\n   49  %  		\\restrictOpt{b}{\\stilde{M}}\n   50  %  		& \\stilde( M \\tensor \\sections{b}{O}) \\arrow{l}{s_{\\pstilde(M)}} \\\\\n   51  %  		\\pstilde( M \\tensor \\sections{b}{O}) \\arrow{u}{\\restrictOpt{b}{i}} \\arrow{ru}{j}\n   52: %  	\\end{tikzcd}\n   53  %  \\end{center}\n   54  \n   ..\n  123  \n  124  % \\begin{center}\n  125: % \\begin{tikzpicture}[node distance=2cm, auto]\n  126  %   \\node (C) {$\\sections{a}{F}$};\n  127  %   \\node (B) [right of =C] {$\\sections{b}{F}$};\n  ...\n  130  %   \\draw[->] (D) to node [swap] {}  (B);\n  131  %   \\draw[->] (C) to node [swap] {} (D);\n  132: % \\end{tikzpicture}\n  133  % \\end{center}\n  134  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Caffine\\caffine-objects\\prf-counit-is-iso-if-locally.tex:\n   23  \n   24  % \\begin{center}\n   25: %  	\\begin{tikzcd}[row sep = large, column sep = large]\n   26  %  		\\restr{\\stilde{M}{a}}{b_i} \\arrow{r}{\\beta = \\restr{\\counit_{a}(\\module{F})}{b_i}}\n   27  %  		& \\restr{\\module{F}}{b_i} \\\\\n   28: %  	\\end{tikzcd}\n   29  %  \\end{center}\n   30  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Caffine\\caffine-schemes\\prf-surjectivity.tex:\n   13  \n   14  \\begin{center}\n   15: \\begin{tikzpicture}[node distance=3cm, auto]\n   16    \\node (C) {$X$};\n   17    \\node (B) [right of =C] {$\\Spec R$};\n   ..\n   22    \\draw[->] (D) to node [swap] {} (A);\n   23     \\draw[->] (D) to node [swap] {} (C);\n   24: \\end{tikzpicture}\n   25  \\end{center}\n   26  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Caffine\\enough-caffines\\non-quasi-coherentsheaf.tex:\n   13  %TODO: improve this diagram\n   14  \\begin{center}\n   15: \\begin{tikzpicture}[node distance=2cm, auto]\n   16    \\node (C) {$c$};\n   17    \\node (B) [above of =C] {$b$};\n   ..\n   22    \\draw[->] (D) to node {$K$} (E);\n   23    \\draw[->] (E) to node {$L$} (B);\n   24: \\end{tikzpicture}\n   25  \\end{center}\n   26  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\basic-cat\\prf-adj-comp.tex:\n   20  \n   21  \\begin{center}\n   22: 	\\begin{tikzpicture}[]\n   23  		\\node (lu) {$\\Hom{GF(c')}{e}$}\n   24  		\\node (mu) [right of = lu] {$\\Hom{F(c')}{H(e)}$} \n   ..\n   37  		\\draw[->] (md) to node {$F(f), H(g)$} (mu)\n   38  		\\draw[->] (rd) to node {$f,KH(g)$} (ru)\n   39: 	\\end{tikzpicture}\n   40  \\end{center}\n   41  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\modules\\def-pshmodules.tex:\n   15  \n   16  \\begin{center}\n   17:  	\\begin{tikzcd}[row sep = large, column sep = large]\n   18  		\\presheaf{O} \\times \\presheaf{F} \\arrow{r}\\arrow{d}\n   19  		& \\presheaf{F} \\arrow{d} \\\\\n   20  		\\presheaf{O} \\times \\presheaf{G}\\arrow{r}\n   21  		& \\presheaf{G} \\\\\n   22:  	\\end{tikzcd}\n   23   \\end{center}\n   24  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\topology\\Restriction\\prf-s-commute-omega.tex:\n   15  \n   16  \\begin{center}\n   17: 	\\begin{tikzcd}\n   18  		\\direct{u} \\presheaf{F} \\arrow{d}{\\direct{u}\\omega_{\\presheaf{F}}} \\arrow{dr}{\\omega_{\\direct{u} \\presheaf{F}}} \\\\\n   19  		\\direct{u} \\plus{\\presheaf{F}}  \\arrow{r}{s} &\n   20  		\\plus{(\\direct{u} \\presheaf{F})}\n   21: 	\\end{tikzcd}\n   22  \\end{center}\n   23  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Restrictive\\restrictive\\prf-comp-restr.tex:\n   15  Consider the following diagram\n   16  \\begin{center}\n   17: 	\\begin{tikzcd}[row sep = large, column sep = large]\n   18  		\\sect{a}{G} \\tensor_{\\sect{a}{O}} \\sect{c}{O} \\ar{r}{\\widehat{f} \\tensor_{\\sect{b}{O}} \\sect{c}{O}} \\ar[equal]{d}\n   19  		& \\sect{b}{G} \\tensor_{\\sect{b}{O}} \\sect{c}{O} \\ar{d}{\\widehat{g}} \\\\\n   20  		\\sect{a}{G} \\tensor_{\\sect{a}{O}} \\sect{c}{O} \\ar{r}{\\widehat{fg}} \n   21  		& \\sect{c}{G},\\\\\n   22: 	\\end{tikzcd}\n   23  \\end{center}\n   24  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\preamble.tex:\n   16  \\usepackage[T1]{fontenc}\n   17  \\usepackage[utf8]{inputenc}\n   18: \\usepackage{tikz-cd}\n   19  \\usepackage{xstring}\n   20  \\usepackage{csquotes}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Preamble\\packages.sty:\n    4  \\RequirePackage[T1]{fontenc}\n    5  \\RequirePackage[utf8]{inputenc}\n    6: \\RequirePackage{tikz-cd}\n    7  \\RequirePackage{xstring}\n    8  \\RequirePackage{csquotes}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Project docs\\TODO\\Latex:\n    1  - Setup functor macros that work without parameters\n    2: - Setup symbols in tikz cd : http://tex.stackexchange.com/questions/279187/adjunction-of-functors-command-tikzcd/279192\n    3  - Add names and references to lemmas/definitions/examples\n    4  - Clean preamble\n\n24 matches across 11 files\n",
+			"settings":
+			{
+				"buffer_size": 5952,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "preamble.tex",
+			"settings":
+			{
+				"buffer_size": 12812,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Chapters/Prelims/scheme-sites/prf-omega-iso-affine.tex",
+			"settings":
+			{
+				"buffer_size": 884,
 				"line_ending": "Windows"
 			}
 		},
@@ -91,23 +141,7 @@
 			"file": "Chapters/Prelims/scheme-sites/prf-big-stilde-qc.tex",
 			"settings":
 			{
-				"buffer_size": 1174,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "preamble.tex",
-			"settings":
-			{
-				"buffer_size": 12764,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Chapters/Restrictive/restrictive/prf-restr-between-affines.tex",
-			"settings":
-			{
-				"buffer_size": 594,
+				"buffer_size": 1177,
 				"line_ending": "Windows"
 			}
 		}
@@ -252,19 +286,19 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive"
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites"
 	],
 	"file_history":
 	[
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-big-stilde-qc.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-restr-between-affines.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-omega-iso-affine.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/main.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/prf-spec-adjunction.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-big-stilde-restricts-to-small.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-restr-between-affines.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-spectrum.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/preamble.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-big-stilde-qc.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-omega-iso-affine.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-big-stilde-qc.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/def-restrictive.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/exmpl-restrictive-mor.tex",
 		"/C/Users/Sadari/Documents/Writings/Code/Python/addLabelsTex.py",
@@ -296,18 +330,15 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/exmpl-affine-non-restrictive.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-pstilde-adj.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/prf-spec-adjunction.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-coproduct-restrictive.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-Ny.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-comp-restr.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/preamble.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-canonical-coproduct-map.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-coproduct-restritive.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-arbitrary-coproducts.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-coproduct.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-small-site.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/def-extension-sheaf-big.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-big-stilde-restricts-to-small.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/def-quasi-coherence.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/prf-u-homeo.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/affineobjects.bib",
@@ -360,7 +391,6 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/prf-sheafification-commute-general.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/def-sheaf.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-sheaf-of-algebras.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-spectrum.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-basis.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-open-site.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-dist-open-general.tex",
@@ -387,8 +417,7 @@
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Prelims/schemes/prf-quasi-coherence-equivalence.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-coproduct.tex",
 		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Restrictive/blurbs-old-todo/prf-morphism-between-affines-restr.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-restr-open-immersion-affine.tex",
-		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Restrictive/restrictive/non-exmpl-restr-mor.tex"
+		"/C/Users/Sadari/Documents/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-restr-open-immersion-affine.tex"
 	],
 	"find":
 	{
@@ -399,6 +428,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"C:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects",
 			"C:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Restrictive\\restrictive",
 			"C:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Restrictive\\",
 			"C:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\",
@@ -475,6 +505,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"tikz",
+			"Hom",
+			"section",
 			"\\ker",
 			"ker",
 			"coker",
@@ -599,10 +632,7 @@
 			"todo",
 			"mod",
 			"Mod",
-			"mod",
-			"module",
-			"build",
-			"sections"
+			"mod"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -713,52 +743,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Chapters/Prelims/scheme-sites/main.tex",
+					"file": "Chapters/Prelims/scheme-sites/prf-affine-scheme-caffine.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 875,
+						"buffer_size": 343,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								696,
-								696
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 171.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Chapters/Prelims/scheme-sites/prf-big-stilde-qc.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								631,
-								636
+								330,
+								330
 							]
 						],
 						"settings":
@@ -769,24 +771,254 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "preamble.tex",
+					"buffer": 1,
+					"file": "Chapters/Prelims/scheme-sites/main.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12764,
+						"buffer_size": 644,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11822,
-								11822
+								644,
+								644
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Sadari/Documents/Writings/Code/Gintonic/gintonic/bootstrap.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2736.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Sadari/Downloads/hw2-sample.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3884,
+								4098
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2258.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5952,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										231,
+										235
+									],
+									[
+										595,
+										599
+									],
+									[
+										875,
+										879
+									],
+									[
+										1197,
+										1201
+									],
+									[
+										1303,
+										1307
+									],
+									[
+										1577,
+										1581
+									],
+									[
+										1670,
+										1674
+									],
+									[
+										1923,
+										1927
+									],
+									[
+										2139,
+										2143
+									],
+									[
+										2336,
+										2340
+									],
+									[
+										2530,
+										2534
+									],
+									[
+										2751,
+										2755
+									],
+									[
+										2981,
+										2985
+									],
+									[
+										3187,
+										3191
+									],
+									[
+										3374,
+										3378
+									],
+									[
+										3608,
+										3612
+									],
+									[
+										3796,
+										3800
+									],
+									[
+										4031,
+										4035
+									],
+									[
+										4232,
+										4236
+									],
+									[
+										4475,
+										4479
+									],
+									[
+										4695,
+										4699
+									],
+									[
+										5059,
+										5063
+									],
+									[
+										5251,
+										5255
+									],
+									[
+										5494,
+										5498
+									],
+									[
+										5734,
+										5738
+									],
+									[
+										5821,
+										5825
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								654,
+								654
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2394.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "preamble.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 12812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -796,27 +1028,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7801.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Chapters/Restrictive/restrictive/prf-restr-between-affines.tex",
+					"buffer": 6,
+					"file": "Chapters/Prelims/scheme-sites/prf-omega-iso-affine.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 594,
+						"buffer_size": 884,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								385,
-								385
+								27,
+								30
 							]
 						],
 						"settings":
@@ -824,10 +1056,38 @@
 							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 52.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Chapters/Prelims/scheme-sites/prf-big-stilde-qc.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27,
+								30
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]

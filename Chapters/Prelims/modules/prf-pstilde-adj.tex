@@ -1,16 +1,16 @@
-\begin{lemma}\label[lemma]{77b}
-Let $Y = \rsite{C}{T}{O}$ be a ringed site.
+\begin{lemma}\label[lemma]{779}
+Let $\rsite{C}{T}{O}$ be a ringed site.
+Let $R = \gblsect{O}$.
 The functor $\pstilde$ is left adjoint to 
 \[\globalsections:\pshmodules{\sheaf{O}} \rightarrow \modules{R}.\]
 \end{lemma}
 
 \begin{proof}
-Let $a$ be an object of $C$.
 Let $M,N$ be $R$-modules. 
 Let $\presheaf{F},\presheaf{G} \in \pshmodules{\sheaf{O}}$ be presheaf modules.
 
 Let $\varphi:\pstilde{M} \rightarrow \presheaf{G}$ be a morphism of presheaf modules.
-Let $\phi: M \rightarrow \globalsections{G}$ be a morphism of presheaf modules.
+Let $\phi: M \rightarrow \globalsections{G}$ be a morphism of $R$-modules.
 
 Define
 \begin{align*}
@@ -25,11 +25,13 @@ Define
 \[\beta = L_{M,\presheaf{G}}: 
 	\Hom{M}{\globalsections{G}} \rightarrow \Hom{\pstilde{M}}{\presheaf{G}}
 \] 
-by
+by, for each $a\in \cat{C}$
 \[ \beta(\phi)_a = \phi \tensor_R \sections{a}{O}.\]
 
 We will show that $\beta$ and $\alpha$ are mutually inverse. 
 
+Let $\varphi \in \Hom{\pstilde{M}}{\presheaf{G}}$
+and $a\in \cat{C}$.
 Let $d = \beta(\alpha(\varphi))$. 
 Let $m \tensor g \in M \tensor_R \sections{a}{O}$.
 Let $p: \pstilde(M)(1)\rightarrow \pstilde(M)(a)$ be the projection map.
@@ -52,17 +54,6 @@ are uniquely determined by their global sections component.
 Let $d = \alpha(\beta(\phi))$. 
 Let $m \in M$.
 Then $d(m) = (\phi \tensor_R R)(m) = \phi(m)$.
-Hence $d = \phi$, which makes $H$ and $L$ mutual inverses.
-
-Now we will show naturality in $M$ and $\presheaf{G}$.
-Let $g:N\rightarrow M$ and $h:\presheaf{F} \rightarrow \presheaf{G}$.
-Let $\rho \in \Hom{\pstilde(N)}{\presheaf{F}}$.
-Let $k = H_{M,\presheaf{G}} (h \circ \rho \circ \pstilde(f))$.
-Let $l = h_1 \circ H_{N,\presheaf{F}}(\rho) \circ f$.
-
-Unfolding the definition for $H$ shows that $k = h_1\rho_1 f$
-and $l = h_1\rho_1 f$ as well.
-This proves naturality in $M$ and $\presheaf{G}$ 
-and the adjunction between $\pstilde$ and $\globalsections$
-between $\modules{R}$ and $\pshmodules{\sheaf{O}}$.
+Hence $d = \phi$, which makes $\alpha$ and $\beta$ mutual inverses.
+Naturality is straightforward to check and is omitted.
 \end{proof}
