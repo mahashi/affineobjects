@@ -1,23 +1,20 @@
 Hi Mohamed,
 
-The 5-week thing is not so strict after all, so no worries on that account. But if you want to have your defense before I leave, we should start thinking about who should be on your committee and when they are available.
-
-I'm attaching my comments on your latest writeup, starting at Section 1.3.  Some general advice would be to check that the mathematical objects you use in the statement of a given lemma or theorem are exactly the ones you introduce.  (E.g. the Y in "Let Y=(C,T,O) be a ringed site..." is not necessary if you never refer to Y again in that lemma. Or when you mention the pushforward functor u*, make sure that u has been (re)introduced in that lemma.)
-
 Also, the organization in sections 1.3 to 1.5 still feels a little out of order.  Right now it looks like this:
-definitions of presheaf module, quasicoherent sheaf, and various adjunctions
-some compatibility isomorphisms
-definition of Spec of a ring
-general scheme constructions
-definition of a scheme
-definition of the tilde functor
+- definitions of presheaf module, quasicoherent sheaf, and various adjunctions
+- some compatibility isomorphisms
+- definition of Spec of a ring
+- general scheme constructions
+- definition of a scheme
+- definition of the tilde functor
 lemma that quasicoherence is the same as restriction maps to distinguished opens being localization (using a future lemma about tilde)
 definition of relative spec of a sheaf of algebras
 the big and small Zariski sites
 lemma that the global sections of Lambda(M) is just M (on second reading, it's not clear which site you're working in).
 lemma that quasicoherence is the same as being locally tilde
 Lemma 1.5.8, which is so long that I don't understand what exactly is the statement and what is the proof.
-It seems like there are 3 main topics you're covering: general definitions and constructions for modules and quasicoherent sheaves, what some of these constructions look like for big/small sites of schemes, and various scheme constructions that you will use later.  Perhaps you can collect those results together into their own sections? The fact that restricting a quasicoherent sheaf gives another quasicoherent sheaf is a general result that you don't need the context of schemes to prove (I don't think), so it can go much earlier.  Then you can have a section about how on the small Zariski site for a scheme, taking lambda of a module and then sheafifying it is exactly what the stacks project calls "tilde". Then you can cite the standard result that a sheaf of modules being quasicoherent is the same as it being locally tilde of something. The remaining scheme constructions (locus of a point, set cut out by an ideal, etc.) are only useful for the section where you prove all caffine schemes are affine, right? Perhaps they should be moved there, then.
+It seems like there are 3 main topics you're covering: 
+general definitions and constructions for modules and quasicoherent sheaves, what some of these constructions look like for big/small sites of schemes, and various scheme constructions that you will use later.  Perhaps you can collect those results together into their own sections? The fact that restricting a quasicoherent sheaf gives another quasicoherent sheaf is a general result that you don't need the context of schemes to prove (I don't think), so it can go much earlier.  Then you can have a section about how on the small Zariski site for a scheme, taking lambda of a module and then sheafifying it is exactly what the stacks project calls "tilde". Then you can cite the standard result that a sheaf of modules being quasicoherent is the same as it being locally tilde of something. The remaining scheme constructions (locus of a point, set cut out by an ideal, etc.) are only useful for the section where you prove all caffine schemes are affine, right? Perhaps they should be moved there, then.
 
 How does that sound?
 

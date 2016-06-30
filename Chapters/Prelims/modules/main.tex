@@ -1,5 +1,6 @@
 \section{Modules}
 Presheaf modules and sheaf modules on a ringed site will be introduced in this section.
+Next we will introduce two main functors $\pstilde$ and $\stilde$.
 The functors $\pstilde$ and $\stilde$ introduced here will be used extensively.
 See \cite[Tag 03A4]{stacks} for more detail.
 
@@ -8,12 +9,3 @@ See \cite[Tag 03A4]{stacks} for more detail.
 \input{def-pstilde}
 \input{prf-pstilde-adj.tex}
 \input{def-stilde}
-
-Let $\cat{C}$ be a category.
-Let $a\in \cat{C}$.
-Let $\counit$ be the counit of the adjunction $\adj{\pstilde}{\globalsections}$ on $\cat{C}$.
-Let $\counit_a$ be the counit of the adjunction $\adj{\pstilde_a}{\sections{a}}$ on $\overcat{C}{a}$.
-
-\input{prf-pstilde-restriction-commute}
-\input{rmk-pstilde-counit-restriction-commute}
-\input{prf-stilde-restriction-commute}
