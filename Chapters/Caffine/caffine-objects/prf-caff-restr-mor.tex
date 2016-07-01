@@ -1,4 +1,4 @@
-\begin{theorem}[Morphism between caffines is restrictive]\label[theorem]{12c}
+\begin{theorem}[Morphism between caffines is restrictive]\label[theorem]{11e}
 Let $Y = \rsite{C}{T}{O}$.
 Let $f: b \rightarrow a \in \cat{C}$ be a morphism between caffine objects, 
 then $f$ is restrictive.
@@ -9,10 +9,10 @@ Let $\module{F}$ be a quasi-coherent module on $\oversite{Y}{a}$.
 Let $M = \sections{a}{F}$.
 Since $a$ is caffine, we have $\sheaf{F} = \stilde{M}$.
 
-We have to show that the adjunct, along the extension of scalars adjunction, of $\presheaf{F}(f)$
-\[\sections{a}{F} \tensor_{\sections{a}{O}} \sections{b}{O} \rightarrow \sections{b}{F}\]
-is an isomorphism.
+We have to show that
+\[\widehat{f}:\sections{a}{F} \tensor_{\sections{a}{O}} \sections{b}{O} \rightarrow \sections{b}{F}\]
+is an isomorphism, where $\widehat{f}$ as defined in \Cref{caa}.
 
-This adjunct is the component at $b$ of the natural transformation $\omega^2_{\pstilde{\globalsections{F}}}$.
-Since $b$ is caffine, this component is an isomorphism.
+Note that \widehat{f} is the component at $b$ of the natural transformation $\omega^2_{\pstilde{\globalsections{F}}}$.
+Since $b$ is caffine, this component is an isomorphism by \Cref{14d}.
 \end{proof}

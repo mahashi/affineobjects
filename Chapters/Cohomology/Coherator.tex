@@ -1,15 +1,15 @@
 
-\begin{definition}\label[definition]{45c}
+\begin{definition}\label[definition]{3ba}
 An object $B$ in a category $\cat{C}$ is called a \emph{generator} if for any distinct parallel morphisms 
 $f,g:A\rightrightarrows C$ there exists a morphism $h:B\rightarrow A$ such that $g\circ h\neq f\circ h$.
 Equivalently in an abelian category, an object $B$ is called a generator if for any proper(?) subobject $N<M$ there exists a map $B\rightarrow M$ that does not factor through $N$.
 \end{definition}
 
-\begin{definition}[Grothendieck Category]\label[definition]{462}
+\begin{definition}[Grothendieck Category]\label[definition]{3c0}
 An abelian category $\cat{C}$ is called a Grothendieck category if filtered colimits are exact and the category has a generator.
 \end{definition}
 
-\begin{lemma}\label[lemma]{466}
+\begin{lemma}\label[lemma]{3c4}
 The abelian category $R-Mod$ is Grothendieck for any ring $R$.
 \end{lemma}
 \begin{proof}
@@ -20,23 +20,23 @@ For any submodule $N$ of any module $M$, the module $R$ admits a map whose image
 Filtered colimits are exact: \url{http://stacks.math.columbia.edu/tag/00DB}
 \end{proof}
 
-\begin{corollary}[\url{http://stacks.math.columbia.edu/tag/077K}]\label[corollary]{471}
+\begin{corollary}[\url{http://stacks.math.columbia.edu/tag/077K}]\label[corollary]{3cf}
 
 Let $X$ be 'affine'. Then $\Qcoh{X}$ is a Grothendieck abelian category.
 \end{corollary}
 
-\begin{remark}[\url{http://stacks.math.columbia.edu/tag/077K}]\label[remark]{476}
+\begin{remark}[\url{http://stacks.math.columbia.edu/tag/077K}]\label[remark]{3d4}
 
 Due to a result of Gabber, $\Qcoh{X}$ is a Grothendieck category for any scheme $X$.
 \end{remark}
 
-\begin{remark}\label[remark]{47b}
+\begin{remark}\label[remark]{3d9}
 The opposite of a Grothendieck abelian category is abelian but not Grothendieck. 
 It is abelian since dualizing all requirements to be abelian yields the same set of requirements. 
 It is not Grothendieck if R is non-zero. [Abelian Categories Freyd p116].
 \end{remark}
 
-\begin{lemma}\label[lemma]{481}
+\begin{lemma}\label[lemma]{3df}
 Let $\cat{A}$ be a Grothendieck abelian category.
 Let $\presheaf{F}$ be a presheaf on $\cat{A}$.
 Then $\presheaf{F}$ is representable \iff $\presheaf{F}$ commutes with colimits.
@@ -50,7 +50,7 @@ Assume $\presheaf{F}$ commutes with colimits.
 % step 2: Define A and s_{univ}. Het A' becausee A is grothendieck and 
 \end{proof}
 
-\begin{lemma}\label[lemma]{48f}
+\begin{lemma}\label[lemma]{3ed}
 Let $\sheaf{G}$ be any $\sheaf{O}_X$ module. 
 The functor $Q_{\sheaf{G}}:\Opposite{\Qcoh{X}}\rightarrow \cat{Sets}$ defined by
 \[\sheaf{F}\mapsto \Hom{\sheaf{F}}{\sheaf{G}},\]
@@ -62,16 +62,16 @@ Consider $\Hom{\colim(D)}{\sheaf{G}}$. The inclusion functor $i:\Qcoh{X}\rightar
 Consider our hom-set inside $\cat{Mod(X)}$. Then by definition the colimit turns into a limit where the components are all hom-set of quasi-coherent modules into $\sheaf{G}$. 
 \end{proof}
 
-\begin{definition}[Right Adjoint/coherator]\label[definition]{49b}
+\begin{definition}[Right Adjoint/coherator]\label[definition]{3f9}
 Define the functor $Q:\cat{Mod(X)}\rightarrow \Qcoh(X)$ that associates to a module $\sheaf{G}$ the presenting object of $Q_{\sheaf{G}}$.
 Concretely $Q= \Lambda_X \circ \Gamma(-)$.
 \end{definition}
 
-\begin{lemma}\label[lemma]{4a0}
+\begin{lemma}\label[lemma]{3fe}
 The functor $Q$ is right adjoint to the inclusion functor $i:\Qcoh{X}\rightarrow \cat{Mod(X)}$.
 \end{lemma}
 
-\begin{lemma}[\url{http://stacks.math.columbia.edu/tag/015Z}]\label[lemma]{4a4}
+\begin{lemma}[\url{http://stacks.math.columbia.edu/tag/015Z}]\label[lemma]{402}
 The functor $i$ is exact, hence $Q$ sends injectives to injectives. 
 \end{lemma}
 
