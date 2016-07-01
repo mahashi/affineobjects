@@ -1,13 +1,13 @@
-\begin{lemma}\label[lemma]{86f}
+\begin{lemma}\label[lemma]{8e8}
 Let $R$ be a ring.
 Let $M$ be a $R$-module.
 Consider $\pstilde{M},\stilde{M}$ as sheaf modules on $\opens{\Spec{R}}$.
-Then $\omega^2_{\pstilde{M},\Spec{R}}: \Gamma(\Spec{R};\pstilde{M}) \rightarrow \Gamma(\Spec{R};\stilde{M})$ is an isomorphism.
+Then $$\omega^2_{\pstilde{M},\Spec{R}}: \Gamma(\Spec{R};\pstilde{M}) \rightarrow \Gamma(\Spec{R};\stilde{M})$$ is an isomorphism.
 \end{lemma}
 
 \begin{proof}
 Let $\Ip \subset R$ be a prime ideal.
-As stated in \Cref{759}, we may use results from \cite[Tag 01BH]{stacks} in this setting.
+As stated in \Cref{7a7}, we may use results from \cite[Tag 01BH]{stacks} in this setting.
 We will use that $\stilde{M}_{\Ip} = M \tensor_R R_{\Ip}$.
 By naturality, localized at $\Ip$,
 the map $\omega^2$ sends $m$ to $m\tensor 1 \in M \tensor_R R_{\Ip}$,
@@ -15,7 +15,7 @@ hence is the inverse of the multiplication map which is an isomorphism.
 Hence globally $\omega^2$ is an isomorphism.
 \end{proof}
 
-\begin{corollary}\label[corollary]{87f}
+\begin{corollary}\label[corollary]{8f9}
 Let $X$ be a scheme.
 Consider $\pstilde{M},\stilde{M}$ as sheaf modules on $\opens{X}$.
 Let $\Spec{R}$ be an open subset of $X$.
@@ -23,8 +23,10 @@ Let $M$ be a $\sect{X}{O}$-module.
 Then $\omega^2_{\pstilde{M},\Spec{R}}: \Gamma(\Spec{R};\pstilde{M}) \rightarrow \Gamma(\Spec{R};\stilde{M})$ is an isomorphism. 
 \end{corollary}
 
-\begin{corollary}
+
+Note that $\unit_M$ is equal to $\omega^2_{\pstilde{M},\Spec{R}}$ so we get the following.
+
+\begin{corollary}\label[corollary]{901}
 Consider the adjunction $\mainadjunction$ on $\opens{\Spec{R}}$.
-The unit $\unit_M:M \rightarrow \Gamma(\Spec{R};\stilde{M})$ is 
-equal to $\omega^2_{\pstilde{M},\Spec{R}}$ hence an isomorphism.
+The unit $\unit_M:M \rightarrow \Gamma(\Spec{R};\stilde{M})$ is an isomorphism.
 \end{corollary}

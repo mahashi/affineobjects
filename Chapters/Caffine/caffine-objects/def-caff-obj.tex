@@ -1,10 +1,14 @@
 \begin{definition}[Caffine object]\label[definition]{e9}
-Let $Y = \rsite{C}{T}{O}$ be a ringed site.
+Let $\rsite{C}{T}{O}$ be a ringed site.
 Let $a\in \cat{C}$ be an object. 
 We call $a$ caffine
 if the unit $\unit$
 and co-unit $\counit$ 
-of the adjunction $\mainadjunction$
-restricted to $\qcoh{O}$ and $\modules{\sections{a}{O}}$ 
-are natural isomorphisms.
+of the adjunction $\adj{\stilde}{\sect{a}}$ on $\overcat{C}{a}$
+are natural isomorphisms for any $\sect{a}{O}$-module $M$
+and any quasi-coherent $\sheaf{F}$ on $\overcat{C}{a}$
+
+In other words, that $\stilde:\modules{\sect{a}{O}} \rightarrow \qcoh{O}$
+is an equivalence of categories with $\sect{a}$ as pseudo-inverse
+and the unit and co-unit as witnessing natural isomorphisms.
 \end{definition}

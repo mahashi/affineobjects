@@ -1,5 +1,0 @@
-- move stilde restriction to caffine objects section
-- Add restriction hypothesis, prove commutativity of diagram
- \stilde(M \tensor R) \xrightarrow{\restr{\counit}{b}}
- \downarrow						\restr{F}{b}
- \stilde(F(b)) \xrightarrow{\counit_b} 

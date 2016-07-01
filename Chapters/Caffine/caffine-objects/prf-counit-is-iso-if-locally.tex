@@ -7,68 +7,13 @@ Then the counit $\counit$ of the adjunction $\mainadjunction{a}$
 is a natural isomorphism.
 \end{lemma}
 
-
 \begin{proof}
 Let $\module{F}$ be a quasi-coherent sheaf module. 
 Set $M = \sections{a}{F}$.
 Set $M_i = \sections{b_i}{F}$.
 Set $\beta_i = \restr{\counit_{\module{F},a}}{b_i}$.
-By lemma ? $\beta_i \iso \counit_{b_i}$, hence $beta_i$ is an isomorphism.
-
-
-% Since all the maps are restrictive, we have
-% \[M\tensor_{\globalsections{O}} \sections{b_i}{O} \iso M_i.\]
-
-% Consider the diagram 
-
-% \begin{center}
-%  	\begin{tikzcd}[row sep = large, column sep = large]
-%  		\restr{\stilde{M}{a}}{b_i} \arrow{r}{\beta = \restr{\counit_{a}(\module{F})}{b_i}}
-%  		& \restr{\module{F}}{b_i} \\
-%  	\end{tikzcd}
-%  \end{center}
-
-% The map $\beta$ is a natural transformation between quasi-coherent modules over a caffine object, 
-% hence is an isomorphism \iff the global component $\beta_{b_i}$ is.
-% The global component $\beta_{b_i}$ is
-% \[\beta':M \tensor_{\globalsections{O}} \sections{b_i}{O} \rightarrow M_i,\]
-% \[m \tensor t \mapsto tm\]
-
-% composed with the component at $b_i$ 
-% of $i: \pstilde(M) \rightarrow \stilde(M) = \module{F}$.
-% By lemma ?, the component at any caffine object 
-% of the universal sheafification morphism for a quasi-coherent module is an isomorphism.
-% We know $\beta'$ is an isomorphism because the map $b_i \rightarrow a$ is restrictive.
-% Hence $\beta$ is an isomorphism.
-
-% Consider the co-unit at $\module{F}$
-% \[\counit_a(\module{F}): 
-% 	\stilde{\sections{a}{F}} \rightarrow \module{F}.
-% \]
-
-% This morphism restricted gives
-% \[\restr{\counit_{a}(\module{F})}{b_i}: 
-% 	\restr{\stilde{\sections{a}{F}}}{b_i} \rightarrow \restr{\module{F}}{b_i},
-% \]
-
-% which is the same map as $\epsilon_{b}(\restr{\module{F}}{b})$.
-% We only need to establish that $\restr{\stilde{\sections{a}{F}}}{b_i}$.
-
-% Because $b_i$ is caffine, the canonical morphism given by sheafification
-% \[ M \tensor_{\sections{a}{O}} \sections{b_i}{O} \rightarrow  M_i\] is an isomorphism.
-
-% Hence the component 
-% \[\epsilon_{b_i}(\restr{\module{F}}{b_i}): \stilde{\sections{b_i}{F}} \rightarrow \restr{\module{F}}{b_i}.\]
-% is an isomorphism, because $\epsilon_{b_i}$ is a natural isomorphism because $b_i$ is caffine.
-% The subscript ${b_i}$ signifies that we are working in $\cat{C}/b_i$.
-
-% But over an caffine object, a map is an isomorphism \iff it is an isomorphism on global sections. 
-% In this case, using naturality of $\epsilon$,
-% \[\epsilon_{b_i}(b_i): \globalsections{F} \tensor_{\sections{a}{O}} \sections{b_i}{O} \rightarrow \sections{b_i}{F},\]
-% \[ m \tensor r \rightarrow mr.\]
-
-% By restrictiveness of the map $b_i\rightarrow a$, this map is an isomorphism. A local isomorphism between sheaves is an isomorphism.
+By lemma ? $\beta_i \iso \counit_{\restr{\module{F}}{b_i},b_i}$, 
+since $b_i$ is caffine $\beta_i$ is an isomorphism.
+Hence $\counit$ is an isomorphism between sheafs, since it is locally an isomorphism.
 \end{proof}
-
-
-
+%TODO: proof counits restrict to each other
