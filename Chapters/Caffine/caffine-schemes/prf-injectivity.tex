@@ -1,11 +1,16 @@
 \begin{lemma}\label[lemma]{1e4}
-The closed set $V_X(\Ip)$ is irreducible. This implies that $\counit_X$ is injective.
+Let $\Ip\subset R$ be an prime ideal.
+The closed set $V_X(\Ip)$ is irreducible.
+This implies that $\counit_X$ is injective.
 \end{lemma}
 \begin{proof}
-Let $F(z)=\Ip$ for some $z\in X$. By lemma .. this is possible.
-Let $y\in V_X(\Ip)$. Then $\ker(z)\subset \ker(y)$, hence if $y\in D_X(a)$ then $x\in D_X(a)$.
-Therefore $y$ specialises to $z$, which thus must be $V_X(\Ip)$. This shows that it is irreducible.
-Uniqueness of generic points of closed irreducible subsets of schemes implies injectivity of $F$.
+Let $\counit_X(z)=\Ip$ for some $z\in X$. By lemma .. this is possible.
+So $\ker{z} = \Ip$.
+Let $y\in V_X(\Ip)$. Then $\ker(z)\subset \ker(y)$, hence if $y\in D_X(a)$ then $z\in D_X(a)$.
+Therefore $z$ is contained in any open subset of $V_X(\Ip)$, hence it is irreducible.
+Any element that is send to $\Ip$ will be the generic point of $V_X(\Ip)$.
+Uniqueness of generic points implies injectivity of $F$.
+
 \begin{comment}
 Let $U \cup V = V_X(\Ip)$ with $U,V$ closed. 
 The inclusions $u,v$ of closed sets $U,V$ is a quasi-compact map, because a closed set of a quasi-compact is quasi-compact. 

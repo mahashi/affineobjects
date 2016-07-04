@@ -1,18 +1,6 @@
 \begin{lemma}[Stalks]\label[lemma]{209}
-Let $I \subset \globalsections{O}$.
+Let $M$ be a $\sect{X}{O}$-module.
 Let $x\in X$.
 Then $\stilde{I}_x = I\tensor \sheaf{O}_x$.
 \end{lemma}
-
-\begin{proof}
-The functor $\Lambda_X$ is exact, so it commutes with quotients.
-So
-\[\Lambda_X(\frac{\sheaf{O}(X)}{I}) = \frac{\sheaf{O}}{\Lambda_X(I)}\]
-and 
-\[\Lambda_X(\frac{\sheaf{O}(X)}{I})_x = \frac{\sheaf{O}_x}{\Lambda_X(I)_x} = \frac{\sheaf{O}_x}{I\tensor \sheaf{O}_x} \]
-
-$\frac{\sheaf{O}_x}{\Lambda_X(I)_x} \neq 0$, which is the same as saying that  $\Lambda_X(I)_x$ is a proper ideal of $\sheaf{O}_x$. 
-The sheaf $\Lambda_X(I)_x$ is the sheafification of the presheaf $(U \mapsto I \tensor \sheaf{O}(U))$, hence the stalk at $x$ of the sheaf is 
-$\colim{x \in U} I\tensor \sheaf{O}(U)$. The functor $I\tensor -$ is a left adjoint, hence commutes with colimits.
-So the stalk is isomorphic to $I\tensor \colim{x\in U} \sheaf{O}(U)= I\tensor \sheaf{O}_x$. See Stacks[01BH].
-\end{proof}
+\begin{proof} See \cite[Tag 01BH]{stacks}. \end{proof}

@@ -1,21 +1,27 @@
 \section{Caffine schemes}
 
-Let $X$ be a caffine scheme.
-We will prove that that the the counit of $\adj{\Spec}{\globalsections}$, 
-namely \[\counit_X: X \rightarrow \Spec{\globalsections{O}},\] is an isomorphism.
-Set $R = \globalsections{O}$.
+Let $X$ be a caffine scheme. Set $R = \sect{X}{O}$.
+We will prove that the canonical morphism \[\counit_X: X \rightarrow \Spec{\sect{X}{O}}\] is an isomorphism.
+This morphism sends $x\in X$ to $\ker{x}$ as defined later.
 
-%TODO: look for place for locus-point and locus
+
 %TODO: read section and mark all issues
-\input{prf-dist-basis-scheme}
-\input{prf-every-closed-set-is-cut-out}
-\input{prf-ideal-cuts-out-closed-set}
-\input{prf-tfae-support-locus}
+%Definitions
+\input{def-support-module}
+\input{def-set-cut-out-ideal}
+\input{def-locus-point}
+\input{def-support-global-section}
 \input{prf-stalk-stilde}
-\input{prf-homeo}
+\input{prf-tfae-support-locus}
+
+\input{prf-ideal-cuts-out-closed-set}
+\input{prf-every-closed-set-is-cut-out}
+
+\input{prf-dist-basis-scheme}
+
 \input{prf-surjectivity}
 \input{prf-injectivity}
-\input{prf-open}
 
-%conclusion
+\input{prf-open}
+\input{prf-homeo}
 \input{prf-caffine-is-affine}
