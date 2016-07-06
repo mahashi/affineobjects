@@ -1,0 +1,24 @@
+\begin{lemma}\label[lemma]{4ae}
+For any $X \in \LocRingSpaces$ and $R\in \Rings$
+we have an isomorphism
+\[\Hom{X}{\Spec{R}}{\LocRingSpaces} \rightarrow \Hom{R}{\sect{X}{O}}{\Rings}\]
+that is natural in $X$ and $R$.
+In short \[\Spec: \Rings \rightarrow \LocRingSpaces\]
+is adjoint to \[\globalsections: \LocRingSpaces \rightarrow \Rings.\]
+\end{lemma}
+
+\begin{proof}
+Sending a morphism of locally ringed spaces $X \rightarrow \Spec R$ to its global component $R \rightarrow \sect{X}{O}$
+will turn out to be an isomorphism.
+The inverse is the following map. 
+
+Let $\varphi: R \rightarrow \sect{X}{O}$ be given.
+We need to construct a morphism of locally ringed spaces $(f,f^{\#})$.
+Define $f(x) = \ker(x)$.
+For distinguised open $D(f)\subset \Spec{R}$,
+define $f^{\#}_{D(f)}(\frac{s}{f}) = \frac{s}{f}$.
+This makes sense because $f \in \sect{X}{O}$ is invertible in $D_X(f)$
+
+These maps are mutually inverses and we have naturality.
+See \cite[Tag 01I1]{stacks}
+\end{proof}

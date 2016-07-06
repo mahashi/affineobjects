@@ -1,5 +1,3 @@
-TODO:
-
 - Notational: Over and undercat should contain reference to functor and then stated that this is suppressed.
 - Notational: use push forward and push back for the two induced functors on presheaf categories.
 
