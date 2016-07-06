@@ -1,0 +1,25 @@
+\begin{example}\label[example]{2ae}
+The category $C$ is $\Z \times \Z$ with the usual ordering.
+An element $(i,j)$ is only non-trivially covered 
+by $\{(i,j-1)\rightarrow (i,j),(i-1,j)\rightarrow (i,j)\}$.
+Let $k$ be any field.
+Let $R = k[x_{ij}| i,j\in \Z]$. 
+Define the structure sheaf 
+as $\sheaf{O}(i,j) = R[x_{kl}^{-1}| i\leq k \; \& \; j \leq l]$.
+
+Fix $(a,b) \in C$.
+Consider the over category $\overcat{C}{(a,b)}$ at this point.
+Let $(i,j)\rightarrow (a,b)$ be an object of $\overcat{C}{(a,b)}$.
+So $i\leq a$ and $j\leq b$.
+Define the presheaf of modules 
+$F(i,j) = \sheaf{O}(i,j)/(x_{a-1,b}x_{a,b-1})$ on $X$.
+We have $a > i$ or $b > j$ or ($i=a$ and $j=b$).
+If $a>i$ or $b>j$, then $x_{a-1,b}$ or $x_{a,b-1}$ is invertible in $\sheaf{O}(i,j)$, 
+hence $F(i,j) = 0$ in both cases.
+This presheaf is zero everywhere except at $(a,b)$,
+because both $x_{a-1,b}$ and $x_{a,b-1}$ are not invertible in $\sheaf{O}(a,b)$
+hence sheafifies to the zero sheaf.
+In other words: $\stilde{\frac{\sheaf{O}(a,b)}{(x_{a-1,b}x_{a,b-1})}} = 0$,
+Hence $(a,b)$ is not affine,
+which shows that $C$ has no affine objects.
+\end{example}

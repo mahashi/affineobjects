@@ -1,61 +1,7 @@
+\begin{example}\label[example]{2c7}
 %%% Example moved to N(y) setting
-Let $X,f_j$ and $U_n$ be as in the previous example.
-Define the full subcategory $N(y)\xrightarrow{i}\opens(X)$ of all opens $U$ that contain the point $y\in X$.
-
-This category has all fibre products. Let $U\rightarrow V \leftarrow W$ be two morphisms.
-Then $U \leftarrow U\cap W \rightarrow W$ is the pullback.
-
-On this category $N(y)$, let a family $\{f_i:U_i\rightarrow U\}$ be covering if $\union_i f_i(U_i) = U$. 
-
-Let $V\xrightarrow{f} U$ be an isomorphism, then $f(V)=U$ so $\{f\}$ is a covering family.
-
-Let $\{U_i \xrightarrow{f_i} U\}$ be a covering family. 
-For every $i$, let $\{U_{ij}\xrightarrow{f_{ij}} U_i\}$ be a covering family. 
-By definition this gives that $\union_i f_i(U_i)=U$ and $\union_j f_{ij}(U_ij)=U_i$ for every $i$. 
-Hence \[\union_{i,j} (f_i \circ f_{ij}) (U_{ij}) = \union_{i} f_i(U_i)=U\] and so the family 
-$\{U_{ij}\xrightarrow{f_i \circ f_{ij}} U\}$ is covering.
-
-Let $V\rightarrow U$ be a morphism in $N(y)$ and $\{U_i \xrightarrow{f_i} U\}$ be a covering family on $U$.
-This tells us that $\union_i f_i(U_i)=U$, hence also $\union_i g_i(U_i\cap V) = V$ where $g_i:U_i\cap V\rightarrow V$ is the pullback of $f_i$. 
-Hence $\{U_i\cap V\xrightarrow{g_i}V\}$ is a covering family of $V$.
-
-All criteria for a pretopology are established. Let $\tau$ be the generated Grothendieck topology.
-
-%%i is continuous
-Let $\sheaf{F}$ be a sheaf on $\opens{X}$.
-Let $\widehat{\sheaf{F}} = \sheaf{F}\circ i$.
-Let $\cover{U_i}{V}$ be a covering family on $V$ in $N(y)$.
-Let $(x)_i$ be a matching family of $\widehat{\sheaf{F}}$ indexed by $\cover{U_i}{V}$, so $x_i \in \widehat{\sheaf{F}}(U_i) = \sheaf{F}(U_i)$.
-Note that $\cover{U_i}{V}$ is also a covering family on $V$ in $\opens{X}$, hence $(x)_i$ is also a matching family of $\sheaf{F}$ on $V$.
-Since $\sheaf{F}$ is a sheaf, there exists a unique amalgamation $x\in \sheaf{F}(V)=\widehat{\sheaf{F}}(V)$ such that $x=x_i$ in $\sheaf{F}(U_i)=\widehat{\sheaf{F}}(U_i)$. 
-This shows that $\widehat{\sheaf{F}}$ is a sheaf, hence $i$ is continuous.
-
-Let $\sheaf{O}_{X,y} = \sheaf{O}_X\circ \tau$. This is a sheaf of rings by the previous.
-We constructed a ringed site $(N(y),\tau,\sheaf{O}_{X,y})$.
-
-%%adjunctions
-Let $F$ be the inclusion functor from the category of sheafs to the category of presheafs. 
-We have the adjunctions:
-
-\begin{enumerate}
-\item $(\Lambda(-),\Gamma(X,-))$,
-\item $((-)^{++},F)$.
-\end{enumerate}
-
-%%coproduct is still associated, holds in every ringed site
-The structure sheaf $O_{X,y}$ is, trivially, isomorphic to $\Lambda(\Gamma(X,O_{X,y}))$.
-By adjunction (2)
-\[\coproduct_i \sheaf{O}_{X,y} \iso (\coproduct_i \sheaf{O}_{X,y})^{+s},\]
-where the coproduct on the left hand side is in the category of sheafs and the coproduct on the right hand side in the category of presheafs.
-
-By adjunction (1)
-\[\coproduct_i \Lambda(\Gamma(X,O_{X,y})) \iso \Lambda(\coproduct_i \Gamma(X,O_{X,y})).\]
-
-Combine these 3 observation to get
-
-\[\coproduct_i \sheaf{O}_{X,y} \iso \Lambda(\coproduct_i \Gamma(X,O_{X,y})),\]
-
-which shows that $\coproduct_i \sheaf{O}_{X,y}$ is quasi-coherent.
+Let $X,f_j$ and $U_n$ be as in \Cref{26e}.
+Note that $\coproduct_i \sheaf{O}_{X,y}$ is quasi-coherent.
 
 
 %%Define \alpha
@@ -66,25 +12,23 @@ Define the sheaf map
 
 %%Proof \alpha is well-defined
 Fix $i$. We will prove that $\alpha_X(e_i)$ is a well-defined global section.
-Let $m>i$. Let $V_k=L_k\cup U_m$ and $\cover{V}=\{V_k\}$.
+Choose $m>i$. Let $V_k=L_k\cup U_m$ and note that $\Union_k V_k = X$.
 By construction $f_i$ is zero on $U_m$, hence $f_i \indicator_{L_j}$ is zero on $V_k$ if $k\neq j$ and so $\sum_{j} f_i \indicator_{L_j} e_{ij} = f_i\indicator{L_k}e_{ik}$ on $V_k$.
-This shows that $\alpha_X(e_i)$ is a well-defined section on any element of the cover $\cover{U_i}{V}$ and
+This shows that $\alpha_X(e_i)$ is a well-defined section on any element of the cover $\cover{V_k}{X}$ and
 this family is matching since the sections are functions and the 'restriction' maps are actual restriction.
 
 %%Absence of a \beta for every element
+Let $V \in N(y)$.
 Assume there exists $\beta: \coproduct_i \Gamma(V,O_{X,y}) \rightarrow \coproduct_{ij} \Gamma(V,O_{X,y})$ such that $\Lambda(\beta)=\alpha_V$.
-Then $\alpha_V(e_i)=\sum_{j} f_i \indicator_{L_j} e_{ij}$ is not just locally finite over some cover, but actually finite globally on $V$ for all $i$.
+Then $\alpha_V(e_i)=\sum_{j} f_i \indicator_{L_j} e_{ij}$ is not just locally finite over some cover that may depend on $i$, but actually finite globally on $V$ for all $i$.
 So almost all $f_i \indicator_{L_j}$ are zero on $V$. 
 Note that $y\in V$, so $U_d\subset V$ for some $d$. 
 Let $i>2d$, then $f_i\neq 0$ on $(-\frac{1}{d},\frac{1}{d})$ and so $f_i \indicator_{L_j}\neq 0$ on $U_d$ for any $j$.
 Hence $\alpha_V(e_i)=\sum_{j} f_i \indicator_{L_j} e_{ij}$ is not a finite sum for $i>2d$. 
-This contradicts our assumption.
-
-%%Mistake
-Let $U\subset X$ be $U\cap L_j = U_{j}$. Fix $i$.
-Then $f_i\indicator_{L_j}=0$ if $i<j$, hence \[\sum_{j} f_i \indicator_{L_j} e_{ij}=\sum_{j\leq i} f_i \indicator_{L_j} e_{ij}\] is a finite sum.
+This contradicts our assumption, so $\alpha$ does not come 
 
 %%Conclude no element is affine
 The restriction of any quasi-coherent sheaf is quasi-coherent. 
-Observe that $\alpha$, and its restrictions, is a morphism between quasi-coherent sheafs but does not come from a map of modules.
-Therefore $\Lambda(-)_V: \Gamma(V, O_{X,y})-\mbox{Mod} \rightarrow \qcoh{V}$ is not full for any $V$ and no object $V$ is affine in $N(y)$.
+Observe that $\alpha$, and its restrictions, is a morphism between quasi-coherent sheafs but does not come from a map of modules by the previous contradiction.
+Therefore $\stilde$ is not full for any $V$ and so no object $V$ is caffine in $N(y)$.
+\end{example}

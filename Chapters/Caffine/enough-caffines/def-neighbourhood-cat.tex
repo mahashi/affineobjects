@@ -1,7 +1,11 @@
-\begin{definition}[Neighbourhood site]\label[definition]{268}
+\begin{definition}[Neighbourhood site]\label[definition]{267}
 Let $X$ be a topological space 
-and $\Open{X}$ the corresponding category of open subsets.
+and $\opens{X}$ the corresponding category of open subsets.
 Let $y\in X$. 
-Define the category $N(y)$ to be the full subcategory of $Open{X}$ of all neighbourhoods $U$ of $y$.
-A family $\cover{U_i}{U}$ is covering on $U$ if it is covering in $\Open{X}$.
+Define the category $N(y)$ to be the full subcategory of $\opens{X}$ of all neighbourhoods $U$ of $y$.
+A family $\cover{U_i}{U}$ is covering on $U$ in $N(y)$ if it is covering in $\opens{X}$.
+Note that $i: N(y) \rightarrow \opens{X}$ is a morphism of sites.
+
+Assume that $X$ is a ringed space coming with a structure sheaf $\sheaf{O}$.
+Define $\sheaf{O}_{X,y} = \direct{i}\sheaf{O}$. This is a sheaf as mentioned in \Cref{962}.
 \end{definition}

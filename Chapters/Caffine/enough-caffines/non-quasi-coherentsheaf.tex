@@ -1,7 +1,7 @@
-
-
+%TODO: nakijken
+\begin{example}\label[example]{33b}
 Let $C$ be a ringed site with no affines. 
-Therefore no object can have the empty sieve as a covering sieve, because that would make all sheafs trivial localized at this object.
+Therefore no object can have the empty sieve as a covering sieve, because that would make all sheafs trivial restricted at this object.
 Let $\sheaf{O}$ be its structure sheaf.
 
 Let $a$ be an object of $C$.
@@ -42,8 +42,10 @@ Define the presheaf $\presheaf{F}$ as
 \[ x \mapsto \sheaf{O}(x) \mbox{ if } \Hom{x}{a}=\emptyset, \]
 \[ x \mapsto \sheaf{O}(x)[y] \otherwise,\] 
 
-\[ u \xrightarrow{f} v \mapsto \sheaf{O}(f) \mbox{ if } \Hom{x}{a}=\emptyset, \]
-\[ (u \xrightarrow{f} v) \mapsto (\sheaf{O}(u) \rightarrow \sheaf{O}(u)[y]) \circ \sheaf{O}(f) \otherwise.\]
+\[ u \xrightarrow{f} v \mapsto \sheaf{O}(f) \mbox{ if } \Hom{u}{a} = \emptyset, \]
+\[ u \xrightarrow{f} v \mapsto (\sheaf{O}(u) \rightarrow \sheaf{O}(u)[y]) \circ \sheaf{O}(f) 
+\mbox{ if } \Hom{u}{a} \neq \emptyset \; \& \; \Hom{v}{a} = \emptyset,\]
+\[ u \xrightarrow{f} v \mapsto \sheaf{O}(f) \otherwise.\]
 
 Let $G = \presheaf{F}^{++}$.
 
@@ -73,3 +75,4 @@ Hence $G$ is not locally presentable.
 \item Neighbourhood space of any point in any topological space.
 \item categories with pullbacks, terminal object and are irreducible.
 \end{itemize}
+\end{example}
