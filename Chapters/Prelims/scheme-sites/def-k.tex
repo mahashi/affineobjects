@@ -1,4 +1,4 @@
-\begin{definition}[k]\label[definition]{7eb}
+\begin{definition}[k]\label[definition]{a49}
 Let $X$ be a scheme.
 Define the functor $k:\opens{X} \rightarrow \overschemes{X}$
 by $U \mapsto ((U,\sheaf{O}_U),i)$
@@ -13,7 +13,10 @@ of $k(U) \rightarrow k(V)$ and $k(W) \rightarrow k(V)$.
 Let $S= \set{D(f_i) \rightarrow \Spec{R}}$ be one of the generating family in $\opens{X}$.
 Note that $k(D(f_i))$ is isomorphic to the object $\Spec{R_{f_i}} \rightarrow \Spec{R}$.
 Hence $k(S)$ generates a covering sieve on $\schemes$ and hence on $\overschemes{X}$.
+We established that $k$ is a morphism of sites.
 
-So $k$ is a morphism of sites as defined in \Cref{98b}.
+Consider $\rsite{\opens{X}}{T}{O}$ and $\rsite{\overschemes{X}}{S}{U}$.
+Note that $\direct{k}U = O$ by construction.
+Define the morphism of ringed sites $(k,\id)$.
+We will denote this by $k$.
 \end{definition}
-%TODO: has k a left adjoint?

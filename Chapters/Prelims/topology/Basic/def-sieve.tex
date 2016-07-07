@@ -1,4 +1,4 @@
-\begin{definition}[Sieve]\label[definition]{981}
+\begin{definition}[Sieve]\label[definition]{bea}
 Let $\cat{C}$ be a category 
 and $a \in \cat{C}$.
 Define the maximal sieve $\maxsieve{a}$ on $a$ to be the collection of all morphisms to $a$.
@@ -6,5 +6,5 @@ In formula,
 \[\maxsieve{a} = \set{ f \in \cat{C} \suchthat \codomain{f} = a}.\]
 
 A sieve $S$ on $a$ is a subcollection of $\maxsieve{a}$ such that 
-$gf \in S$ for any $f\in S$ and any $g$.
+$f\circ g \in S$ for any $f\in S$ and any $g$.
 \end{definition}

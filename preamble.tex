@@ -227,7 +227,7 @@
 \newcommand{\definedAs}{:=}
 \newcommand{\basis}{\topo}
 \newcommand{\intersect}{\cap}
-
+\newcommand\pair[2]{(#1,#2)}
 \newcommand{\Sets}{\cat{Set}}
 \newcommand{\opens}[1]{\cat{Open}(#1)}
 \newcommand{\site}[2]{(\cat{#1}, \topo{#2})}
@@ -295,6 +295,18 @@
  \IfNoValueTF{#2} 
     {}
     {\; #2}%
+}
+
+\DeclareDocumentCommand{\overcat}{ m m g }{% 
+ \IfNoValueTF{#3} 
+    {\cat{#1}_{#2}}
+    {\cat{#1}_{#2,#3}}%
+}
+
+\DeclareDocumentCommand{\undercat}{ m m g }{% 
+ \IfNoValueTF{#3} 
+    {\cat{#1}^{#2}}
+    {\cat{#1}^{#2,#3}}%
 }
 
 \DeclareDocumentCommand{\yoneda}{ g }{%

@@ -1,4 +1,4 @@
-\begin{definition}[inverse image of presheaves]\label[definition]{4c1}
+\begin{definition}[inverse image of presheaves]\label[definition]{6f8}
 Let $\cat{C}, \cat{D}$ be a categories.
 Let $f: \cat{C} \rightarrow \cat{D}$ be a functor.
 Define the inverse image functor
@@ -6,5 +6,6 @@ $\inverseimg{f}: \presheaves{C} \rightarrow \presheaves{D}$
 as follows.
 Let $\presheaf{F} \in \presheaves{C}$.
 For any $d \in \cat{D}$ 
-\[\inverseimg{f}(F)(d) = \colim{\overcat{D}{d}}{\presheaf{F}u} .\]
+\[\inverseimg{f}(\sheaf{F})(d) = \colim{\undercat{C}{d}{f}}{\presheaf{F}} .\]
+See \cite[\href{http://stacks.math.columbia.edu/tag/00VC}{Tag 00VC}]{stacks}.
 \end{definition}

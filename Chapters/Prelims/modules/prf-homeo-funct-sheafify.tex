@@ -1,7 +1,7 @@
-\begin{lemma}\label[lemma]{704}
+\begin{lemma}\label[lemma]{97d}
 Let $F:\site{C}{T} \rightarrow \site{D}{S}$
 be a morphism of sites that lift covers.
-Then $\direct{F} \plus = \plus \direct{F}$ 
+Then $\direct{F} \circ \plus = \plus \circ \direct{F}$ 
 and hence also $\direct{F} \circ \sheafify = \sheafify \circ \direct{F}$.
 \end{lemma}
 
@@ -12,7 +12,7 @@ Let $\presheaf{G}$ be a presheaf on $\cat{D}$.
 Let $s = \matchfam{s}{i}{R}$ be a matching family in $\direct{F}\presheaf{G}$ 
 on $c$ indexed by $R$. So $s_i \in \sect{F(\dom{i})}{G}$.
 By the cover preserving assumption we know $F(R)$ generates a covering sieve $S$ on $F(c)$.
-Define the natural transformation $T: \direct{F}\plus \rightarrow \plus \direct{F}$ by 
+Define the natural transformation $T: \direct{F}\circ \plus \rightarrow \plus \circ \direct{F}$ by 
 \[ s \mapsto \matchfam{t}{j}{S} \]
 
 where $t_j = F(h)s_i$ for some factorisation $j=F(i)h$. 
@@ -40,30 +40,6 @@ This produces a matching family because restriction in $\direct{F}\presheaf{G}$ 
 Note that now $T(s) = t$. Hence we got surjectivity.
 \end{proof}
 
-\begin{example}\label[example]{72e}
-The morphism of ringed sites $u$ satisfies the conditions of \Cref{704}
-and so commutes with sheafification.
-\end{example}
-
-\begin{corollary}\label[corollary]{733}
+\begin{corollary}\label[corollary]{9a7}
 We have $\direct{F}\omega = \omega$ and hence also $\direct{F}\omega^2=\omega^2$
 \end{corollary}
-
-% \begin{proof}
-% For any section $x \in \sections{b}{F}$.
-% Let $x_i = \presheaf{F}(i)(x)$ for any morphism $i \in \cat{C}$. 
-% Note that $\maxsieve{f} = \maxsieve{b}$.
-% This implies that the compatible family $\set{x_i}$ indexed by the maximal sieve on $f$
-% is sent by $s$ to the same set $\set{x_i}$ indexed by the maximal sieve on $b$.
-% In diagram form, that
-
-% \begin{center}
-% 	\begin{tikzcd}
-% 		\direct{u} \presheaf{F} \arrow{d}{\direct{u}\omega_{\presheaf{F}}} \arrow{dr}{\omega_{\direct{u} \presheaf{F}}} \\
-% 		\direct{u} \plus{\presheaf{F}}  \arrow{r}{s} &
-% 		\plus{(\direct{u} \presheaf{F})}
-% 	\end{tikzcd}
-% \end{center}
-
-% commutes.
-% \end{proof}

@@ -26,7 +26,7 @@ Let $y\in X$. Define $N(y)$ to be the full subcategory of $Open(X)$ with all nei
 
 %%%%%%%%%%%%%%%%%%%%%%% Restrictiveness %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %def of a restrictive map
-\begin{definition}\label[definition]{84}
+\begin{definition}\label[definition]{272}
 Let $f:C\rightarrow D$ be a map in $\cat{C}$.
 We call it \emph{restrictive} if for any quasi-coherent $\sheaf{F}$ the map
 \[\sheaf{F}(D)\xrightarrow{\sheaf{F}(f)} \sheaf{F}(C)\]
@@ -43,12 +43,12 @@ induces an isomorphism
 
 
 %%%%% def of global section functor
-\begin{definition}\label[definition]{95}
+\begin{definition}\label[definition]{283}
 Define the global sections functor $\Gamma(-):\presheafcat{\cat{C}}\rightarrow Set$ as $\Hom{\ast}{- }$.
 Equivalently, one can define it as the limit of the diagram $\cat{C}\xrightarrow{\presheaf{G}} Set$ for any presheaf $\presheaf{G}$.
 Taking limits is functorial so this gives a functor.
 \end{definition}
-\begin{remark}\label[remark]{9a}
+\begin{remark}\label[remark]{288}
 The forgetful functor from rings, modules or abelian groups has a right adjoint so it commutes with limits.
 Hence if $\presheaf{G}$ takes values in the category of rings,
 modules or abelian groups, then the set $\Gamma(\presheaf{G})$ can be endowed with extra structure making it into the limit taken of
@@ -59,7 +59,7 @@ rings, modules or abelian groups respectively.
 
 Let $X = (\cat{C},\topo{T},\sheaf{O})$ be a ringed site.
 
-\begin{definition}\label[definition]{a5}
+\begin{definition}\label[definition]{293}
 The \emph{tilde} functor 
 \[\widetilde{-}:\Gamma(\O)-Mod\rightarrow \presheafcat{\cat{C}}\]
 is 
@@ -82,7 +82,7 @@ Define the tilde functor as the left adjoint to $\circ \pi$, which exists since 
 \end{definition}
 
 %prove adjunction between tilde and global sections
-\begin{lemma}\label[lemma]{bc}
+\begin{lemma}\label[lemma]{2aa}
 The functor $\widetilde{(-)}$ is left adjoint to $\Gamma(-)$.
 \end{lemma}
 \begin{proof}
@@ -97,7 +97,7 @@ Proof: Let $M$ be a $\Gamma(\sheaf{O}$ module and $\presheaf{G}$ a \sheaf{O} mod
 %Extend it to sheaves
 
 
-\begin{definition}\label[definition]{cb}
+\begin{definition}\label[definition]{2b9}
 An object $C\in\cat{C}$ is called \emph{affine}
 if the unit and co-unit in the adjunction $(\widetilde{-}, \Gamma{})$ are isomorphisms.
 \end{definition}
