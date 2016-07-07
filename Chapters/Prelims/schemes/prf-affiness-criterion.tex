@@ -1,14 +1,4 @@
-\begin{definition}
-Let $X$ be a scheme.
-Let $f\in \sect{X}{O}$.
-Define $X_f$ to be the pullback of $D(f) \rightarrow \Spec{\sect{X}{O}} \leftarrow X$.
-\end{definition}
-
-\begin{definition}
-A morphism $f:X\rightarrow Y$ of schemes is called affine if for any affine open $U\subset Y$ we have $\inverse{f}(U)$ is affine.
-\end{definition}
-
-\begin{lemma}
+\begin{lemma}\label[lemma]{bb2}
 Let $X$ be a scheme.
 If $X_{f_i}$ is affine for all $i$ 
 and $(f_i)_{i\in I} =(1)$ then $X$ is affine. 
@@ -16,9 +6,9 @@ and $(f_i)_{i\in I} =(1)$ then $X$ is affine.
 
 \begin{proof}
 Let $\Union_i D(f_i) = \Spec{\sect{X}{O}}$.
-Consider $\counit: X\rightarrow \Spec{\sect{X}{O}}$.
+Consider the canonical $\counit: X\rightarrow \Spec{\sect{X}{O}}$.
 By definition $\inverse{\counit}(D(f_i)) = X_{f_i}$.
 By assumption $X_{f_i}$ is affine.
-By \cite[\cite[\href{http://stacks.math.columbia.edu/tag/01S8}{Tag 01S8}]{stacks}]
+By \cite[\href{http://stacks.math.columbia.edu/tag/01S8}{Tag 01S8}]{stacks}]
 the morphism $\counit$ is affine, hence $X$ is affine.
 \end{proof}

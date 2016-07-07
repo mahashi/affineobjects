@@ -1,4 +1,4 @@
-\begin{lemma}
+\begin{lemma}\label[lemma]{398}
 The following are equivalent:
 \begin{enumerate}
 	\item $X$ is affine
@@ -8,16 +8,16 @@ The following are equivalent:
 \end{lemma}
 
 \begin{proof}
-1 \Rightarrow 2:
+$1 \Rightarrow 2$:
 Assume that $X = \Spec R$.
 Then $\ker{\Ip} = \Ip$ for $\Ip \in X$, so the topological part of $\counit_X$ is an homeomorphism.
 The sheaf part of $\counit_X$ sends the global section $1\in \sheaf{O}(X)$ to $1 \in R$,
 since the sheaf morphism is a $\sheaf{O}_{\Spec{R}}$-algebra map, it has to be the identity.
 
-2 \Rightarrow 3:
+$2 \Rightarrow 3$:
 By definition.
 
-3 \Rightarrow 1:
+$3 \Rightarrow 1$:
 Let $\Spec A_i = U_i \subset X$ be open affines
 and suppose $\union_i U_i = X$.
 Assume it is a finite affine cover, which can be done since $X$ is quasi-compact.
@@ -32,6 +32,6 @@ we get a finite cover of affines $D_X(a_{ij})$ of $X$.
 Since 
 \[ \counit_X(X) = \counit_X(\union_{ij} D_X(a_{ij})) = \union_{ij} D_{\Spec{R}}(a_{ij}) = \Spec R,\]
 we have $(a_{ij})=(1)$.
-Now both requirements of \cite[Ex.2.17]{harts} are satisfied,
+Now both requirements of \Cref{bb2} are satisfied,
 hence $X$ is affine.
 \end{proof}
