@@ -2,7 +2,12 @@
 The counit $\counit_X$ is open, hence a homeomorphism.
 \end{lemma}
 \begin{proof}
-Since $\counit_X$ is a morphism of locally ringed spaces, if $a\not in \ker{x}$ then $a\not \in \ker{\counit_X(x)}$.
+Let $a \in R$.
+Let $x\in X$.
+Let $\Ip = \counit_X(x)$.
+Since $\counit_X$ is a morphism of locally ringed spaces,
+if $a\not\in \ker{x}$ then $a\not \in \ker{\Ip} = \Ip$.
+Note that $\ker{\blank}$ is defined for arbitrary schemes so also works on $\Spec{R}$.
 Hence
 $\counit_X(D_X(a))= \{\counit_X(x) \st a\not\in \ker(x)\} = \counit_X(X) \intersect D_{\Spec R}(a) = D_{\Spec R}(a)$.
 Our map $\counit_X$ is continuous and open, so a homeomorphism.

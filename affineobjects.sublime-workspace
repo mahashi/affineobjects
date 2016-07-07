@@ -4,16 +4,16 @@
 		"selected_items":
 		[
 			[
+				"end",
+				"end{proof}	main.tex"
+			],
+			[
 				"stack",
 				"stacksrepl"
 			],
 			[
 				"stac",
 				"stacks_re"
-			],
-			[
-				"end",
-				"end{question}	main.tex"
 			],
 			[
 				"no",
@@ -96,75 +96,26 @@
 	"buffers":
 	[
 		{
-			"contents": "\\input{def-direct-img}\n\\input{def-inverse-image}\n\\input{prf-adjunction}",
-			"file": "Chapters/Prelims/basic-cat/main-induced-functors.tex",
-			"file_size": 140,
-			"file_write_time": 131122901966735391,
+			"file": "Chapters/Restrictive/restrictive/rmk-hat-omega.tex",
 			"settings":
 			{
-				"buffer_size": 71,
+				"buffer_size": 257,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Chapters/Prelims/basic-cat/prf-adjunction.tex",
+			"file": "Chapters/Restrictive/main.tex",
 			"settings":
 			{
-				"buffer_size": 325,
+				"buffer_size": 817,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Chapters/Prelims/topology/Basic/def-sieve.tex",
+			"file": "FrontBackMatter/acknowledgements.tex",
 			"settings":
 			{
-				"buffer_size": 403,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Prelims/basic-cat/def-inverse-image.tex",
-			"settings":
-			{
-				"buffer_size": 503,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\\begin{definition}[Over/Under categories]\\label[definition]{4d0}\nLet $\\cat{C}$ and $\\cat{C'}$ be categories. \nLet $F:\\cat{C}\\rightarrow \\cat{C'}$ and $z\\in C'$. \nDefine the category $\\overcat{C}{z}$ and $\\undercat{C}{z}$ as \n\n\\[\\obj{\\overcat{C}{z}{F}} := \\{(a,w) \\suchthat a\\in \\cat{C}, w:F(a)\\rightarrow z\\},\\]\n\\[\\Hom{(a,w)}{(b,v)} := \\{f:a\\rightarrow b \\suchthat v\\circ F(f) = w  \\},\\]\n\nand\n\n\\[\\obj{\\undercat{C}{z}{F}} := \\{(a,w) \\suchthat a\\in \\cat{C}, w:z\\rightarrow F(a)\\},\\]\n\\[\\Hom{(a,w)}{(b,v)} := \\{f:a\\rightarrow b \\suchthat F(f) \\circ w = v  \\}.\\]\n\nWe get faithful functors \n$\\overcat{C}{z} \\rightarrow \\cat{C}: (a,w)\\rightarrow a$ \nand \n$\\undercat{C}{z} \\rightarrow \\cat{C}: (a,w)\\rightarrow a$.\nWe will denote them both by $u$.\n\\end{definition}",
-			"file": "Chapters/Prelims/basic-cat/def-over-cat.tex",
-			"file_size": 768,
-			"file_write_time": 131122883710343745,
-			"settings":
-			{
-				"buffer_size": 756,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\\documentclass[\n  % Replace twoside with oneside if you are printing your thesis on a single side\n  % of the paper, or for viewing on screen.\n  %oneside,\n  oneside,\n  11pt, a4paper,\n  footinclude=true,\n  headinclude=true,\n  cleardoublepage=empty\n]{scrbook}\n\n\\usepackage[english]{babel}\n\\setlength\\parindent{0pt}\n\\setlength{\\parskip}{2.5mm}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage{tikz-cd}\n\\usepackage{xstring}\n\\usepackage{csquotes}\n\\usepackage[backend=biber]{biblatex}\n\\addbibresource{affineobjects.bib}\n\\usepackage{url}\n\\usepackage{hyperref}\n\\usepackage{cleveref}\n\\usepackage{verbatim}\n\\usepackage{amsmath, amsthm, amsfonts, mathrsfs,bbm}\n\\usepackage{amssymb}\n\\usepackage{import}\n\\usepackage{mathtools}\n\\usepackage{eulervm}\n\\usepackage{concrete}\n\\usepackage{wasysym}\n\\usepackage{xparse}\n\n%\\usepackage[linedheaders,parts,pdfspacing]{classicthesis}\n\n    %%%%%%%%%%\n    % MACROS %\n    %%%%%%%%%%\n\n\\newcounter{dummy}\n\\theoremstyle{plain}% default\n\\newtheorem{theorem}{Theorem}[section]\n\\newtheorem{lemma}[theorem]{Lemma}\n\\newtheorem{question}[theorem]{Question}\n\\newtheorem{proposition}[theorem]{Proposition}\n\\newtheorem{corollary}[theorem]{Corollary}\n\\theoremstyle{definition}\n\\newtheorem{definition}[theorem]{Definition}\n\\newtheorem{notation}[theorem]{Notation}\n\\newtheorem{conjecture}[theorem]{Conjecture}\n\\newtheorem{example}[theorem]{Example}\n\\newtheorem{nonexample}[theorem]{Non-Example}\n\\newtheorem{exercise}[dummy]{Exercise}\n\\newtheorem*{solution}{Solution}\n\\newtheorem{construction}[theorem]{Construction}\n\\theoremstyle{remark}\n\\newtheorem{remark}[theorem]{Remark}\n\n\\newtheorem*{todo}{\\begin{color}{red}{TODO}\\end{color}}\n\\newtheorem*{Qanswer}{\\textbf{Answer}}\n\\newtheorem{note}{Note}\n\\newtheorem*{case}{Case}\n\n% solution environment\n\\newenvironment{answer}[1]\n{\\section*{Exercise #1}}\n{}\n\n% sub solution environment\n\\newenvironment{subanswer}[1]\n{\\subsection*{#1}}\n{\\qed}\n\n\n\n\n%mathbb\n\\newcommand{\\F}{\\ensuremath{\\mathbb{F}}}\n\\newcommand{\\N}{\\ensuremath{\\mathbb{N}}}\n\\newcommand{\\Z}{\\ensuremath{\\mathbb{Z}}}\n\\newcommand{\\Q}{\\ensuremath{\\mathbb{Q}}}\n\\newcommand{\\R}{\\ensuremath{\\mathbb{R}}}\n\\newcommand{\\C}{\\ensuremath{\\mathbb{C}}}\n\\newcommand{\\A}{\\ensuremath{\\mathbb{A}}}\n\\renewcommand{\\S}{\\ensuremath{\\mathbb{S}}}\n\\renewcommand{\\P}{\\ensuremath{\\mathbb}{P}}\n\\newcommand{\\G}{\\ensuremath{\\mathbb}{G}}\n\n\\newcommand{\\indicator}{\\ensuremath{\\mathbbm}{1}}\n\n\n% Mathbf\n\\newcommand{\\bN}{\\ensuremath{\\mathbf{N}}}\n\\newcommand{\\bZ}{\\ensuremath{\\mathbf{Z}}}\n\\newcommand{\\bQ}{\\ensuremath{\\mathbf{Q}}}\n\\newcommand{\\bF}{\\ensuremath{\\mathbf{F}}}\n\\newcommand{\\bR}{\\ensuremath{\\mathbf{R}}}\n\\newcommand{\\bC}{\\ensuremath{\\mathbf{C}}}\n\\newcommand{\\bS}{\\ensuremath{\\mathbf{S}}}\n\\newcommand{\\bP}{\\ensuremath{\\mathbf}{P}}\n\n\n% calligraphic\n\\newcommand{\\curly}[1]{\\ensuremath{\\mathcal{#1}}}\n\\newcommand{\\topo}[1]{{\\ensuremath{\\mathcal{#1}}}}\n\\newcommand{\\cat}[1]{{\\ensuremath{\\mathsf{#1}}}}\n\\newcommand{\\curlyK}{\\ensuremath{\\mathcal{K}}}\n\\newcommand{\\curlyH}{\\ensuremath{\\mathcal{H}}}\n\\newcommand{\\curlyF}{\\ensuremath{\\mathcal{F}}}\n\\newcommand{\\curlyT}{\\ensuremath{\\mathcal{T}}}\n\\renewcommand{\\O}{\\ensuremath{\\mathcal{O}}}\n\\newcommand{\\curlyR}{\\ensuremath{\\mathscr{R}}}\n\\newcommand{\\curlyP}{\\ensuremath{\\mathscr{P}}}\n\\newcommand{\\curlyA}{\\ensuremath{\\mathscr{A}}}\n\\newcommand{\\curlyS}{\\ensuremath{\\mathscr{S}}}\n\\newcommand{\\curlyZ}{\\ensuremath{\\mathscr{Z}}}\n\\newcommand{\\curlyI}{\\ensuremath{\\mathscr{I}}}\n\n\n\n% frakd\n\\newcommand{\\sheaf}[1]{\\ensuremath{\\mathfrak{#1}}}\n\\newcommand{\\presheaf}[1]{\\ensuremath{\\mathfrak{#1}}}\n\\newcommand\\psh\\presheaf\n\\newcommand{\\Ip}{\\ensuremath{\\mathfrak{p}}}\n\\newcommand{\\Iq}{\\ensuremath{\\mathfrak{q}}}\n\\newcommand{\\Ia}{\\ensuremath{\\mathfrak{a}}}\n\\newcommand{\\Ib}{\\ensuremath{\\mathfrak{b}}}\n\\renewcommand{\\Im}{\\ensuremath{\\mathfrak{m}}}\n\\newcommand{\\shf}{\\ensuremath{\\mathfrak{F}}}\n\\newcommand{\\Fs}{\\ensuremath{\\mathfrak{F}}}\n\\newcommand{\\Is}{\\ensuremath{\\mathfrak{I}}}\n\\newcommand{\\Js}{\\ensuremath{\\mathfrak{J}}}\n\\newcommand{\\shg}{\\ensuremath{\\mathfrak{G}}}\n\\newcommand{\\Gs}{\\ensuremath{\\mathfrak{G}}}\n\\newcommand{\\Nil}{\\ensuremath{\\mathfrak{N}}}\n\n\n% Delimiters\n\\DeclarePairedDelimiter\\abs{\\lvert}{\\rvert}\n\\DeclarePairedDelimiter\\brac[]\n\\DeclarePairedDelimiter\\cbrace\\{\\}\n\\DeclarePairedDelimiter\\paren()\n\\DeclarePairedDelimiter{\\gen}\\langle\\rangle\n\\DeclarePairedDelimiter{\\nrm}\\lVert\\rVert\n\\DeclarePairedDelimiter{\\card}\\lVert\\rVert\n\\newcommand\\idealgen\\paren\n% custom commands\n%\\newcommand{\\colim}[1]{\\underset{#1}{colim}}\n\\newcommand{\\limit}[1]{\\underset{#1}{lim}}\n\\newcommand{\\se}{\\ensuremath{\\subseteq}}\n\\newcommand{\\tbs}{\\textbackslash }\n\\newcommand{\\sh}{\\backslash}\n\n\n\\newcommand\\compl[1]{{#1}^c}\n\\newcommand{\\iso}{\\cong}\n\\newcommand{\\kr}{\\mbox{Ker}}\n\\newcommand{\\im}{\\mbox{Im}}\n\\newcommand{\\Sup}{\\mbox{Supp}}\n\\newcommand{\\Ht}{\\mathfrak{h}\\mathfrak{t}}\n\\newcommand{\\Dim}[1]{\\mbox{Dim}(#1)}\n\\newcommand{\\Span}[1]{\\mbox{Span}_{#1}}\n\\renewcommand{\\deg}{\\mbox{deg }}\n\\newcommand{\\eq}{\\sim}\n\\renewcommand{\\to}{\\mapsto}\n\\newcommand{\\givenby}{,\\quad}\n\\newcommand{\\Rspec}{\\mbox{Rspec }}\n\\newcommand{\\Ann}{\\mbox{Ann}}\n\\newcommand{\\Der}{\\mbox{Der}}\n\\newcommand{\\Trdg}{\\mbox{Tr.dg }}\n\\newcommand{\\Proj}{\\mbox{Proj }}\n\\newcommand{\\Sp}{\\mbox{sp }}\n\\newcommand{\\Dom}[1]{\\mbox{Dom}(#1)}\n\\newcommand{\\coproduct}{\\bigoplus}\n\\newcommand{\\product}{\\prod}\n\\newcommand{\\presheafcat}[1]{\\widehat{#1}}\n\n\\newcommand{\\Dist}{\\mbox{\\textbf{Dist}}}\n%Category theory\n\n\\newcommand\\disjointunion\\sqcup\n\\newcommand\\Disjointunion\\bigsqcup\n\\newcommand{\\Sch}{\\cat{Sch}}\n\\newcommand\\Schemes\\Sch\n\\newcommand{\\Rng}{\\cat{Rng}}\n\\newcommand\\Rings\\Rng\n\\newcommand{\\CmRng}{\\cat{CmRng}}\n\\newcommand\\LocRingSpaces{\\cat{LRSpaces}}\n\n\\newcommand{\\union}{\\bigcup}\n\\newcommand\\Union\\union\n\\newcommand{\\opUnion}{\\cup}\n\\newcommand{\\match}[2]{\\mbox{Match}(#1,#2)}\n\\newcommand\\matchfam[3]{\\set{{#1}_{#2} \\suchthat #2 \\in #3}}\n\\newcommand{\\cov}{\\mbox{Cov}}\n\\newcommand{\\Opp}[1]{{#1}^{Opp}}\n\\newcommand{\\Opposite}[1]{{#1}^{Opp}}\n\n% Differential operators\n\\renewcommand\\qedsymbol{\\rule{1ex}{1ex}}\n\\newcommand{\\from}{\\ensuremath{\\colon}}\n\\renewcommand{\\iff}{if and only if }\n\\newcommand{\\tensor}{\\otimes}\n\\newcommand{\\heq}{\\simeq}\n\\newcommand{\\st}{\\;|\\;}\n\n\n\\newcommand{\\copresheaves}[1]{\\hat{\\cat{#1}}}\n\\newcommand{\\presheaves}{\\copresheaves}\n\\newcommand{\\functors}[2]{[\\cat{#1},\\cat{#2}]}\n\\newcommand{\\opposite}[1]{\\cat{#1}^{op}}\n\\newcommand{\\opp}{\\opposite}\n%\\newcommand{\\coyoneda}[1]{h_{#1}}\n\\newcommand\\ynd\\yoneda\n\\newcommand\\y\\ynd\n\\newcommand{\\contrayoneda}[1]{h^{#1}}\n\\newcommand{\\overcat}[2]{\\cat{#1}_{#2}}\n\\newcommand{\\undercat}[2]{\\cat{#1}^{#2}}\n\\newcommand{\\oversite}{\\overcat}\n\\newcommand{\\undersite}{\\undercat}\n\\newcommand\\overschemes[1]{\\overcat{\\schemes}{#1}}\n\\newcommand{\\obj}[1]{Obj(\\cat{#1})}\n\\newcommand{\\signature}[3]{#1:#2\\rightarrow #3}\n\\newcommand{\\suchthat}{ \\mid }\n\\newcommand{\\definedAs}{:=}\n\\newcommand{\\basis}{\\topo}\n\\newcommand{\\intersect}{\\cap}\n\n\\newcommand{\\Sets}{\\cat{Set}}\n\\newcommand{\\opens}[1]{\\cat{Open}(#1)}\n\\newcommand{\\site}[2]{(\\cat{#1}, \\topo{#2})}\n\\newcommand{\\ringedspace}[2]{({#1}, {\\sheaf{#2}})}\n\\newcommand\\rspace\\ringedspace\n\\newcommand\\scheme\\ringedspace\n\\newcommand{\\rsite}[3]{(\\cat{#1}, \\topo{#2}, {\\sheaf{#3}})}\n\n\n% \\newcommand{\\rsite}[2]{({\\cat{#1}}, {\\sheaf{#2}})}\n\n\\newcommand{\\adjunction}[2]{{#1} \\dashv {#2}}\n\\newcommand{\\adj}{\\adjunction}\n\n\n%\\newcommand{\\stilde}[1]{\\Lambda(#1)}\n\\DeclareDocumentCommand{\\stilde}{ g g }{%\n \\IfNoValueTF{#2}%\n          {\\IfNoValueTF{#1}%\n            {\\Lambda}%\n            {\\Lambda(#1)}%\n          }%\n          {\\Lambda_{#1}(#2)}%\n}\n\\DeclareDocumentCommand{\\pstilde}{ g g }{%\n \\IfNoValueTF{#2}%\n          {\\IfNoValueTF{#1}%\n            {\\lambda}%\n            {\\lambda(#1)}%\n          }%\n          {\\lambda_{#1}(#2)}%\n}\n\n\\DeclareDocumentCommand{\\restrict}{ m g }{%\n \\IfNoValueTF{#2}%\n          {\\restrictie{\\pt}{#1}}%\n          {\\restrictie{#2}{#1}}%\n}\n\\newcommand\\restrictOpt\\restrict\n\\newcommand\\restr\\restrict\n\\newcommand\\restrictie[2]{{% we make the whole thing an ordinary symbol\n  \\left.\\kern-\\nulldelimiterspace % automatically resize the bar with \\right\n  #1 % the function\n  \\vphantom{\\big|} % pretend it's a little taller at normal size\n  \\right|_{#2} % this is the delimiter\n}}\n\n\\DeclareMathOperator{\\HHom}{Hom}\n\\DeclareDocumentCommand{\\Hom}{ m m g }{%\n \\IfNoValueTF{#3}%\n          {\\HHom(#1,#2)}%\n          {\\HHom_{#3}(#1,#2)}%\n}\n\n\n\\DeclareDocumentCommand{\\colimit}{ m g }{%\n \\underset{#1}{\\mbox{colim} } \n \\IfNoValueTF{#2} \n    {}\n    {\\; #2}%\n}\n\\newcommand\\colim\\colimit\n\\DeclareDocumentCommand{\\limit}{ m g }{%\n \\underset{#1}{\\mbox{lim} } \n \\IfNoValueTF{#2} \n    {}\n    {\\; #2}%\n}\n\n\\DeclareDocumentCommand{\\overcat}{ m m g }{% \n \\IfNoValueTF{#3} \n    {\\cat{#1}_{#2}}\n    {\\cat{#1}_{#2,#3}}%\n}\n\n\\DeclareDocumentCommand{\\undercat}{ m m g }{% \n \\IfNoValueTF{#3} \n    {\\cat{#1}^{#2}}\n    {\\cat{#1}^{#2,#3}}%\n}\n\n\\DeclareDocumentCommand{\\yoneda}{ g }{%\n \\IfNoValueTF{#1}%\n          {h}%\n          {h(#1)}%\n}\n\n\\DeclareDocumentCommand{\\mainadjunction}{ g }{%\n \\IfNoValueTF{#1}%\n          {\\adj{\\stilde{\\blank}}{\\globalsections{\\blank}}}%\n          {\\adj{\\stilde{#1}{\\blank}}{\\sections{#1}}}%\n}\n%\\newcommand{\\mainadjunction}{\\adj{\\stilde{\\blank}}{\\globalsections{\\blank}}}\n\n\\DeclareDocumentCommand{\\sheafify}{ g }{%\n \\IfNoValueTF{#1}%\n          {sh}%\n          {sh(#1)}%\n}\n\n\\DeclareMathOperator{\\HSpec}{Spec}\n\\DeclareDocumentCommand{\\Spec}{ g }{%\n \\IfNoValueTF{#1}%\n          {\\HSpec}%\n          {\\HSpec(#1)}%\n}\n\\newcommand\\spec\\Spec\n\n\\DeclareDocumentCommand{\\plus}{ g }{%\n \\IfNoValueTF{#1}%\n          {(\\blank)^+}%\n          {{#1}^+}%\n}\n\n\\DeclareDocumentCommand{\\globalsections}{ g }{%\n \\IfNoValueTF{#1}%\n          {\\sections{\\terminal}{\\blank}}%\n          {\\sections{\\terminal}{#1}}%\n}\n\\newcommand\\gblsect\\globalsections\n\n\\DeclareDocumentCommand{\\sections}{ mg }{%\n  \\StrRight{#2}{1}[\\lastletter]%\n  \\StrBefore{#2}{\\lastletter}[\\beforelastletter]%\n  \\IfNoValueTF{#2}%\n    {\\Gamma( #1 ; \\blank)}%\n    { \n      \\Gamma( #1 ; \\beforelastletter\\presheaf{\\lastletter})%\n    }%\n}\n\n\\newcommand\\sect\\sections\n\n\\DeclareDocumentCommand{\\top}{ m g }{%\n \\IfNoValueTF{#2}%\n          {\\topo{#1}}%\n          {\\topo{#1}(#2)}%\n}\n\\DeclareDocumentCommand{\\sieve}{ m g }{%\n \\IfNoValueTF{#2}%\n          {#1}%\n          {{#1}(#2)}%\n}\n\\DeclareDocumentCommand{\\incsh}{ g }{%\n \\IfNoValueTF{#1}%\n          {i}%\n          {i(#1)}%\n}\n\n\n\\newcommand\\Supp{\\mbox{Supp }}\n\\newcommand{\\maxsieve}[1]{\\cat{max}(#1)}\n\\newcommand{\\sheaves}[1]{\\cat{Shv}(#1)}\n\\newcommand{\\sheafmodules}[1]\n  {\n    \\StrRight{#1}{1}[\\lastletter]%\n    \\StrBefore{#1}{\\lastletter}[\\beforelastletter]%\n    \\beforelastletter\\cat{Mod}(\\sheaf{\\lastletter})\n  }\n\\newcommand\\shmodules{\\sheafmodules}\n\\newcommand\\shmod\\sheafmodules\n\\newcommand{\\pshmodules}[1]{\\cat{PMod}(#1)}\n\\newcommand{\\qcoh}[1]{\\cat{Qcoh}(\\sheaf{#1})}\n%\\newcommand{\\plus}[1]{{\\presheaf{#1}}^+}\n%\\newcommand{\\sheafify}[1]{a(\\presheaf{#1})}\n\\newcommand{\\id}{\\mbox{Id}}\n\\newcommand{\\blank}{{-}}\n\\newcommand{\\prshfs}[2]{\\presheaves{#1}(\\cat{#2})}\n\\newcommand\\pshs\\presheaves\n\\newcommand\\shs\\sheaves\n%\\newcommand{\\sections}[2]{\\Gamma( #1 ; \\presheaf{#2} )}\n%\\newcommand{\\globalsections}[1]{\\sections{\\terminal}{#1}}\n\\newcommand\\spull[1]{{#1}^*}\n\\newcommand{\\cover}[2]{\\set{{#1} \\rightarrow {#2}}}\n\n\\newcommand{\\module}[1]{\\sheaf{#1}}\n\\newcommand{\\terminal}{1}\n\\newcommand{\\initial}{0}\n\\newcommand\\sievecat[1]{\\cat{Sieves}({#1})}\n\\newcommand\\sieves\\sievecat\n\\newcommand{\\schemes}{\\cat{Sch}}\n\\newcommand{\\affschemes}{\\cat{AffSch}}\n\\newcommand\\sites{\\cat{Sites}}\n\\newcommand\\inverse[1]{{#1}^{-1}}\n\\newcommand{\\direct}[1]{{#1}_*}\n\\newcommand{\\inverseimg}[1]{{#1}^{-1}}\n\\newcommand{\\forward}[1]{{#1}_!}\n\\newcommand\\pushforward\\forward\n\\newcommand{\\interhom}[2]{{#1}^{#2}}\n\\newcommand{\\modules}[1]{#1\\text{-}\\cat{Mod}}\n\\newcommand{\\pullback}[1]{{#1}^*}\n\\newcommand{\\unit}{\\eta}\n\\newcommand{\\counit}{\\epsilon}\n\\newcommand\\subobjects[1]{\\mbox{Sub}({#1})}\n\\newcommand{\\domain}[1]{\\mbox{Dom}(#1)}\n\\newcommand\\dom{\\domain}\n\\newcommand{\\codomain}[1]{\\mbox{Codom}(#1)}\n\\newcommand{\\kernel}[1]{\\mbox{Ker}(#1)}\n\\newcommand{\\cokernel}[1]{\\mbox{Coker}(#1)}\n\\newcommand\\coker\\cokernel\n\\newcommand{\\image}[1]{\\mbox{Im}(#1)}\n\\newcommand{\\coimage}[1]{\\mbox{Coim}(#1)}\n\n\\newcommand{\\affspace}[1]{\\A^{1}}\n\\newcommand{\\projspace}[1]{\\P^{1}}\n\n\\newcommand{\\pt}{\\ast}\n\\newcommand\\eqclass[1]{[#1]}\n\n\\newcommand\\set[1]{\\{#1\\}}\n%\\renewcommand{\\if}{\\mbox{ if }}\n\\newcommand{\\otherwise}{\\mbox{ otherwise }}\n\\newcommand{\\reason}[1]{\\mbox{ by #1}}\n\\newcommand\\onsome{\\mbox{ on some }}\n\\newcommand\\with{\\mbox{ : }}\n\\renewcommand\\and{\\mbox{,  }}\n\\newcommand\\wt\\widetilde\n%------------------------------------------------------------------------------ \n% ADMINISTRATION \n%------------------------------------------------------------------------------ \n\\newcommand{\\homeworkset}{5} %%% UPDATE THIS NUMBER \n\\title{Affine Objects}\n\\newcommand{\\firstName}  {Mohamed} \n\\newcommand{\\lastName}   {Hashi} \n\\newcommand{\\studId}     {1408593} \n\\newcommand{\\email}    {maxamedhashi@gmail.com} \n\\newcommand{\\uni} {Universiteit Leiden}\n\\author{Mohamed Hashi}",
-			"file": "preamble.tex",
-			"file_size": 13438,
-			"file_write_time": 131122905334991737,
-			"settings":
-			{
-				"buffer_size": 12983,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Prelims/basic-cat/def-presheaves.tex",
-			"settings":
-			{
-				"buffer_size": 491,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Prelims/basic-cat/def-direct-img.tex",
-			"settings":
-			{
-				"buffer_size": 372,
+				"buffer_size": 519,
 				"line_ending": "Windows"
 			}
 		}
@@ -316,32 +267,80 @@
 	[
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat"
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive"
 	],
 	"file_history":
 	[
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/main-big.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/main-small.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/def-restrictive.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/main.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/prf-caff-restr-mor.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/non-exmpl-restr-mor.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-restr-between-affines.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/rmk-hat-omega.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/exmpl-u.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-over-ringed-site.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/main.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-caffine-is-affine.tex",
+		"/C/Users/Sadari/Documents/Writings/Code/Python/addLabelsTex.py",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-stilde-restrict.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/exmpl-affine-scheme.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/prf-continuous-sheaf.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-rel-topo.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/prf-u-homeo.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-continuous-functor.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-homeo-funct-sheafify.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-immersion-counit.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-k-cover-lifts.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-counit-big.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-stilde-big-small.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/def-k.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-k-cover-lift.te.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-unit-big.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-unit-small.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-sheaf-of-algebras.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/main-u-functors.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/def-stilde.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-pstilde-restrict.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Introduction/main.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-pstilde-adj.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/def-pshmodules.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-ringed-site.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/preamble.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-over-site.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-restricting-qc.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/def-plus-funct.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-site.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/main-sites.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-small-site.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/rmk-weaker-notion-morphism-sites.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-cat-sites.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-sieve.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/main-induced-functors.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/prf-adjunction.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/def-inverse-image.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/def-over-cat.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/def-presheaves.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/def-direct-img.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/openquestions.tex",
-		"/C/Users/Sadari/Documents/Writings/Code/Python/addLabelsTex.py",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/prf-spec-adjunction.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Project docs/TODO/TODO.txt",
 		"/C/Users/Sadari/Documents/Writings/Code/Python/test.py",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Preamble/preamble_new.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-Ny.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/preamble.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/acknowledgements.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/def-neighbourhood-cat.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Introduction/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/dedication.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/abstract.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/def-presheaves.tex",
 		"/c/users/sadari/appdata/local/temp/latexing/main/main.bbl",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/affineobjects.bib",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/main-u-functors.tex",
 		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
 		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/User/JSON.sublime-settings",
@@ -349,22 +348,13 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/titlepage.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Cohomology/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/non-quasi-coherentsheaf.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-continuous-functor.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-category-without-affines.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-rel-topo.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/prf-u-homeo.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-over-ringed-site.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/prf-caff-restr-mor.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/def-restrictive.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-caffine-is-affine.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-qc-sheaf-on-category-without-affines.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-01BL.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/prf-finite-poset-has-enough-affines.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/P1.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-unit-big.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-tfae-support-locus.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-injectivity.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-open.tex",
@@ -376,45 +366,27 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-every-closed-set-is-cut-out.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-stalk-stilde.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/def-set-cut-out-ideal.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/def-stilde.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/prf-adj-comp.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-ideal-cuts-out-closed-set.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/def-big-site.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/def-over-cat.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/def-k.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-stilde-restrict.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-homeo-funct-sheafify.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/prf-homeo-funct-commutes-sheafify.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/prf-caffine-omega-iso.tex",
 		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/WordCount/WordCount.sublime-settings",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/def-inverse-image.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/prf-counit-is-iso-if-locally.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-immersion-counit.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-restricting-qc.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/def-inverse.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-pstilde-restrict.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/prf-adjunction.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-basis.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/def-inverse.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-restr-between-affines.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-site.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/def-direct-img.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/rmk-pstilde-counit-restriction-commute.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/main-induced-functors.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-ringed-site.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-stilde-restriction-commute.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/prf-mor-sites-sheaf.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/main-sites.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-open-site.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/prf-spull-sieve-iso-commute.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/prf-sheafification-commute-general.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/prf-homeo-funct-commutes-sheafify.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-over-site.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/prf-stapelen-overcats.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/rmk-qc-restriction.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/def-quasi-coh-shf.tex",
@@ -423,32 +395,12 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/def-caff-obj.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/exmpl-non-caffine.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/prf-s-commute-omega.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/exmpl-affine-scheme.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/proof-big-unit-counit-old.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Project docs/What is inside a section intro",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/blurbs-old-todo/restrictiveness.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/main-big.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Project docs/Owen email 29-6",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-big-stilde-restricts-to-small.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/main-small.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/main-contin-functor-tildes.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-counit-big.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-qc-big-small.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-unit-small.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-restr-open-immersion-affine.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-comp-restr.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-affine-scheme-caffine.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-tilde-cokernel.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-omega-iso-affine.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-spectrum.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/prf-spec-adjunction.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/rmk-hat-omega.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-coproduct-restrictive.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/prf-dist-inclusions-strong-restrictive.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/prf-big-stilde-qc.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-scheme.tex"
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/main-contin-functor-tildes.tex"
 	],
 	"find":
 	{
@@ -554,6 +506,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"866",
 			"Tag",
 			"TODO",
 			"O",
@@ -680,8 +633,7 @@
 			"shf",
 			"\\pshmodules{Y}",
 			"sheaf",
-			"sh",
-			"sheaf"
+			"sh"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -808,27 +760,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Chapters/Prelims/basic-cat/main-induced-functors.tex",
+					"file": "Chapters/Restrictive/restrictive/rmk-hat-omega.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 71,
+						"buffer_size": 257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								29,
+								32
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 102,
-								"count": 5,
+								"changes": 2,
+								"count": 17,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -840,32 +792,32 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Chapters/Prelims/basic-cat/prf-adjunction.tex",
+					"file": "Chapters/Restrictive/main.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 325,
+						"buffer_size": 817,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								210,
-								210
+								441,
+								441
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 60,
-								"count": 13,
+								"changes": 37,
+								"count": 84,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -882,31 +834,31 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Chapters/Prelims/topology/Basic/def-sieve.tex",
+					"file": "FrontBackMatter/acknowledgements.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 403,
+						"buffer_size": 519,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								348,
-								348
+								519,
+								519
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 8,
-								"count": 49,
+								"changes": 26,
+								"count": 73,
 								"modified": false,
 								"selection": false,
 								"status": -1,
-								"syntax": "latex"
+								"syntax": "plain text"
 							},
 							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
 						},
@@ -915,193 +867,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Chapters/Prelims/basic-cat/def-inverse-image.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 503,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								465,
-								465
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 57,
-								"count": 27,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Chapters/Prelims/basic-cat/def-over-cat.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 756,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								234,
-								241
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 4,
-								"count": 40,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "preamble.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12983,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8791,
-								8791
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 52,
-								"count": 151,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5343.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Chapters/Prelims/basic-cat/def-presheaves.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 491,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								369,
-								369
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 21,
-								"count": 56,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Chapters/Prelims/basic-cat/def-direct-img.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 372,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								321,
-								321
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 7,
-								"count": 25,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "latex"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1140,7 +905,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 250.0
+		"height": 292.0
 	},
 	"output.find_results":
 	{
@@ -1192,7 +957,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 325.0,
+	"side_bar_width": 366.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

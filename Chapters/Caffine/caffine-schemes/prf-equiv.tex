@@ -1,9 +1,23 @@
-\begin{lemma}\label[lemma]{3a2}
-If $\counit_X$ is a homeomorphism, then $X$ is affine.
+\begin{lemma}
+The following are equivalent:
+\begin{enumerate}
+	\item $X$ is affine
+	\item $\counit_X$ is an isomorphism
+	\item $\counit_X$ is a homeomorphism
+\end{enumerate}
 \end{lemma}
-%TODO: encapsulate affines criterion from HAG in an lemma and reference here
 
 \begin{proof}
+1 \Rightarrow 2:
+Assume that $X = \Spec R$.
+Then $\ker{\Ip} = \Ip$ for $\Ip \in X$, so the topological part of $\counit_X$ is an homeomorphism.
+The sheaf part of $\counit_X$ sends the global section $1\in \sheaf{O}(X)$ to $1 \in R$,
+since the sheaf morphism is a $\sheaf{O}_{\Spec{R}}$-algebra map, it has to be the identity.
+
+2 \Rightarrow 3:
+By definition.
+
+3 \Rightarrow 1:
 Let $\Spec A_i = U_i \subset X$ be open affines
 and suppose $\union_i U_i = X$.
 Assume it is a finite affine cover, which can be done since $X$ is quasi-compact.

@@ -1,27 +1,31 @@
 \section{Caffine schemes}
 
-Let $X$ be a caffine scheme. Set $R = \sect{X}{O}$.
-We will prove that the canonical morphism \[\counit_X: X \rightarrow \Spec{\sect{X}{O}}\] is an isomorphism.
+Let $X\in \schemes$.
+
+Set $R = \sect{X}{O}$.
+We will prove that the canonical morphism \[\counit_X: X \rightarrow \Spec{\sect{X}{O}}\] is an isomorphism if $X$ is a caffine object.
 This morphism sends $x\in X$ to $\ker{x}$ as defined later.
 
+We will start this section with some general results that work for any scheme.
 
-%TODO: read section and mark all issues
-%Definitions
+
 \input{def-support-module}
 \input{def-set-cut-out-ideal}
 \input{def-locus-point}
 \input{def-support-global-section}
+
+The following lemma will be the tool we use to prove that $X$ is affine if it is caffine.
+\input{prf-equiv}
+
 \input{prf-stalk-stilde}
 \input{prf-tfae-support-locus}
-
 \input{prf-ideal-cuts-out-closed-set}
+
+From now on assume that $X$ is a caffine object in $\schemes$.
+
 \input{prf-every-closed-set-is-cut-out}
-
 \input{prf-dist-basis-scheme}
-
 \input{prf-surjectivity}
 \input{prf-injectivity}
-
 \input{prf-open}
-\input{prf-homeo}
 \input{prf-caffine-is-affine}

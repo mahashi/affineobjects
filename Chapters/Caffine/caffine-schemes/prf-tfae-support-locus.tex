@@ -1,4 +1,3 @@
-
 \begin{lemma}\label[lemma]{42b}
 For $x\in X$ TFAE:
 \begin{enumerate}
@@ -10,9 +9,9 @@ For $x\in X$ TFAE:
 \begin{proof}
 1 $\Rightarrow$ 2:
 
-Assume $x\in V_X(I)$. 
-Then $\Lambda_X(\frac{\sheaf{O}(X)}{I})_x = \frac{\sheaf{O}_x}{I\sheaf{O}_x} \neq 0$. 
-Hence $I\sheaf{O}_x \neq \sheaf{O}_x$.
+Assume $x\in V_X(I)$.
+We have $\Lambda_X(\frac{R}{I})= \frac{\Lambda_X(R)}{\Lambda_X(I)}$ and taking stalks is exact so $\frac{\Lambda_X(R)}{\Lambda_X(I)}_x = \frac{\Lambda_X(R)_x}{\Lambda_X(I)_x}$. Lastly by \Cref{3fa} we get $\Lambda_X(\frac{\sheaf{O}(X)}{I})_x = \frac{\sheaf{O}_x}{I\sheaf{O}_x}$.
+Since $x \in V_X(I)$ we know $\frac{\sheaf{O}_x}{I\sheaf{O}_x} \neq 0$, hence $I\sheaf{O}_x \neq \sheaf{O}_x$.
 
 2 $\Rightarrow$ 3: 
 
@@ -27,18 +26,18 @@ Assume $I \subset \ker(x)$. Then $I$ maps into $\Im_x$, hence $I\sheaf{O}_x \sub
 
 \end{proof}
 \begin{corollary}\label[corollary]{446}
-If $y\in I$ then $D_X(y)\cap V_X(I)= \emptyset$ 
+If $y\in I$ then $D_X(y)\cap V_X(I)= \emptyset$.
 \end{corollary} 
 \begin{proof}
 Assume $y\in I$.
-Let $z\in V_X(I)$, then $y\in \ker(z)$ by the previous lemma.
-This implies $z\not\in D_X(y)$
+Let $z\in V_X(I)$, then $y\in \ker(z)$ by \Cref{42b}.
+This implies $z\not\in D_X(y)$.
 \end{proof}
 \begin{corollary}\label[corollary]{44e}
 $V_X(I)\cup V_X(J) = V_X(IJ)$
 \end{corollary}
 \begin{proof}
-Let $z\in V_X(I)\cup V_X(J)$. Then $I\subset \ker(z)$ and $J\subset \ker(z)$ by the lemma, hence $IJ\subset \ker(z)$.
-Apply the lemma again to get $z\in V_X(IJ)$.
-Let $z\in V_X(IJ)$. Then $IJ \subset \ker(z)$ by the lemma. The ideal $\ker(z)$ is prime, so $I\subset \ker(z)$ or $J\subset \ker(z)$. Invoke the lemma again to get $z\in V_X(I)\cup V_X(J)$.
+Let $z\in V_X(I)\cup V_X(J)$. Then $I\subset \ker(z)$ and $J\subset \ker(z)$ by \Cref{42b}, hence $IJ\subset \ker(z)$.
+Apply \Cref{42b} again to get $z\in V_X(IJ)$.
+Let $z\in V_X(IJ)$. Then $IJ \subset \ker(z)$ by \Cref{42b}. The ideal $\ker(z)$ is prime, so $I\subset \ker(z)$ or $J\subset \ker(z)$. Invoke \Cref{42b} again to get $z\in V_X(I)\cup V_X(J)$.
 \end{proof}
