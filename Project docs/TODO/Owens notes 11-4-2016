@@ -1,7 +1,0 @@
-Owens notes:
-Done - Over/under categories: Object and category have same name.
-Done - Define max sieve
-- Define sheafification
-- Define universal sheafification morphism and choose notation
-- Make explicit that \pstilde( M \tensor ...) = \sheafify\restrict\pstilde
-- Define adjunctions for pstilde and stilde and give bijections explicitely.

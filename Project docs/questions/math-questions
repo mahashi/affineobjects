@@ -1,3 +1,0 @@
-- Let $f$ be a natural tranformation. Does f always extend to the global sections?
-+ Yes. f induces a map Hom(-, F) -> Hom(-,G), so a map F(1) -> G(1).
-- In overcategory, are the morphism reversed? 
