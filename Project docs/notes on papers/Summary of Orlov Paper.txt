@@ -14,7 +14,7 @@ Category is (small?) cocomplete.
 %Ass. modules
 Definition. Tilde functor.
 Definition. Quasi-coherent presheaf module. (Orlov)
-Fully faithful embedding of modules in module presheafs.
+Fully faithful embedding of modules in module presheaves.
 Lemma. Tilde is left adjoint to global sections.
 Definition. Quasi-coherent module on a presheaf.
 Use of sheafification after tilde, adjunction is preserved but no longer full. This is exact since both functors are.
@@ -25,7 +25,7 @@ Lemma. qc modules restricted/pullbacked are qc modules.
 %Affines
 Example. For the affine site, the tilde|global sections adjunctions is an equivalence only for every representable.
 Implies sheafification is full*.
-Define. affines in any site as the presheafs/objects such that tilde|global sections is an equivalence.(possible extra condition: qc presheaf module is sheaf)
+Define. affines in any site as the presheaves/objects such that tilde|global sections is an equivalence.(possible extra condition: qc presheaf module is sheaf)
 
 Question. For which sites is a module qc (cokernel) iff it is qc (cokernel)= ass. mod pulledback to each affine?
 Need descent to work.

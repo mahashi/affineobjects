@@ -3,12 +3,12 @@ Let $\cat{C}$ and $\cat{C'}$ be categories.
 Let $F:\cat{C}\rightarrow \cat{C'}$ and $z\in C'$. 
 Define the category $\overcat{C}{z}$ and $\undercat{C}{z}$ as 
 
-\[\obj{\overcat{C}{z}{F}} := \{(a,w) \suchthat a\in \cat{C}, w:F(a)\rightarrow z\},\]
+\[\obj(\overcat{C}{z}{F}) := \{(a,w) \suchthat a\in \cat{C}, w:F(a)\rightarrow z\},\]
 \[\Hom{(a,w)}{(b,v)} := \{f:a\rightarrow b \suchthat v\circ F(f) = w  \},\]
 
 and
 
-\[\obj{\undercat{C}{z}{F}} := \{(a,w) \suchthat a\in \cat{C}, w:z\rightarrow F(a)\},\]
+\[\obj(\undercat{C}{z}{F}) := \{(a,w) \suchthat a\in \cat{C}, w:z\rightarrow F(a)\},\]
 \[\Hom{(a,w)}{(b,v)} := \{f:a\rightarrow b \suchthat F(f) \circ w = v  \}.\]
 
 We get faithful functors 

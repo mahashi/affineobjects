@@ -1,0 +1,31 @@
+\begin{lemma}
+Let $\cat{C}$ be a ringed site that has enough affines.
+Let $\sheaf{F}$ be a sheaf of modules on $\cat{C}$.
+Then $\sheaf{F}$ is quasi-coherent 
+\iff for each caffine $a\in \cat{C}$ 
+we have $\restr{a}{\sheaf{F}} \iso \stilde{M}$ for some $\sect{a}{O}$-module $M$.
+\end{lemma}
+
+\begin{proof}
+$\Rightarrow$: This is \Cref{a38}.
+
+$\Leftarrow$: Since $\cat{C}$ has enough affines, every object has a cover of caffine objects. For any caffine $a\in \cat{C}$, we have $\restr{a}{\sheaf{F}} \iso \stilde{M}$
+so $\restr{a}{\sheaf{F}}$ has a global presentation.
+Hence $\sheaf{F}$ is quasi-coherent.
+\end{proof}
+
+% \begin{corollary}
+% Let $\cat{C}$ be a ringed site that has enough affines.
+% Let $\sheaf{F}$ be a sheaf of modules on $\cat{C}$.
+% Then $\sheaf{F}$ is quasi-coherent 
+% \iff for each restrictive morphism $f:b\rightarrow a\in \cat{C}$ 
+% the map $\widehat{f}: \sect{a}{F} \tensor \sect{b}{O} \rightarrow \sect{b}{F}$
+% is an isomorphism.
+% \end{corollary}
+% \begin{proof}
+% $\Rightarrow:$
+% By definition of restrictiveness.
+
+% $\Leftarrow:$
+% Assume $a$ is caffine
+% \end{proof}

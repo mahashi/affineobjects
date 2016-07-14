@@ -1,32 +1,41 @@
 \chapter{Introduction}
 
 \section{Motivation}
-Quasi-coherent sheaves and affine schemes have a special relationship. One can find out that a sheaf of modules on any scheme is quasi-coherent by looking at the sections at the affine open subsets.
-One can find out that a quasi-compact scheme is affine by proving all higher cohomology of any quasi-coherent scheaf vanishes \cite[\href{http://stacks.math.columbia.edu/tag/01XF}{Tag 01XF}]{stacks}. 
-
-%TODO: mention paper by Orlov
+Quasi-coherent sheaves, affine schemes and the inclusion of distinguised opens of an affine scheme have a special relationship. 
+A sheaf of modules $\sheaf{F}$ on any scheme $X$ is quasi-coherent 
+\iff for any open affine subset $\Spec{R}\subset X$ and $f\in R$ 
+we have the following coherence property $\sect{D(f)}{F} \tensor_{\sect{\Spec{R}}{O}} \rightarrow \sect{\Spec{R}}{F}$.
+A quasi-coherent sheaf.
+One can find out that a quasi-compact scheme is affine by proving that all higher cohomology of any quasi-coherent sheaf vanishes \cite[\href{http://stacks.math.columbia.edu/tag/01XF}{Tag 01XF}]{stacks}.
 
 \section{Aim}
-This thesis will investigate 
-and formalize this special relationship in 
-a definition that only depends on the category of quasi-coherent sheaves on a scheme. 
-This generalizes affine schemes to any ringed site, which gives us a notion of `affine' object, which we will call \textbf{caffine}, shorthand for categorically affine.
-We will investigate how fruitful this definition is in other contexts.
+This thesis will investigate, formalize and generalize this trinity. 
+We will generalize affineness to a property that any object of any ringed site may have, which gives us a notion of `affine' object, which we will call an \textbf{caffine}, shorthand for categorically affine, object. 
+This definition will use the functor $\stilde$ which is a generalized version of the well-known functor $\widetilde{\blank}$ that sends modules of the global sections to a quasi-coherent module.
+We will define a property  of morphisms in a ringed site, to replace the distinguised inclusions in the generalized trinity.
+Both definitions are defined purely in terms of quasi-coherent sheaves.
+
+Our main results are the following.
+Any morphism between caffine objects will turn out to be restrictive.
+If a ringed site has `enough caffines', then a sheaf module is quasi-coherent \iff
+it is locally of the form $\stilde{M}$ for some module $M$.
 
 \section{Outline}
-In chapter 2 we will build up all the necessary theory that is well-known, but not assumed.
-We will start with some general categorical results and definitions. Then we will introduce the generalisation of topology for categories, the category of sites and the central notion of a sheaf. The induced topology on an over/slice category will get special attention because we will use it extensively.
+In chapter 2 we will build up all the necessary theory that is well-known, but not assumed to be familiar.
+We will start with some general categorical results and definitions.
+Then we will introduce the generalisation of topology for categories, the category of sites and the central notion of a sheaf. The induced topology on an over/slice category will get special attention because we will use it extensively.
 
 In chapter 3 we will introduce restrictive morphisms and show how this notion interacts with affine schemes.
 It will turn out any morphism between affine schemes is restrictive.
 
-In Chapter 4 we will define caffine objects.
+In Chapter 4 we will define caffine objects 
+and prove that any morphism between caffine objects is restrictive.
 Then we will show that the caffine objects in the category of schemes are exactly the affine schemes.
-Lastly we will look at some examples of categories that lack any caffine objects.
+Lastly we prove that a sheaf of modules is quasi-coherent \iff it is locally of the form $\stilde{M}$. We will also look at some examples of categories that lack any caffine objects.
 
 In Chapter 5 I will expand on possible avenues of further research.
 
 \section{Assumptions}
 The intended audience are my peers, so some mathematical maturity is assumed.
 I assume familiar with the usual undergraduate curriculum in topology and algebra. Furthermore basic categorical notions such as limits and adjunctions are assumed.
-See the first 3 chapters of \cite{catsUU}.
+See the first 3 chapters of \cite{catsUU} for an introduction to these ideas.

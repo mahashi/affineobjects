@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sta",
+				"stacksrepl"
+			],
+			[
 				"end",
 				"end{definition}	main.tex"
 			],
@@ -96,120 +100,10 @@
 	"buffers":
 	[
 		{
-			"contents": "TO",
+			"file": "FrontBackMatter/openquestions.tex",
 			"settings":
 			{
-				"buffer_size": 2,
-				"line_ending": "Windows",
-				"name": "TO"
-			}
-		},
-		{
-			"contents": "Searching 219 files for \"TODO\" (case sensitive)\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\blurb.tex:\n    1: %TODO: Proof that \\stilde on the big site restricts to \\stilde on the big site\n    2  %only need to prove  that $k$ is a morphism of sites.\n    3  \\begin{lemma}\\label[lemma]{2}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Caffine\\caffine-schemes\\prf-homeo.tex:\n    2  If $\\counit_X$ is a homeomorphism, then $X$ is affine.\n    3  \\end{lemma}\n    4: %TODO: encapsulate affines criterion from HAG in an lemma and reference here\n    5  \n    6  \\begin{proof}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Caffine\\caffine-schemes\\prf-ideal-cuts-out-closed-set.tex:\n   20  This implies $V_X(I) = \\Sup(f(1))$ which makes $V_X(I)$ closed as the support of a global section.\n   21  \\end{proof}\n   22: %TODO: support of global section is closed\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Caffine\\enough-caffines\\non-quasi-coherentsheaf.tex:\n    1: %TODO: nakijken\n    2  \\begin{example}\\label[example]{51e}\n    3  Let $C$ be a ringed site with no affines. \n    .\n   11  Note that $a,b$ are fixed and not variables in $S1$. \n   12  \n   13: %TODO: improve this diagram\n   14  \\begin{center}\n   15  \\begin{tikzpicture}[node distance=2cm, auto]\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Caffine\\enough-caffines\\P1.tex:\n   48  \n   49  \\begin{example}[Category without enough affines \\#1]\\label[example]{59b}\n   50: %TODO\n   51  \\end{example}\n   52  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Introduction\\main.tex:\n    5  One can find out that a quasi-compact scheme is affine by proving all higher cohomology of any quasi-coherent scheaf vanishes \\cite[\\href{http://stacks.math.columbia.edu/tag/01XF}{Tag 01XF}]{stacks}. \n    6  \n    7: %TODO: mention paper by Orlov\n    8  \n    9  \\section{Aim}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\blurbs-todo-old\\presheafs.tex:\n   54  Hence $\\prshfs{C}{A}$ is abelian as defined in tag 0109 of stacks.\n   55  \n   56: Assume $\\cat{A}$ is also Grothendieck. Note that the section functions $\\sections{U}{\\blank}$ have adjoints : %TODO\n   57  Then using this the family $\\{c_!G: c\\in \\cat{C}\\}$ is a small generating family. Taking the colimit over this family provides us with a generator in $\\prshfs{C}{A}$.\n   58  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\blurbs-todo-old\\sheaves.tex:\n   11  Hence given an morphism $X\\rightarrow \\presheaf{F}$ that extends the morphism $R\\rightarrow \\presheaf{F}$ defined by the compatible family.\n   12  \n   13: %%TODO: pullback sequence\n   14  \n   15  A presheaf that admits a unique amalgamation of every compatible family is called a sheaf.\n   ..\n   49  \n   50  \\begin{definition}[Plus construction Moerdijk]\\label[definition]{8c7}\n   51: %TODO: fill in moerdijks construction\n   52  \\end{definition}\n   53  \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\blurbs-todo-old\\unit-of-spec-gbl.tex:\n    1: %TODO: move to where it is used\n    2  If you start with $\\id_{\\sect{X}{O}}$ for any locally ringed space $X$\n    3  and apply the isomorphism from the adjunction, you get the canonical map \n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\main.tex:\n    6  Then we will introduce modules on ringed sites.\n    7  Lastly, the notion of a scheme is introduced.\n    8: %TODO: update introduction\n    9  \n   10  \\subimport{basic-cat/}{main}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\modules\\prf-restricting-qc.tex:\n    6  \n    7  \\begin{proof}\n    8: %TODO: proof/ref\n    9  \\end{proof}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\topology\\main.tex:\n    7  See \\cite{sheavGeomLogic} for more details.\n    8  \n    9: %TODO: Organise folder/files and structure. Remove old files and add new files to mains.\n   10  \n   11  \\subimport{Basic/}{main}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\topology\\Restriction\\old\\prf-s-commute-omega.tex:\n   24  commutes.\n   25  \\end{proof}\n   26: %TODO: shorten and reference general result\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Restrictive\\blurbs-old-todo\\restrictiveness.tex:\n   30  \\end{lemma}\n   31  \\begin{proof}\n   32: %TODO\n   33  \\end{proof}\n   34  \n   ..\n   52  \\end{lemma}\n   53  \\begin{proof}\n   54: %TODO\n   55  \\end{proof}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\FrontBackMatter\\acknowledgements.tex:\n    6  Furthermore I would like to mention all the people who endured my complaining and encouraged me:\n    7  Laura Schubert, Fatima Botan, Alexander Gietelink, Kyra Orbons, Sebastiaan Dielemans, Mathijs Henquet, Maria Heu\\ss, Francesca Ali, Raoul Wols, Vincent Willems, Charlotte Willems and Jasmin Zahirovic. Thank you!\n    8: %TODO: sharp s encode\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\FrontBackMatter\\openquestions.tex:\n    1: \\chapter{Further research} %TODO: expand\n    2  \n    3  All the loose ends and open questions are collected in this section.\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\preamble.tex:\n   58  \\newtheorem{remark}[theorem]{Remark}\n   59  \n   60: \\newtheorem*{todo}{\\begin{color}{red}{TODO}\\end{color}}\n   61  \\newtheorem*{Qanswer}{\\textbf{Answer}}\n   62  \\newtheorem{note}{Note}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Preamble\\environments.sty:\n   21  \\newtheorem*{remark}{Remark}\n   22  \n   23: \\newtheorem*{todo}{\\begin{color}{red}{TODO}\\end{color}}\n   24  \\newtheorem{note}{Note}\n   25  \\newtheorem*{case}{Case}\n\n21 matches across 18 files\n\n\nSearching 219 files for \"TODO\" (case sensitive)\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Introduction\\main.tex:\n    5  One can find out that a quasi-compact scheme is affine by proving all higher cohomology of any quasi-coherent scheaf vanishes \\cite[\\href{http://stacks.math.columbia.edu/tag/01XF}{Tag 01XF}]{stacks}. \n    6  \n    7: %TODO: mention paper by Orlov\n    8  \n    9  \\section{Aim}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\main.tex:\n    6  Then we will introduce modules on ringed sites.\n    7  Lastly, the notion of a scheme is introduced.\n    8: %TODO: update introduction\n    9  \n   10  \\subimport{basic-cat/}{main}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\modules\\prf-restricting-qc.tex:\n    6  \n    7  \\begin{proof}\n    8: %TODO: proof/ref\n    9  \\end{proof}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\topology\\Restriction\\old\\prf-s-commute-omega.tex:\n   24  commutes.\n   25  \\end{proof}\n   26: %TODO: shorten and reference general result\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\FrontBackMatter\\acknowledgements.tex:\n    6  Furthermore I would like to mention all the people who endured my complaining and encouraged me:\n    7  Laura Schubert, Fatima Botan, Alexander Gietelink, Kyra Orbons, Sebastiaan Dielemans, Mathijs Henquet, Maria Heu\\ss, Francesca Ali, Raoul Wols, Vincent Willems, Charlotte Willems and Jasmin Zahirovic. Thank you!\n    8: %TODO: sharp s encode\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\FrontBackMatter\\openquestions.tex:\n    1: \\chapter{Further research} %TODO: expand\n    2  \n    3  All the loose ends and open questions are collected in this section.\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\preamble.tex:\n   58  \\newtheorem{remark}[theorem]{Remark}\n   59  \n   60: \\newtheorem*{todo}{\\begin{color}{red}{TODO}\\end{color}}\n   61  \\newtheorem*{Qanswer}{\\textbf{Answer}}\n   62  \\newtheorem{note}{Note}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Preamble\\environments.sty:\n   21  \\newtheorem*{remark}{Remark}\n   22  \n   23: \\newtheorem*{todo}{\\begin{color}{red}{TODO}\\end{color}}\n   24  \\newtheorem{note}{Note}\n   25  \\newtheorem*{case}{Case}\n\n8 matches across 8 files\n\n\nSearching 219 files for \"TODO\" (case sensitive)\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Introduction\\main.tex:\n    5  One can find out that a quasi-compact scheme is affine by proving all higher cohomology of any quasi-coherent scheaf vanishes \\cite[\\href{http://stacks.math.columbia.edu/tag/01XF}{Tag 01XF}]{stacks}. \n    6  \n    7: %TODO: mention paper by Orlov\n    8  \n    9  \\section{Aim}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\main.tex:\n    6  Then we will introduce modules on ringed sites.\n    7  Lastly, the notion of a scheme is introduced.\n    8: %TODO: update introduction\n    9  \n   10  \\subimport{basic-cat/}{main}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Chapters\\Prelims\\modules\\prf-restricting-qc.tex:\n    6  \n    7  \\begin{proof}\n    8: %TODO: proof/ref\n    9  \\end{proof}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\FrontBackMatter\\acknowledgements.tex:\n    6  Furthermore I would like to mention all the people who endured my complaining and encouraged me:\n    7  Laura Schubert, Fatima Botan, Alexander Gietelink, Kyra Orbons, Sebastiaan Dielemans, Mathijs Henquet, Maria Heu\\ss, Francesca Ali, Raoul Wols, Vincent Willems, Charlotte Willems and Jasmin Zahirovic. Thank you!\n    8: %TODO: sharp s encode\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\FrontBackMatter\\openquestions.tex:\n    1: \\chapter{Further research} %TODO: expand\n    2  \n    3  All the loose ends and open questions are collected in this section.\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\preamble.tex:\n   58  \\newtheorem{remark}[theorem]{Remark}\n   59  \n   60: \\newtheorem*{todo}{\\begin{color}{red}{TODO}\\end{color}}\n   61  \\newtheorem*{Qanswer}{\\textbf{Answer}}\n   62  \\newtheorem{note}{Note}\n\nC:\\Users\\Sadari\\Documents\\Writings\\Math\\Affine Objects\\Preamble\\environments.sty:\n   21  \\newtheorem*{remark}{Remark}\n   22  \n   23: \\newtheorem*{todo}{\\begin{color}{red}{TODO}\\end{color}}\n   24  \\newtheorem{note}{Note}\n   25  \\newtheorem*{case}{Case}\n\n7 matches across 7 files\n",
-			"settings":
-			{
-				"buffer_size": 10064,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "Chapters/Prelims/topology/Restriction/old/prf-s-commute-omega.tex",
-			"settings":
-			{
-				"buffer_size": 958,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Caffine/caffine-schemes/prf-homeo.tex",
-			"settings":
-			{
-				"buffer_size": 781,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Caffine/caffine-schemes/prf-ideal-cuts-out-closed-set.tex",
-			"settings":
-			{
-				"buffer_size": 834,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Caffine/enough-caffines/non-quasi-coherentsheaf.tex",
-			"settings":
-			{
-				"buffer_size": 3210,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Caffine/enough-caffines/P1.tex",
-			"settings":
-			{
-				"buffer_size": 1428,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Prelims/blurbs-todo-old/presheafs.tex",
-			"settings":
-			{
-				"buffer_size": 7176,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "%References: Moerdijk, Shapira\n%todo: sheaves with values in arbitraty categories.\n\\subsection{Sheaves}\n\n\\begin{definition}[Sheaves of sets]\\label[definition]{89a}\nLet $(\\cat{C},\\topo{T})$ be a site. Let $\\presheaf{F}\\in \\presheaves{C}$.\nA compatible family on $X$ is a family of elements $x_f\\in \\presheaf{F}(X_f)$ indexed by a sieve $R$ on $X$, where $X_f=\\domain{f}$ \nand such that $\\pullback{g}(x_{f})=x_{fg}$. This is the same as a morphism $R\\rightarrow \\presheaf{F}$ as presheaves.\n\nAn amalgamation of a compatible family $(x_f)_R$ on $X$ is an element $x\\in \\presheaf{F}(X)$ such that $\\pullback{f}(x)=x_f$.\nHence given an morphism $X\\rightarrow \\presheaf{F}$ that extends the morphism $R\\rightarrow \\presheaf{F}$ defined by the compatible family.\n\n%%: pullback sequence\n\nA presheaf that admits a unique amalgamation of every compatible family is called a sheaf.\nThe category $\\sheaves{C}$ is the full subcategory on these sheaves. \nLet $i$ be the inclusion functor $\\sheaves{C}\\rightarrow \\presheaves{C}$.\n\\end{definition}\n\n\\begin{definition}[Sheaves \\#2]\\label[definition]{8a9}\nLet $(\\cat{C},\\topo{T})$ be a site. Let $\\presheaf{F}\\in \\presheaves{C}{A}$. \nLet $\\cat{A}$ be (small) complete. Define $\\presheaf{F}(R)$ for a sieve $R$ on $X$ to be \n\\[\\Hom{R}{F}.\\]\n\nWe call $\\presheaf{F}$ a sheaf if the map \n\\[\\presheaf{F}(X) \\rightarrow \\presheaf{F}(R)\\] is an isomorphism.\n\nThis is just shorthand notation for the above definition. There is a bijection between $\\Hom{R}{F}$ and matching families and the map sends a section to the unique matching family indexed by $R$ it is an amalgamation of.\n\\end{definition}\n\n\\begin{definition}[Plus construction Shapiro]\\label[definition]{8b4}\nLet $(\\cat{C},\\topo{T})$ be a site. \nLet $\\presheaf{F}\\in \\presheaves{C}$.\nDefine the category $\\cat{I}$ whose objects are pairs $(R,\\varphi)$ \nwith $R\\in \\topo{T}(X)$ and $R\\xrightarrow{\\varphi} F$.\nA morphism between $(R,\\varphi)\\rightarrow (S,\\phi)$ are inclusions $R\\rightarrow S$ such that $\\varphi=\\phi$ restricted to $R$.\n\nThen\n\\[\\plus{F}(X) = \\limit{(R,\\varphi)\\in \\cat{I}} F(R).\\]\n\nMore concretely, $\\plus{F}(X)$ is the set of all objects $(R,\\varphi)$ with the equivalence relation that $(R, \\varphi)\\sim (S,\\phi)$ if $\\varphi=\\phi$ on $R\\cap S$. Or equivalently the set all compatible families with the equivalence relation that $(x_f)_R \\sim (y_g)_S$ if $(x_h)_{R\\cap S} = (y_h)_{R\\cap S}$. \n\nWe have the map\n\\[\\unit:\\presheaf{F}(X)\\rightarrow \\product{f\\in R} \\presheaf{F}(\\domain{f})\\]\n\\[x \\mapsto (X,x).\\]\n\nThis defines a natural transformation from $\\id$ to $\\plus{\\blank}$.\n\\end{definition}\n\n\\begin{definition}[Plus construction Moerdijk]\\label[definition]{8c7}\n%: fill in moerdijks construction\n\\end{definition}\n\n\\begin{lemma}\\label[lemma]{8cb}\n$\\plus{F}$ is separated\n\\end{lemma}\n\n\\begin{lemma}\\label[lemma]{8cf}\nIf $\\presheaf{F}$ is separated then $\\plus{F}$ is a sheaf.\n\\end{lemma}\n\n\n\\begin{lemma} \\label[lemma]{8d4}\nLet $\\site{C}{S} \\xrightarrow{g} \\site{D}{T}$. \nLet $\\presheaf{F}$ be a presheaf on $\\cat{D}$. \nThen \n\\[ \\plus{F}g \\iso \\plus{Fg}.\\]\n\\end{lemma}\n\n\\begin{proof}\n\n\\end{proof}\n\n\\begin{definition}[Sheafification]\\label[definition]{8df}\nDefine $\\sheafify{F}=\\plus{\\plus{F}}: \\presheaves{C} \\rightarrow \\sheaves{C}$.\nThis is a left adjoint to the inclusion functor $\\sheaves{C} \\rightarrow \\presheaves{C}$.\n\nThe functor $\\sheafify$ commutes with finite limits.\nThere are two different proofs: Moerdijk and stacks+Shapiro. \nShapiro defines the plus with as a colimit over a directed set, hence this commutes with limits.\n\\end{definition}\n\n\\begin{theorem}\\label[theorem]{8e8}\nThe following this are equivalent for a category $\\cat{C}$.\n\\begin{itemize}\n\\item A Grothendieck topology\n\\item A full subcategory $\\cat{E}\\subset \\presheaves{C}$ such that the the inclusion functor has a left adjoint that preserves finite limits.\n\\end{itemize}\n\\end{theorem}\n\n%% Properties\n\\begin{remark}[Properties]\\label[remark]{8f1}\n\\begin{itemize}\n\\item The restriction of a sheaf is a sheaf\n\\end{itemize}\n\\end{remark}\n\n%% Rings\n\n%% Modules\n\n%% Quasi-coherent modules",
-			"file": "Chapters/Prelims/blurbs-todo-old/sheaves.tex",
-			"file_size": 4179,
-			"file_write_time": 131123716168438307,
-			"settings":
-			{
-				"buffer_size": 4070,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Prelims/blurbs-todo-old/unit-of-spec-gbl.tex",
-			"settings":
-			{
-				"buffer_size": 213,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Prelims/main.tex",
-			"settings":
-			{
-				"buffer_size": 708,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Prelims/modules/prf-restricting-qc.tex",
-			"settings":
-			{
-				"buffer_size": 266,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Restrictive/blurbs-old-todo/restrictiveness.tex",
-			"settings":
-			{
-				"buffer_size": 2492,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Chapters/Prelims/topology/main.tex",
-			"settings":
-			{
-				"buffer_size": 323,
+				"buffer_size": 982,
 				"line_ending": "Windows"
 			}
 		}
@@ -361,14 +255,37 @@
 	[
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive"
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter"
 	],
 	"file_history":
 	[
+		"/C/Users/Sadari/Documents/Writings/Code/Python/pyscripts/tidyLibrary.py",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-restricting-qc.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Introduction/main.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/acknowledgements.tex",
+		"/C/Users/Sadari/Documents/Writings/Code/Shell scripts/backup plan",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/main.tex",
+		"/C/Users/Sadari/Documents/todo lijst",
+		"/C/Users/Sadari/Documents/TODO",
+		"/C/Users/Sadari/Documents/Writings/Code/Shell scripts/changeUsername.sh",
+		"/C/Users/Sadari/Documents/Writings/Code/Python/pyscripts/.git/config",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/.git/config",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-01BL.tex",
+		"/C/Users/Sadari/Documents/Writings/Code/Python/addLabelsTex.py",
+		"/C/Users/Sadari/Documents/Writings/Code/Python/insertStacksHyperlinks.py",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/prf-u-homeo.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-rel-topo.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/remark-identification-sieves.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/old/prf-s-commute-omega.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-homeo.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-ideal-cuts-out-closed-set.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/non-quasi-coherentsheaf.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/P1.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/presheafs.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/sheaves.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/blurbs-todo-old/unit-of-spec-gbl.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/blurbs-old-todo/restrictiveness.tex",
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/blurb.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-equiv.tex",
@@ -379,20 +296,14 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-affine-morphism.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/dedication.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-rel-topo.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/prf-u-homeo.tex",
-		"/C/Users/Sadari/Documents/Writings/Code/Python/addLabelsTex.py",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-surjectivity.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-homeo.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/prf-restr-open-immersion-affine.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/prf-affiness-criterion.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-dist-open.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/def-locus-point.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/schemes/def-dist-open-general.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-01BL.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/restrictive/rmk-hat-omega.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Restrictive/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/acknowledgements.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/prf-caffine-omega-iso.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-injectivity.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-open.tex",
@@ -400,7 +311,6 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-dist-basis-scheme.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/def-set-cut-out-ideal.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-stalk-stilde.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-ideal-cuts-out-closed-set.tex",
 		"/C/Users/Sadari/Documents/Library/New Text Document.txt",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/prf-tfae-support-locus.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/prf-counit-is-iso-if-locally.tex",
@@ -431,13 +341,11 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/main-u-functors.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/def-stilde.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-pstilde-restrict.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Introduction/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-pstilde-adj.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/def-pshmodules.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-ringed-site.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/preamble.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Restriction/def-over-site.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-restricting-qc.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/def-plus-funct.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-site.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/main-sites.tex",
@@ -460,7 +368,6 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-Ny.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/def-neighbourhood-cat.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/abstract.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/main.tex",
 		"/c/users/sadari/appdata/local/temp/latexing/main/main.bbl",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/affineobjects.bib",
@@ -470,33 +377,16 @@
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/FrontBackMatter/titlepage.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Cohomology/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/non-quasi-coherentsheaf.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-category-without-affines.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/exmpl-qc-sheaf-on-category-without-affines.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/prf-finite-poset-has-enough-affines.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/enough-caffines/P1.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-objects/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/def-support-module.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Caffine/caffine-schemes/def-support-global-section.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/prf-adj-comp.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/main.tex",
 		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/scheme-sites/def-big-site.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/prf-homeo-funct-commutes-sheafify.tex",
-		"/C/Users/Sadari/AppData/Roaming/Sublime Text 3/Packages/WordCount/WordCount.sublime-settings",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/def-inverse.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-basis.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/def-inverse.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/rmk-pstilde-counit-restriction-commute.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/modules/prf-stilde-restriction-commute.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/prf-mor-sites-sheaf.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/main.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/def-open-site.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/prf-spull-sieve-iso-commute.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Basic/prf-sheafification-commute-general.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/Sheaves/prf-homeo-funct-commutes-sheafify.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/prf-stapelen-overcats.tex",
-		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/basic-cat/rmk-qc-restriction.tex"
+		"/C/Users/Sadari/Documents/Writings/Math/Affine Objects/Chapters/Prelims/topology/prf-homeo-funct-commutes-sheafify.tex"
 	],
 	"find":
 	{
@@ -604,6 +494,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"TODO",
+			"Tag",
+			"d13",
 			"TODO",
 			"harts",
 			"hag",
@@ -728,10 +621,7 @@
 			"\\shf(V)",
 			"\\begin{lemma}\\label[lemma]{0}",
 			"TODO",
-			"\\begin{lemma}\\label[lemma]{1}",
-			"\\begin{lemma}\\label[lemma]{0}",
-			"\\sheaf",
-			"TODO"
+			"\\begin{lemma}\\label[lemma]{1}"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -854,683 +744,44 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "FrontBackMatter/openquestions.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2,
+						"buffer_size": 982,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2,
-								2
+								41,
+								41
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 6,
-								"count": 1,
+								"changes": 0,
+								"count": 113,
 								"modified": false,
 								"selection": false,
 								"status": -1,
 								"syntax": "plain text"
 							},
-							"auto_name": "TO",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10064,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										123,
-										127
-									],
-									[
-										492,
-										496
-									],
-									[
-										854,
-										858
-									],
-									[
-										1022,
-										1026
-									],
-									[
-										1213,
-										1217
-									],
-									[
-										1507,
-										1511
-									],
-									[
-										1853,
-										1857
-									],
-									[
-										2215,
-										2219
-									],
-									[
-										2668,
-										2672
-									],
-									[
-										2897,
-										2901
-									],
-									[
-										3085,
-										3089
-									],
-									[
-										3474,
-										3478
-									],
-									[
-										3686,
-										3690
-									],
-									[
-										3880,
-										3884
-									],
-									[
-										4175,
-										4179
-									],
-									[
-										4380,
-										4384
-									],
-									[
-										4466,
-										4470
-									],
-									[
-										4915,
-										4919
-									],
-									[
-										5062,
-										5066
-									],
-									[
-										5326,
-										5330
-									],
-									[
-										5593,
-										5597
-									],
-									[
-										6064,
-										6068
-									],
-									[
-										6321,
-										6325
-									],
-									[
-										6533,
-										6537
-									],
-									[
-										6735,
-										6739
-									],
-									[
-										7203,
-										7207
-									],
-									[
-										7350,
-										7354
-									],
-									[
-										7614,
-										7618
-									],
-									[
-										7881,
-										7885
-									],
-									[
-										8350,
-										8354
-									],
-									[
-										8607,
-										8611
-									],
-									[
-										8819,
-										8823
-									],
-									[
-										9279,
-										9283
-									],
-									[
-										9426,
-										9430
-									],
-									[
-										9690,
-										9694
-									],
-									[
-										9957,
-										9961
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								7990,
-								7990
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 41,
-								"count": 572,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 3,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ 	].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 4370.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Chapters/Prelims/topology/Restriction/old/prf-s-commute-omega.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								958,
-								958
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 2,
-								"count": 65,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 203.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Chapters/Caffine/caffine-schemes/prf-homeo.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 781,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								99,
-								99
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 2,
-								"count": 84,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Chapters/Caffine/caffine-schemes/prf-ideal-cuts-out-closed-set.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 834,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								834,
-								834
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 2,
-								"count": 71,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Chapters/Caffine/enough-caffines/non-quasi-coherentsheaf.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3210,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								510,
-								510
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 4,
-								"count": 393,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Chapters/Caffine/enough-caffines/P1.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1428,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1292,
-								1292
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 6,
-								"count": 96,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 640.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Chapters/Prelims/blurbs-todo-old/presheafs.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7176,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2836,
-								2836
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 6,
-								"count": 518,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 944.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Chapters/Prelims/blurbs-todo-old/sheaves.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 2,
-								"count": 351,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "Chapters/Prelims/blurbs-todo-old/unit-of-spec-gbl.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 213,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 2,
-								"count": 25,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "Chapters/Prelims/main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 708,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								458,
-								458
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 81,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "Chapters/Prelims/modules/prf-restricting-qc.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 266,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								238,
-								238
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 21,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "Chapters/Restrictive/blurbs-old-todo/restrictiveness.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2492,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2480,
-								2480
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 2,
-								"count": 194,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 716.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "Chapters/Prelims/topology/main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								19,
-								19
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 6,
-								"count": 32,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
 					"type": "text"
 				}
 			]

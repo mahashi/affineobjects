@@ -1,0 +1,5 @@
+This thesis will formalize, generalize and investigate 
+the special relationship between quasi-coherent sheaves, affine schemes
+and the inclusion of distinguised opens into affine schemes.
+These 3 notions will be generalized to the context of arbitrary ringed sites
+and several results of the scheme case will be proven in the general case.
